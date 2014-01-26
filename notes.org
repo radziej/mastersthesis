@@ -1,0 +1,40 @@
+* *Master's Thesis TODO List*d
+** DONE check tt+V statement not to include tt+gamma
+** DONE check smearing to be 1/pt
+** DONE stat error from MC
+** DONE muon system graphic
+** DONE Fix number of events and weights in dataset tables
+** DONE explain values after last bin 
+** DONE exactly 2 muons in muon sel
+** DONE summary of MC titles
+** DONE fix DY contribution in final dist
+** DONE k-Faktor graphic and xs scaling to old limits
+** DONE add citations for theorists tool and andreas/lars
+** DONE check generator information Xs
+** DONE fix datadbg subtraction
+** TODO generate d_0 < 0.08 distribution
+** TODO show signal distributions
+** TODO add signal uncertainties
+** DONE variate sigma_MC for jer
+** DONE change single bin counting exp
+** DONE add poisson error to prediction
+** DONE take conservative values (incl xs)
+** TODO update systematics
+   - values
+   - trigg eff distribution
+   - signal uncertainties
+     - 5% PDF, 5% Scale, 7% SUSY-QCD at NLO
+** TODO add MET distribution for T/L ratio in datadbg
+** TODO smoothing only in 2d T/L histogram
+** DONE change 2012A to doublemu
+** TODO explain smoothing in F_R
+
+* *Coop games*
+** Jamestown
+   http://store.steampowered.com/app/94200/
+** Capsized
+   http://store.steampowered.com/app/95300/
+** Mercenary Kings
+   http://store.steampowered.com/app/218820/
+** Gish
+   http://store.steampowered.com/app/9500/
