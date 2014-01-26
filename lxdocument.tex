@@ -1,0 +1,229 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup of the document - size, style, languages
+
+\documentclass[12pt,a4paper,twoside,openright]{scrbook} % style of the document, fontsize, pagesize and spacing (incl. binding space)
+\usepackage[english]{babel} % English document
+\usepackage[utf8]{inputenc} % UTF-8 input
+\usepackage[T1]{fontenc} % PDF language encoding
+% \usepackage{a4} % Seitenrander Voreinstellung
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematical symbols and numbering scheme for equations/figures/tables
+
+\usepackage{amsmath} % align
+\usepackage{amssymb} % \lesssim
+\usepackage{braket} % for the bra-ket notation of QM
+\numberwithin{equation}{chapter} % section based numbers in equations
+\numberwithin{figure}{chapter} % figures
+\numberwithin{table}{chapter} % and tables
+
+% \usepackage{breqn} %automatic linebreaks in equations
+% \usepackage{flexisym}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Settings for tables and captions
+
+\usepackage{multirow} % enables multiple rows per column in tables
+\usepackage[hang,small,bf]{caption} % bold captions + vertical alignment
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Importing graphics and allowing for multiple figures in a group
+
+\usepackage{graphicx} % implements importing of graphics
+\usepackage{subcaption} % allows for multiple figures next to each other
+\captionsetup{compatibility=false}
+% \usepackage{float} % allows for 'H' positioning of figures
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Importing formating of head and footlines, as well as the title pages
+
+\usepackage{fancyhdr} % head and footline
+\usepackage{titlesec} % gives control over titles in pages
+
+\titleformat{\chapter}[display]      % titlesec
+{\bf\Huge}               % {format}
+{Chapter \thechapter }   % {label}
+{1pc}                    % {separation}
+{\thispagestyle{empty}}  % {before}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual formating head and footlines
+
+% header and footer
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\headheight}{15pt} %size of header
+\fancyhead[LE,RO]{\slshape\thepage} % L - Left, E - Even page number, R - Right, O - Odd page number
+\fancyhead[RE]{\slshape \leftmark}
+\fancyhead[LO]{\slshape \rightmark}
+% \fancyfoot[LO,LE]{\slshape Short Course on Asymptotics}
+% \fancyfoot[C]{}
+% \fancyfoot[RO,RE]{\slshape 7/15/2002}
+
+\renewcommand{\headrulewidth}{0.5pt} % size of line in header
+\renewcommand{\footrulewidth}{0pt} % size of line in footer
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Misc
+
+\usepackage[figuresright]{rotating} % enables rotation of figures/tables
+\usepackage{comment} % enables a comment environment
+\usepackage{setspace} % enables individual line spacing
+%\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+%\addbibresource{biblio.bib}
+
+% self defined commands
+\newcommand{\MET}{\mbox{$\not\hspace{-0.11cm}E_T$}} %missing transversal energy
+\newcommand{\pct}{\scalebox{.9}{\%}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting up the pdf and allow for colored links
+
+\usepackage[unicode]{hyperref} % Links
+\usepackage[usenames,dvipsnames]{color} % for linkcolors
+\hypersetup{plainpages=false,
+  % bookmarks=true,         % show bookmarks bar?
+  unicode=true,          % non-Latin characters in Acrobats bookmarks
+  pdftoolbar=true,        % show Acrobats toolbar?
+  pdfmenubar=true,        % show Acrobats menu?
+  pdffitwindow=false,     % window fit to page when opened
+  % pdfstartview={FitH},    % fits the width of the page to the window
+  pdftitle={Masterthesis},    % title
+  pdfauthor={Markus Radziej},     % author
+  pdfsubject={Search for Resonant Slepton Production in a DiMuon + Jets Final State with 2012 CMS Data},   % subject of the document
+  % pdfcreator={Creator},   % creator of the document
+  % pdfproducer={Producer}, % producer of the document
+  % pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+  % pdfnewwindow=true,      % links in new window
+  % linktoc=page,               %only the page numbers are colored in the table of contents
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=Maroon, % color of internal links
+  citecolor=ForestGreen,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=blue           % color of external links			
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document starts here
+
+\begin{document}
+% ----------- titlepage --------------------
+\pagenumbering{roman}
+\pagestyle{empty}
+
+\begin{titlepage}
+  % \setcounter{page}{-5}
+  \begin{center}
+    \vspace{3.0cm}
+    
+    % Subject and university
+    \rule{\linewidth}{0.5pt} \\
+    \textsc{Master's thesis in physics} \\[0.4cm]
+    
+    % Title
+    \doublespacing
+    \textsc{\LARGE \textbf{Search for Resonant Slepton Production in a DiMuon + Jets Final State with 2012 CMS Data}}\\[1.5cm]
+    \singlespacing
+    
+    % Author
+    Written by\\[0.2cm]
+    \textsc{Markus Radziej}\\
+    
+    
+    \rule{\linewidth}{0.5pt} \\[3cm]
+    
+    
+    
+    % Submission to
+    Submitted to the\\
+    \textsc{\large Faculty for mathematics, computer science and natural sciences}\\[1.5cm]
+    Created at the\\
+    \textsc{\large III Phys. Inst. A} \\[0.2cm]
+    of the\\
+    \textsc{\large RWTH Aachen university} \\[0.5cm]
+    
+    Supervised by\\
+    \textsc{Prof. Dr. Thomas Hebbeker}
+    
+    \vfill
+    % Bottom of the page
+    {\large \today}
+    
+  \end{center}
+\end{titlepage}
+
+\clearpage{\pagestyle{empty}\cleardoublepage} %empty page
+
+% ------------- Declaration ---------------
+
+\newpage
+\noindent I assure that I have created this document independently, have not used any sources or aids other than the ones I have listed and have labeled quotes as such.\\[1.0cm]
+\noindent Aachen the \hfill Signature
+
+% ------------ Abstract - English ----------
+
+\newpage
+\begin{center} \textbf{Abstract} \end{center}
+\noindent This thesis has its focal
+
+%------------ Abstract - German ----------
+
+\newpage
+\begin{center} \textbf{Kurzfassung} \end{center}
+\noindent Diese Bachelorarbeit
+
+% ------------ Tables --------------
+
+\newpage
+% \renewcommand{\contentsname}{Contents} 
+\tableofcontents
+
+
+% ----------- Document -------------
+
+
+% introduction
+\input{standardmodel} % note the page numbering and pagestyle being set inside this include
+\input{supersymmetry}
+\input{experiment}
+
+% analysis
+\input{signature}
+\input{datasets}
+\input{objectsel}
+\input{eventsel}
+\input{datadrivenbg}
+\input{systematics}
+\input{results}
+
+% appendices
+\appendix
+%rename the chapter title for appendices
+\titleformat{\chapter}[display]      % titlesec
+            {\bf\Huge}               % {format}
+            {Appendix \thechapter }   % {label}
+            {1pc}                    % {separation}
+            {\thispagestyle{empty}}  % {before}
+\input{mcsampleapp}
+\input{n-1app}
+
+
+% ----------- Bibliography -------------
+
+%\printbibliography[heading=bibintoc]
+\bibliographystyle{ieeetr}
+\bibliography{biblio}
+
+\end{document}
