@@ -22,9 +22,10 @@
 ** TODO add signal uncertainties
    - 5% PDF, 5% Scale, 7% SUSY-QCD at NLO
 ** TODO update systematics
-   - values
+   - +other values+
+   - closure test
    - trigg eff distribution
+   - summary
 ** TODO add MET distribution for T/L ratio in datadbg
 ** TODO smoothing only in 2d T/L histogram
 ** TODO explain smoothing in F_R
-   
