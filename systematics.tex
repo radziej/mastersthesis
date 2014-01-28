@@ -13,9 +13,9 @@ One thing to note is that the systematic uncertainty of the data-driven backgrou
 
 The procedure discussed in section~\ref{sec:jer} describes the adjustment of the jet energy resolution already. It remains the same for estimating its systematic uncertainty. As for the variation of its parameters, the core resolution factors (Tab.~\ref{tab:jerfactors}) are scaled according to their uncertainties. Both the statistical and systematic upper and lower bound are added quadratically and applied to the mean value. While this applies to both cases of matched and no matched gen-jets, the latter is designed to exclusively worsen the resolution. As a result, a core resolution factor is not expected to be less or equal to 1. With the width of the Gaussian distribution used for smearing given by $\sigma = \mathbf{\sqrt{c^2-1}} \cdot \sigma_{\text{MC}}$, values below that threshold have to be adjusted. This is only the case for the lower bound of the $0 < \eta < 0.5$ range. Here instead of $0.990$, $1.001$ is used. 
 
-While the statistical error of the energy resolution in the Monte Carlo samples $\sigma_{\text{MC}}$ is negligible, the fitting procedure is subject to systematic uncertainties as well. To account for that, the value of $\sigma_{\text{MC}}$ has been varied separately from the core resolution scaling factors by $\pm 5\,\pct$.
+While the statistical error of the energy resolution in the Monte Carlo samples $\sigma_{\text{MC}}$ is negligible, the fitting procedure is subject to systematic uncertainties such as the range it considers, as well. To account for that, the value of $\sigma_{\text{MC}}$ has been varied separately from the core resolution scaling factors by $\pm 5\,\pct$. The effect has been found to be below $0.1\,\pct$.
 
-The overall effect for an upward deviation amounts to $-1\,\pct$ while for the downward one it is $+0.5\,\pct$.
+The overall effect for an upward deviation then amounts to $-0.1\,\pct$ while for the downward one it is $+0.6\,\pct$.
 
 
 \subsection{Jet Energy Scale}
@@ -23,7 +23,7 @@ The overall effect for an upward deviation amounts to $-1\,\pct$ while for the d
 
 For the jet energy scale (\textbf{JES}), there are a variety of factors which influence the measurement. A collection of all relevant values is being provided by the JetMET working group on their dedicated website~\cite{jes}. It encompasses the following effects: Absolute scale uncertainty, high transverse momentum extrapolation, single pion influence, jet flavour extrapolation, time dependencies, pileup as well as a statistical uncertainty, resolution dependency and central fit dependency which are given relative to the $p_{\text{T}}$ of jets. The quadrature of all contributions yields the total uncertainty. From the recommended set of uncertainty sources, \verb+Summer13_V2_DATA_AK5PFchs+ is used in this analysis. 
 
-Shifting the energies of all jets up and down affects the number of events by $+3.1\,\pct$ and $-3.6\,\pct$, respectively. Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$.
+Shifting the energies of all jets up and down affects the number of events by $+3.6\,\pct$ and $-2.9\,\pct$, respectively. Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$.
 
 
 \subsection{Muon Momentum Resolution \& Scale}
@@ -33,7 +33,7 @@ The systematic uncertainties for the muon momentum resolution and scale have bee
 
 Applying the resolution uncertainties is performed similarly to the smearing of the jet energy scale in case of no matched gen-jets. Random numbers following a Gaussian distribution are generated, with the width being given by the listed percentages. The energies of muons on the other hand, are shifted by the respective amount to estimate the impact of the muon momentum scale. Once again, all effects are being propagated to $E_{\text{T}}^{\text{miss}}$.
 
-For the resolution, the result is a $0.2\,\pct$ difference. Varying the scale yields a $+0.1\,\pct$ and $-0.3\,\pct$ difference for the up- and downward direction, respectively.
+For the resolution, the result is a $0.2\,\pct$ difference. Varying the scale yields a $+0.2\,\pct$ and $-0.2\,\pct$ difference for the up- and downward direction, respectively.
 
 
 \subsection{Muon  ID Efficiency}
@@ -51,7 +51,7 @@ To estimate the systematic uncertainty for the $b$-tagging algorithm described i
 
 Shifting the efficiency maps only yields second order corrections. As their contribution also depends on (pseudo-)randomly generated numbers, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, this relation holds true. For these reasons, their impact is neglected.
 
-The effect on the final distribution is $-0.6\,\pct$ for the upward variation and $+0.7\,\pct$ for the downward one.
+The effect on the final distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one.
 
 
 
@@ -112,7 +112,7 @@ Towards higher masses ($\geq 1000\,\text{GeV}$) the distribution lacks the neces
 
 For the pileup reweighting procedure, there are mainly two systematic uncertainties that contribute to determining the number of interactions~\cite{pileupsys}. The measurement of the bunch luminosity and the total inelastic cross section. The latter has been determined through the comparing the number of vertices in $Z \rightarrow \mu\mu$ events between simulation and measurement. A $3.9\,\pct$ uncertainty is given on this procedure. The $2.6\,\pct$ error on the luminosity has already been discussed in section~\ref{sec:lumisys}.
 
-Additional uncertainties arise from possible shifts in the reweighting and pileup modelling processes, as well as potential beam size variations over time. They are expected to be small, but are taken into account by shifting the number of interactions by an overall amount of $\pm 5\,\pct$. The impact of this shift amounts to $-0.4\,\pct$ and $+0.4\pct$.
+Additional uncertainties arise from possible shifts in the reweighting and pileup modelling processes, as well as potential beam size variations over time. They are expected to be small, but are taken into account by shifting the number of interactions by an overall amount of $\pm 5\,\pct$. The impact of this shift amounts to $-1.1\,\pct$ and $+1.5\pct$.
 
 
 \subsection{Trigger Efficiency}
@@ -150,19 +150,25 @@ Table~\ref{tab:tlratiosys} shows the results of the variations.
   \begin{tabular}{|l|c|c|}
     % BEGIN RECEIVE ORGTBL tlratiosys
     \hline
-    Quantity            & Variation & Impact on estimate $[\pct]$ \\
+    Quantity                                        & Variation & Impact on estimate $[\pct]$ \\
     \hline
     \hline
-    Comb. Rel. Iso.     & 0.2       & $8.8 \pm 16.0$              \\
-    (default $< 0.5$)   & 0.4       & $-0.5\pm 3.7$               \\
-                        & 0.8       & $0.3 \pm 4.2$               \\
-                        & 1.0       & $4.8 \pm 4.5$               \\
+    Comb. Rel. Iso.                                 & 0.2       & $3.7 \pm 21.7$              \\
+    (default $< 0.5$)                               & 0.4       & $1.7 \pm 4.6$               \\
+    & 0.8       & $4.0 \pm 4.9$               \\
+    & 1.0       & $5.1 \pm 5.4$               \\
     \hline
-    $p_{\text{T, jet}}$     & 40        & $6.0 \pm 2.8$               \\
-    (default $> 50$)    & 60        & $-5.2 \pm 2.2$              \\
-                        & 70        & $-7.8 \pm 2.4$              \\
+    $p_{\text{T, jet}}$                             & 40        & $7.6 \pm 3.9$               \\
+    (default $> 50$)                                & 60        & $-5.8 \pm 3.1$              \\
+    & 70        & $-9.3 \pm 3.6$              \\
     \hline
-    Smoothing           & Off       & $17.0 \pm 8.3$              \\
+    $E_{\text{T}}^{\text{miss}}$                    & 40        & $0.6 \pm 0.5$               \\
+    (default $< 50$)                                & 60        & $-0.9 \pm 1.4$              \\
+    & 70        & $-2.1 \pm 2.1$              \\
+    \hline
+    $m_{\text{T}}(\mu, E_{\text{T}}^{\text{miss}})$ & 30        & $-3.8 \pm 2.4$              \\
+    (default $< 50$)                                & 50        & $8.6 \pm 4.3$               \\
+    & 60        & $14.2 \pm 5.9$              \\
     \hline
     % END RECEIVE ORGTBL tlratiosys
   \end{tabular}
@@ -172,19 +178,27 @@ Table~\ref{tab:tlratiosys} shows the results of the variations.
 
 \begin{comment}
 #+ORGTBL: SEND tlratiosys orgtbl-to-latex :splice t :no-escape t
-|---------------------+-----------+-----------------------------|
-| Quantity            | Variation | Impact on estimate $[\pct]$ |
-|---------------------+-----------+-----------------------------|
-|---------------------+-----------+-----------------------------|
-| Comb. Rel. Iso.     |       0.2 | $8.8 \pm 16.0$              |
-| (default $< 0.5$)   |       0.4 | $-0.5\pm 3.7$               |
-|                     |       0.8 | $0.3 \pm 4.2$               |
-|                     |       1.0 | $4.8 \pm 4.5$               |
-|---------------------+-----------+-----------------------------|
-| $p_{\text{T, jet}}$ |        40 | $6.0 \pm 2.8$               |
-| (default $> 50$)    |        60 | $-5.2 \pm 2.2$              |
-|                     |        70 | $-7.8 \pm 2.4$              |
-|---------------------+-----------+-----------------------------|
+|-------------------------------------------------+-----------+-----------------------------|
+| Quantity                                        | Variation | Impact on estimate $[\pct]$ |
+|-------------------------------------------------+-----------+-----------------------------|
+|-------------------------------------------------+-----------+-----------------------------|
+| Comb. Rel. Iso.                                 |       0.2 | $3.7 \pm 21.7$              |
+| (default $< 0.5$)                               |       0.4 | $1.7 \pm 4.6$               |
+|                                                 |       0.8 | $4.0 \pm 4.9$               |
+|                                                 |       1.0 | $5.1 \pm 5.4$               |
+|-------------------------------------------------+-----------+-----------------------------|
+| $p_{\text{T, jet}}$                             |        40 | $7.6 \pm 3.9$               |
+| (default $> 50$)                                |        60 | $-5.8 \pm 3.1$              |
+|                                                 |        70 | $-9.3 \pm 3.6$              |
+|-------------------------------------------------+-----------+-----------------------------|
+| $E_{\text{T}}^{\text{miss}}$                    |        40 | $0.6 \pm 0.5$               |
+| (default $< 50$)                                |        60 | $-0.9 \pm 1.4$              |
+|                                                 |        70 | $-2.1 \pm 2.1$              |
+|-------------------------------------------------+-----------+-----------------------------|
+| $m_{\text{T}}(\mu, E_{\text{T}}^{\text{miss}})$ |        30 | $-3.8 \pm 2.4$              |
+| (default $< 40$)                                 |        50 | $8.6 \pm 4.3$               |
+|                                                 |        60 | $14.2 \pm 5.9$              |
+|-------------------------------------------------+-----------+-----------------------------|
 \end{comment}
  
 Only the listed quantities are examined. All of the other ones are strictly motivated by trigger thresholds or analysis requirements. For example the transverse momenta thresholds for muons are restricted by the choice of trigger and the dimuon mass window is limited by low mass resonances and the $Z$-peak itself. The dominant contribution to the uncertainty comes from the corrections of the smoothing algorithm. {\huge TODO} As the impact of combined relative isolation is within the expected range, only the one from the transverse momentum of jets adds to this.
