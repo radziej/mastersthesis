@@ -23,9 +23,10 @@
    - 5% PDF, 5% Scale, 7% SUSY-QCD at NLO
 ** TODO update systematics
    - +other values+
-   - closure test
+   - +closure test+
    - trigg eff distribution
    - summary
 ** TODO add MET distribution for T/L ratio in datadbg
 ** TODO smoothing only in 2d T/L histogram
 ** TODO explain smoothing in F_R
+** TODO final distribution -> final state?
