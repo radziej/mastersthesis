@@ -1,7 +1,9 @@
 \chapter{Systematic Uncertainties}
 \label{cha:systematics}
 
-Before unveiling the final distribution, the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe a certain bias the methods of the analysis themselves can introduce to a measurement or prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects.
+Before unveiling the final distribution, the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe a certain bias the methods of the analysis themselves can introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects.
+
+For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedures on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest influence. 
 
 One thing to note is that the systematic uncertainty of the data-driven background prediction is evaluated separately. Therefore the global and object uncertainties only are only given for Monte Carlo samples which are \textit{not} replaced by the estimate.
 
@@ -15,7 +17,7 @@ The procedure discussed in section~\ref{sec:jer} describes the adjustment of the
 
 While the statistical error of the energy resolution in the Monte Carlo samples $\sigma_{\text{MC}}$ is negligible, the fitting procedure is subject to systematic uncertainties such as the range it considers, as well. To account for that, the value of $\sigma_{\text{MC}}$ has been varied separately from the core resolution scaling factors by $\pm 5\,\pct$. The effect has been found to be below $0.1\,\pct$.
 
-The overall effect for an upward deviation then amounts to $-0.1\,\pct$ while for the downward one it is $+0.6\,\pct$.
+For the background Monte Carlos, the overall effect for an upward deviation then amounts to $-0.1\,\pct$ while for the downward one it is $+0.6\,\pct$. For the signal prediction, it varies between $1.2\,\pct$ and $3.4\,\pct$.
 
 
 \subsection{Jet Energy Scale}
@@ -23,7 +25,7 @@ The overall effect for an upward deviation then amounts to $-0.1\,\pct$ while fo
 
 For the jet energy scale (\textbf{JES}), there are a variety of factors which influence the measurement. A collection of all relevant values is being provided by the JetMET working group on their dedicated website~\cite{jes}. It encompasses the following effects: Absolute scale uncertainty, high transverse momentum extrapolation, single pion influence, jet flavour extrapolation, time dependencies, pileup as well as a statistical uncertainty, resolution dependency and central fit dependency which are given relative to the $p_{\text{T}}$ of jets. The quadrature of all contributions yields the total uncertainty. From the recommended set of uncertainty sources, \verb+Summer13_V2_DATA_AK5PFchs+ is used in this analysis. 
 
-Shifting the energies of all jets up and down affects the number of events by $+3.6\,\pct$ and $-2.9\,\pct$, respectively. Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$.
+Shifting the energies of all jets up and down affects the number of events by $+3.6\,\pct$ and $-2.9\,\pct$, respectively. Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$. The signal is affected by up to $7.8\,\pct$.
 
 
 \subsection{Muon Momentum Resolution \& Scale}
@@ -33,7 +35,7 @@ The systematic uncertainties for the muon momentum resolution and scale have bee
 
 Applying the resolution uncertainties is performed similarly to the smearing of the jet energy scale in case of no matched gen-jets. Random numbers following a Gaussian distribution are generated, with the width being given by the listed percentages. The energies of muons on the other hand, are shifted by the respective amount to estimate the impact of the muon momentum scale. Once again, all effects are being propagated to $E_{\text{T}}^{\text{miss}}$.
 
-For the resolution, the result is a $0.2\,\pct$ difference. Varying the scale yields a $+0.2\,\pct$ and $-0.2\,\pct$ difference for the up- and downward direction, respectively.
+For the resolution, the result is a $0.2\,\pct$ difference. Varying the scale yields a $+0.2\,\pct$ and $-0.2\,\pct$ difference for the up- and downward direction, respectively. In case of the signal Monte Carlo, the impact for the resolution goes up to $3.0\,\pct$, while it only goes up to $1.0\,\pct$ for the scale.
 
 
 \subsection{Muon  ID Efficiency}
@@ -41,7 +43,7 @@ For the resolution, the result is a $0.2\,\pct$ difference. Varying the scale yi
 
 Possible discrepancies between data and simulation when applying the tight muon ID have been researched by the Muon POG. The scale factors have been determined on the 2012 re-reconstructed datasets, which are also used in this analysis. They are below $1\,\pct$ throughout the entire $\eta$-range for muons beyond the $p_{\text{T}} > 20\,\text{GeV}$ threshold~\cite{muonideff}. 
 
-To compensate for not scaling the number of events accordingly, a conservative $1\,\pct$ systematic uncertainty is assumed here.
+To compensate for not scaling the number of events accordingly, a conservative $1\,\pct$ systematic uncertainty for both the background as well as the signal is assumed here.
 
 
 \subsection{B-Tagging}
@@ -51,7 +53,7 @@ To estimate the systematic uncertainty for the $b$-tagging algorithm described i
 
 Shifting the efficiency maps only yields second order corrections. As their contribution also depends on (pseudo-)randomly generated numbers, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, this relation holds true. For these reasons, their impact is neglected.
 
-The effect on the final distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one.
+The effect on the final distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one. Its impact on the signal lies between $0.2\,\pct$ and $1.4\,\pct$. 
 
 
 
@@ -70,6 +72,8 @@ The offline estimate of the luminosity uses the information provided by the pixe
 When determining the cross section of a process, there are two main contributions to the uncertainty of the scale. The factorization and renormalization scale. By convention, these are varied up and down by a factor of two to estimate their individual uncertainties. They are also assumed to be fully correlated.
 
 The scale uncertainties have been provided alongside their cross sections for a sizeable portion of Monte Carlo samples. For the remainder, a conservative $50\,\pct$ and $5\,\pct$ uncertainty are assumed for leading order and higher order cross sections, respectively.
+
+For all signal Monte Carlos, the estimates given by the authors of the cross section calculation tool are used. They amount to $5\,\pct$ from the scale uncertainty and an additional $7\,\pct$ from supersymmetric QCD processes~\cite{susyxstool}.
 
 
 \subsection{Parton Distribution Functions}
@@ -106,6 +110,8 @@ For the purpose of reweighting, there are numerous ``members'' stored in single 
 
 Towards higher masses ($\geq 1000\,\text{GeV}$) the distribution lacks the necessary number of entries to yield statistically significant results. Taking this into account, the overall systematic uncertainty introduced by PDFs is estimated to be a flat $\pm 6\,\pct$.
 
+For the signal Monte Carlo, the authors of the cross section calculation tool estimate a $5\,\pct$ uncertainty~\cite{susyxstool}, which is being used in this analysis.
+
 
 \subsection{Pileup}
 \label{sec:pusys}
@@ -118,7 +124,7 @@ Additional uncertainties arise from possible shifts in the reweighting and pileu
 \subsection{Trigger Efficiency}
 \label{sec:trig-eff}
 
-The performance of the trigger may vary between data and simulation. To account for this, trigger efficiency scale factors are determined.  for each analysis individually. This is necessary
+The performance of the trigger may vary between data and simulation. To account for this, trigger efficiency scale factors, which are the ratio between the efficiencies in Monte Carlo and data, are determined. Figure~ shows the 
 
 Due to the comparatively low impact, there is no correction implemented for this effect. Keeping the transverse momentum threshold of $15\,\text{GeV}$ for the sub-leading muon in mind, a conservative $2\,\pct$ systematic uncertainty is assumed as compensation. 
 
@@ -248,23 +254,23 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
     Source of sys. uncertainty      & Impact $[\pct]$ \\
     \hline
     \hline
-    Jet Energy Resolution           & 0.8             \\
-    Jet Energy Scale                & 3.4             \\
-    Muon Momentum Resolution          & 0.2             \\
-    Muon Momentum Scale               & 0.2             \\
+    Jet Energy Resolution           & 0.6             \\
+    Jet Energy Scale                & 3.6             \\
+    Muon Momentum Resolution        & 0.2             \\
+    Muon Momentum Scale             & 0.2             \\
     Muon ID Efficiency              & 1.0             \\
-    B-Tagging                       & 0.7             \\
+    B-Tagging                       & 0.6             \\
     \hline
     Luminosity                      & 2.6             \\
     Parton Distribution Functions   & 6.0             \\
     Cross sections                  & $\leq 50 \star$ \\
-    Pileup                          & 0.4             \\
-    Trigger Efficiency              & 2.0             \\
+    Pileup                          & 1.5             \\
+    Trigger Efficiency              & 5.0             \\
     \hline
-    $\sum$                          & 7.8             \\
+    $\sum$                          & 9.2             \\
     \hline
     \hline
-    Data-driven Background Estimate & 21.0            \\
+    Data-driven Background Estimate & 47.0            \\
     \hline
     % END RECEIVE ORGTBL sys-uncertainties
   \end{tabular}
@@ -278,23 +284,23 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
 | Source of sys. uncertainty      | Impact $[\pct]$ |
 |---------------------------------+-----------------|
 |---------------------------------+-----------------|
-| Jet Energy Resolution           |             0.8 |
-| Jet Energy Scale                |             3.4 |
-| Muon Momentum Resolution          |             0.2 |
-| Muon Momentum Scale               |             0.2 |
+| Jet Energy Resolution           |             0.6 |
+| Jet Energy Scale                |             3.6 |
+| Muon Momentum Resolution        |             0.2 |
+| Muon Momentum Scale             |             0.2 |
 | Muon ID Efficiency              |             1.0 |
-| B-Tagging                       |             0.7 |
+| B-Tagging                       |             0.6 |
 |---------------------------------+-----------------|
 | Luminosity                      |             2.6 |
 | Parton Distribution Functions   |             6.0 |
 | Cross sections                  | $\leq 50 \star$ |
-| Pileup                          |             0.4 |
-| Trigger Efficiency              |             2.0 |
+| Pileup                          |             1.5 |
+| Trigger Efficiency              |             5.0 |
 |---------------------------------+-----------------|
-| $\sum$                          |             7.8 |
+| $\sum$                          |             9.2 |
 |---------------------------------+-----------------|
 |---------------------------------+-----------------|
-| Data-driven Background Estimate |            21.0 |
+| Data-driven Background Estimate |            47.0 |
 |---------------------------------+-----------------|
 \end{comment}
 
