@@ -118,17 +118,22 @@ For the signal Monte Carlo, the authors of the cross section calculation tool es
 
 For the pileup reweighting procedure, there are mainly two systematic uncertainties that contribute to determining the number of interactions~\cite{pileupsys}. The measurement of the bunch luminosity and the total inelastic cross section. The latter has been determined through the comparing the number of vertices in $Z \rightarrow \mu\mu$ events between simulation and measurement. A $3.9\,\pct$ uncertainty is given on this procedure. The $2.6\,\pct$ error on the luminosity has already been discussed in section~\ref{sec:lumisys}.
 
-Additional uncertainties arise from possible shifts in the reweighting and pileup modelling processes, as well as potential beam size variations over time. They are expected to be small, but are taken into account by shifting the number of interactions by an overall amount of $\pm 5\,\pct$. The impact of this shift amounts to $-1.1\,\pct$ and $+1.5\pct$.
+Additional uncertainties arise from possible shifts in the reweighting and pileup modelling processes, as well as potential beam size variations over time. They are expected to be small, but are taken into account by shifting the number of interactions by an overall amount of $\pm 5\,\pct$. The impact of this shift amounts to $-1.1\,\pct$ and $+1.5\pct$. For the signal Monte Carlos, the effect is between $0.3\,\pct$ and $0.8\,\pct$.
 
 
 \subsection{Trigger Efficiency}
 \label{sec:trig-eff}
 
-The performance of the trigger may vary between data and simulation. To account for this, trigger efficiency scale factors, which are the ratio between the efficiencies in Monte Carlo and data, are determined. Figure~ shows the 
+The performance of the trigger may vary between data and simulation. To account for this, trigger efficiency scale factors, which are the ratio between the efficiencies in Monte Carlo and data, are determined. Figure~\ref{fig:triggereff} shows a comparison of the turn on curves in 2012 jet data and the $t\bar{t}$ Monte Carlo.
 
-Due to the comparatively low impact, there is no correction implemented for this effect. Keeping the transverse momentum threshold of $15\,\text{GeV}$ for the sub-leading muon in mind, a conservative $2\,\pct$ systematic uncertainty is assumed as compensation. 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{plots/pdfratios.pdf}
+  \caption{Trigger efficiencies for 2012 jet data and $t\bar{t}$ Monte Carlo. The resulting scale factor is used to account for the discrepancy.}
+  \label{fig:triggereff}
+\end{figure}
 
-
+Due to the nature of this analysis, implementing scale factors for muons depending on their transverse momentum can lead to moderately complex individual event weights. To avoid this issue, keeping the transverse momentum threshold of $15\,\text{GeV}$ for the sub-leading muon in mind, a conservative $5\,\pct$ systematic uncertainty is assumed as compensation.
 
 \section{Fake Rate Uncertainties}
 \label{sec:tlsys}
@@ -213,7 +218,7 @@ Only the listed quantities are examined. All of the other ones are motivated by 
 \subsection{Closure Test}
 \label{sec:closure-test}
 
-To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction which has been observed (Fig.~\ref{fig:tlratios}), a ``closure test'' is being used. It provides a proof of concept for the data-driven background method, as well as being an indicator for the accuracy of the prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratio measured in data and the QCD counterpart it is meant to be similar to, yields the aforementioned quality estimate for the Monte Carlo prediction. Figure~ shows both the proof of concept on the left, as well as the comparison on the right.
+To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction which has been observed (Fig.~\ref{fig:tlratios}), a ``closure test'' is being used. It provides a proof of concept for the data-driven background method, as well as being an indicator for the accuracy of the prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratio measured in data and the QCD counterpart it is meant to be similar to, yields the aforementioned quality estimate for the Monte Carlo prediction. Figure~\ref{fig:closuretest} shows both the proof of concept on the left, as well as the comparison on the right.
 
 \begin{figure}
   \centering
@@ -244,7 +249,7 @@ Taking the second order effects from the Monte Carlo subtraction and the luminos
 \section{Summary}
 \label{sec:summary}
 
-In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overall number of events are summarized. From the individual impacts of the up- and downward variations, the larger value has been taken for symmetrization to remain conservative. Considering the statistical uncertainties that go along with each method to determine the systematic ones, this is a valid approach.
+In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overall number of events are summarized. From the individual impacts of the up- and downward variations, the larger value has been taken for symmetrization to remain conservative.
 
 \begin{table}[!htb]
   \centering
