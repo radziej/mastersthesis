@@ -1,4 +1,4 @@
-* *Master's Thesis TODO List*d
+* *Master's Thesis TODO List*
 ** DONE check tt+V statement not to include tt+gamma
 ** DONE check smearing to be 1/pt
 ** DONE stat error from MC
@@ -19,15 +19,15 @@
 ** DONE change 2012A to doublemu
 ** DONE add signal uncertainties
    - 5% PDF, 5% Scale, 7% SUSY-QCD at NLO
-** TODO generate d_0 < 0.08 distribution
-** TODO show signal distributions
-** TODO update systematics
+** DONE ask daniel about how trigg eff has been determined
+** DONE update systematics
    - +other values+
    - +closure test+
-   - trigg eff distribution
-   - summary
+   - +summary+
+** TODO generate d_0 < 0.08 distribution
+** TODO trigg eff distribution
+** TODO show signal distributions
 ** TODO add MET distribution for T/L ratio in datadbg
 ** TODO smoothing only in 2d T/L histogram
 ** TODO explain smoothing in F_R
 ** TODO final distribution -> final state?
-** TODO ask daniel about how trigg eff has been determined
