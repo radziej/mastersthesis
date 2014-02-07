@@ -56,7 +56,7 @@ One would naively expect the sum of both cases to be the overall amount of fakes
 
 Estimating the background starts off by measuring the tight-to-loose ratio $F_R = \frac{T}{T+L}$. For that, the definition and selection of tight and loose muons is the first step. This is done after the event cleaning (Sec.~\ref{sec:evclean}), but before the basic muon selection (Sec.~\ref{sec:basicmuon}). Therefore events with any number of muons, specifically ones with less than two muons that pass the ID, can be included. For the \textit{tight} subset, almost all of the muon quality criteria (Sec.~\ref{sec:muonqualy}) are applied. The only exceptions are the distance to the next jet and the distance between two muons. These requirements are only meant for selecting the two muons candidates of the analysis. They may otherwise introduce a bias it towards the specific final state, thus limiting the prediction. As already stated before, \textit{loose} muons are defined by the same rules, but only have to abide $I_{\text{rel}} < 0.5$ and $d_{xy} < 2\,\text{mm}$.
 
-Demanding exactly one loose muon (Fig.~\ref{fig:ntlnloose}) yields an independent sample. Since the prediction of fakes is strongly correlated to the amount of QCD multijet events, various kinematic and topologic requirements can be applied to isolate these. Requiring two jets (Fig.~\ref{fig:ntlnjets}) ensures a minimum amount of hadronic activity per event. With each jet's transverse momentum exceeding $50\,\text{GeV}$ (Fig.~\ref{fig:ntljetpt}), the Drell-Yan background can be suppressed. After setting the minimum transverse momentum of the first muon to $20\,\text{GeV}$ and all remaining ones to at least $10\,\text{GeV}$(Fig.~\ref{fig:ntlmupt}), one can eliminate the $Z$-peak for the same purpose. Thus the invariant mass of two muons\footnote{The two muons encompass the one loose muon as well as one muon which passes the ID, but does not qualify as a loose muon.} closest to the $Z$-mass, is restricted to a window from $10\,\text{GeV}$ to $80\,\text{GeV}$ (Fig.~\ref{fig:ntlzmass}). Using the transverse mass hypothesis for a leptonically decaying $W$ boson, it is possible to reduce backgrounds such as top pair production or $W +$ jets. Requiring the value of the transverse mass of the loose muon and the missing transverse energy to be less than $40\,\text{GeV}$ (Fig.~\ref{fig:ntlmt}) decreases the contribution of said backgrounds, while passing QCD multijet events. Also, motivating a QCD-like back-to-back topology can be achieved through limiting the azimuth angle between the leading jet and loose muon to $\Delta \phi > 1$ (Fig.~\ref{fig:ntljetdphi}).
+Demanding exactly one loose muon (Fig.~\ref{fig:ntlnloose}) yields an independent sample. Since the prediction of fakes is strongly correlated to the amount of QCD multijet events, various kinematic and topologic requirements can be applied to isolate these. Requiring two jets (Fig.~\ref{fig:ntlnjets}) ensures a minimum amount of hadronic activity per event. With each jet's transverse momentum exceeding $50\,\text{GeV}$ (Fig.~\ref{fig:ntljetpt}), the Drell-Yan background is being suppressed. After setting the minimum transverse momentum of the first muon to $20\,\text{GeV}$ and all remaining ones to at least $10\,\text{GeV}$(Fig.~\ref{fig:ntlmupt}), the $Z$-peak can be eliminated for the same purpose. Thus the invariant mass of two muons\footnote{The two muons encompass the one loose muon as well as one muon which passes the ID, but does not qualify as a loose muon.} closest to the $Z$-mass, is restricted to a window from $10\,\text{GeV}$ to $80\,\text{GeV}$ (Fig.~\ref{fig:ntlzmass}). By setting an upper bound of $40\,\text{GeV}$ for the missing transverse energy (Fig.~\ref{fig:ntlmet}), the top-quark and $W$-Boson backgrounds are being discriminated against, as QCD processes generally do not contain a lot of $E_{T}^{miss}$. By using the transverse mass hypothesis for a leptonically decaying $W$ boson, it is also possible to reduce the same backgrounds. Requiring the value of the transverse mass of the loose muon and the missing transverse energy to be less than $40\,\text{GeV}$ (Fig.~\ref{fig:ntlmt}) decreases the contribution of said backgrounds, while passing QCD multijet events. Also, motivating a QCD-like back-to-back topology can be achieved through limiting the azimuth angle between the leading jet and loose muon to $\Delta \phi > 1$ (Fig.~\ref{fig:ntljetdphi}).
 
 In general, one can observe reasonable agreement between data and simulation in the $n - 1$ distributions. In particular in regards to the electroweak processes. However in QCD dominated histograms, there is a noticeable lack of QCD contributions towards higher energies. One major reason are the leading order cross sections used for these samples. Additionally only a fraction of the enormous amount of hadronic activity can be simulated adequately. The large event weights given in table~\ref{tab:mcsamples}, are a testament to that. As a result, the statistics for QCD multijet events are also lacking.
 
@@ -99,14 +99,20 @@ In general, one can observe reasonable agreement between data and simulation in 
   \end{subfigure}
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/nTL_mt.pdf}
-    \caption{Transverse mass of loose $\mu$ and $E_{\text{T}}^{\text{miss}}$ \label{fig:ntlmt}}
+    \includegraphics[width=\textwidth]{plots/nTL_met.pdf}
+    \caption{Transverse missing energy $E_{\text{T}}^{\text{miss}}$ \label{fig:ntlmet}}
   \end{subfigure}
 \end{figure}
 
 \begin{figure}[htbp!]
   \ContinuedFloat
   \centering
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/nTL_mt.pdf}
+    \caption{Transverse mass of loose $\mu$ and $E_{\text{T}}^{\text{miss}}$ \label{fig:ntlmt}}
+  \end{subfigure}
+
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/nTL_jetdphi.pdf}
