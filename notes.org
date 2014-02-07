@@ -24,10 +24,11 @@
    - +other values+
    - +closure test+
    - +summary+
-** TODO generate d_0 < 0.08 distribution
-** TODO trigg eff distribution
+** DONE generate d_0 < 0.08 distribution
+** DONE add MET distribution for T/L ratio in datadbg
+** TODO trigg efficiency distribution in syst
 ** TODO show signal distributions
-** TODO add MET distribution for T/L ratio in datadbg
 ** TODO smoothing only in 2d T/L histogram
 ** TODO explain smoothing in F_R
 ** TODO final distribution -> final state?
+** TODO jjmm_m plot to show 6 bins -> maybe show a signal which is located in another bin to show multibin efficiency gain
