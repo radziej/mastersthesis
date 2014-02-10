@@ -213,7 +213,7 @@ To derive a single value $d$ for discrimination, all variables are combined into
     \caption{\label{fig:b_proj}}
   \end{subfigure}
   \caption{Highest $b$-tag discriminator of an event \ref{fig:1st_btag} and $p_{\text{T}}$-projection of the Monte Carlo $b$-tagging efficiency \ref{fig:b_proj}.}
-  \label{fig:dyscaling}
+  \label{fig:btag}
 \end{figure}
 
 The medium working point for the CSV (\textbf{CSVM}) has been chosen for this analysis. Its suggested dicriminator value is $d > 0.679$~\cite{btagworkp}. To judge its performance, one can consult the distribution of the highest $b$-tag discriminator in every event shown in figure~\ref{fig:1st_btag}. One can see the majority of the top pair background being cut off by the chosen threshold. As expected, the signal simulation has its lowest contribution in this region as well. It is quite apparent that there are inefficiencies of the algorithm, especially towards the lower discriminator values. They are being accounted for by adjusting the $b$-tag status of a fraction of all jets\footnote{Once again $b$, $c$ and light jets are treated separately.}~\cite{btageff}. Depending on whether one needs to upgrade a non-tagged or downgrade a tagged object, a different formula for determining said fraction $f$ has to be used.
@@ -256,15 +256,16 @@ At this stage of the analysis, there is still \textit{at least} one order of mag
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/CR6_m_mumu_nofakes.pdf}
-    \caption{\label{fig:CRBVC_m_mumu_nofakes}}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.495\textwidth}
-    \centering
     \includegraphics[width=\textwidth]{plots/CR6_m_smuon_nofakes.pdf}
     \caption{\label{fig:CRBVC_m_smuon_nofakes}}
   \end{subfigure}
-  \caption{Dimuon mass \ref{fig:CRBVC_m_mumu_nofakes} and mass of the smuon \ref{fig:CRBVC_m_smuon_nofakes} from the same sign charge control region. The smuon mass is the invariant mass of both jets and the two muons. Both distributions will be expanded upon in the following chapter.}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/CR6_m_gaugino_nofakes.pdf}
+    \caption{\label{fig:CRBVC_m_gaugino_nofakes}}
+  \end{subfigure}
+
+  \caption{Mass of the gaugino \ref{fig:CRBVC_m_gaugino_nofakes} and mass of the smuon \ref{fig:CRBVC_m_smuon_nofakes} from the same sign charge control region. The gaugino mass is the invariant mass of both jets and the sub-leading muon, while the smuon mass includes the leading muon as well. Both distributions will be expanded upon in the following chapter.}
   \label{fig:ssccr_nofakes}
 \end{figure}
 

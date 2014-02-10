@@ -22,48 +22,81 @@ Having accounted for the systematic uncertainties, one can examine the final dis
   \label{fig:final-dist}
 \end{figure}
 
-Regarding the entire mass region of the final distribution as one bin and summing up the number of events yields table~\ref{tab:nev-msmuon}.
+\noindent Table~\ref{tab:nev-msmuon} resolves each group of processes into it's individual background components. The importance of the data-driven background estimate is shown by its large contribution. Combined with the $WZ \rightarrow 3l \nu$ process, it adds up to more than $80\,\pct$ of the entire background prediction.
 
 \begin{table}[!htb]
   \centering
   \begin{tabular}{|l|c|c|c|}
     \hline
     \multirow{2}{*}{Backgrounds}    & \multirow{2}{*}{$N_{\text{Events}}$} & \multicolumn{2}{|c|}{Uncertainties} \\ \cline{3-4}
-                                    &                                      & stat. & sys.                        \\ \hline \hline
-    Fake estimate                   & 54.563                               & 3.170 & 10.913                      \\ \hline
-    $W\gamma \rightarrow l\nu 2\mu$ & 1.685                                & 0.460 & 0.855                       \\ 
-    $WW \rightarrow 2l 2\nu$        & 0.000                                & 0.000 & 0.000                       \\ 
-    $WZ \rightarrow 2l 2q$          & 0.015                                & 0.014 & 0.002                       \\ 
-    $WZ \rightarrow 3l \nu$         & 18.465                               & 0.446 & 1.927                       \\ 
-    $WZ \rightarrow 2q l \nu$       & 0.029                                & 0.039 & 0.003                       \\ 
-    $ZZ \rightarrow 2l 2\nu$        & 0.000                                & 0.000 & 0.000                       \\ 
-    $ZZ \rightarrow 2l 2q$          & 0.066                                & 0.029 & 0.007                       \\ 
-    $ZZ \rightarrow 4l$             & 2.972                                & 0.047 & 0.294                       \\ \hline
-    $t\bar{t} + W$                  & 1.001                                & 0.153 & 0.005                       \\ 
-    $t\bar{t} + WW$                 & 0.016                                & 0.002 & 0.001                       \\ 
-    $t\bar{t} + Z$                  & 0.294                                & 0.075 & 0.029                       \\ \hline
-    $WWW$                           & 0.837                                & 0.078 & 0.080                       \\ 
-    $WWZ$                           & 0.197                                & 0.032 & 0.020                       \\ 
-    $WZZ$                           & 0.093                                & 0.013 & 0.009                       \\ 
-    $ZZZ$                           & 0.006                                & 0.002 & 0.001                       \\ \hline
-    $W^- W^-$                       & 1.391                                & 0.159 & 0.706                       \\ 
-    $W^+ W^+$                       & 4.046                                & 0.444 & 2.052                       \\ 
-    $WW$ Double-parton              & 0.295                                & 0.064 & 0.150                       \\ \hline
-    $\sum$                          & 85.972                               & 4.002 & 17.054                      \\ \hline
-    Data                            & 101.000                              & -     & -                           \\ \hline
+                                    &                                      & stat.   & sys.                      \\ \hline \hline
+    Fake estimate                   & 33.5                                 & 2.42    & 16                        \\ \hline
+    $W\gamma \rightarrow l\nu 2\mu$ & 1.35                                 & 0.453   & 0.687                     \\
+    $WZ \rightarrow 3l \nu$         & 17.1                                 & 0.46    & 1.87                      \\
+    $WZ \rightarrow 2q l \nu$       & 0.0259                               & 0.0259  & 0.00284                   \\
+    $ZZ \rightarrow 2l 2q$          & 0.0435                               & 0.0298  & 0.00441                   \\
+    $ZZ \rightarrow 4l$             & 2.55                                 & 0.0464  & 0.27                      \\ \hline
+    $t\bar{t} + W$                  & 1.0                                  & 0.157   & 0.303                     \\
+    $t\bar{t} + WW$                 & 0.0163                               & 0.0019  & 00083                     \\
+    $t\bar{t} + Z$                  & 0.258                                & 0.0704  & 0.0383                    \\ \hline
+    $WWW$                           & 0.842                                & 0.0807  & 0.0852                    \\
+    $WWZ$                           & 0.186                                & 0.0336  & 0.02                      \\
+    $WZZ$                           & 0.186                                & 0.013   & 0.00932                   \\
+    $ZZZ$                           & 0.0554                               & 0.00178 & 0.000531                  \\ \hline
+    $W^- W^-$                       & 1.38                                 & 0.167   & 0.7                       \\
+    $W^+ W^+$                       & 3.97                                 & 0.476   & 2.02                      \\
+    $WW$ Double-parton              & 0.242                                & 0.067   & 0.123                     \\ \hline
+    $\sum$                          & 62.5                                 & 2.57    & 22.1                      \\ \hline
+    Data                            & 63                                   & -       & -                         \\ \hline
   \end{tabular}
-  \caption{Detailed number of events for each background in the distribution of the smuon mass.}
+  \caption{Detailed number of events for each background in the distributions at the final stage of the analysis.}
   \label{tab:nev-msmuon}
 \end{table}
 
-The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits said statistical uncertainties as background samples are subtracted to determine the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes} yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and simulation. The very slight surplus of data is well within the uncertainties.
+\noindent Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. To improve the results, a multi-bin approach is being used. For that purpose, the two dimensional gaugino-smuon mass distribution is divided into six regions, which is shown in figure~\ref{fig:m_smu_chi}.
 
-Resolving the event count by each background's contribution also reveals the importance of the data-driven background estimate. Combined with the $WZ \rightarrow 3l\nu$ process, they add up to roughly $85\,\pct$ of the entire background prediction.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{plots/m_smu_chi.pdf}
+  \caption{Two-dimensional smuon and gaugino mass distribution. All backgrounds are summed up and are shown as coloured bins, while the data points are shown individually. The six regions are regarded as separate bins to improve the results of this analysis.}
+  \label{fig:m_smu_chi}
+\end{figure}
+
+\noindent Most entries are centered around one diagonal line. In comparison, the aforementioned signal point has the majority of its entries at smuon masses above $1200\,\text{GeV}$. The contents of each of the six regions, are summarized in table~\ref{tab:m_smu_chi_summary}.
+
+\begin{table}[!htbp]
+  \centering
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    Process group & SR 1              & SR 2              & SR 3              \\ \hline
+    Fakes         & 16.0 $\pm$ 1.63   & 10.7 $\pm$ 1.3    & 5.00 $\pm$ 0.98   \\ 
+    $tt+V$        & 0.47 $\pm$ 0.10   & 0.49 $\pm$ 0.11   & 0.187 $\pm$ 0.068 \\ 
+    $VV$          & 8.46 $\pm$ 0.40   & 7.10 $\pm$ 0.40   & 4.01 $\pm$ 0.29   \\
+    $VVV$         & 0.374 $\pm$ 0.051 & 0.392 $\pm$ 0.052 & 0.209 $\pm$ 0.040 \\ 
+    Rare          & 1.04 $\pm$ 0.21   & 1.33 $\pm$ 0.24   & 1.65 $\pm$ 0.28   \\ \hline
+    $\sum$        & 26.4 $\pm$ 9.6    & 20.0 $\pm$ 7.1      & 11.1 $\pm$ 4.0    \\ \hline
+    Data          & 19                & 25                & 13                \\ \hline \hline
+    Process group & SR 4                & SR 5              & SR 6              \\ \hline
+    Fakes         & 0.23 $\pm$ 0.16     & 1.15 $\pm$ 0.69   & 0.33 $\pm$ 0.19   \\
+    $tt+V$        & $<0.001 \pm <0.001$ & 0.032$\pm$ 0.027  & 0.094 $\pm$ 0.054 \\
+    $VV$          & 0.106 $\pm$ 0.032   & 1.07 $\pm$ 0.11   & 0.277 $\pm$ 0.054 \\
+    $VVV$         & 0.0062 $\pm$ 0.0047 & 0.090 $\pm$ 0.026 & 0.028 $\pm$ 0.014 \\
+    Rare          & 0.102 $\pm$ 0.072   & 0.65 $\pm$ 0.17   & 0.80 $\pm$ 0.21   \\ \hline
+    $\sum$        & 0.45 $\pm$ 0.25     & 3.0 $\pm$ 1.3     & 1.5 $\pm$ 0.7     \\ \hline
+    Data          & 2                   & 1                 & 3                 \\ \hline
+  \end{tabular}
+  \caption{Summary of the six regions displayed in figure~\ref{fig:m_smu_chi}. They are numbered starting on the left and progressing upwards from the lowest bin.}
+  \label{tab:m_smu_chi_summary}
+\end{table}
+
+
+The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits said statistical uncertainties as background samples are subtracted to determine the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes} yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and simulation. All variations are well within the given uncertainties.
+
 
 \section{Calculation of Limits}
 \label{sec:calc-of-limits}
 
-As the excess of data is too slight to be considered a discovery, one can translate the result into limits onto two things. The number of events itself and RPV SUSY model parameters. To calculate these, the method commonly used amongst the CMS experiment will be utilized. Details are given in the upcoming section.
+As any excess of data is too slight to be considered a discovery, one can translate the result into limits onto two quantities. The number of events itself and RPV SUSY model parameters. To calculate these, the method commonly used amongst the CMS experiment will be utilized. Details are given in the upcoming section.
 
 
 \subsection{CLs Method}
@@ -142,16 +175,17 @@ The actual calculation of limits is performed by the \textsc{HiggsCombine} tool~
 
 While the result of the calculation is a limit on the signal cross section $\sigma$, it can be translated into a limit onto the model parameter $\lambda^\prime_{211}$. As the former scales quadratically with the latter, the following formula has to be used.
 
-
 \begin{equation}
   \label{eq:xs-lambda-scale}
-  \sigma \propto \lambda^\prime_{211} \Rightarrow \lambda^\prime_{211} (95\,\pct\:b CL) = \lambda^\prime_{211} \cdot \sqrt{ \frac{\sigma (95\,\pct\: CL)}{\sigma} } 
+  \sigma \propto \lambda^\prime_{211} \Rightarrow \lambda^\prime_{211} (95\,\pct\: CL) = \lambda^\prime_{211} \cdot \sqrt{ \frac{\sigma (95\,\pct\: CL)}{\sigma} } 
 \end{equation}
+
 
 
 
 \section{Discussion and Thoughts}
 \label{sec:discussion}
+
 
 
 \section{Candidate Events}

@@ -125,7 +125,7 @@ In general, one can observe reasonable agreement between data and simulation in 
 
 Counting the number of tight and loose muons in the resulting enriched sample, can be used to predict the hadronic activity leading to possible misidentifications. From the two dimensional tight and loose muon histograms containing the measured data, one has to statistically subtract all background samples. The only exception are the QCD ones, as those are the events this method attempts to predict. The results are shown in figure~\ref{fig:tlratios}.
  
-\begin{figure}
+\begin{figure}[!htbp]
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
@@ -151,7 +151,7 @@ For the actual prediction, $F_R$ is used as a function of $p_{\text{T}}$ and $\e
 
 With the tight-to-loose ratio $F_R$ determined, the analysis can be rerun to determine the background estimate. As mentioned in section~\ref{sec:fakerate}, the selection process of the two muons (Sec.~\ref{sec:muonqualy}) has to be altered to be working on an orthogonal sample. Instead of demanding the two tight leptons, one or both of them are replace by loose muons, which are not tight ones. In combination with the respective event weights, this yields single- and double-fake estimates. Figure~\ref{fig:fakeestimates} shows the distributions for both estimates.
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
@@ -174,16 +174,16 @@ One can see that the data exceeds the background. This supports the hypothesis, 
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/CR6_m_mumu.pdf}
-    \caption{\label{fig:CRBVC_m_mummu}}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.495\textwidth}
-    \centering
     \includegraphics[width=\textwidth]{plots/CR6_m_smuon.pdf}
     \caption{\label{fig:CRBVC_m_smuon}}
   \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/CR6_m_gaugino.pdf}
+    \caption{\label{fig:CRBVC_m_gaugino}}
+  \end{subfigure}
 
-  \caption{Dimuon mass and smuon mass of the control region BVC, including the data-driven background estimate.}
+  \caption{Smuon mass and gaugino mass of the control region BVC, including the data-driven background estimate.}
   \label{fig:CRBVC}
 \end{figure}
 
