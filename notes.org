@@ -29,11 +29,12 @@
 ** DONE jjmm_m plot to show 6 bins -> maybe show a signal which is located in another bin to show multibin efficiency gain
    also add summary table for jjmm_m
 ** DONE trigg efficiency distribution in syst
-** TODO show signal distributions
+** DONE show signal distributions
 ** TODO smoothing only in 2d T/L histogram
 ** TODO explain smoothing in F_R
 ** TODO final distribution -> final state?
 ** TODO fix ratio plots having small x axis title
+** TODO maybe add some more signal distributions
 ** TODO outlook
    - adjust cuts to point in phase space
    - simplified models
