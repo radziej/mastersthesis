@@ -1,0 +1,16 @@
+# TeX files #
+#############
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.toc
+document.pdf
+
+# Emacs files #
+##############
+*.org
+auto/
