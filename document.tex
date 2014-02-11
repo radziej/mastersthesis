@@ -50,7 +50,7 @@
 
 \titleformat{\chapter}[display]      % titlesec
 {\bf\Huge}               % {format}
-{Chapter \thechapter }   % {label}
+{\chapapp~\thechapter }   % {label}
 {1pc}                    % {separation}
 {\thispagestyle{empty}}  % {before}
 
@@ -211,11 +211,11 @@
 % appendices
 \appendix
 %rename the chapter title for appendices
-\titleformat{\chapter}[display]      % titlesec
-            {\bf\Huge}               % {format}
-            {Appendix \thechapter }   % {label}
-            {1pc}                    % {separation}
-            {\thispagestyle{empty}}  % {before}
+% \titleformat{\chapter}[display]      % titlesec
+%             {\bf\Huge}               % {format}
+%             {Appendix \thechapter }   % {label}
+%             {1pc}                    % {separation}
+%             {\thispagestyle{empty}}  % {before}
 \input{mcsampleapp}
 \input{n-1app}
 
