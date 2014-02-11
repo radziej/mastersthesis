@@ -289,7 +289,39 @@ In order to increase the accuracy of the \textsc{CalcHep} simulation, $k$-factor
   \label{fig:susy-2dxs}
 \end{figure}
 
-For comparison, three points of the cMSSM parameter phase space will be shown in most of the upcoming distributions. The $m_0 = 300\,\text{GeV}$, $m_{1/2} = 300\,\text{GeV}$ and $m_0 = 1000\,\text{GeV}$, $m_{1/2} = 300\,\text{GeV}$, as well as the $m_0 = 1200\,\text{GeV}$, $m_0 = 1000\,\text{GeV}$ scenario. While the first two are within the range of existing limits (Sec.~\ref{sec:anamodel}), the latter is not. As such, only two of the corresponding cross sections are scaled to match said limits. Exemplary distributions displaying the different properties of the signal points are shown in figure~.
+For comparison, three points of the cMSSM parameter phase space will be shown in most of the upcoming distributions. The $m_0 = 300\,\text{GeV}$, $m_{1/2} = 300\,\text{GeV}$ and $m_0 = 1000\,\text{GeV}$, $m_{1/2} = 200\,\text{GeV}$, as well as the $m_0 = 1000\,\text{GeV}$, $m_0 = 1200\,\text{GeV}$ scenario. While the first two are within the range of existing limits (Sec.~\ref{sec:anamodel}), the latter is not. As such, only two of the corresponding cross sections are scaled to match said limits. Exemplary distributions displaying the different properties of the signal points are shown in figure~\ref{fig:signal_properties}. Large differences between the distributions of the generated points in phase space can be seen. While this is expected, it leads to differing efficiencies in regards to certain requirements that are going to be applied in the next chapter (Cha.~\ref{cha:eventsel}).
+
+\begin{figure}[!htbp]
+  \centering
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/muo_n.pdf}
+    \caption{Number of muons.\label{fig:muo_n}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/sig_muo_pt1.pdf}
+    \caption{Transverse momentum of sub-leading muon.\label{fig:sig_muo_pt1}}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \ContinuedFloat
+  \centering
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/sig_muo_pt2.pdf}
+    \caption{Transverse momentum of sub-leading muon.\label{fig:sig_muo_pt2}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/sig_slepton_charge.pdf}
+    \caption{Charge of slepton.\label{fig:sig_slepton_charge}}
+  \end{subfigure}
+  \caption{Selected properties of the generated signal Monte Carlo. For \ref{fig:muo_n} all events are included, while for the remaining distributions at least 2 muons and 2 jets per event are required.}
+  \label{fig:signal_properties}
+\end{figure}
+
 
 
 \section{Adjustments}
