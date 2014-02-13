@@ -8,6 +8,7 @@
 *.out
 *.run.xml
 *.toc
+*.sty
 document.pdf
 
 # Emacs files #
