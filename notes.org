@@ -21,20 +21,21 @@
    - 5% PDF, 5% Scale, 7% SUSY-QCD at NLO
 ** DONE ask daniel about how trigg eff has been determined
 ** DONE update systematics
-   - +other values+
-   - +closure test+
-   - +summary+
+   - other values
+   - closure test
+   - summary
 ** DONE generate d_0 < 0.08 distribution
 ** DONE add MET distribution for T/L ratio in datadbg
 ** DONE jjmm_m plot to show 6 bins -> maybe show a signal which is located in another bin to show multibin efficiency gain
    also add summary table for jjmm_m
 ** DONE trigg efficiency distribution in syst
 ** DONE show signal distributions
-** TODO smoothing only in 2d T/L histogram
-** TODO explain smoothing in F_R
-** TODO final distribution -> final state?
-** TODO fix ratio plots having small x axis title
-** TODO maybe add some more signal distributions
-** TODO outlook
+** DONE outlook
    - adjust cuts to point in phase space
    - simplified models
+** DONE final distribution -> final state?
+** DONE fix ratio plots having small x axis title
+** DONE change text of closure proof to use control region
+** DONE smoothing only in 2d T/L histogram
+** DONE fixed signal region numbering
+** TODO explain smoothing in F_R?
