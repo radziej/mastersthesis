@@ -18,7 +18,7 @@ The general idea of the fake rate method is to estimate fake contributions by co
   \label{fig:nloosetight}
 \end{figure}
 
-To measure the fake rate independently from the final distribution, an orthogonal sample needs to be procured. Much like the control regions being defined by an inverted MET requirement, the overall number of loose muons in an event can be used. Here the fraction of tight to loose muons $F_R = \frac{T}{T+L}$\footnote{This is often falsely called the ``fake rate'', thus naming the method.} can be determined (C.f. fig.~\ref{fig:nloosetight}). To account for possible dependencies introduced by the detector, it is measured in both $\eta$ and $p_{\text{T}}$. 
+To measure the fake rate independently from the final distributions, an orthogonal sample needs to be procured. Much like the control regions being defined by an inverted MET requirement, the overall number of loose muons in an event can be used. Here the fraction of tight to loose muons $F_R = \frac{T}{T+L}$\footnote{This is often falsely called the ``fake rate'', thus naming the method.} can be determined (C.f. fig.~\ref{fig:nloosetight}). To account for possible dependencies introduced by the detector, it is measured in both $\eta$ and $p_{\text{T}}$. 
 
 Using $F_R$, the number of tight muons $N_T$ can be predicted from the number of loose ones $N_L$. The definition of loose muons also includes all tight ones. Therefore, to stay in line with the independence of samples, one has to ensure that amongst the number of loose muons $N_L$, there are \textit{no} tight ones. The resulting formula is given below.
 
@@ -104,7 +104,7 @@ In general, one can observe reasonable agreement between data and simulation in 
   \end{subfigure}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
   \ContinuedFloat
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
@@ -112,7 +112,6 @@ In general, one can observe reasonable agreement between data and simulation in 
     \includegraphics[width=\textwidth]{plots/nTL_mt.pdf}
     \caption{Transverse mass of loose $\mu$ and $E_{\text{T}}^{\text{miss}}$ \label{fig:ntlmt}}
   \end{subfigure}
-
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/nTL_jetdphi.pdf}
@@ -125,7 +124,7 @@ In general, one can observe reasonable agreement between data and simulation in 
 
 Counting the number of tight and loose muons in the resulting enriched sample, can be used to predict the hadronic activity leading to possible misidentifications. From the two dimensional tight and loose muon histograms containing the measured data, one has to statistically subtract all background samples. The only exception are the QCD ones, as those are the events this method attempts to predict. The results are shown in figure~\ref{fig:tlratios}.
  
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
@@ -187,7 +186,7 @@ One can see that the data exceeds the background. This supports the hypothesis, 
   \label{fig:CRBVC}
 \end{figure}
 
-With the inclusion of the fake rate method's prediction, the background describes the data significantly better. For a simple quantification of this statement, one can regard the entire distribution as a single bin and compare the number of entries. This yields the following values for the smuon mass distribution: $N_{\text{MC}} = 82.9 \pm 3.6\,(\text{stat.})$ and $N_{\text{Data}} = 75$. A $-0.8\,\sigma$ deviation, purely based off of the Poisson and statistical uncertainty, is a strong indication for the quality of this entire method.
+With the inclusion of the fake rate method's prediction, the background describes the data significantly better. For a simple quantification of this statement, one can regard the entire distribution as a single bin and compare the number of entries. This yields the following values for the smuon mass distribution: $N_{\text{MC}} = 86.6 \pm 3.0\,(\text{stat.})$ and $N_{\text{Data}} = 79.0$. A $-0.8\,\sigma$ deviation, purely based off of the Poisson and statistical uncertainty, is a strong indication for the quality of this entire method.
 
 
 %%% Local Variables: 
