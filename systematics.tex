@@ -1,7 +1,7 @@
 \chapter{Systematic Uncertainties}
 \label{cha:systematics}
 
-Before unveiling the final distribution, the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe a certain bias the methods of the analysis themselves can introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects.
+Before unveiling the final distribution(s), the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe a certain bias the methods of the analysis themselves can introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects. Unless stated otherwise, all of the uncertainties are determined using the smuon mass distribution at the final stage of the analysis.
 
 For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedures on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest influence. 
 
@@ -53,7 +53,7 @@ To estimate the systematic uncertainty for the $b$-tagging algorithm described i
 
 Shifting the efficiency maps only yields second order corrections. As their contribution also depends on (pseudo-)randomly generated numbers, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, this relation holds true. For these reasons, their impact is neglected.
 
-The effect on the final distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one. Its impact on the signal lies in between $0.2\,\pct$ and $1.4\,\pct$. 
+The effect on the smuon mass distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one. Its impact on the signal lies in between $0.2\,\pct$ and $1.4\,\pct$. 
 
 
 
@@ -99,7 +99,7 @@ As for theoretical uncertainties contributing to the PDFs, the dominant one stem
 
 The actually application of this procedure, follows the \textsc{PDF4LHC} recipe for a practical implementation~\cite{pdf4lhcpractical}. It is based on the general recommendations provided by the LHC4PDF Working Group~\cite{pdf4lhcrecom}. The general idea is to reweight the distribution of the observable in question, as if the Monte Carlo samples were generated using a different PDF set. From the resulting deviation one an estimate the systematic uncertainty introduced by choosing a certain set.
 
-For the purpose of reweighting, there are numerous ``members'' stored in single PDF set. While the first one represents the central value, the others are variations in $\alpha_s$ or the PDF estimate. They are used to determine the up- and downward deviations of each member in respect to the central value. Adding the PDF and $\alpha_s$ variations in quadrature, yields the overall deviation in each direction. When reweighting the events for the observable, it has to be relative to the PDF set with which the sample has been generated. All Monte Carlo simulations have been created using \textsc{cteq6l1}~\cite{cteq6l1}, except for the $t\bar{t}$ one. There the NLO MC generator \textsc{Powheg} has been employed, which uses \textsc{CT10} as its basis. Estimating the uncertainty is done relative to the best fit, a combination of all PDF sets. Figure~\ref{fig:pdfsys} shows the PDF uncertainties for all Monte Carlo samples in the final distribution.
+For the purpose of reweighting, there are numerous ``members'' stored in single PDF set. While the first one represents the central value, the others are variations in $\alpha_s$ or the PDF estimate. They are used to determine the up- and downward deviations of each member in respect to the central value. Adding the PDF and $\alpha_s$ variations in quadrature, yields the overall deviation in each direction. When reweighting the events for the observable, it has to be relative to the PDF set with which the sample has been generated. All Monte Carlo simulations have been created using \textsc{cteq6l1}~\cite{cteq6l1}, except for the $t\bar{t}$ one. There the NLO MC generator \textsc{Powheg} has been employed, which uses \textsc{CT10} as its basis. Estimating the uncertainty is done relative to the best fit, a combination of all PDF sets. Figure~\ref{fig:pdfsys} shows the PDF uncertainties for all Monte Carlo samples in the smuon mass distribution at the final stage of the analysis.
 
 \begin{figure}[!htb]
   \centering
@@ -152,7 +152,7 @@ Determining the tight-to-loose ratio $F_R$ varies depending on the chosen requir
   \sigma_{\text{stat}} = \frac{\sqrt{\sigma_{\text{var}}^2 - \sigma_{\text{def}}^2}}{N_{\text{def}}}.
 \end{equation}
 
-\noindent Note that one would usually expect the $\sigma$ to be \textit{added} in quadrature. However, this uncertainty would correspond to the number of events instead of the method itself.
+\noindent Note that one would usually expect the $\sigma$ to be \textit{added} in quadrature. However, this uncertainty would correspond to the number of events instead of the method itself. Since these values are (theoretically) fully correlated, they are required to be subtracted.
 
 Table~\ref{tab:tlratiosys} shows the results of the variations.
 
@@ -218,7 +218,7 @@ Only the listed quantities are examined. All of the other ones are motivated by 
 \subsection{Closure Test}
 \label{sec:closure-test}
 
-To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction which has been observed (Fig.~\ref{fig:tlratios}), a ``closure test'' is being used. It provides a proof of concept for the data-driven background method, as well as being an indicator for the accuracy of the prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratio measured in data and the QCD counterpart it is meant to be similar to, yields the aforementioned quality estimate for the Monte Carlo prediction. Figure~\ref{fig:closuretest} shows both the proof of concept on the left, as well as the comparison on the right.
+To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction of said ratio given by the QCD background (Fig.~\ref{fig:tlratios}), a ``closure test'' is being used. It provides a proof of concept for the data-driven background method, as well as being an indicator for the accuracy of the MC prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratios measured in data and the QCD counterpart it is meant to be similar to, yields the aforementioned quality estimate for the method itself. Since the $t\bar{t}$ background is the most prominent one in the final stage of the analysis, it is used as the benchmark process in this test. Figure~\ref{fig:closuretest} shows both the proof of concept on the left, as well as the actual comparison on the right.
 
 \begin{figure}
   \centering
@@ -233,13 +233,13 @@ To quantify the difference between the tight-to-loose ratio $F_R$ of the recorde
     \caption{\label{fig:closurecomparison}}
   \end{subfigure}
 
-  \caption{Proof of concept provided by the closure test (\ref{fig:closureproof}) and comparison between QCD and data tight-to-loose ratios $F_R$ in the final distributions (\ref{fig:closurecomparison}). The former shows $t\bar{t}$ background given by the Monte Carlo prediction and by applying the QCD $F_R$. Here, the final distribution without the $b$-jet veto is used to retain a useful number of entries. The latter shows the final distribution with the same components and adds the data-driven $t\bar{t}$ background estimate.}
+  \caption{Proof of concept provided by the closure test (\ref{fig:closureproof}) and comparison between QCD and data tight-to-loose ratios $F_R$ in the smuon mass distribution (\ref{fig:closurecomparison}). Both distributions show the Monte Carlo prediction, as well as both the QCD and the data tight-to-loose ratio applied to it. While the right distribution was filled at the final stage, the left one is filled at the charge control region.}
   \label{fig:closuretest}
 \end{figure}
 
-To provide a proof of concept for the fake rate method, the QCD tight-to-loose ratio is measured and applied to the $t\bar{t}$ background. It is shown alongside the corresponding $t\bar{t}$ Monte Carlo. Note that the ratio measured in data cannot be used here, as the previously observed difference to the Monte Carlo tight-to-loose ratio already necessitates a differing result. The good agreement that can be seen in figure~\ref{fig:closureproof}, speaks for the quality of the method itself. This comparison is done at the final state without the $b$-jet veto to yield a statistically meaningful result.
+To provide a proof of concept for the fake rate method, the charge control region CRC is being used. Aside from the typical inverted $E_{\text{T}}^{\text{miss}}$ requirement, it is characterised by not applying the $b$-jet veto while requiring the same charge one. For the proof the QCD tight-to-loose ratio is measured and applied to the $t\bar{t}$ background. It is shown alongside the corresponding $t\bar{t}$ Monte Carlo. Note that the ratio measured in data cannot be used here, as the previously observed difference to the Monte Carlo tight-to-loose ratio already necessitates a differing result. The good agreement between the QCD $F_R$ and MC prediction that can be seen in figure~\ref{fig:closureproof}, speaks for the quality of the method itself.
 
-The comparison of the results of applying both the data and the QCD tight-to-loose ratio to the $t\bar{t}$ background is shown in figure~\ref{fig:closurecomparison}. The disagreement of $45\,\pct$ which can be observed in the final stage of the analysis is taken as a systematic uncertainty.
+The actual comparison of the results of applying both the data and the QCD tight-to-loose ratio to the $t\bar{t}$ background is shown in figure~\ref{fig:closurecomparison}. Their disagreement of $45\,\pct$ which can be observed in the final stage of the analysis is taken as a systematic uncertainty.
 
 While all previously discussed uncertainties apply to the Monte Carlo samples that are used for the statistical subtraction, their overall impact is reduced significantly. As they affect \textit{both} the number of tight and loose muons, calculating the ratio absorbs a large portion of said impact. Since the relative contributions of the individual uncertainties to the tight and loose subsets are similar, they only play a comparatively minor role.
 
