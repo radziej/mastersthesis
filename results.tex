@@ -94,15 +94,15 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
 \section{Calculation of Limits}
 \label{sec:calc-of-limits}
 
-As any excess of data is too slight to be considered a discovery, one can translate the result into limits onto two quantities. The cross section of a RPV SUSY model and its model parameters. To calculate these, the method commonly used amongst the CMS experiment will be utilized. Details are given in the upcoming section.
+As any excess of data is too slight to be considered statistically significant, one can translate the result into limits onto two quantities. The cross section of a RPV SUSY model and its model parameters. To calculate these, the method commonly used amongst the CMS experiment will be utilized. Details are given in the upcoming section.
 
 
 \subsection{CLs Method}
 \label{sec:cls-method}
 
-To compliment Bayesian and common frequentist methods, the $CL_s$ method~\cite{cls,cls2} has been developed. It is considered a modified frequentist analysis. Compared to the former two, its results are better in cases with low statistics and are less background dependent. The general idea is to compare two hypotheses to a measurement by determining a \textit{confidence level} (\textbf{CL}) for each of them. Confidence levels are defined as the probability of the respective hypothesis describing the measured data.
+To complement Bayesian and common frequentist methods, the $CL_s$ method~\cite{cls,cls2} has been developed. It is considered a modified frequentist analysis. Compared to the former two, its results are better in cases with low statistics and are less background dependent. The general idea is to compare two hypotheses to a measurement by determining a \textit{confidence level} (\textbf{CL}) for each of them. Confidence levels are defined as the probability of the respective hypothesis describing the measured data.
 
-In regards to high energy particle physics, there are usually two cases to be covered. The null hypotheses being the Standard Model background expectation by itself, while the second hypotheses includes the signal as well. The corresponding likelihoods $\mathcal{L} (x)$ for both cases are the basis for this method. Here, $x$ denotes the background-only scenario for $x = b$ and the background plus signal one for $x = s + b$. The distributions are a function of the cross section corresponding to the relevant processes and therefore effectively also of the number of selected events $n$.
+With regards to high energy particle physics, there are usually two cases to be covered. The null hypotheses being the Standard Model background expectation by itself, while the second hypotheses includes the signal as well. The corresponding likelihoods $\mathcal{L} (x)$ for both cases are the basis for this method. Here, $x$ denotes the background-only scenario for $x = b$ and the background plus signal one for $x = s + b$. The distributions are a function of the cross section corresponding to the relevant processes and therefore effectively also of the number of selected events $n$.
 
 A test statistic $Q$ is used to determine which hypothesis is the better description. It is called the \textit{likelihood-ratio}.
 
@@ -153,7 +153,7 @@ Following the recommendations by the CMS and ATLAS collaborations~\cite{clsmod},
   Q = - 2 \ln{ \frac{\mathcal{L} (\mu s + b; n, \hat{\theta)}_\mu }{\mathcal{L} (\hat{\mu} \cdot s + b; n, \hat{\theta} )} } \quad \text{ with } \quad 0 \leq \hat{\mu} \leq \mu
 \end{equation}
 
-\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are determined at the global maximum of the likelihood. $\hat{\theta}_\mu$ on the other hand denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$.
+\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are evaluated at the global maximum of the likelihood. $\hat{\theta}_\mu$ on the other hand denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$.
 
 % Using the logarithm with a factor of $-2$ allows the test statistic to converge against $\Delta \chi^2$ for a large number of selected events.
 
@@ -169,7 +169,7 @@ To improve the limits, the signal region is subdivided into multiple signal regi
 \section{Limit Graphs}
 \label{sec:limit-graphs}
 
-The actual calculation of limits is performed by the \textsc{HiggsCombine} tool~\cite{clsmod,higgscombine}. It employs the \textsc{RooStats} package~\cite{roostats} which is part of the statistical analysis framework \textsc{ROOT}. In line with all CMS publications, the exclusion ranges are calculated to a $95\,\pct$ confidence level as a lower limit ($CL_s \leq 0.05$). The necessary scaling of the signal strength to reach this $CL$ can be achieved through varying the previously introduced modifier $\mu$. This has to be done for each of the individual points in the RPV SUSY phase space.
+The actual calculation of limits is performed by the \textsc{HiggsCombine} tool~\cite{clsmod,higgscombine}. It employs the \textsc{RooStats} package~\cite{roostats} which is part of the statistical analysis framework \textsc{ROOT}. In line with all CMS publications, the exclusion ranges are calculated at a $95\,\pct$ confidence level as a lower limit ($CL_s \leq 0.05$). The necessary scaling of the signal strength to reach this $CL$ can be achieved through varying the previously introduced modifier $\mu$. This has to be done for each of the individual points in the RPV SUSY phase space.
 
 While the result of the calculation is a limit on the signal cross section $\sigma$, it can be translated into a limit onto the model parameter $\lambda^\prime_{211}$. As the former scales quadratically with the latter, the following formula has to be used.
 
@@ -218,7 +218,7 @@ The respective $95\,\pct\: CL$ multi-bin cross section limits, which have been t
 
 Comparing the shown limits to the analyses of 2011 RPV SUSY and the D0 predecessor, the phase space that is being covered has been expanded considerably. The simulation with the highest universal mass parameters for D0 was $m_0 = 500$, $m_{1/2} = 600$, while it had increased to $m_0 = 1300$, $m_{1/2} = 1000$ in the 2011 CMS analysis. With the given results, it now lies at $m_0 = 1500$, $m_{1/2} = 2500$. In addition to that, the excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0, and around a factor of 1.8 in regards to the 2011 analysis. As a consequence, these are now the world's best limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
 
-In general one can see that, especially towards higher values of $m_0$, the exclusion limits get progressively weaker. This is due the drop in selection efficiency for the high mass signal points drops, as there are changes in the particle properties and composition of the decay chain. These differences have been illustrated throughout the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
+In general one can see that, especially towards higher values of $m_0$, the exclusion limits get progressively weaker. This is due the drop in selection efficiency for the high mass signal points, as there are changes in the particle properties and composition of the decay chain. These differences have been illustrated throughout the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
 
 
 \begin{figure}[!htb]
@@ -228,7 +228,7 @@ In general one can see that, especially towards higher values of $m_0$, the excl
   \label{fig:lambda_ratio}
 \end{figure}
 
-Examining the ratio of expected and observed limits (Fig.~\ref{fig:lambda_ratio}), one can see that there are no rogue values deviating too much from the expectation. However, certain structures can be seen. They are the product of these mass parameters lead to certain smuon and gaugino masses, corresponding to one or two of the signal regions. Using the phase space point with $m_0 = 1000, m_{1/2} = 1200$ (Fig.~\ref{fig:final-dist}) as an example, one can see that its distribution has its main contribution in the SR 5 and 6, where data and MC are in reasonable agreement. Hence, the ratio for that region in phase space is roughly equal to 1. For $m_0 = 1000, m_{1/2} = 200$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to ratio of 1.1 or higher.
+Examining the ratio of expected and observed limits (Fig.~\ref{fig:lambda_ratio}), one can see that there are no rogue values deviating too much from the expectation. However, certain structures can be seen. They are the product of these mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the signal regions. Using the phase space point with $m_0 = 1000, m_{1/2} = 1200$ (Fig.~\ref{fig:final-dist}) as an example, one can see that its distribution has its main contribution in the SR 5 and 6, where data and MC are in reasonable agreement. Hence, the ratio for that region in phase space is roughly equal to 1. For $m_0 = 1000, m_{1/2} = 200$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to ratio of 1.1 or higher.
 
 
 \section{Candidate Events}
