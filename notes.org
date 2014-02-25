@@ -40,13 +40,12 @@
 ** DONE fixed signal region numbering
 ** TODO explain smoothing in F_R?
 * Lars' Comments
-** electromagnetic calorimeter - p21
-** resolving virtuality - p3
-** "supposed" - p3
-** enlarged errors in tail -p43
+** DONE electromagnetic calorimeter - p21
+** DONE resolving virtuality - p3
+** DONE enlarged errors in tail -p43
 ** DONE Z-Peak m_mumu
-** TODO Crosssection Ratio
+** DONE Crosssection Ratio
 ** DONE explain differences between ANA and M2J2
 ** DONE pfmet
-** asymmetric conversion background? -p80
-** overestimate of 45%
+** DONE asymmetric conversion background? -p80
+** DONE overestimate of 45%
