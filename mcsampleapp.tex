@@ -70,8 +70,11 @@
     \verb+WpWpqq_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+ & 99985 \\
     \verb+WW_DoubleScattering_8TeV-pythia8_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+ & 834040 \\
     \hline
+    \hline
+    {\footnotesize\verb+/RPVsmuon_M0-100To2000_M12-100to2500_TuneZ2star_8TeV-calchep-pythia6-tauola/Summer12_DR53X-PU_S10_START53_V19-v1/AODSIM+} & 7140403 \\
+    \hline
   \end{tabular}
-  \caption{This table lists all paths of the Monte Carlo samples that are considered as backgrounds for this analysis. The number of events that remain after skimming are given in the second column.}
+  \caption{All paths of the Monte Carlo samples that are considered as backgrounds and signals for this analysis. The number of events that remain after skimming are given in the second column.}
   \label{tab:mcsamplepaths}
 \end{sidewaystable}
 
@@ -80,62 +83,64 @@
 \begin{comment}
   
   #+ORGTBL: SEND datasetsmc orgtbl-to-generic :tstart "\\begin{tabular}" :tend "\\end{tabular}" :lstart "" :lend " \\\\" :sep " & " :efmt "%s\\,(%s)" :hline "\\hline" :no-escape t :splice t
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | Monte Carlo Samples                                                                                   | $N_{\text{Events}}$ |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+DYJetsToLL_M-10To50filter_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                |             7132223 |
-  | \verb+DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+       |            30459503 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+QCD_Pt-15to20_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+    |             1722681 |
-  | \verb+QCD_Pt-20to30_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+    |             8486904 |
-  | \verb+QCD_Pt-30to50_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+    |             9560265 |
-  | \verb+QCD_Pt-50to80_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+    |            10365230 |
-  | \verb+QCD_Pt-80to120_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+   |             9238642 |
-  | \verb+QCD_Pt-120to170_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+  |             8501935 |
-  | \verb+QCD_Pt-170to300_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+  |             7669947 |
-  | \verb+QCD_Pt-300to470_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+  |             7832261 |
-  | \verb+QCD_Pt-470to600_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+  |             3783069 |
-  | \verb+QCD_Pt-600to800_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+  |             4119000 |
-  | \verb+QCD_Pt-800to1000_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+ |             4107853 |
-  | \verb+QCD_Pt-1000_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+      |             3873970 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+Tbar_s-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+           |              139974 |
-  | \verb+T_s-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+              |              259961 |
-  | \verb+Tbar_t-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+           |             1935072 |
-  | \verb+T_t-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v3SIM+              |               99876 |
-  | \verb+Tbar_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+       |              493460 |
-  | \verb+T_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+          |              497658 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+TT_CT10_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+                  |            21675970 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+TTGJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                  |               71598 |
-  | \verb+TTWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                  |              217820 |
-  | \verb+TTWWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                 |              217820 |
-  | \verb+TTZJets_8TeV-madgraph_v2_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                               |              210160 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+WJetsToLNu_TuneZ2Star_8TeV-madgraph-tarball_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+            |            57709905 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+WGstarToLNu2Mu_TuneZ2star_7TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+         |              299973 |
-  | \verb+WWJetsTo2L2Nu_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+          |             1933235 |
-  | \verb+WZJetsTo2L2Q_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+           |             3215990 |
-  | \verb+WZJetsTo3LNu_TuneZ2_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+               |             2017979 |
-  | \verb+WZJetsTo2QLNu_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7C-v1SIM+                            |             2908657 |
-  | \verb+ZZJetsTo2L2Nu_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v3SIM+          |              954911 |
-  | \verb+ZZJetsTo2L2Q_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+           |             1936727 |
-  | \verb+ZZJetsTo4L_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+             |             4787893 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+WWWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                  |              220549 |
-  | \verb+WWZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                           |              222234 |
-  | \verb+WZZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                           |              219835 |
-  | \verb+ZZZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                           |              224904 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
-  | \verb+WmWmqq_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                   |               96392 |
-  | \verb+WpWpqq_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                   |               99985 |
-  | \verb+WW_DoubleScattering_8TeV-pythia8_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                       |              834040 |
-  |-------------------------------------------------------------------------------------------------------+---------------------|
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | Monte Carlo Samples                                                                                                                           | $N_{\text{Events}}$ |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+DYJetsToLL_M-10To50filter_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                        |             7132223 |
+  | \verb+DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                               |            30459503 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+QCD_Pt-15to20_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+                                            |             1722681 |
+  | \verb+QCD_Pt-20to30_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                            |             8486904 |
+  | \verb+QCD_Pt-30to50_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                            |             9560265 |
+  | \verb+QCD_Pt-50to80_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                            |            10365230 |
+  | \verb+QCD_Pt-80to120_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                           |             9238642 |
+  | \verb+QCD_Pt-120to170_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                          |             8501935 |
+  | \verb+QCD_Pt-170to300_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                          |             7669947 |
+  | \verb+QCD_Pt-300to470_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                          |             7832261 |
+  | \verb+QCD_Pt-470to600_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                          |             3783069 |
+  | \verb+QCD_Pt-600to800_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                          |             4119000 |
+  | \verb+QCD_Pt-800to1000_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                         |             4107853 |
+  | \verb+QCD_Pt-1000_MuEnrichedPt5_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                              |             3873970 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+Tbar_s-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                   |              139974 |
+  | \verb+T_s-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                      |              259961 |
+  | \verb+Tbar_t-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                   |             1935072 |
+  | \verb+T_t-channel_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v3SIM+                                                      |               99876 |
+  | \verb+Tbar_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                               |              493460 |
+  | \verb+T_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                  |              497658 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+TT_CT10_TuneZ2star_8TeV-powheg-tauola_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+                                                          |            21675970 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+TTGJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                          |               71598 |
+  | \verb+TTWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                          |              217820 |
+  | \verb+TTWWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                         |              217820 |
+  | \verb+TTZJets_8TeV-madgraph_v2_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                       |              210160 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+WJetsToLNu_TuneZ2Star_8TeV-madgraph-tarball_Summer12_DR53X-PU_S10_START53_V7A-v2SIM+                                                    |            57709905 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+WGstarToLNu2Mu_TuneZ2star_7TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                 |              299973 |
+  | \verb+WWJetsTo2L2Nu_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                  |             1933235 |
+  | \verb+WZJetsTo2L2Q_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                   |             3215990 |
+  | \verb+WZJetsTo3LNu_TuneZ2_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                       |             2017979 |
+  | \verb+WZJetsTo2QLNu_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7C-v1SIM+                                                                    |             2908657 |
+  | \verb+ZZJetsTo2L2Nu_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v3SIM+                                                  |              954911 |
+  | \verb+ZZJetsTo2L2Q_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                   |             1936727 |
+  | \verb+ZZJetsTo4L_TuneZ2star_8TeV-madgraph-tauola_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                     |             4787893 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+WWWJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                          |              220549 |
+  | \verb+WWZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                   |              222234 |
+  | \verb+WZZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                   |              219835 |
+  | \verb+ZZZNoGstarJets_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                   |              224904 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | \verb+WmWmqq_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                           |               96392 |
+  | \verb+WpWpqq_8TeV-madgraph_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                                           |               99985 |
+  | \verb+WW_DoubleScattering_8TeV-pythia8_Summer12_DR53X-PU_S10_START53_V7A-v1SIM+                                                               |              834040 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
+  | {\footnotesize\verb+/RPVsmuon_M0-100To2000_M12-100to2500_TuneZ2star_8TeV-calchep-pythia6-tauola/Summer12_DR53X-PU_S10_START53_V19-v1/AODSIM+} |             7140403 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------|
 \end{comment}
-
 
 %%% Local Variables: 
 %%% mode: latex
