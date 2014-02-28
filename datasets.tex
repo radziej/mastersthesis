@@ -24,7 +24,7 @@ As previously mentioned, the data that is going to be used for the search has be
   \centering
   \begin{tabular}{|l|c|c|}
     \hline
-    Datasets                                         & Run Range         & $\int \mathcal{L}$ [pb$^{-1}$] \\ \hline \hline
+    Datasets                                         & Run Range         & $\int \mathcal{L} d\text{t}$ [pb$^{-1}$] \\ \hline \hline
     \verb+/DoubleMu/Run2012A-22Jan2013-v1/AOD+       & $190645 - 193621$ & 876                            \\ \hline
     \verb+/DoubleMuParked/Run2012B-22Jan2013-v1/AOD+ & $193834 - 196531$ & 4409                           \\ \hline
     \verb+/DoubleMuParked/Run2012C-22Jan2013-v1/AOD+ & $198049 - 203002$ & 7017                           \\ \hline
@@ -36,7 +36,7 @@ As previously mentioned, the data that is going to be used for the search has be
 \end{table}
 
 
-\footnotetext{The DoubleMuParked dataset from the 2012A period is not a superset of the DoubleMu dataset. As such, the DoubleMu dataset is being used, which yields an additional 3\% events in the chosen final state.}Dissecting the full name of a dataset gives different information about its contents. The first part, here DoubleMuParked, hints at the selected particle content. In this case, the \textit{Parked} version superseded the usual DoubleMu datasets by adding an additional offline trigger with a lower transverse momentum threshold. The second part of the name being the data taking period and the third one the date at which it was published. Unless the latter contains ``PromptReco'', the data has since been reprocessed with improved knowledge of the detector, leading to more precise measurements. The datasets which are subject of this analysis are part of the Winter13 ``ReReco'', short for rereconstruction. The data format, here ``AOD'', is given at the end.
+\footnotetext{The DoubleMuParked dataset from the 2012A period is not a superset of the DoubleMu dataset. As such, the DoubleMu dataset is being used, which yields an additional 3\% events in the chosen final state.}Dissecting the full name of a dataset gives different information about its contents. The first part, here DoubleMuParked, hints at the selected particle content. In this case, the \textit{Parked} version superseded the usual DoubleMu datasets by adding an additional offline trigger with a lower transverse momentum threshold. The second part of the name being the data taking period and the third one the date at which it was processed. Unless the latter contains ``PromptReco'', the data has since been reprocessed with improved knowledge of the detector, leading to more precise measurements. The datasets which are subject of this analysis are part of the Winter13 ``ReReco'', short for rereconstruction. The data format, here ``AOD'', is given at the end.
 
 In the second column, the run ranges are listed. Each run is composed of several sections with roughly equal luminosity. In the third column, the integrated luminosity for the individual run ranges is given. It is estimated from the average number of pixel clusters occurring in the silicon pixel detector (Sec.~\ref{sec:innertracker}) during an inelastic collision $\left< n \right>$.
 
@@ -51,7 +51,7 @@ In general, only events from the certified list of properly reconstructed events
 
 \section{Simulation}
 
-As a general concept to differentiate between potential new physics and the standard model processes, this analysis compares the recorded data to simulation. The difference between simulated and measured distributions of observables, more accurately the expected number of events, the probability of a discovery or at least exclusion ranges can be given. Due to the nature of this method, having a precise prediction from the simulation is essential. There is a strong dependence on the knowledge of the relevant standard model processes.
+As a general concept to differentiate between potential new physics and the standard model processes, this analysis compares the recorded data to simulation. By comparing simulated and measured distributions of observables, more accurately their expected number of events, the probability of a discovery or at least exclusion ranges can be given. Due to the nature of this method, having a precise prediction from the simulation is essential. There is a strong dependence on the knowledge of the relevant standard model processes.
 
 To take the probabilities for the occurrence of the various processes into account, a Monte-Carlo method is used for the simulation. While this describes the collision physics, the detector simulation is performed with \textsc{GEANT4}~\cite{geant41,geant42}. The next step of the simulation are the triggers, after which the events can be reconstructed using the \textsc{CMSSW} application framework.
 
@@ -177,14 +177,14 @@ $WW$-DoubleParton & 0.5879 & 0.0139 \\
   |---------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------|
 \end{comment}
 
-All Monte Carlo samples that can produce two muons, two jets and are considered as backgrounds for this analysis are given in table~\ref{tab:mcsamples}. The samples were generated during the Summer12 period using \textsc{Pythia6}~\cite{pythia6} for QCD, \textsc{Powheg}~\cite{powheg,powhegst,powhegtt} for single and pair production of top-quarks and \textsc{Madgraph}~\cite{madgraph5} for most others. Details and the sample's paths are given in appendix~\ref{cha:mcsamppath}. In columns two and three, the cross section and weight of the specific processes are given. The latter is necessary to adjust the generated number of events for each sample to the expected amount for a given luminosity. Producing Monte Carlos samples individually for each analysis would not only be inefficient, but also very resource intensive. Instead most samples are produced centrally, which is also the reason why the generated and expected number of events cannot be matched. The formula for calculating the weight is
+All Standard Model samples that can produce two muons, two jets and are considered as backgrounds for this analysis are given in table~\ref{tab:mcsamples}. The samples were generated during the Summer12 period using \textsc{Pythia6}~\cite{pythia6} for QCD, \textsc{Powheg}~\cite{powheg,powhegst,powhegtt} for single and pair production of top-quarks and \textsc{Madgraph}~\cite{madgraph5} for most others. Details can be extracted from the sample paths, which are given in appendix~\ref{cha:mcsamppath}. In columns two and three, the cross section and weight of the specific processes are given. The latter is necessary to adjust the generated number of events for each sample to the expected amount for a given luminosity. Producing Monte Carlos samples individually for each analysis would not only be inefficient, but also very resource intensive. Instead most samples are produced centrally, which is also the reason why the generated and expected number of events cannot be matched. The formula for calculating the weight is
 
 \begin{equation}
   \label{eq:weight}
   w = f \cdot \frac{\sigma \cdot \mathcal{L}_{\text{int}}}{N}.
 \end{equation}
 
-\noindent The variable parameters are the cross section $\sigma$ and the number of generated events $N$. The integrated luminosity $\mathcal{L}_{\text{int}}$ is set through the amount of recorded data. An additional scaling factor $f$ can be introduced to account for effects like higher order corrections to a crosssection. It is set to $1$ for all values shown in the table, except for the Drell-Yan processes. Their weights are given as a product, where $f$ is given as the first factor. The way these scaling factors are determined is described in an upcoming section (Sec.~\ref{sec:scaling}).
+\noindent The variable parameters are the cross section $\sigma$ and the number of generated events $N$. The integrated luminosity $\mathcal{L}_{\text{int}}$ is set through the amount of recorded data. An additional scaling factor $f$ can be introduced to account for effects like higher order corrections to a cross section. It is set to $1$ for all values shown in the table, except for the Drell-Yan processes. Their weights are given as a product, where $f$ is given as the first factor. The way these scaling factors are determined is described in an upcoming section (Sec.~\ref{sec:scaling}).
 
 In all following distributions, groups of backgrounds are summarized under a single title to avoid cluttering. Table~\ref{tab:mcpooltitles} lists the names which will be used.
 
@@ -201,7 +201,7 @@ Single-top & $t^\pm$ $s$-, $t$- and $tW$-channels \\
 $t \bar{t}$ & $t \bar{t}$ \\
 $t \bar{t} + V$ & $t \bar{t} + \gamma$, $t \bar{t} + W$, $t \bar{t} + WW$ and $t \bar{t} + Z$ \\
 $W \rightarrow l \nu$ & $W + \text{jets} \rightarrow l + \nu$ \\
-DiBoson & $W\gamma$ and all $WW$, $WZ$, $ZZ$ decay modes \\
+DiBoson & $W\gamma$ and all $W^+W^-$, $WZ$, $ZZ$ decay modes \\
 $VVV$ & $WWW$, $WWZ$, $WZZ$ and $ZZZ$ \\
 Rare Samples & $W^-W^-$, $W^+W^+$ and $WW$-DoubleParton \\
 \hline
@@ -239,11 +239,11 @@ Rare Samples & $W^-W^-$, $W^+W^+$ and $WW$-DoubleParton \\
     \includegraphics[width=\textwidth]{plots/ttbar.pdf}
     \caption{\label{fig:ttbar}}
   \end{subfigure}
-  \caption{Drell-Yan~(\ref{fig:dyll}) and a $t\bar{t}$~(\ref{fig:ttbar}) feynman graph, which lead to a two muon and two jet signature. With their high crosssections, these two processes prove to be dominant Standard Model backgrounds for this analysis.}
+  \caption{Drell-Yan~(\ref{fig:dyll}) and a $t\bar{t}$~(\ref{fig:ttbar}) feynman graph, which lead to a two muon and two jet signature. With their high cross sections, these two processes prove to be dominant Standard Model backgrounds for this analysis.}
   \label{fig:dyllttbar}
 \end{figure}
 
-The two Feynman graphs in figure~\ref{fig:dyllttbar} show the most dominant background processes before and after the same sign charge requirement, respectively. Drell-Yan processes with two muons (Fig.~\ref{fig:dyll}) are the prevalent background before applying the same sign charge requirement. An initial state which only requires one quark and its antimatter counterpart, leads to a high cross section. The two lepton final state can provide two muons, although the charge cannot have the same sign. An additional amount of two jets can be produced through radiation of additional bosons or unrelated interactions being misinterpreted. After applying the same sign charge requirement, top pair production (Fig.~\ref{fig:ttbar}) becomes the leading Standard Model process. Each top-quark is able to decay via the weak interaction, opening up the possibility of two prompt leptons. However, their charge cannot be equal. As a result, the events passing the same sign charge requirement have to have one faked, or mismeasured muon. The likelihood for a muon to be a fake rises with the amount of hadronic activity. All Monte Carlo samples which are dominated by QCD multijet events and cannot lead to the necessary final state, will be used to estimate the amount of these contributions.
+The two Feynman graphs in figure~\ref{fig:dyllttbar} show the most dominant background processes. Drell-Yan processes with two muons (Fig.~\ref{fig:dyll}) are the prevalent background before applying the same sign charge requirement. An initial state which requires only one quark and its antimatter counterpart, leads to a high cross section. The two lepton final state can provide two muons, although the charge cannot have the same sign. An additional amount of two jets can be produced through radiation of additional bosons or unrelated interactions being misinterpreted. After applying the same sign charge requirement, top pair production (Fig.~\ref{fig:ttbar}) becomes the leading Standard Model process. Each top-quark is able to decay via the weak interaction, opening up the possibility of two prompt leptons. However, their charge cannot be equal. As a result, the events passing the same sign charge requirement have to have one faked or mismeasured muon. The likelihood for a muon to be a fake rises with the amount of hadronic activity. All Monte Carlo samples which contribute to the final state due to being dominated by QCD multijet events, will be used to estimate the amount of these contributions.
 
 
 \subsection{Signal Simulation}
@@ -260,9 +260,9 @@ To cover a variety of $R$-parity violating constrained MSSM scenarios, the $m_0$
 
 As previously discussed (Cha.~\ref{cha:sig}), certain points in the parameter space do not favour the chosen signal signature while others do yield unphysical results. The former is strictly due the $\tilde{\tau}$-LSP configuration in the high $m_{1/2}$, low $m_0$ region, while the latter has three different reasons. Low values for $m_{1/2}$ and high ones $m_0$ can lead to no electroweak symmetry breaking, non-converging renormalization group equations or the production of tachyons. When generating the mass spectra, all of these scenarios are being excluded before the production. Overall, this leaves $287$ valid points in the phase space.
 
-To actually produce the events, the leading order generator \textsc{CalcHep 3.4}~\cite{calchep} is being employed. Generated events are processed with the \textit{full} CMS detector simulation using the \verb+CMSSW_5_3_9_patch1+ framework. The path to the batch file containing all signal samples is also given in appendix~\ref{cha:mcsamppath}. Running the full simulation on the entire grid of parameter points with sufficient statistics for each sample is resource intensive. Therefore a filter is applied at generator level (i.e. before parton showering and simulation) removing events that do not contain at least two muons. They also have to suffice the transverse momentum threshold of $10\,\text{GeV}$ for the leading muon and $5\,\text{GeV}$ for the sub leading one. These requirements are chosen such that they do not interfere with the trigger threshold of \verb+HLT_Mu17_TkMu8+.
+To actually produce the events, the leading order matrix element generator \textsc{CalcHep 3.4}~\cite{calchep} is being employed. Generated events are processed with the \textit{full} CMS detector simulation using the \verb+CMSSW_5_3_9_patch1+ framework. The path to the batch file containing all signal samples is also given in appendix~\ref{cha:mcsamppath}. Running the full simulation on the entire grid of parameter points with sufficient statistics for each sample is resource intensive. Therefore a filter is applied at generator level (i.e. before parton showering and simulation) removing events that do not contain at least two muons. They also have to suffice the transverse momentum threshold of $10\,\text{GeV}$ for the leading muon and $5\,\text{GeV}$ for the sub leading one. These requirements are chosen such that they do not interfere with the trigger threshold of \verb+HLT_Mu17_TkMu8+.
 
-In order to increase the accuracy of the \textsc{CalcHep} simulation, $k$-factors are determined as the ratio of a leading order to a next-to leading order cross section calculation~\cite{susyxstool}. They are then applied to the value provided by \textsc{CalcHep}. The branching fractions for the production of the smuon and sneutrino have to be kept in mind. Both the evolution of the cross section as well as one the of $k$-factors are shown in figure~\ref{fig:susys-xs-kfactor}.
+In order to increase the accuracy of the \textsc{CalcHep} simulation, $k$-factors are determined as the ratio of a next-to leading order to a leading order cross section calculation~\cite{susyxstool}. They are then applied to the value provided by \textsc{CalcHep}. The branching fractions for the production of the smuon and sneutrino have to be kept in mind. Both the evolution of the cross section as well as one the of $k$-factors are shown in figure~\ref{fig:susys-xs-kfactor}.
 
 \begin{figure}[!htb]
   \centering
@@ -301,7 +301,7 @@ For comparison, three points of the cMSSM parameter phase space will be shown in
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/sig_muo_pt1.pdf}
-    \caption{Transverse momentum of sub-leading muon.\label{fig:sig_muo_pt1}}
+    \caption{Transverse momentum of leading muon.\label{fig:sig_muo_pt1}}
   \end{subfigure}
 \end{figure}
 
@@ -350,7 +350,7 @@ During 2012 the average number of proton-proton collisions that occur for a sing
   \label{fig:pileups}
 \end{figure}
 
-To obtain the (true) number of interactions for each crossing, the instantaneous bunch-by-bunch luminosities are used as input. Combined with the total inelastic cross section, which amounts to $69400\,\mu\text{b}$ for 2012~\cite{pileup}, they can be used to calculate the aforementioned expected number of interactions for each luminosity section. While said cross section is entered manually into the script, the luminosities are extracted from a centrally maintained pileup file. In this analysis \verb+pileup_JSON_DCSONLY_190389-208686_All_2012_pixelcorr.txt+ has been used, which already includes corrections from the information provided by the pixel detector. Figure~\ref{fig:pileup2012} shows the histogram filled with the expected number of interactions for the 2012 data taking period. Complementary, figure~\ref{fig:pileup} shows the normalized distribution with the corresponding Monte Carlo entries. These bin contents for the simulated samples have also been gathered centrally and are taken from the dedicated TWiki website~\cite{pileupmc}. All samples in question have been produced with the Summer12 S10 scenario (c.f. app.~\ref{cha:mcsamppath}).
+To obtain the (true) number of interactions for each crossing, the instantaneous bunch-by-bunch luminosities are used as input. Combined with the total inelastic cross section, which amounts to $69400\,\mu\text{b}$ for 2012~\cite{pileup}, they can be used to calculate the aforementioned expected number of interactions for each  luminosity section\footnote{A section of roughly equal luminosity.}. While said cross section is entered manually into the script, the luminosities are extracted from a centrally maintained pileup file. In this analysis \verb+pileup_JSON_DCSONLY_190389-208686_All_2012_pixelcorr.txt+ has been used, which already includes corrections from the information provided by the pixel detector. Figure~\ref{fig:pileup2012} shows the histogram filled with the expected number of interactions for the 2012 data taking period. Complementary, figure~\ref{fig:pileup} shows the normalized distribution with the corresponding Monte Carlo entries. These bin contents for the simulated samples have also been gathered centrally and are taken from the dedicated TWiki website~\cite{pileupmc}. All samples in question have been produced with the Summer12 S10 scenario (c.f. app.~\ref{cha:mcsamppath}).
 
 From the ratio of each bin a weight can be calculated and applied on an event by event basis for the analysis. Figure~\ref{fig:vtxn} provides a visualization of the effect of the reweighting.
 
@@ -378,10 +378,10 @@ From the ratio of each bin a weight can be calculated and applied on an event by
 
 With two jets and no missing transverse energy in the final state, the hadronic calorimeter contributes vital information. However, similarly to the pileup situation, the conditions of the simulation differ from the actual measurement. The energy resolution of the calorimeter has been overestimated in the detector simulation. To gain access to the resolution, the objects after the simulation stage can be compared to the generator-level ones. Based on this information and the set of measurements the necessary scale factor can be determined.
 
-Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum is considered relevant for the analysis. The algorithm searches in a cone of $\Delta R = \sqrt{\Delta\phi^2 + \Delta\eta^2} = 0.5$ in spatial distance around each reconstructed (\textbf{reco-}) jet. It adds up the transverse momentum of generator-level (\textbf{gen-}) jets found within that area. Depending on whether or not any objects are found, a different recipe for adjusting the jet energy resolution (\textbf{JER}) has to be used.
+Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum is considered relevant for the analysis. The algorithm searches in a cone of $\Delta R = \sqrt{\Delta\phi^2 + \Delta\eta^2} = 0.5$ in spatial distance around each reconstructed (\textbf{reco-}) jet. It adds up the transverse momentum of generator-level (\textbf{gen-}) jets found within that area. Depending on whether or not any objects are found, a different recipe for adjusting the jet energy resolution (\textbf{JER}) has to be used. \\
 
-\begin{itemize}
-\item \textbf{Matched gen-jets:} In this case the following formula is used to smear the jet energy.
+
+\textbf{Matched gen-jets:} In this case the following formula is used to smear the jet energy.
   \begin{equation}
     \label{eq:jermatched}
     p^\prime_{\text{T}} = p_{\text{T}, \text{GEN}} + c \cdot (p_{\text{T}} - p_{\text{T}, \text{GEN}})
@@ -404,9 +404,9 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
     }
     \caption{Core resolution scaling factors for jet energy smearing. They are taken from the JER TWiki~\cite{jer}.}
     \label{tab:jerfactors}
-  \end{table}
+  \end{table} \\
   
-\item \textbf{No matched gen-jets:} Without a gen-jet match the jet energy resolution cannot be estimated. As an alternative method, one can randomly smear the \textit{reconstructed} transverse momentum of the jet. The values are assumed to follow a Gaussian distribution with a width of $\sigma = \sqrt{c^2-1} \cdot \sigma_{\text{MC}}$. The core resolution scaling factors $c$ remain the same, but the energy resolution of jets $\sigma_{\text{MC}}$ has to be derived from the Monte Carlo samples. In figure~\ref{fig:jerdeltapt} the difference between the transverse momentum of matched reco- and gen-jets is shown.
+\textbf{No matched gen-jets:} Without a gen-jet match the jet energy resolution cannot be estimated. As an alternative method, one can randomly smear the \textit{reconstructed} transverse momentum of the jet. The values are assumed to follow a Gaussian distribution with a width of $\sigma = \sqrt{c^2-1} \cdot \sigma_{\text{MC}}$. The core resolution scaling factors $c$ remain the same, but the energy resolution of jets $\sigma_{\text{MC}}$ has to be derived from the Monte Carlo samples. In figure~\ref{fig:jerdeltapt} the difference between the transverse momentum of matched reco- and gen-jets is shown.
 
   \begin{figure}[htb!]
     \centering
@@ -415,8 +415,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
     \label{fig:jerdeltapt}
   \end{figure}
  
-  \noindent Determining the width of this distribution yields the energy resolution. The shape cannot be accurately described by any commonly known distributions, however the width is reasonably well described by a Gaussian function. It yields $\sigma_{\text{MC}} = 7.32$ with an negligible statistical error, which is one order of magnitude lower than the last significant digit. Keeping the shape in mind, the systematic uncertainty of the fit is expected to be higher. Thus the given precision is a conservative estimate.
-\end{itemize}
+  \noindent Determining the width of this distribution yields the energy resolution. The shape cannot be accurately described by any commonly known distributions, however the width is reasonably well described by a Gaussian function. It yields $\sigma_{\text{MC}} = 6.2$ with an negligible statistical error, which is more than one order of magnitude lower than the last given digit. Keeping the shape in mind, the systematic uncertainty of the fit is expected to be higher. Its impact will be studied in the dedicated systematics section (Sec.~\ref{sec:jersys}).
 
 The correction to the transverse momenta is propagated to the directional momenta, energy and the missing transverse energy measurements. In figure~\ref{fig:jermet} the particle flow missing transverse energy is shown with and without the correction. Due to the adjustment being expected to be comparatively small, the histogram has been filled at a later stage of the analysis. This ensures a reasonable agreement between data and simulation prior to examining the effect of the jet energy resolution.
 

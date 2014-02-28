@@ -8,7 +8,7 @@ Additional distributions displaying the effects of the individual ID criteria ar
 \section{Triggers}
 \label{sec:trigger}
 
-Before selecting physics objects, a trigger has to be chosen. Although DoubleMu datasets already necessitate dimuon triggers, only a selected few are well suited for the specified signature. A primary concern is a low trigger prescale. Prescaling means that the amount of events passing the trigger is suppressed by a certain factor to keep the integrated luminosity constant (and the amount of data manageable). This is achieved by simply not recording triggered events that surpass the limitations. To be able to allow for a low prescale factor, the requirements for each trigger have to be strict enough. Usually the transverse momentum threshold for the object can be raised to ensure an acceptable rate of events, but keeping the essentially prompt decay in mind, another option is available. Various triggers have a $\Delta z_{\mu\mu} < 0.2\,\text{cm}$ requirement, filtering out events with a large distance in the $z$-direction between the muon-pair. This effectively enables the inclusion of the low momentum regions in the search. The remaining options for high level triggers are:
+Before selecting physics objects, a trigger has to be chosen. Although DoubleMu datasets already necessitate dimuon triggers, only a selected few are well suited for the specified signature. A primary concern is a low trigger prescale. Prescaling means that the amount of events passing the trigger is suppressed by a certain factor to keep the integrated luminosity constant (and the amount of data manageable). This is achieved by simply not recording triggered events that surpass the limitations. To be able to allow for a low prescale factor, the requirements for each trigger have to be strict enough. Usually the transverse momentum threshold for the object can be raised to ensure an acceptable rate of events, but keeping the essentially prompt decay in mind, another option is available. Various triggers have a $|\Delta z_{\mu\mu}| < 0.2\,\text{cm}$ requirement, filtering out events with a large distance in the $z$-direction between the muon-pair. This effectively enables the inclusion of the low momentum regions in the search. The remaining options for high level triggers are:
 
 \begin{itemize}
 \item \verb+HLT_Mu17_Mu8+
@@ -28,6 +28,7 @@ To quantify the difference between both triggers, the number of selected events 
 
 \noindent The first two bins of the distribution show the results for each individual trigger. By raw numbers, \verb+HLT_Mu17_TkMu8+ is in the lead in terms of overall efficiency. To get en estimate of the overlap, the third bin shows the case when both triggers are required at once. With the number of events being quite similar to the one for \verb+HLT_Mu17_Mu8+, one can conclude that almost all events in the first bin are contained in the second one as well. To further quantify this conclusion, the fourth and fifth bin display the event count of \textit{only} one out of the two being triggered. Comparing the contents of these bins with the previous ones, the additional efficiency yielded by using \verb+HLT_Mu17_Mu8+ in addition to \verb+HLT_Mu17_TkMu8+ can be estimated. With it being only of the order of $\mathcal{O}(10^{-5})$, this analysis uses the latter trigger exclusively.
 
+
 \section{Muon Identification}
 \label{sec:muonid}
 
@@ -43,11 +44,11 @@ Since the analysis expects a low amount of statistics in the final distributions
 \item $\mathbf{N_{\textbf{Matched Stations}} > 1}$ - Requiring at least two muon stations to have a muon segment hit provides consistency with the trigger\footnote{A reasonable estimate for the transverse momentum requires a minimum of three hits. Without a well reconstructed transverse momentum, the trigger threshold becomes meaningless as it is based upon that.}. Once again, this aids against punch-through particles and also against general mismatches of tracks.
 \item $\mathbf{d_{xy} < 2\,\textbf{mm}}$ - The impact parameter in the transverse plane, in respect to the primary vertex, has to be low. Both decays in flight and cosmic muons are unlikely to meet this criterion~\cite{muonidcosmic}.
 \item $\mathbf{d_z < 5\,\textbf{mm}}$ - The longitudinal distance towards the primary vertex also has to be low for the same reasons.
-\item $\mathbf{N_{\textbf{Pixel Hits}} > 0}$ - Since in flight decays may not have hits in the pixel detector, this requirement provides further suppression.
+\item $\mathbf{N_{\textbf{Pixel Hits}} > 0}$ - Since in flight decays may not have hits in the pixel detector, this requirement provides further suppression and association to a single vertex.
 \item $\mathbf{N_{\textbf{Tracker Layers}} > 0}$ - A certain amount of tracker layers needs to be hit for a precise transverse momentum measurement. Additionally, the same logic as for the hits in the pixel detector applies.
 \end{itemize}
 
-The detector coverage only ensure a consistent momentum resolution for muons in the $\eta$-region up to 2.1 (c.f. cha.~\ref{cha:experiment}). Hence the analysis limits itself to this region. Together with a minimum transverse momentum set by the trigger, these are the basic criteria for object selection with regards to muons. They will be used and expanded upon in the event selection (Sec.~\ref{cha:eventsel}). 
+The detector coverage only ensure a consistent momentum resolution for muons in the $\eta$-region up to 2.1 (C.f. cha.~\ref{cha:experiment}). Hence the analysis limits itself to this region. Together with a minimum transverse momentum set by the trigger, these are the basic criteria for object selection with regards to muons. They will be used and expanded upon in the event selection (Sec.~\ref{cha:eventsel}). 
 
 
 \section{Jet \& Missing Transverse Energy Identification}
@@ -85,12 +86,12 @@ A supercluster (\textbf{SC}) describes an $\eta$-region of ECAL entries triggere
 \item $\mathbf{d_{0, \textbf{vtx}} < 0.02}$ - Transverse distance to primary vertex. 
 \item $\mathbf{d_{z, \textbf{vtx}} < 0.1}$ - Longitudinal distance to primary vertex.
 \item $\mathbf{1/E - 1/p < 0.05}$ - Difference of the inverse energy and momentum.
-\item $\mathbf{\textbf{Comb. RelIso}_{\textbf{PF}} < 0.15}$ - Combined relative isolation.
+\item $\mathbf{\textbf{Combined I}_{\textbf{rel, PF}} < 0.15}$ - Combined relative isolation.
 \item \textbf{Missing Hits} $\mathbf{<= 1}$ - Number of expected tracker hits that are missing.
 \item \textbf{Vertex Fit Probability} $\mathbf{> 10^{-6}}$ - Likelihood of the electron being matched to a conversion vertex.
 \end{itemize}
 
-Isolation describes the amount of energy in close vicinity to the particle's trajectory. Section~\ref{sec:muonqualy} will go into more detail on this topic. To match the electron trigger's settings, the individual tracker, ECAL and HCAL entries are also required to have an isolation less than 0.2, respectively.
+Isolation describes the amount of energy in close vicinity $\Delta R = 0.3$ to the particle's trajectory. Section~\ref{sec:muonqualy} will go into more detail on this topic. To match the electron trigger's settings, the individual tracker, ECAL and HCAL entries are also required to have an isolation less than 0.2, respectively.
 
 %%% Local Variables: 
 %%% mode: latex

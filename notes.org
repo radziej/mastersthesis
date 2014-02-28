@@ -49,3 +49,12 @@
 ** DONE pfmet
 ** DONE asymmetric conversion background? -p80
 ** DONE overestimate of 45%
+* Sebastian's Comments
+** TODO units and z-axis title in signal study plots
+** TODO lumi sections
+** TODO lumi determination reference
+** TODO signal PDF?
+** TODO signal xs scaling table
+** TODO core resolution scaling factors ref
+** TODO coordinate system, primary vertex?
+** TODO root smoothing ref
