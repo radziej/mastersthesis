@@ -39,6 +39,7 @@
 ** DONE smoothing only in 2d T/L histogram
 ** DONE fixed signal region numbering
 ** TODO explain smoothing in F_R?
+<<<<<<< Updated upstream
 * Lars' Comments
 ** DONE electromagnetic calorimeter - p21
 ** DONE resolving virtuality - p3
@@ -58,3 +59,66 @@
 ** TODO core resolution scaling factors ref
 ** TODO coordinate system, primary vertex?
 ** TODO root smoothing ref
+* Daniel Notes
+** page 1
+*** Aronyms: Standard model -> SM
+*** Fermion: Matter; Boson: Interaction
+*** 3 interactions in SM: EW, weak + strong
+*** DONE electrons interact with anything *that carries a charge*
+** page 2
+*** DONE +- sign
+*** DONE strong force between quarks -> hadrons
+**** 
+*** TODO 3 forces part of the SM?
+** page 3
+*** DONE check relativ force values
+*** DONE rephrase antiparticle charge inversion (neutrino majorana/dirac?)
+*** DONE equation 1.1 explain T and U as kinetic and potential energy
+** page 5
+*** DONE refer or define gell man matrices 
+*** DONE SU(3) dimension is 8 -> 8 interactions
+*** DONE gluons massless because it is an exact symmetry
+*** DONE gluons are bi-colour objects 
+*** DONE write red green blue explicitly
+*** DONE neutrally coloured
+*** DONE lagrangian density
+** page 6
+*** TODO lagrangian density
+*** TODO yang-mills?
+*** DONE introduce field B_\mu first and then give eigenstates W+-
+*** DONE capitalize NATURE
+*** glashow, salam, weinberg references
+*** DONE always write W boson and Z boson
+*** DONE equation 1.16 lambda^1 !! and change H to \phi
+** page 7
+*** quote all 3 authors, and give CMS paper reference
+*** TODO lagrangian density; use H for higgs field
+*** show mass term with H dublet
+*** explain how masses are generated
+*** 1 higgs dublet -> 4 dof -> W+-, Z and finally higgs
+*** same for susy model
+*** 2 higgs dublets -> 3 gauge bosons -> 5 higgs
+*** give all higgs couplings, stronger argument for SM higgs
+** page 8 
+*** observation in the 1940 by "zwicky"
+*** complete the energy content 25% DM, 70% DE (ref. planck measurement)
+** page 9
+*** DONE massive and slower -> cold dark matter
+** page 10
+*** DONE equation 1.20 term in (...) corresponds to masses between scalar and fermion -> only holds true for TeV SUSY
+*** DONE light higgs is bad; higgs mass = z mass + stop mass correction
+*** DONE 10^16 GeV
+*** DONE the INVARIANCE of a translation in time ... (Nöther's theorem)
+** page 11
+*** TODO mssm is a particular case of susy
+*** DONE only two dublets added
+** page 12
+*** equation 1.27 explain 5 higgs bosons with 2 higgs dublets -> 8 dof
+*** DONE susy particle masses are outside?? of reach of current exp
+** page 13
+*** DONE mention other models; Gauge mediated GMSB; other ways to realize SUSY
+** page 14
+*** either LNV and BNV coupling can be !=0 but not both
+** page 16
+*** add lambda prime 211 on z axis in 2011 plot
+
