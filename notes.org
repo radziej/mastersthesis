@@ -51,14 +51,19 @@
 ** DONE asymmetric conversion background? -p80
 ** DONE overestimate of 45%
 * Sebastian's Comments
-** TODO units and z-axis title in signal study plots
-** TODO lumi sections
+** DONE units and z-axis title in signal study plots
+** DONE lumi sections
 ** TODO lumi determination reference
 ** TODO signal PDF?
 ** TODO signal xs scaling table
-** TODO core resolution scaling factors ref
-** TODO coordinate system, primary vertex?
-** TODO root smoothing ref
+** DONE core resolution scaling factors ref
+** DONE coordinate system
+** DONE primary vertex
+** DONE transverse mass?
+** DONE root smoothing ref
+** DONE fake rate method ref + mb table of dd bgs
+** DONE explain summarization of F_R systematic uncertainties
+** TODO round values in tables
 * Daniel Notes
 ** page 1
 *** Aronyms: Standard model -> SM
@@ -121,4 +126,3 @@
 *** either LNV and BNV coupling can be !=0 but not both
 ** page 16
 *** add lambda prime 211 on z axis in 2011 plot
-

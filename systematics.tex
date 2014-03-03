@@ -1,9 +1,9 @@
 \chapter{Systematic Uncertainties}
 \label{cha:systematics}
 
-Before unveiling the final distribution(s), the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe a certain bias the methods of the analysis themselves can introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects. Unless stated otherwise, all of the uncertainties are determined using the smuon mass distribution at the final stage of the analysis.
+Before unveiling the final distribution(s), the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe an additional uncertainty or a possible bias the methods of the analysis themselves introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects. Unless stated otherwise, all of the uncertainties are determined using the smuon mass distribution at the final stage of the analysis.
 
-For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedures on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest influence. 
+For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedures on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest relative influence. 
 
 One thing to note is that the systematic uncertainty of the data-driven background prediction is evaluated separately. Therefore the global and object uncertainties are only given for Monte Carlo samples which are \textit{not} replaced by the estimate.
 
@@ -17,7 +17,7 @@ The procedure discussed in section~\ref{sec:jer} describes the adjustment of the
 
 While the statistical error of the energy resolution in the Monte Carlo samples $\sigma_{\text{MC}}$ is negligible, the fitting procedure is subject to systematic uncertainties such as the range it considers, as well. To account for that, the value of $\sigma_{\text{MC}}$ has been varied separately from the core resolution scaling factors by $\pm 5\,\pct$. The effect has been found to be below $0.1\,\pct$.
 
-For the background Monte Carlos, the overall effect for an upward deviation then amounts to $-0.1\,\pct$ while for the downward one it is $+0.6\,\pct$. For the signal prediction, it varies in between $1.2\,\pct$ and $3.4\,\pct$.
+For the background Monte Carlo samples, the overall effect for an upward deviation then amounts to $-0.1\,\pct$ while for the downward one it is $+0.6\,\pct$. For the signal prediction, it varies in between $1.2\,\pct$ and $3.4\,\pct$.
 
 
 \subsection{Jet Energy Scale}
@@ -25,13 +25,13 @@ For the background Monte Carlos, the overall effect for an upward deviation then
 
 For the jet energy scale (\textbf{JES}), there are a variety of factors which influence the measurement. A collection of all relevant values is being provided by the JetMET working group on their dedicated website~\cite{jes}. It encompasses the following effects: Absolute scale uncertainty, high transverse momentum extrapolation, single pion influence, jet flavour extrapolation, time dependencies, pileup as well as a statistical uncertainty, resolution dependency and central fit dependency which are given relative to the $p_{\text{T}}$ of jets. The quadrature of all contributions yields the total uncertainty. From the recommended set of uncertainty sources, \verb+Summer13_V2_DATA_AK5PFchs+ is used in this analysis. 
 
-Shifting the energies of all jets up and down affects the number of events by $+3.6\,\pct$ and $-2.9\,\pct$, respectively. Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$. The signal is affected by up to $7.8\,\pct$.
+Similarly to the jet energy resolution, the effect of scaling the jet energy has also been propagated to $E_{\text{T}}^{\text{miss}}$. Shifting the energies of all jets up and down affects the number of events by $+3.6\,\pct$ and $-2.9\,\pct$, respectively. The signal is affected by up to $7.8\,\pct$.
 
 
 \subsection{Muon Momentum Resolution \& Scale}
 \label{sec:mers}
 
-The systematic uncertainties for the muon momentum resolution and scale have been determined by the Muon POG~\cite{muonid2}. For muons with less than $200\,\text{GeV}$ transverse momentum, the general recommendations are a $0.2\,\pct$ uncertainty on the value of the scale and $0.6\,\pct$ on the resolution. Should the particle exceed that $p_{\text{T}}$ threshold, the uncertainty on the scale increases with $5\,\pct \cdot p_{\text{T}}/\text{TeV}$. As studies with cosmic are used for measuring the uncertainty on the resolution, the signal topology is not described accurately. By assuming a continuous $30\,\pct$ uncertainty on the resolution, based off the $0.6\,\pct$ for $p_{\text{T}} < 200\,\text{GeV}$, the remainder of the spectrum~\cite{muonptscale} is estimated over three regions. The values used for smearing are $1.1\,\pct$ for $p_{\text{T}} < 350\,\text{GeV}$, $1.65\,\pct$ for $p_{\text{T}} < 500\,\text{GeV}$ and $3.1\,\pct$ beyond that transverse momentum.
+The systematic uncertainties for the muon momentum resolution and scale have been determined by the Muon POG~\cite{muonid2}. For muons with less than $200\,\text{GeV}$ transverse momentum, the general recommendations are a $0.2\,\pct$ uncertainty on the value of the scale and $0.6\,\pct$ on the resolution. Should the particle exceed that $p_{\text{T}}$ threshold, the uncertainty on the scale increases with $5\,\pct \cdot p_{\text{T}}/\text{TeV}$. As studies with cosmic are used for measuring the uncertainty on the resolution, the signal topology is not described accurately. By assuming a continuous $30\,\pct$ relative uncertainty on the resolution, based off the $0.6\,\pct$ for $p_{\text{T}} < 200\,\text{GeV}$, the remainder of the spectrum~\cite{muonptscale} is estimated over three regions. The values used for smearing are $1.1\,\pct$ for $p_{\text{T}} < 350\,\text{GeV}$, $1.65\,\pct$ for $p_{\text{T}} < 500\,\text{GeV}$ and $3.1\,\pct$ beyond that transverse momentum.
 
 Applying the resolution uncertainties is performed similarly to the smearing of the jet energy scale in case of no matched gen-jets. Random numbers following a Gaussian distribution are generated, with the width being given by the listed percentages. The energies of muons on the other hand, are shifted by the respective amount to estimate the impact of the muon momentum scale. Once again, all effects are being propagated to $E_{\text{T}}^{\text{miss}}$.
 
@@ -51,7 +51,7 @@ To compensate for not scaling the number of events accordingly, a conservative $
 
 To estimate the systematic uncertainty for the $b$-tagging algorithm described in section~\ref{sec:bjets}, its scale factor functions are shifted up and down. These variations are taken from the same text files linked on the corresponding website~\cite{btagtwiki}.
 
-Shifting the efficiency maps only yields second order corrections. As their contribution also depends on (pseudo-)randomly generated numbers, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, this relation holds true. For these reasons, their impact is neglected.
+Shifting the efficiency maps only yields second order corrections. As (pseudo-)randomly generated numbers are used to determine when to up- or downgrade a jet, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, the statistical variance is large. For these reasons, their small impact is neglected.
 
 The effect on the smuon mass distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one. Its impact on the signal lies in between $0.2\,\pct$ and $1.4\,\pct$. 
 
@@ -73,7 +73,7 @@ When determining the cross section of a process, there are two main contribution
 
 The scale uncertainties have been provided alongside their cross sections for a sizeable portion of Monte Carlo samples. For the remainder, a conservative $50\,\pct$ and $5\,\pct$ uncertainty are assumed for leading order and higher order cross sections, respectively.
 
-For all signal Monte Carlos, the estimates given by the authors of the cross section calculation tool are used. They amount to $5\,\pct$ from the scale uncertainty and an additional $7\,\pct$ from supersymmetric QCD processes~\cite{susyxstool}.
+For all signal Monte Carlo samples, the estimates given by the authors of the cross section calculation tool are used. They amount to $5\,\pct$ from the scale uncertainty and an additional $7\,\pct$ from supersymmetric QCD processes~\cite{susyxstool}.
 
 
 \subsection{Parton Distribution Functions}
@@ -86,7 +86,7 @@ With the LHC being a \textit{hadron} collider, the particles it accelerates have
   \sigma = \sum_{ij} \int_0^1 \int_0^1 \text{d}x_1 \text{d}x_2 f(x_1, Q^2) f(x_2 ,Q^2) \hat{\sigma}_{ij}(\hat{s})
 \end{equation}
 
-Here $\hat{\sigma}_{ij}$ denotes the cross section for the interaction of the partons $i$ and $j$ at their center-of-mass energy $\hat{s}$. The parton density functions (\textbf{PDFs}) $f(x_i, Q^2)$ describe the probability to find a particular parton with a certain energy fraction $x_i$. This likelihood also depends on the energy scale $Q^2$, at which the function is evaluated. PDFs have to be determined experimentally, as it is not possible to predict them from theory alone. Measurements from different experiments and different methods to estimate the evolution of the functions have been used to generate multiple sets of parton distribution functions for the LHC experiment. The following three are considered in this analysis to calculate the systematic uncertainty introduced by choosing a particular one~\cite{pdfforlhc}. Both \textsc{MSTW2008}~\cite{mstw2008,mstw2008as} and \textsc{CT10}~\cite{ct10} are optimizing their PDF fit by minimizing a log-likelihood function, while \textsc{NNPDF 2.3}~\cite{nnpdf23,nnpdf23as} uses a template method to determine the closest match to the measurement. Exemplary distributions of \textsc{MSTW2008} for two energy scales are given in figure~\ref{fig:mstw2008pdf}.
+Here $\hat{\sigma}_{ij}$ denotes the cross section for the interaction of the partons $i$ and $j$ at their center-of-mass energy $\hat{s}$. The parton density functions (\textbf{PDFs}) $f(x_i, Q^2)$ describe the probability to find a particular parton with a certain energy fraction $x_i$. This likelihood also depends on the energy scale $Q^2$, at which the function is evaluated. PDFs have to be determined experimentally, as it is not possible to predict them from theory alone. Measurements from different experiments and different methods to estimate the evolution of the functions have been used to generate multiple sets of parton distribution functions for the LHC and other experiments. The following three are considered in this analysis to calculate the systematic uncertainty introduced by choosing a particular one~\cite{pdfforlhc}. Both \textsc{MSTW2008}~\cite{mstw2008,mstw2008as} and \textsc{CT10}~\cite{ct10} are optimizing their PDF fit by minimizing a log-likelihood function, while \textsc{NNPDF 2.3}~\cite{nnpdf23,nnpdf23as} uses a template method to determine the closest match to the measurement. Exemplary distributions of \textsc{MSTW2008} for two energy scales are given in figure~\ref{fig:mstw2008pdf}.
 
 \begin{figure}[htb!]
   \centering
@@ -99,7 +99,7 @@ As for theoretical uncertainties contributing to the PDFs, the dominant one stem
 
 The actual application of this procedure, follows the \textsc{PDF4LHC} recipe for a practical implementation~\cite{pdf4lhcpractical}. It is based on the general recommendations provided by the LHC4PDF Working Group~\cite{pdf4lhcrecom}. The general idea is to reweight the distribution of the observable in question, as if the Monte Carlo samples were generated using a different PDF set. From the resulting deviation, one can estimate the systematic uncertainty introduced by choosing a certain set.
 
-For the purpose of reweighting, there are numerous ``members'' stored in single PDF set. While the first one represents the central value, the others are variations in $\alpha_s$ or the PDF estimate. They are used to determine the up- and downward deviations of each member in respect to the central value. Adding the PDF and $\alpha_s$ variations in quadrature, yields the overall deviation in each direction. When reweighting the events for the observable, it has to be relative to the PDF set with which the sample has been generated. All Monte Carlo simulations have been created using \textsc{cteq6l1}~\cite{cteq6l1}, except for the $t\bar{t}$ one. There the NLO MC generator \textsc{Powheg} has been employed, which uses \textsc{CT10} as its basis. Estimating the uncertainty is done relative to the best fit, a combination of all PDF sets. Figure~\ref{fig:pdfsys} shows the PDF uncertainties for all Monte Carlo samples in the smuon mass distribution at the final stage of the analysis.
+For the purpose of reweighting, there are numerous ``members'' stored in single PDF set. While the first one represents the central value, the others are variations in $\alpha_s$ or the PDF estimate. They are used to determine the up- and downward deviations of each member in respect to the central value. Adding the PDF and $\alpha_s$ variations in quadrature, yields the overall deviation in each direction. When reweighting the events for the observable, it has to be relative to the PDF set with which the sample has been generated. All Monte Carlo simulations have been created using \textsc{cteq6l1}~\cite{cteq6l1}, except for the $t\bar{t}$ one. There the NLO MC generator \textsc{Powheg} has been employed, which uses \textsc{CT10} as its basis. Estimating the uncertainty is done relative to the best fit, which is given by the combination of all PDF sets. Figure~\ref{fig:pdfsys} shows the PDF uncertainties for all Monte Carlo samples in the smuon mass distribution at the final stage of the analysis.
 
 \begin{figure}[!htb]
   \centering
@@ -133,7 +133,7 @@ The performance of the trigger may vary between data and simulation. To account 
   \label{fig:triggereff}
 \end{figure}
 
-Both distributions are created right before the application of the same sign charge requirement. By including the latter, one would reduce the statistics to a point where the result is dominated by its statistical errors. Due to the nature of this analysis, implementing scale factors for muons depending on their transverse momentum can lead to moderately complex individual event weights. To avoid this issue, keeping the transverse momentum threshold of $15\,\text{GeV}$ for the sub-leading muon in mind, a conservative $5\,\pct$ systematic uncertainty is assumed as compensation.
+Both distributions are created right before the application of the same sign charge requirement. By including the latter, one would reduce the already low statistics to a point where the result is dominated by its statistical errors. Due to the nature of this analysis, implementing scale factors for muons depending on their transverse momentum can lead to moderately complex individual event weights. To avoid this issue, keeping the transverse momentum threshold of $15\,\text{GeV}$ for the sub-leading muon in mind, a conservative $5\,\pct$ systematic uncertainty is assumed as compensation.
 
 \section{Fake Rate Uncertainties}
 \label{sec:tlsys}
@@ -160,27 +160,27 @@ Table~\ref{tab:tlratiosys} shows the results of the variations.
   \centering
   \begin{tabular}{|l|c|c|}
     % BEGIN RECEIVE ORGTBL tlratiosys
-    \hline
-    Quantity                                        & Variation & Impact on estimate $[\pct]$ \\
-    \hline
-    \hline
-    Comb. Rel. Iso.                                 & 0.2       & $3.7 \pm 21.7$              \\
-    (default $< 0.5$)                               & 0.4       & $1.7 \pm 4.6$               \\
-    & 0.8       & $4.0 \pm 4.9$               \\
-    & 1.0       & $5.1 \pm 5.4$               \\
-    \hline
-    $p_{\text{T, jet}}$                             & 40        & $7.6 \pm 3.9$               \\
-    (default $> 50$)                                & 60        & $-5.8 \pm 3.1$              \\
-    & 70        & $-9.3 \pm 3.6$              \\
-    \hline
-    $E_{\text{T}}^{\text{miss}}$                    & 40        & $0.6 \pm 0.5$               \\
-    (default $< 50$)                                & 60        & $-0.9 \pm 1.4$              \\
-    & 70        & $-2.1 \pm 2.1$              \\
-    \hline
-    $m_{\text{T}}(\mu, E_{\text{T}}^{\text{miss}})$ & 30        & $-3.8 \pm 2.4$              \\
-    (default $< 50$)                                & 50        & $8.6 \pm 4.3$               \\
-    & 60        & $14.2 \pm 5.9$              \\
-    \hline
+\hline
+Quantity & Variation & Impact on estimate $[\pct]$ \\
+\hline
+\hline
+Comb. Rel. Iso. & 0.2 & $3.7 \pm 21.7$ \\
+(default $< 0.5\,\text{GeV}$) & 0.4 & $1.7 \pm 4.6$ \\
+ & 0.8 & $4.0 \pm 4.9$ \\
+ & 1.0 & $5.1 \pm 5.4$ \\
+\hline
+$p_{\text{T, jet}}$ & 40 & $7.6 \pm 3.9$ \\
+(default $> 50\,\text{GeV}$) & 60 & $-5.8 \pm 3.1$ \\
+ & 70 & $-9.3 \pm 3.6$ \\
+\hline
+$E_{\text{T}}^{\text{miss}}$ & 40 & $0.6 \pm 0.5$ \\
+(default $< 50\,\text{GeV}$) & 60 & $-0.9 \pm 1.4$ \\
+ & 70 & $-2.1 \pm 2.1$ \\
+\hline
+$m_{\text{T}}(\mu, E_{\text{T}}^{\text{miss}})$ & 30 & $-3.8 \pm 2.4$ \\
+(default $< 40\,\text{GeV}$) & 50 & $8.6 \pm 4.3$ \\
+ & 60 & $14.2 \pm 5.9$ \\
+\hline
     % END RECEIVE ORGTBL tlratiosys
   \end{tabular}
   \caption{Parameter variations to determine the systematic uncertainties of determining the fake rate $F_R$. Only one requirement is varied at a time. The expected statistical deviation has to be kept in mind.}
@@ -194,25 +194,25 @@ Table~\ref{tab:tlratiosys} shows the results of the variations.
 |-------------------------------------------------+-----------+-----------------------------|
 |-------------------------------------------------+-----------+-----------------------------|
 | Comb. Rel. Iso.                                 |       0.2 | $3.7 \pm 21.7$              |
-| (default $< 0.5$)                               |       0.4 | $1.7 \pm 4.6$               |
+| (default $< 0.5\,\text{GeV}$)                   |       0.4 | $1.7 \pm 4.6$               |
 |                                                 |       0.8 | $4.0 \pm 4.9$               |
 |                                                 |       1.0 | $5.1 \pm 5.4$               |
 |-------------------------------------------------+-----------+-----------------------------|
 | $p_{\text{T, jet}}$                             |        40 | $7.6 \pm 3.9$               |
-| (default $> 50$)                                |        60 | $-5.8 \pm 3.1$              |
+| (default $> 50\,\text{GeV}$)                    |        60 | $-5.8 \pm 3.1$              |
 |                                                 |        70 | $-9.3 \pm 3.6$              |
 |-------------------------------------------------+-----------+-----------------------------|
 | $E_{\text{T}}^{\text{miss}}$                    |        40 | $0.6 \pm 0.5$               |
-| (default $< 50$)                                |        60 | $-0.9 \pm 1.4$              |
+| (default $< 50\,\text{GeV}$)                    |        60 | $-0.9 \pm 1.4$              |
 |                                                 |        70 | $-2.1 \pm 2.1$              |
 |-------------------------------------------------+-----------+-----------------------------|
 | $m_{\text{T}}(\mu, E_{\text{T}}^{\text{miss}})$ |        30 | $-3.8 \pm 2.4$              |
-| (default $< 40$)                                 |        50 | $8.6 \pm 4.3$               |
+| (default $< 40\,\text{GeV}$)                    |        50 | $8.6 \pm 4.3$               |
 |                                                 |        60 | $14.2 \pm 5.9$              |
 |-------------------------------------------------+-----------+-----------------------------|
 \end{comment}
  
-Only the listed quantities are examined. All of the other ones are motivated by trigger thresholds or analysis requirements. For example the transverse momenta thresholds for muons are restricted by the choice of the trigger and the dimuon mass window is limited by low mass resonances and the $Z$-peak. For the overall impact, the variations of the transverse momentum of jets and the transverse mass hypothesis are considered. With the combined relative isolation and missing transverse energy only yielding impacts which are within the expected variation, they do not contribute. 
+Only the listed quantities are examined. All of the other ones are motivated by trigger thresholds or analysis requirements. For example the transverse momenta thresholds for muons are restricted by the choice of the trigger and the dimuon mass window is limited by low mass resonances and the $Z$-peak. For the overall impact, the variations of the transverse momentum of jets and the transverse mass hypothesis are considered. For a given quantity, the average is taken and added in quadrature to the overall sum. With the combined relative isolation and missing transverse energy only yielding impacts which are within the expected variation, they do not contribute.
 
 
 \subsection{Closure Test}
@@ -249,7 +249,7 @@ Taking the second order effects from the Monte Carlo subtraction and the luminos
 \section{Summary}
 \label{sec:summary}
 
-In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overall number of events are summarized. From the individual impacts of the up- and downward variations, the larger value has been taken for symmetrization to remain conservative.
+In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overall number of events are summarized. From the individual impacts of the up- and downward variations, the larger value has been taken to remain conservative.
 
 \begin{table}[!htb]
   \centering
@@ -279,7 +279,7 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
     \hline
     % END RECEIVE ORGTBL sys-uncertainties
   \end{tabular}
-  \caption{Summary of all systematic uncertainties. Cross section uncertainties ($\star$) are considered individually for each sample and are therefore not included in the sum. They are either listed in table~\ref{tab:mcsamples} or assumed to be 5 and 50 percent for a NNLO and NLO calculation, respectively.}
+  \caption{Summary of all systematic uncertainties. Cross section uncertainties ($\star$) are considered individually for each sample and are therefore not included in the sum. They are either listed in table~\ref{tab:mcsamples} or assumed to be 5 and 50 percent for a higher order and a LO calculation, respectively.}
   \label{tab:sys-uncertainties}
 \end{table}
 

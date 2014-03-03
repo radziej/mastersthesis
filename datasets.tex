@@ -350,7 +350,7 @@ During 2012 the average number of proton-proton collisions that occur for a sing
   \label{fig:pileups}
 \end{figure}
 
-To obtain the (true) number of interactions for each crossing, the instantaneous bunch-by-bunch luminosities are used as input. Combined with the total inelastic cross section, which amounts to $69400\,\mu\text{b}$ for 2012~\cite{pileup}, they can be used to calculate the aforementioned expected number of interactions for each  luminosity section\footnote{A section of roughly equal luminosity.}. While said cross section is entered manually into the script, the luminosities are extracted from a centrally maintained pileup file. In this analysis \verb+pileup_JSON_DCSONLY_190389-208686_All_2012_pixelcorr.txt+ has been used, which already includes corrections from the information provided by the pixel detector. Figure~\ref{fig:pileup2012} shows the histogram filled with the expected number of interactions for the 2012 data taking period. Complementary, figure~\ref{fig:pileup} shows the normalized distribution with the corresponding Monte Carlo entries. These bin contents for the simulated samples have also been gathered centrally and are taken from the dedicated TWiki website~\cite{pileupmc}. All samples in question have been produced with the Summer12 S10 scenario (c.f. app.~\ref{cha:mcsamppath}).
+To obtain the (true) number of interactions for each crossing, the instantaneous bunch-by-bunch luminosities are used as input. Combined with the total inelastic cross section, which amounts to $69400\,\mu\text{b}$ for 2012~\cite{pileup}, they can be used to calculate the aforementioned expected number of interactions for each lumi section\footnote{Short intervals of roughly equal luminosity.}. While said cross section is entered manually into the script, the luminosities are extracted from a centrally maintained pileup file. In this analysis \verb+pileup_JSON_DCSONLY_190389-208686_All_2012_pixelcorr.txt+ has been used, which already includes corrections from the information provided by the pixel detector. Figure~\ref{fig:pileup2012} shows the histogram filled with the expected number of interactions for the 2012 data taking period. Complementary, figure~\ref{fig:pileup} shows the normalized distribution with the corresponding Monte Carlo entries. These bin contents for the simulated samples have also been gathered centrally and are taken from the dedicated TWiki website~\cite{pileupmc}. All samples in question have been produced with the Summer12 S10 scenario (c.f. app.~\ref{cha:mcsamppath}).
 
 From the ratio of each bin a weight can be calculated and applied on an event by event basis for the analysis. Figure~\ref{fig:vtxn} provides a visualization of the effect of the reweighting.
 
@@ -387,7 +387,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
     p^\prime_{\text{T}} = p_{\text{T}, \text{GEN}} + c \cdot (p_{\text{T}} - p_{\text{T}, \text{GEN}})
   \end{equation}
   
-  \noindent Here $c$ denotes the core resolution scaling factors. To determine those, $0.8\,\text{fb}^{-1}$ of 2011 dijet data\footnote{No significant deviations have been observed with more statistics and 2012 data} has been used. The values are given in table~\ref{tab:jerfactors}.
+  \noindent Here $c$ denotes the core resolution scaling factors. To determine those, $0.8\,\text{fb}^{-1}$ of 2011 dijet data\footnote{No significant deviations have been observed with more statistics and 2012 data} has been used~\cite{jer}. The values are given in table~\ref{tab:jerfactors}.
 
   \begin{table}[htbp!]
     \centering
@@ -404,7 +404,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
     }
     \caption{Core resolution scaling factors for jet energy smearing. They are taken from the JER TWiki~\cite{jer}.}
     \label{tab:jerfactors}
-  \end{table} \\
+  \end{table}
   
 \textbf{No matched gen-jets:} Without a gen-jet match the jet energy resolution cannot be estimated. As an alternative method, one can randomly smear the \textit{reconstructed} transverse momentum of the jet. The values are assumed to follow a Gaussian distribution with a width of $\sigma = \sqrt{c^2-1} \cdot \sigma_{\text{MC}}$. The core resolution scaling factors $c$ remain the same, but the energy resolution of jets $\sigma_{\text{MC}}$ has to be derived from the Monte Carlo samples. In figure~\ref{fig:jerdeltapt} the difference between the transverse momentum of matched reco- and gen-jets is shown.
 
@@ -415,7 +415,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
     \label{fig:jerdeltapt}
   \end{figure}
  
-  \noindent Determining the width of this distribution yields the energy resolution. The shape cannot be accurately described by any commonly known distributions, however the width is reasonably well described by a Gaussian function. It yields $\sigma_{\text{MC}} = 6.2$ with an negligible statistical error, which is more than one order of magnitude lower than the last given digit. Keeping the shape in mind, the systematic uncertainty of the fit is expected to be higher. Its impact will be studied in the dedicated systematics section (Sec.~\ref{sec:jersys}).
+  \noindent Determining the width of this distribution yields the energy resolution. The entire distribution cannot be accurately modelled using by a Gaussian function, however the width of the peak is reasonably well described. It yields $\sigma_{\text{MC}} = 6.2$ with an negligible statistical error, which is more than one order of magnitude lower than the last given digit. Keeping the shape in mind, the systematic uncertainty of the fit is expected to be higher. Its impact will be studied in the dedicated systematics section (Sec.~\ref{sec:jersys}).
 
 The correction to the transverse momenta is propagated to the directional momenta, energy and the missing transverse energy measurements. In figure~\ref{fig:jermet} the particle flow missing transverse energy is shown with and without the correction. Due to the adjustment being expected to be comparatively small, the histogram has been filled at a later stage of the analysis. This ensures a reasonable agreement between data and simulation prior to examining the effect of the jet energy resolution.
 
