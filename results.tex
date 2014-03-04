@@ -120,23 +120,21 @@ Using the two likelihoods, a test statistic $Q$ can be defined. It is called the
   Q = \frac{\mathcal{L} (s + b; n)}{\mathcal{L} (b; n)}.
 \end{equation}
 
-\noindent Large values of $Q$ correspond to a better agreement with $H_1$, while small ones to a better agreement with $H_0$. For a result of an actual experiment, the observed number of events $n_{\text{obs}}$ yields a set likelihood-ratio $Q_{\text{obs}}$.
-
-The confidence level for either hypothesis to be an accurate description for $Q_{\text{obs}}$, is given as
+\noindent Large values of $Q$ correspond to a better agreement with $H_1$, while small ones to a better agreement with $H_0$. For a result of an actual experiment, the observed number of events $n_{\text{obs}}$ yields a set likelihood-ratio $Q_{\text{obs}}$. The confidence level for an hypothesis is defined as the probability $P$ to find a test statistic $Q$, which is less or equal to $Q_{\text{obs}}$. 
 
 \begin{equation}
   \label{eq:cl-prob}
   CL_x = P (Q \leq Q_{obs}).
 \end{equation}
 
-\noindent Here, $P$ denotes the probability for a test statistic $Q$ being less or equal to the observed statistic $Q_{\text{obs}}$. It is determined through integration.
+To determine this probability $P$, one has to integrate over all possible $Q$s up to $Q_{\text{obs}}$.
 
 \begin{equation}
   \label{eq:clx}
   CL_x = \int^{Q_{\text{obs}}}_{-\infty} \frac{d f_x(Q)}{d Q} \text{d} Q
 \end{equation}
 
-\noindent The probability distribution functions are denoted by $f_x(Q)$ and are usually determined through pseudo-experiments. For a very well understood background hypothesis, a confidence level in the null hypothesis of $CL_b (Q_{\text{obs}}) \approx 1$ is necessary to claim a discovery. The specific thresholds that $1 - CL_b (Q_{\text{obs}})$ has to fall below, are derived from the Gaussian distribution. This means $2.7 \cdot 10^{-3}$ corresponds to $3\,\sigma$, which is considered ``evidence'', and $5.7 \cdot 10^{-5}$ corresponding to $5\,\sigma$, a discovery.
+\noindent The probability distribution functions are denoted by $f_x(Q)$ and are usually determined through pseudo-experiments. For a very well understood background hypothesis, a confidence level in the null hypothesis close to one $CL_b (Q_{\text{obs}}) \approx 1$ is necessary to claim a discovery. The specific thresholds for the claim are given on $1 - CL_b (Q_{\text{obs}})$ and have been derived from standard deviations of the Gaussian distribution. This means $2.7 \cdot 10^{-3}$ corresponds to $3\,\sigma$, which is considered ``evidence'', and $5.7 \cdot 10^{-5}$ corresponding to $5\,\sigma$, a discovery.
 
 Excluding the signal (plus background) hypothesis uses the eponymous $CL_s$ quantity instead of $CL_{s+b}$. It is defined as a ratio:
 
