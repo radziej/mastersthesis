@@ -66,15 +66,13 @@
 ** TODO round values in tables
 * Daniel Notes
 ** page 1
-*** Aronyms: Standard model -> SM
-*** Fermion: Matter; Boson: Interaction
-*** 3 interactions in SM: EW, weak + strong
+*** DONE Fermion: Matter; Boson: Interaction
+*** DONE 3 interactions in SM: EW, weak + strong
 *** DONE electrons interact with anything *that carries a charge*
 ** page 2
 *** DONE +- sign
 *** DONE strong force between quarks -> hadrons
 **** 
-*** TODO 3 forces part of the SM?
 ** page 3
 *** DONE check relativ force values
 *** DONE rephrase antiparticle charge inversion (neutrino majorana/dirac?)
@@ -105,8 +103,7 @@
 *** 2 higgs dublets -> 3 gauge bosons -> 5 higgs
 *** give all higgs couplings, stronger argument for SM higgs
 ** page 8 
-*** observation in the 1940 by "zwicky"
-*** complete the energy content 25% DM, 70% DE (ref. planck measurement)
+*** DONE complete the energy content 25% DM, 70% DE (ref. planck measurement)
 ** page 9
 *** DONE massive and slower -> cold dark matter
 ** page 10
@@ -123,6 +120,6 @@
 ** page 13
 *** DONE mention other models; Gauge mediated GMSB; other ways to realize SUSY
 ** page 14
-*** either LNV and BNV coupling can be !=0 but not both
+*** TODO either LNV and BNV coupling can be !=0 but not both
 ** page 16
-*** add lambda prime 211 on z axis in 2011 plot
+*** DONE add lambda prime 211 on z axis in 2011 plot
