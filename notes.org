@@ -38,8 +38,8 @@
 ** DONE change text of closure proof to use control region
 ** DONE smoothing only in 2d T/L histogram
 ** DONE fixed signal region numbering
-** TODO explain smoothing in F_R?
-<<<<<<< Updated upstream
+** DONE explain smoothing in F_R?
+** TODO fix plot titles to "CMS Private"
 * Lars' Comments
 ** DONE electromagnetic calorimeter - p21
 ** DONE resolving virtuality - p3
