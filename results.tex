@@ -53,9 +53,9 @@ Having accounted for the systematic uncertainties, one can examine the final dis
   \label{tab:nev-msmuon}
 \end{table}
 
-The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits said statistical uncertainties as some background samples are subtracted from the data when determining the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation. All variations are well within the given uncertainties.
+The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits  statistical uncertainties from the background samples which are subtracted from the data when determining the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation. All variations are well within the given uncertainties.
 
-Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. To improve the results a multi-bin approach is being employed. For that purpose the two dimensional gaugino-smuon mass distribution is divided into six regions, which is shown in figure~\ref{fig:m_smu_chi}.
+Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. To improve the sensitivity a multi-bin approach is being employed. For that purpose the two dimensional gaugino-smuon mass distribution is divided into six regions, which is shown in figure~\ref{fig:m_smu_chi}.
 
 \begin{figure}[!htb]
   \centering
@@ -64,7 +64,7 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
   \label{fig:m_smu_chi}
 \end{figure}
 
-\noindent Most entries are centered around one diagonal line. In comparison, the aforementioned signal point has the majority of its entries at smuon masses above $1200\,\text{GeV}$. The contents of each of the six regions, are summarized in table~\ref{tab:m_smu_chi_summary}.
+\noindent Most entries are centered around one diagonal line. In comparison, the aforementioned signal point has the majority of its entries at smuon masses above $1200\,\text{GeV}$. The contents of each of the six regions are summarized in table~\ref{tab:m_smu_chi_summary}.
 
 \begin{table}[!htbp]
   \centering
@@ -94,15 +94,13 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
 \section{Calculation of Limits}
 \label{sec:calc-of-limits}
 
-As any excess of data is too slight to be considered statistically significant, one can translate the result into limits onto two quantities. The cross section of a RPV SUSY model and its model parameters. To calculate these, the method commonly used amongst the CMS experiment will be utilized. Details are given in the upcoming section.
+As any excess of data is too slight to be considered statistically significant, one can translate the result into limits onto two quantities. The cross section of a RPV SUSY model and its model parameters. To calculate these, one method commonly used in the CMS experiment will be utilized. Details are given in the upcoming section.
 
 
 \subsection{CLs Method}
 \label{sec:cls-method}
 
-To complement Bayesian and common frequentist methods, the $CL_s$ method~\cite{cls,cls2} has been developed. It is considered a modified frequentist analysis. Compared to the former two, its results are better in cases with low statistics and are less background dependent. The general idea is to compare two hypotheses to a measurement.
-
-% Confidence levels are defined as the probability of the respective hypothesis to describe the measured data.
+The $CL_s$ method~\cite{cls,cls2} is considered a modified frequentist analysis. It has been developed to prevent setting limits with frequentist methods on regions where the analysis is not sensitive. Its provides useful results in cases with low statistics and less dependent on background fluctuations. The general idea is to compare two hypotheses to a measurement.
 
 For most analyses in high energy particle physics, there are two cases to be covered. The null hypotheses $H_0$ being the Standard Model prediction by itself and a combination of the proposed signal and the Standard Model prediction as the second hypothesis $H_1$. In the most simple case, given enough statistics, one expects the number of events $n$ to follow a Poisson distribution.
 
@@ -113,7 +111,7 @@ For most analyses in high energy particle physics, there are two cases to be cov
 
 \noindent These likelihoods $\mathcal{L}_x$ are the basis for this method. Here, $x$ denotes the background-only scenario for $x = b$ and the background plus signal one for $x = s + b$. The distributions are ultimately a function of the cross section of the relevant processes, as it proportional to the number of selected events $n$.
 
-Using the two likelihoods, a test statistic $Q$ can be defined. It is called the \textit{likelihood-ratio} and is used to judge how well a hypothesis describes the measurement. In the most simple case, it is given by
+Using the two likelihoods, a test statistic $Q$ can be defined. It is called the \textit{likelihood-ratio} and is used to judge how well a hypothesis describes the measurement. In the simplest case, it is given by
 
 \begin{equation}
   \label{eq:testq}
@@ -178,7 +176,7 @@ To improve the limits, the signal region is subdivided into multiple signal regi
 \section{Limit Graphs}
 \label{sec:limit-graphs}
 
-The actual calculation of limits is performed by the \textsc{HiggsCombine} tool~\cite{clsmod,higgscombine}. It employs the \textsc{RooStats} package~\cite{roostats} which is part of the statistical analysis framework \textsc{ROOT}. In line with all CMS publications, the exclusion ranges are calculated at a $95\,\pct$ confidence level as a upper limit on the cross section ($CL_s \leq 0.05$). The necessary scaling of the signal strength to reach this $CL$ can be achieved through varying the previously introduced modifier $\mu$. This has to be done for each of the individual points in the RPV SUSY phase space.
+The actual calculation of limits is performed by the \textsc{HiggsCombine} tool~\cite{clsmod,higgscombine}. It employs the \textsc{RooStats} package~\cite{roostats} which is part of the statistical analysis framework \textsc{ROOT}. In line with most CMS publications, the exclusion ranges are calculated at a $95\,\pct$ confidence level as an upper limit on the cross section ($CL_s \leq 0.05$). The necessary scaling of the signal strength to reach this $CL$ can be achieved through varying the previously introduced modifier $\mu$. This has to be done for each of the individual points in the RPV SUSY phase space.
 
 While the result of the calculation is a limit on the signal cross section $\sigma$, it can be translated into a limit onto the model parameter $\lambda^\prime_{211}$. As the former scales quadratically with the latter, the following formula has to be used.
 
@@ -222,10 +220,10 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
 \end{figure}
 
 
-\section{Discussion and Thoughts}
+\section{Discussion and Interpretation}
 \label{sec:discussion}
 
-Comparing the shown limits to the analyses of 2011 RPV SUSY and the D0 predecessor, the phase space that is being covered has been expanded considerably. The simulation with the highest universal mass parameters for D0 was $m_0 = 500\,\text{GeV}$, $m_{1/2} = 600\,\text{GeV}$, while it had increased to $m_0 = 1300\,\text{GeV}$, $m_{1/2} = 1000\,\text{GeV}$ in the 2011 CMS analysis. With the given results, it now lies at $m_0 = 1500\,\text{GeV}$, $m_{1/2} = 2500\,\text{GeV}$. In addition to that, the excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0~\cite{auter,d0rpv}, and around a factor of 1.8 in regards to the 2011 analysis~\cite{2011rpv}. One can base a rough evaluation of this improvement off the increased luminosity. It grew by a factor of four compared to the 2011 analysis and by simply assuming the cross sections remain roughly the same, one would expect an improvement by a factor of 2 due to the quadratic scaling of $\lambda^\prime_{211}$ with $\sigma$ (Eq.~\ref{eq:xs-lambda-scale}). This matches the actual improvement reasonably well. This marks these results as the world's best collider-based limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
+Comparing the shown limits to the analyses of 2011 RPV SUSY and the D0 predecessor, the phase space that is being covered has been expanded considerably. The excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0~\cite{auter,d0rpv}, and around a factor of 1.8 in regards to the 2011 analysis~\cite{2011rpv}. One can base a rough evaluation of this improvement on the increased luminosity. It grew by a factor of four compared to the 2011 analysis, and by simply assuming the cross sections remain roughly the same, one would expect an improvement by a factor of 2 due to the quadratic scaling of $\lambda^\prime_{211}$ with $\sigma$ (Eq.~\ref{eq:xs-lambda-scale}). This matches the actual improvement reasonably well. This marks these results as the world's best collider-based limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
 
 In general one can see that, especially towards higher values of $m_0$, the exclusion limits get progressively weaker. This is due the drop in selection efficiency for the high mass signal points, as there are changes in the particle properties and composition of the decay chain. These differences have been illustrated throughout the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
 
@@ -264,11 +262,11 @@ Examining the ratio of expected and observed limits (Fig.~\ref{fig:lambda_ratio}
 \section{Conclusion and Outlook}
 \label{sec:conclusion}
 
-What has been presented, is a search for resonant production of second generation sleptons via single coupling dominance of the $\lambda^{\prime}_{211}$ parameter. For this purpose, the full $\mathcal{L} = 19.7\,\text{fb}^{-1}$ of double muon events recorded by the CMS experiment at proton-proton collisions with a center-of-mass energy of $\sqrt{s} = 8\,\text{TeV}$, is being used. The final state in question is composed of two reasonably well isolated, same-sign muons and at least two jets. An additional characteristic of the signature is a low amount of missing transverse energy, which is atypical for common SUSY events. As no significant excess of data has been observed in comparison to the Standard Model's prediction, the best limits to date have been set on the model parameter $\lambda^{\prime}_{211}$. They cover a range of up to $2.5\,\text{TeV}$ for the universal mass parameter of scalar particles $m_0$ and up to $1.5\,\text{TeV}$ for the universal mass parameter of fermionic particles $m_{1/2}$. A complementary expression through the mass of the smuon $m_{\tilde{\mu}}$ and gaugino $m_{\tilde{\chi}^0}$ in this model has also been provided.
+A search for resonant production of second generation sleptons via single coupling dominance of the $\lambda^{\prime}_{211}$ parameter has been presented. For this purpose, the full $\mathcal{L} = 19.7\,\text{fb}^{-1}$ of double muon events recorded by the CMS experiment at proton-proton collisions with a center-of-mass energy of $\sqrt{s} = 8\,\text{TeV}$, is being used. The final state in question is composed of two reasonably well isolated, same-sign muons and at least two jets. An additional characteristic of the signature is a low amount of missing transverse energy, which is atypical for common SUSY events. As no significant excess of data has been observed in comparison to the Standard Model's prediction, the best limits to date have been set on the model parameter $\lambda^{\prime}_{211}$. They cover a range of up to $2.5\,\text{TeV}$ for the universal mass parameter of scalar particles $m_0$ and up to $1.5\,\text{TeV}$ for the universal mass parameter of fermionic particles $m_{1/2}$. A complementary expression through the mass of the smuon $m_{\tilde{\mu}}$ and gaugino $m_{\tilde{\chi}^0}$ in this model has also been provided.
 
 For future efforts in this particular search, an improved selection efficiency for the signal could be achieved through taking the varying signature distributions of different RPV SUSY phase space points into account. This would require either fully flexible or individually adjusted thresholds for specific regions of the $m_0$-$m_{1/2}$-phase space.
 
-Additional, easier to interpret results using ``simplified models'', based on the knowledge gained about the most important decay channels, are also possible and being investigated.
+In addition, results allowing for a broader interpretation beyond the cMSSM using ``simplified models'', based on the knowledge gained about the most important decay channels, are also possible and being investigated.
 
 \section*{Acknowledgements} 
 \label{sec:acknowledgements}

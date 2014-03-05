@@ -1,13 +1,13 @@
 \chapter{Data-driven Background Estimation}
 \label{cha:datadrivenbg}
 
-One does observe a sizeable contribution from backgrounds like $t\bar{t}$ after the final step of the event selection. This is the case despite them being unable to produce two prompt same sign charge muons. That necessitates the source of at least one of two selected leptons to be some sort of deficiency. Muons from jets or other secondary interactions could be falsely associated with the vertex in question. Another possibility are punch-through particles traversing the HCAL and leaving tracks in the muon system. For example fragments from a hadronic interaction, like a charged pion or kaon, could yield enough hits in the chambers, given enough energy. As a result, this particle may be misidentified as a muon, if a coincidentally matching trajectory can be found in the tracker. Both cases lead to a ``fake muon''. Obviously only the latter is a \textit{true} fake muon, but both occurrences are usually handled the same way. The corresponding selection requirements are isolation for the secondary interaction case and the trajectory quality criteria for the punch-through one. However, preventing either scenario from happening by tightening their thresholds is unlikely to impossible. With how difficult simulating these QCD multi-jet event dominated scenarios can be, the poor agreement between data and prediction can be improved by utilizing an used portion of the measurement. To estimate the contribution of fakes from data, the ``fake rate method'' is employed.
+One does observe a sizeable contribution from backgrounds like $t\bar{t}$ in the CRBVC after the final step of the event selection. This is the case despite them being unable to produce two prompt same sign charge muons. That necessitates the source of at least one of two selected leptons to be some sort of deficiency. Muons from jets or other secondary interactions could be falsely associated with the vertex in question. Another possibility are punch-through particles traversing the HCAL and leaving tracks in the muon system. For example fragments from a hadronic interaction, like a charged pion or kaon, could yield enough hits in the chambers, given enough energy. As a result, this particle may be misidentified as a muon, if a coincidentally matching trajectory can be found in the tracker. Both cases lead to a ``fake muon''. Obviously only the latter is a \textit{true} fake muon, but both occurrences are usually handled the same way. The corresponding selection requirements are isolation for the secondary interaction case and the trajectory quality criteria for the punch-through one. However, preventing either scenario from happening by tightening their thresholds is unlikely to impossible. The poor agreement between data and prediction can be improved by utilizing a portion of the measurement, which is orthogonal to the signal region. To estimate the contribution of fakes from data, the ``fake rate method'' is employed.
 
 
 \section{Fake Rate Method}
 \label{sec:fakerate}
 
-The fake rate method will replace roughly half of the Monte Carlo samples with the data-driven estimate of multi-jet contributions. This encompasses the following backgrounds (C.f. tab.~\ref{tab:fakerate-mc-overview}). $W +$ jets, production of single tops, top pairs and top pairs with real photons as well as the entirety of the multi-jet samples. On the other hand the Drell-Yan processes, two and three vector boson backgrounds, top pair production with additional vector bosons, $W + \gamma$ and rare samples will be taken from simulation.
+The fake rate method will replace the dominant Monte Carlo samples with the data-driven estimate of multi-jet contributions. This encompasses the following backgrounds (Cf. tab.~\ref{tab:fakerate-mc-overview}): $W +$ jets, production of single tops, top pairs and top pairs with real photons as well as the entirety of the multi-jet samples. On the other hand the Drell-Yan processes, two and three vector boson backgrounds, top pair production with additional vector bosons, $W + \gamma$ and rare samples will be taken from simulation.
 
 \begin{table}[!htb]
   \centering
@@ -28,7 +28,7 @@ Rare Samples & No \\
 \hline
     % END RECEIVE ORGTBL fakeratemcs
   \end{tabular}
-  \caption{Overview over which Monte Carlo samples are and which aren't replaced by the data-driven background estimation.}
+  \caption{Overview over which Monte Carlo samples are and which aren't replaced by the data-driven background estimation. Table~\ref{tab:mcpooltitles} lists the samples which are combined under a single label.}
   \label{tab:fakerate-mc-overview}
 \end{table}
 \begin{comment}
@@ -49,16 +49,16 @@ Rare Samples & No \\
 \end{comment}
 
 
-The general idea of the fake rate method is to estimate fake contributions by comparing one tightly and one loosely selected muon sample. It should be noted that \textit{loose} muons are only selected for this data-driven background estimation, while the ones used in the analysis are denoted as \textit{tight}\footnote{The dimuon criteria are not applied for the data-driven background estimate.} ones. Two criteria are used to split the samples from one another. First and foremost, the combined relative isolation criterion is being raised from $I_{\text{rel}} < 0.12$ to $I_{\text{rel}} < 0.5$. This adds a sizeable contribution from backgrounds such as QCD and $t \bar{t}$ with muons stemming from secondary interactions. Additionally, the transverse impact parameter requirement has been loosened from $d_{xy} < 0.2\,\text{mm}$ to $d_{xy} < 2\,\text{mm}$. This allows for more displaced vertices to enter the selection.
+The general idea of the fake rate method is to estimate fake contributions by comparing one tightly and one loosely selected muon sample. It should be noted that \textit{loose} muons are only selected for this data-driven background estimation, while the ones used in the analysis are denoted as \textit{tight}\footnote{The dimuon criteria are not applied for the data-driven background estimate.} ones. Two criteria are used to separate the samples from one another. First and foremost, the combined relative isolation criterion is being raised from $I_{\text{rel}} < 0.12$ to $I_{\text{rel}} < 0.5$. This adds a sizeable contribution from backgrounds such as QCD and $t \bar{t}$ with muons stemming from secondary interactions. Additionally, the transverse impact parameter requirement has been loosened from $|d_{xy}| < 0.2\,\text{mm}$ to $|d_{xy}| < 2\,\text{mm}$. This allows for more displaced vertices to enter the selection.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.6\textwidth]{plots/nloosetight.pdf}
-  \caption{Number of loose versus number of tight muons as measured in data. T - Tight, L - Loose, SF - Single-fake, DF - Double-fake, ANA - Analysis sample, X - Not used.}
+  \caption{Number of loose versus number of tight muons as measured in data. T - Tight, L - Loose, SF - Single-fake, DF - Double-fake, ANA - Analysis sample (Signal region), X - Not used.}
   \label{fig:nloosetight}
 \end{figure}
 
-To measure the fake rate independently from the final distributions, an orthogonal sample needs to be procured. Much like the control regions being defined by an inverted MET requirement, the number of loose muons $N_{\text{loose }\mu}$ in an event can be used. Disjointed from the analysis sample, the fraction of tight to loose muons $F_R = \frac{T}{T+L}$\footnote{This is often falsely called the ``fake rate'', thus naming the method.} can be determined (C.f. fig.~\ref{fig:nloosetight}). To account for possible dependencies introduced by the detector, it is measured in both $\eta$ and $p_{\text{T}}$. 
+To measure the fake rate independently from the final distributions, an orthogonal sample needs to be constructed. Much like the control regions being defined by an inverted MET requirement, the number of loose muons $N_{\text{loose }\mu}$ in an event can be used. Disjointed from the analysis sample, the fraction of tight to loose muons $F_R = \frac{T}{T+L}$\footnote{This is often confusingly called the ``fake rate'', thus naming the method.} can be determined (C.f. fig.~\ref{fig:nloosetight}). To account for possible dependencies introduced by the detector, it is measured in both $\eta$ and $p_{\text{T}}$. 
 
 Using $F_R$, the number of tight muons $N_T$ can be predicted from the number of loose ones $N_L$. The definition of loose muons also includes all tight ones. Therefore, to stay in line with the independence of samples, one has to ensure that amongst the number of loose muons $N_L$, there are \textit{no} tight ones. The resulting formula is given below.
 
@@ -94,10 +94,10 @@ One would naively expect the sum of both cases to be the overall amount of fakes
 \section{Measurement}
 \label{sec:tlmeasurement}
 
-Estimating the background starts off by measuring the tight-to-loose ratio $F_R = \frac{T}{T+L}$. For that, the definition and selection of tight $T$ and loose muons $L$ is the first step. This is done after the event cleaning (Sec.~\ref{sec:evclean}), but before the basic muon selection (Sec.~\ref{sec:basicmuon}). Therefore events with any number of muons, specifically ones with less than two muons that pass the ID, can be included. For the \textit{tight} subset, almost all of the muon quality criteria (Sec.~\ref{sec:muonqualy}) are applied. The only exceptions are the distance to the next jet and the distance between two muons. These requirements are only meant for selecting the two muon candidates of the analysis. They may otherwise introduce a bias towards the specific final state, thus limiting the prediction. As already stated before, \textit{loose} muons are defined by the same rules, but only have to abide $I_{\text{rel}} < 0.5$ and $d_{xy} < 2\,\text{mm}$.
+Estimating the background starts off by measuring the tight-to-loose ratio $F_R = \frac{T}{T+L}$. For that, the definition and selection of tight $T$ and loose muons $L$ is the first step. This is done after the event cleaning (Sec.~\ref{sec:evclean}), but before the basic muon selection (Sec.~\ref{sec:basicmuon}). Therefore events with any number of muons, specifically ones with less than two muons that pass the ID, can be included. For the \textit{tight} subset, almost all of the muon quality criteria (Sec.~\ref{sec:muonqualy}) are applied. The only exceptions are the distance to the next jet and the distance between two muons. These requirements are only meant for selecting the two muon candidates of the analysis. They may otherwise introduce a bias towards the specific final state, thus limiting the prediction. As already stated before, \textit{loose} muons are defined by the same rules, but only have to abide $I_{\text{rel}} < 0.5$ and $|d_{xy}| < 2\,\text{mm}$.
 
 Demanding exactly one loose muon (Fig.~\ref{fig:ntlnloose}) yields an independent sample. Since the prediction of fakes is strongly correlated to the amount of QCD multi-jet events, various kinematic and topologic requirements can be applied to isolate these. Requiring two jets (Fig.~\ref{fig:ntlnjets}) ensures a minimum amount of hadronic activity per event. With each jet's transverse momentum exceeding $50\,\text{GeV}$ (Fig.~\ref{fig:ntljetpt}), the Drell-Yan background is being suppressed. After setting the minimum transverse momentum of the first muon to $20\,\text{GeV}$ and all remaining ones to at least $10\,\text{GeV}$(Fig.~\ref{fig:ntlmupt}), the $Z$-peak can be eliminated for the same purpose. Thus the invariant mass of two muons\footnote{The two muons encompass the one loose muon as well as one muon which passes the ID, but does not qualify as a loose muon.} closest to the $Z$-mass, is restricted to a window from $10\,\text{GeV}$ to $80\,\text{GeV}$ (Fig.~\ref{fig:ntlzmass}). By setting an upper bound of $40\,\text{GeV}$ for the missing transverse energy (Fig.~\ref{fig:ntlmet}), the top-quark and $W$-Boson backgrounds are being discriminated, as QCD processes generally do not contain a lot of $E_{T}^{miss}$. By using the transverse mass hypothesis for a leptonically decaying $W$ boson, it is also possible to reduce the same backgrounds.
-Requiring the value of the transverse mass of the loose muon\footnote{One expects the \textit{loose} muon to stem from a secondary decay, which is why it is the subject of this requirement.} and the missing transverse energy to be less than $40\,\text{GeV}$ (Fig.~\ref{fig:ntlmt}) decreases the contribution of said backgrounds, while passing QCD multi-jet events. 
+Requiring the value of the transverse mass of the loose muon\footnote{One expects the \textit{loose} muon to stem from a secondary decay, which is why it is the subject of this requirement.} and the missing transverse energy to be less than $40\,\text{GeV}$ (Fig.~\ref{fig:ntlmt}) decreases the contribution of top and $W$ backgrounds as well, while passing QCD multi-jet events. 
 
 \begin{equation}
   \label{eq:transverse-mass}
@@ -106,9 +106,9 @@ Requiring the value of the transverse mass of the loose muon\footnote{One expect
 
 \noindent Also, motivating a QCD-like back-to-back topology can be achieved through limiting the azimuth angle between the leading jet and loose muon to $\Delta \phi > 1$ (Fig.~\ref{fig:ntljetdphi}).
 
-In general, one can observe reasonable agreement between data and simulation in the $n - 1$ distributions. In particular with regards to the electroweak processes. However in QCD dominated histograms, there is a noticeable lack of QCD contributions towards higher energies. One major reason are the leading order cross sections used for these samples. Additionally only a fraction of the enormous amount of hadronic activity can be simulated adequately. The large event weights given in table~\ref{tab:mcsamples}, are a testament to that. As a result, the statistics for QCD multi-jet events are also lacking.
+In general, one can observe reasonable agreement between data and simulation in the $n - 1$ distributions. In particular with regards to the electroweak processes. However in QCD dominated histograms, there is a noticeable deficit of QCD contributions towards higher energies. One major reason are the leading order cross sections used for these samples. Additionally, only a fraction of the hadronic activity can be simulated adequately. The large event weights given in table~\ref{tab:mcsamples}, are a testament to that. As a result, the statistical uncertainties for QCD multi-jet events are also large.
 
-\begin{figure}[!htbp]
+\begin{figure}[!p]
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
@@ -120,11 +120,7 @@ In general, one can observe reasonable agreement between data and simulation in 
     \includegraphics[width=\textwidth]{plots/nTL_njets.pdf}
     \caption{Number of jets\label{fig:ntlnjets}}
   \end{subfigure}
-\end{figure}
 
-\begin{figure}[!htbp]
-  \ContinuedFloat
-  \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/nTL_jetpt.pdf}
@@ -135,11 +131,7 @@ In general, one can observe reasonable agreement between data and simulation in 
     \includegraphics[width=\textwidth]{plots/nTL_mupt.pdf}
     \caption{Transverse momentum of muons \label{fig:ntlmupt}}
   \end{subfigure}
-\end{figure}
 
-\begin{figure}[!htbp]
-  \ContinuedFloat
-  \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/nTL_zmass.pdf}
@@ -152,7 +144,7 @@ In general, one can observe reasonable agreement between data and simulation in 
   \end{subfigure}
 \end{figure}
 
-\begin{figure}[!htb]
+\begin{figure}[!ht]
   \ContinuedFloat
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
@@ -185,18 +177,18 @@ Counting the number of tight and loose muons in the resulting enriched sample, c
     \caption{\label{fig:tlratio2d}}
   \end{subfigure}
 
-  \caption{Ratio of tight to loose muons for the calculation of $F_R$. As a function of $p_{\text{T}}$ (\ref{fig:tlratio}) and as a function of both $p_{\text{T}}$ and $\eta$ (\ref{fig:tlratio2d}).}
+  \caption{Ratio of tight to loose muons for the calculation of $F_R$, as a function of $p_{\text{T}}$ (\ref{fig:tlratio}) and as a function of both $p_{\text{T}}$ and $\eta$ (\ref{fig:tlratio2d}).}
   \label{fig:tlratios}
 \end{figure}
 
-The one dimensional version visualizes various tight-to-loose ratios as a function of $p_{\text{T}}$. While the prediction is depicted by the data points, from which the backgrounds have been subtracted, additional exemplary Monte Carlo samples show the general evolution of the hadronic activity for a few selected backgrounds. Once again, the decreasing statistics towards higher energies and leading order cross sections of QCD processes have to be kept in mind. As the data-driven estimate is meant to describe QCD multi-jet events, comparing the evolutions of the respective entries reveals that the data behaves differently than the prediction provided by the simulated QCD multi-jet events. Multiple variations of the method's requirements show that the shape of this evolution remains almost identical. This difference has to be kept in mind when determining the uncertainties of this procedure (Sec.~\ref{sec:closure-test}).  
+The one dimensional version visualizes various tight-to-loose ratios as a function of $p_{\text{T}}$. While the prediction is depicted by the data points, from which the backgrounds have been subtracted, additional exemplary Monte Carlo samples show the general evolution of the hadronic activity for a few selected backgrounds. Once again, the decreasing statistics towards higher energies and leading order cross sections of QCD processes have to be kept in mind. As the data-driven estimate is meant to describe QCD multi-jet events, comparing the evolutions of the respective entries reveals that the data behaves differently than the prediction provided by the simulated QCD multi-jet events. This difference has to be kept in mind when determining the uncertainties of this procedure (Sec.~\ref{sec:closure-test}).  
 
-For the actual prediction, $F_R$ is used as a function of $p_{\text{T}}$ and $\eta$ (Fig~\ref{fig:tlratio2d}). Here, the smoothing algorithm~\cite{rootsmooth} that has been introduced in the $b$-tagging section (Sec.~\ref{sec:bjets}), has been employed once more. This allows one to avoid rogue values in bins with a low amount of entries. Should any muon exceed the maximum transverse momentum for which this histogram can provide a reasonable estimate, the value of the corresponding last bin is being used.
+For the actual prediction, $F_R$ is used as a function of $p_{\text{T}}$ and $\eta$ (Fig~\ref{fig:tlratio2d}). Here, the smoothing algorithm~\cite{rootsmooth} that has been introduced in the $b$-tagging section (Sec.~\ref{sec:bjets}), has been employed once more. This allows one to avoid rogue values in bins with a low amount of entries. Should any muon exceed the maximum transverse momentum for which this histogram can provide a reasonable estimate, the value of the corresponding last bin is used.
 
 \section{Prediction}
 \label{sec:tlprediction}
 
-With the tight-to-loose ratio $F_R$ determined, the analysis can be rerun to determine the background estimate. As mentioned in section~\ref{sec:fakerate}, the selection process of the two muons (Sec.~\ref{sec:muonqualy}) has to be altered to be working on an orthogonal sample. Instead of demanding the two tight leptons, one or both of them are replace by loose muons, which are not tight ones. In combination with the respective event weights, this yields single- and double-fake estimates. Figure~\ref{fig:fakeestimates} shows the distributions for both estimates.
+With the tight-to-loose ratio $F_R$ determined, the analysis can be rerun to determine the background estimate. As mentioned in section~\ref{sec:fakerate}, the selection process of the two muons (Sec.~\ref{sec:muonqualy}) has to be altered to be working on an orthogonal sample. Instead of demanding the two tight leptons, one or both of them are replaced by loose muons, which are not tight ones. In combination with the respective event weights, this yields single- and double-fake estimates. Figure~\ref{fig:fakeestimates} shows the distributions for both estimates.
 
 \begin{figure}[!htbp]
   \centering
@@ -211,11 +203,11 @@ With the tight-to-loose ratio $F_R$ determined, the analysis can be rerun to det
     \caption{\label{fig:CRBVC_m_smuon_doublefake}}
   \end{subfigure}
 
-  \caption{Single- (\ref{fig:CRBVC_m_smuon_singlefake}) and double-fake estimate (\ref{fig:CRBVC_m_smuon_doublefake}) for BVC control region. The latter can be seen before the fake estimate in figure~\ref{fig:ssccr_nofakes}.}
+  \caption{Single- (\ref{fig:CRBVC_m_smuon_singlefake}) and double-fake estimate (\ref{fig:CRBVC_m_smuon_doublefake}) for CRBVC. The distribution before the fake estimate can be seen in figure~\ref{fig:ssccr_nofakes}.}
   \label{fig:fakeestimates}
 \end{figure}
 
-One can see that the data exceeds the simulated backgrounds, including QCD multi-jet production. This supports the hypothesis, that the contribution of fake muons is not well modelled and has an influence on the final state in question. Re-examining the BVC control region previously discussed in section~\ref{sec:sscmuons}, yields the distributions shown in figure~\ref{fig:CRBVC}.
+One can see that the data exceeds the simulated backgrounds, including QCD multi-jet production. This supports the hypothesis, that the contribution of fake muons is not well modelled and has an influence on the final state in question. Re-examining the CRBVC previously discussed in section~\ref{sec:sscmuons}, yields the distributions shown in figure~\ref{fig:CRBVC}.
 
 \begin{figure}[hb!]
   \centering
@@ -230,11 +222,11 @@ One can see that the data exceeds the simulated backgrounds, including QCD multi
     \caption{\label{fig:CRBVC_m_gaugino}}
   \end{subfigure}
 
-  \caption{Smuon mass and gaugino mass of the control region BVC, including the data-driven background estimate.}
+  \caption{Smuon mass and gaugino mass of the CRBVC, including the data-driven background estimate (Cf.~fig~\ref{fig:sccr_nofakes}).}
   \label{fig:CRBVC}
 \end{figure}
 
-With the inclusion of the fake rate method's prediction, the background describes the data significantly better. For a simple quantification of this statement, one can regard the entire distribution as a single bin and compare the number of entries. This yields the following values for the smuon mass distribution: $N_{\text{MC}} = 86.6 \pm 3.0\,(\text{stat.})$ and $N_{\text{Data}} = 79.0$. A $-0.8\,\sigma$ deviation, purely based off of the Poisson and statistical uncertainty, shows good agreement between data and background prediction.
+With the inclusion of the fake rate method's prediction, the background describes the data significantly better. For a simple quantification of this statement, one can regard the entire distribution as a single bin and compare the number of entries. This yields the following values for the smuon mass distribution: $N_{\text{MC}} = 86.6 \pm 3.0\,(\text{stat.})$ and $N_{\text{Data}} = 79.0$. A $-0.8\,\sigma$ deviation showing good agreement between data and background prediction.
 
 
 %%% Local Variables: 

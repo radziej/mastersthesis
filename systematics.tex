@@ -1,11 +1,11 @@
 \chapter{Systematic Uncertainties}
 \label{cha:systematics}
 
-Before unveiling the final distribution(s), the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe an additional uncertainty or a possible bias the methods of the analysis themselves introduce to a measurement or a prediction. To account for them, the parameters of said procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects. Unless stated otherwise, all of the uncertainties are determined using the smuon mass distribution at the final stage of the analysis.
+Before unveiling the final distribution(s), the various systematic uncertainties have to be taken into consideration. These types of uncertainties describe an additional uncertainty or a possible bias that the methods of the analysis themselves introduce to a measurement or a prediction. To account for them, the parameters of the procedures are usually varied in a way that both over- and underestimations are covered. The relevant uncertainties can be split into two categories. On the one hand there are those that affect the analysis on a global scale, while on the other hand some only concern specific types of objects. Unless stated otherwise, all of the uncertainties are determined using the smuon mass distribution at the final stage of the analysis.
 
-For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedures on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest relative influence. 
+For the signal samples, the systematic uncertainties are estimated from the impact of each individual procedure on the three shown points in the RPV supersymmetry phase space. In most cases, the points with lower values of the universal mass parameters are experiencing the largest relative influence. 
 
-One thing to note is that the systematic uncertainty of the data-driven background prediction is evaluated separately. Therefore the global and object uncertainties are only given for Monte Carlo samples which are \textit{not} replaced by the estimate.
+The systematic uncertainty of the data-driven background prediction is evaluated separately. Therefore the global and object uncertainties are only given for Monte Carlo samples which are \textit{not} replaced by the estimate.
 
 \section{Object Uncertainties}
 \label{sec:objsys}
@@ -13,7 +13,7 @@ One thing to note is that the systematic uncertainty of the data-driven backgrou
 \subsection{Jet Energy Resolution}
 \label{sec:jersys}
 
-The procedure discussed in section~\ref{sec:jer} describes the adjustment of the jet energy resolution already. It remains the same for estimating its systematic uncertainty. As for the variation of its parameters, the core resolution factors (Tab.~\ref{tab:jerfactors}) are scaled according to their uncertainties. Both the statistical and systematic upper and lower bound are added quadratically and applied to the mean value. While this applies to both cases of matched and no matched gen-jets, the latter is designed to exclusively worsen the resolution. As a result, a core resolution factor is not expected to be less or equal to 1. With the width of the Gaussian distribution used for smearing given by $\sigma = \mathbf{\sqrt{c^2-1}} \cdot \sigma_{\text{MC}}$, values below that threshold have to be adjusted. This is only the case for the lower bound of the $0 < \eta < 0.5$ range. Here instead of $0.990$, $1.001$ is used. 
+The procedure discussed in section~\ref{sec:jer} describes the adjustment of the jet energy resolution already. It remains the same for estimating its systematic uncertainty. As for the variation of its parameters, the core resolution factors (Tab.~\ref{tab:jerfactors}) are scaled according to their uncertainties. Both the statistical and systematic upper and lower bound are added quadratically and applied to the mean value. While this applies to both cases of matched and no matched gen-jets, the latter can only worsen the resolution. As a result, a core resolution factor is not expected to be less or equal to 1. With the width of the Gaussian distribution used for smearing given by $\sigma = \mathbf{\sqrt{c^2-1}} \cdot \sigma_{\text{MC}}$, values below that threshold have to be adjusted. This is only the case for the lower bound of the $0 < |\eta| < 0.5$ range. Here instead of $0.990$, $1.001$ is used. 
 
 While the statistical error of the energy resolution in the Monte Carlo samples $\sigma_{\text{MC}}$ is negligible, the fitting procedure is subject to systematic uncertainties such as the range it considers, as well. To account for that, the value of $\sigma_{\text{MC}}$ has been varied separately from the core resolution scaling factors by $\pm 5\,\pct$. The effect has been found to be below $0.1\,\pct$.
 
@@ -51,7 +51,7 @@ To compensate for not scaling the number of events accordingly, a conservative $
 
 To estimate the systematic uncertainty for the $b$-tagging algorithm described in section~\ref{sec:bjets}, its scale factor functions are shifted up and down. These variations are taken from the same text files linked on the corresponding website~\cite{btagtwiki}.
 
-Shifting the efficiency maps only yields second order corrections. As (pseudo-)randomly generated numbers are used to determine when to up- or downgrade a jet, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, the statistical variance is large. For these reasons, their small impact is neglected.
+Shifting the efficiency maps only yields minor corrections. As (pseudo-)randomly generated numbers are used to determine when to up- or downgrade a jet, the statistical uncertainty overshadows the systematic one. Especially for points in the $p_{\text{T}}$-$\eta$-parameter space with a very low number of entries, the statistical variance is large. For these reasons, their small impact is neglected.
 
 The effect on the smuon mass distribution is $-0.6\,\pct$ for the upward variation and $+0.2\,\pct$ for the downward one. Its impact on the signal lies in between $0.2\,\pct$ and $1.4\,\pct$. 
 
@@ -63,13 +63,13 @@ The effect on the smuon mass distribution is $-0.6\,\pct$ for the upward variati
 \subsection{Luminosity}
 \label{sec:lumisys}
 
-The offline estimate of the luminosity uses the information provided by the pixel detector. Since the high granularity allows for a very accurate measurement of the pixel clusters on which the estimate is based on, the uncertainty is comparatively low. For the 2012 datasets, it is only $2.6\,\pct$~\cite{lumisys}. It applies directly to all backgrounds as they scale linearly with it.
+The offline estimate of the luminosity uses the information provided by the pixel detector. Since the high granularity allows for a very accurate measurement of the pixel clusters on which the estimate is based on, the uncertainty is comparatively low. For the 2012 datasets, it is $2.6\,\pct$~\cite{lumisys}. It applies directly to all backgrounds as they scale linearly with it.
 
 
 \subsection{Cross sections}
 \label{sec:xssys}
 
-When determining the cross section of a process, there are two main contributions to the uncertainty of the scale. The factorization and renormalization scale. By convention, these are varied up and down by a factor of two to estimate their individual uncertainties. They are also assumed to be fully correlated.
+When determining the cross section of a process, there are two main contributions to the uncertainty of the scale: The factorization and renormalization scale. By convention, these are varied up and down by a factor of two to estimate their individual uncertainties. They are also assumed to be fully correlated.
 
 The scale uncertainties have been provided alongside their cross sections for a sizeable portion of Monte Carlo samples. For the remainder, a conservative $50\,\pct$ and $5\,\pct$ uncertainty are assumed for leading order and higher order cross sections, respectively.
 
@@ -79,7 +79,7 @@ For all signal Monte Carlo samples, the estimates given by the authors of the cr
 \subsection{Parton Distribution Functions}
 \label{sec:pdfsys}
 
-With the LHC being a \textit{hadron} collider, the particles it accelerates have a substructure. As it are the constituents of a proton that collide, only a fraction $x_i \: (i = 1,2)$ of the center-of-mass energy $s$ enters the interaction: $\hat{s} = x_1 x_2 \cdot s$. A significant part of an accurate Monte Carlo simulation is a precise description of these ``partons'', as the constituents are called. To obtain the cross section $\sigma$ for a selected process, one has to sum over all possible partons and integrate over the energy fractions they can carry.
+With the LHC being a \textit{hadron} collider, the particles it accelerates have a substructure. The constituents of a proton collide and only a fraction $x_i \: (i = 1,2)$ of the center-of-mass energy $s$ enters the interaction: $\hat{s} = x_1 x_2 \cdot s$. A significant part of an accurate Monte Carlo simulation is a precise description of these ``partons'', as the constituents are called. To obtain the cross section $\sigma$ for a selected process, one has to sum over all possible partons and integrate over the energy fractions they can carry.
 
 \begin{equation}
   \label{eq:pdfxs}
@@ -138,7 +138,7 @@ Both distributions are created right before the application of the same sign cha
 \section{Fake Rate Uncertainties}
 \label{sec:tlsys}
 
-Determining the tight-to-loose ratio $F_R$ varies depending on the chosen requirements for the QCD multi-jet enrichment of the sample. To estimate the systematic uncertainty introduced by this method, a single quantity is varied, while the others are kept constant. As opposed to the previously discussed systematic uncertainties, the impact on the number of events can be within the expected statistical variation. Should this be the case, it cannot be considered a systematic uncertainty. Calculating said variation is based on how the systematic uncertainty $\sigma_{\text{sys}}$ is determined. With the number of events from the default method as a reference $N_{\text{def}}$ and the one from the variation denoted by $N_{\text{var}}$, it is given by
+Determining the tight-to-loose ratio $F_R$ varies depending on the chosen requirements for the QCD multi-jet enrichment of the sample. To estimate the systematic uncertainty introduced by this method, a single quantity is varied, while the others are kept constant. As opposed to the previously discussed systematic uncertainties, the impact on the number of events can be within the expected statistical variation. Should this be the case, it cannot be considered a systematic uncertainty. Calculating the variation is based on how the relative systematic uncertainty $\sigma_{\text{sys}}$ is determined. With the number of events from the default method as a reference $N_{\text{def}}$ and the one from the variation denoted by $N_{\text{var}}$, it is given by
 
 \begin{equation}
   \label{eq:frsysabs}
@@ -152,7 +152,7 @@ Determining the tight-to-loose ratio $F_R$ varies depending on the chosen requir
   \sigma_{\text{stat}} = \frac{\sqrt{\sigma_{\text{var}}^2 - \sigma_{\text{def}}^2}}{N_{\text{def}}}.
 \end{equation}
 
-\noindent Note that one would usually expect the $\sigma$ to be \textit{added} in quadrature. However, this uncertainty would correspond to the number of events instead of the method itself. Since these values are (theoretically) fully correlated, they are required to be subtracted.
+\noindent Note that one would usually expect the $\sigma$ to be \textit{added} in quadrature. However, this uncertainty would correspond to the number of events instead of the method itself. Since these values are strongly correlated, they are required to be subtracted.
 
 Table~\ref{tab:tlratiosys} shows the results of the variations.
 
@@ -218,7 +218,7 @@ Only the listed quantities are examined. All of the other ones are motivated by 
 \subsection{Closure Test}
 \label{sec:closure-test}
 
-To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction of said ratio given by the QCD multi-jet background (Fig.~\ref{fig:tlratios}), a ``closure test'' is being used. It provides a proof of concept for the data-driven background method, as well as being an indicator for the accuracy of the MC prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratios measured in data and the QCD multi-jet counterpart it is meant to be similar to, yields the aforementioned quality estimate for the method itself. Since the $t\bar{t}$ background is the most prominent one in the final stage of the analysis, it is used as the benchmark process in this test. Figure~\ref{fig:closuretest} shows both the proof of concept on the left, as well as the actual comparison on the right.
+To quantify the difference between the tight-to-loose ratio $F_R$ of the recorded data and the Monte Carlo prediction of the ratio given by the QCD multi-jet background (Fig.~\ref{fig:tlratios}), a ``closure test'' is used. It provides a test of concept for the data-driven background method, as well as being an indicator for the accuracy of the MC prediction. The general idea is to apply the tight-to-loose ratio $F_R$ to a chosen background and compare the result to its Monte Carlo prediction. A comparison between the tight-to-loose ratios measured in data and the QCD multi-jet counterpart it is meant to be similar to, yields the aforementioned quality estimate for the method itself. Since the $t\bar{t}$ background is the most prominent one in the final stage of the analysis, it is used as the benchmark process in this test. Figure~\ref{fig:closuretest} shows both the proof of concept on the left, as well as the actual comparison on the right.
 
 \begin{figure}
   \centering
@@ -237,11 +237,11 @@ To quantify the difference between the tight-to-loose ratio $F_R$ of the recorde
   \label{fig:closuretest}
 \end{figure}
 
-To provide a proof of concept for the fake rate method, the charge control region CRC is being used. Aside from the typical inverted $E_{\text{T}}^{\text{miss}}$ requirement, it is characterised by not applying the $b$-jet veto while requiring the same charge one. For the proof the QCD multi-jet tight-to-loose ratio is measured and applied to the $t\bar{t}$ background. It is shown alongside the corresponding $t\bar{t}$ Monte Carlo. Note that the ratio measured in data cannot be used here, as the previously observed difference to the Monte Carlo tight-to-loose ratio already necessitates a differing result. The good agreement between the QCD multi-jet $F_R$ and MC prediction that can be seen in figure~\ref{fig:closureproof}, speaks for the quality of the method itself.
+To provide a proof of concept for the fake rate method, the charge control region CRC is being used. Aside from the typical inverted $E_{\text{T}}^{\text{miss}}$ requirement, it is characterised by not applying the $b$-jet veto while requiring the same charge one. For the proof the QCD multi-jet tight-to-loose ratio is measured and applied to the $t\bar{t}$ background. It is shown alongside the corresponding $t\bar{t}$ Monte Carlo. Note that the ratio measured in data cannot be used here, as the previously observed difference to the Monte Carlo tight-to-loose ratio already implies a differing result. The good agreement between the QCD multi-jet $F_R$ and MC prediction that can be seen in figure~\ref{fig:closureproof}, is an indication for the quality of the method itself.
 
-The actual comparison of the results of applying both the data and the QCD multi-jet tight-to-loose ratio to the $t\bar{t}$ background is shown in figure~\ref{fig:closurecomparison}. Their disagreement of $45\,\pct$ which can be observed in the final stage of the analysis is taken as a systematic uncertainty.
+The actual comparison of the results of applying both the data and the QCD multi-jet tight-to-loose ratio to the $t\bar{t}$ background is shown in figure~\ref{fig:closurecomparison}. Since one initially expected comparable results from both predictions, their disagreement of $45\,\pct$ in the number of events is taken as a systematic uncertainty.
 
-While all previously discussed uncertainties apply to the Monte Carlo samples that are used for the statistical subtraction, their overall impact is reduced significantly. As they affect \textit{both} the number of tight and loose muons, calculating the ratio absorbs a large portion of said impact. Since the relative contributions of the individual uncertainties to the tight and loose subsets are similar, they only play a comparatively minor role.
+While all previously discussed uncertainties apply to the Monte Carlo samples that are used for the statistical subtraction, their overall impact is reduced significantly. As they affect \textit{both} the number of tight and loose muons, calculating the ratio absorbs a large portion of this impact. Since the relative contributions of the individual uncertainties to the tight and loose subsets are similar, they only play a comparatively minor role.
 
 Taking the second order effects from the Monte Carlo subtraction and the luminosity uncertainty for the \textit{data}-driven estimate into account, a $47\,\pct$ systematic uncertainty is assumed for the fake rate method.
 
@@ -256,7 +256,7 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
   \begin{tabular}{|l|c|c|}
     % BEGIN RECEIVE ORGTBL sys-uncertainties
     \hline
-    Source of syst. uncertainty      & Background Impact $[\pct]$ & Signal Impact $[\pct]$ \\
+    Source of sys. uncertainty      & Background Impact $[\pct]$ & Signal Impact $[\pct]$ \\
     \hline
     \hline
     Jet Energy Resolution           & 0.6                        & 2.6                    \\
@@ -268,18 +268,18 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
     \hline
     Luminosity                      & 2.6                        & 2.6                    \\
     Parton Distribution Functions   & 6.0                        & 5.0                    \\
-    Cross sections                  & $\leq 50 \star$            & 8.6                    \\
+    Cross sections                  & 17.3                       & 8.6                    \\
     Pileup                          & 1.5                        & 0.8                    \\
     Trigger Efficiency              & 5.0                        & 5.0                    \\
     \hline
-    $\sum$                          & 9.2                        & 14.6                   \\
+    $\sum$                          & 19.6                       & 14.6                   \\
     \hline
     \hline
     Data-driven Background Estimate & 47.0                       & N/A                    \\
     \hline
     % END RECEIVE ORGTBL sys-uncertainties
   \end{tabular}
-  \caption{Summary of all systematic uncertainties. Cross section uncertainties ($\star$) are considered individually for each sample and are therefore not included in the sum. They are either listed in table~\ref{tab:mcsamples} or assumed to be 5 and 50 percent for a higher order and a LO calculation, respectively.}
+  \caption{Summary of all systematic uncertainties. The cross section uncertainties are either listed in table~\ref{tab:mcsamples} or assumed to be 5 and 50 percent for a higher order and a LO calculation, respectively. Here, the average impact of the cross section uncertainties on the smuon distribution is given.}
   \label{tab:sys-uncertainties}
 \end{table}
 
@@ -298,11 +298,11 @@ In table~\ref{tab:sys-uncertainties}, the systematic uncertainties on the overal
 |---------------------------------+----------------------------+------------------------|
 | Luminosity                      |                        2.6 |                    2.6 |
 | Parton Distribution Functions   |                        6.0 |                    5.0 |
-| Cross sections                  |            $\leq 50 \star$ |                    8.6 |
+| Cross sections                  |                       17.3 |                    8.6 |
 | Pileup                          |                        1.5 |                    0.8 |
 | Trigger Efficiency              |                        5.0 |                    5.0 |
 |---------------------------------+----------------------------+------------------------|
-| $\sum$                          |                        9.2 |                   14.6 |
+| $\sum$                          |                       19.6 |                   14.6 |
 |---------------------------------+----------------------------+------------------------|
 |---------------------------------+----------------------------+------------------------|
 | Data-driven Background Estimate |                       47.0 |                    N/A |
