@@ -28,7 +28,7 @@ This first stage of the analysis combines event cleaning with the \textbf{electr
 
 At this stage of the analysis, a first subset of muons is selected. Using the object selection recipe (Sec.~\ref{sec:muonid}) as a basis, the requirements are slightly tightened. Events with less than two muons passing the object identification are rejected immediately.
 
-The \verb+HLT_Mu17_TkMu8+ trigger requires more than $17\,\text{GeV}$ and $8\,\text{GeV}$ transverse momentum for the respective muon. To avoid trigger inefficiencies~\cite{trigeff} in the region close to that cut-off, the following thresholds have been chosen in the analysis. The value for the leading muon is required to be at least $p_{\text{T}} > 20\,\text{GeV}$, while the sub-leading muon needs a minimum of $p_{\text{T}} > 15\,\text{GeV}$.
+The \verb+HLT_Mu17_TkMu8+ trigger requires more than $17\,\text{GeV}$ and $8\,\text{GeV}$ transverse momentum for the respective muon. To avoid the trigger ``turn on''~\cite{trigeff} in the region close to that cut-off, the following thresholds have been chosen in the analysis. The value for the leading muon is required to be at least $p_{\text{T}} > 20\,\text{GeV}$, while the sub-leading muon needs a minimum of $p_{\text{T}} > 15\,\text{GeV}$.
 
 \section{Jet Quality Criteria}
 \label{sec:jetqualy}
@@ -103,7 +103,7 @@ Only events with two muon candidates who suffice all listed requirements pass th
 \section{Drell-Yan Normalization}
 \label{sec:scaling}
 
-After applying both the muon and jet quality criteria, the Drell-Yan background is the dominant one. However, upon closer inspection a discrepancy between data and simulation can be observed. To allow for better comparison between them, scaling factors $f$ (Eq.~\eqref{eq:weight}) can be employed. This is a reasonable choice, since this background does \textbf{not} contribute to the final distributions. Determining the ratio between the integrals of data and simulation yields the scale factors. Both values $f_{10-50} = 1.23$ and $f_{50} = 0.96$ are within the expected range. While the statistical errors are negligible, the systematic dependency on other requirements is estimated to be $5\,\pct$. The factors are applied throughout the entire analysis, including distributions preceding this section.
+After applying both the muon and jet quality criteria, the Drell-Yan background is the dominant one. However, upon closer inspection a discrepancy between data and simulation can be observed. To allow for better comparison between them, scaling factors $f$ (Eq.~\eqref{eq:weight}) can be employed. This is a reasonable choice, since this background does \textbf{not} contribute to the final distributions. Determining the ratio between the integrals of data and simulation yields the scale factors. The ranges that are being taken into account for the determination are $15 - 45\,\text{GeV}$ for the low mass sample and $80 - 120\,\text{GeV}$ for the high mass sample. Both values $f_{10-50} = 1.23$ and $f_{50} = 0.96$ are within the expected range. While the statistical errors are negligible, the systematic dependency on other requirements is estimated to be $5\,\pct$. The factors are applied throughout the entire analysis, including distributions preceding this section.
 
 Strictly speaking, this is not part of the event selection. Nevertheless the Drell-Yan background is most relevant at this stage, therefore the adjustment is performed here as well. In figure~\ref{fig:m_mumu_zpeak_nodysf} and~\ref{fig:m_mumu_zpeak} the invariant mass of both selected muons is shown before and after the scaling, respectively.
 
@@ -252,7 +252,7 @@ With a set algorithm to tag $b$-jets, the control regions can be inspected to ju
 \section{Same Sign Charge Muons}
 \label{sec:sscmuons}
 
-At this stage of the analysis, there is still \textit{at least} one order of magnitude between the number of events in data and a potential signal. As discussed in the chapter regarding the signature (Cha.~\ref{cha:sig}), the charge of both prompt muons can be the same. Most of the background Monte Carlo cannot lead to the same condition in the final state. As a result, this requirement is able to improve the signal to background ratio significantly.
+At this stage of the analysis, there is still \textit{at least} one order of magnitude between the number of events of the background prediction and a potential signal. As discussed in the chapter regarding the signature (Cha.~\ref{cha:sig}), the charge of both prompt muons can be the same. Most of the background Monte Carlo cannot lead to the same condition in the final state. As a result, this requirement is able to improve the signal to background ratio significantly.
 
 \begin{figure}[htb!]
   \centering
@@ -272,6 +272,18 @@ At this stage of the analysis, there is still \textit{at least} one order of mag
 \end{figure}
 
 The corresponding control region adds the charge restriction (\textbf{CRBVC}) to the previously defined CRBV. When examining the distributions of CRBVC (Fig~\ref{fig:ssccr_nofakes}), one does see the drastic reduction of the background. However, the dominant backgrounds are not amongst those, that are able to provide two prompt same sign charge muons from the same vertex. Additionally, the agreement between data and simulation appears to be poor throughout the entire mass spectrum. In combination, this suggests that the background is not described accurately. One effect that contributes significantly to this phenomena will be discussed in the upcoming chapter.
+
+\section{Control Region Overview}
+\label{sec:cr-overview}
+
+A short overview of all used control regions up to this point is given in figure~\ref{fig:cr-overview}. The inversion of the $E^{\text{miss}}_{\text{T}} < 50\,\text{GeV}$ is the basis for all control regions. Afterwards, one differentiates between events with $b$-jet tags or a $b$-jet vetos. Continuing with the events that have the veto, one demands the charge of the muons to carry the same sign. Passing this requirement marks the final control region.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/cr-overview.pdf}
+  \caption{Overview over the used control regions. Blue elipses mark requirements, green boxes mark control regions and arrows indicate whether an event passes or fails a requirement.}
+  \label{fig:cr-overview}
+\end{figure}
 
 
 %%% Local Variables: 

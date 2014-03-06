@@ -39,7 +39,6 @@
 ** DONE smoothing only in 2d T/L histogram
 ** DONE fixed signal region numbering
 ** DONE explain smoothing in F_R?
-** TODO fix plot titles to "CMS Private"
 * Lars' Comments
 ** DONE electromagnetic calorimeter - p21
 ** DONE resolving virtuality - p3
@@ -123,3 +122,8 @@
 *** TODO either LNV and BNV coupling can be !=0 but not both
 ** page 16
 *** DONE add lambda prime 211 on z axis in 2011 plot
+* Arnd's Comments
+** TODO add 1d signal limits
+** TODO fix plot titles to "CMS Private"
+** TODO fix values in SR1-6 table
+** TODO add smuon and gaugino mass in candidate events

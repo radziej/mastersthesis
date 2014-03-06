@@ -25,7 +25,7 @@ The four data taking periods from 2012 will be subject of this analysis. The cen
   \begin{tabular}{|l|c|c|}
     \hline
     Datasets                                         & Run Range         & $\int \mathcal{L} d\text{t}$ [pb$^{-1}$] \\ \hline \hline
-    \verb+/DoubleMu/Run2012A-22Jan2013-v1/AOD+       & $190645 - 193621$ & 876                            \\ \hline
+    \verb+/DoubleMu/Run2012A-22Jan2013-v1/AOD+\footnotemark       & $190645 - 193621$ & 876                            \\ \hline
     \verb+/DoubleMuParked/Run2012B-22Jan2013-v1/AOD+ & $193834 - 196531$ & 4409                           \\ \hline
     \verb+/DoubleMuParked/Run2012C-22Jan2013-v1/AOD+ & $198049 - 203002$ & 7017                           \\ \hline
     \verb+/DoubleMuParked/Run2012D-22Jan2013-v1/AOD+ & $203777 - 208686$ & 7369                           \\ \hline
@@ -36,7 +36,9 @@ The four data taking periods from 2012 will be subject of this analysis. The cen
 \end{table}
 
 
-\footnotetext{The DoubleMuParked dataset from the 2012A period is not a superset of the DoubleMu dataset. As such, the DoubleMu dataset is being used, which yields an additional 3\% events in the chosen final state.}Dissecting the full name of a dataset gives different information about its contents. The first part, here DoubleMuParked, hints at the selected particle content. In this case, the \textit{Parked} version superseded the usual DoubleMu datasets by adding an additional offline trigger with a lower transverse momentum threshold. The second part of the name denotes the data taking period and the third one the date at which it was processed. Unless the latter contains ``PromptReco'', the data has since been reprocessed with improved knowledge of the detector, leading to more precise measurements. The datasets which are subject of this analysis are part of the Winter13 ``ReReco'', short for rereconstruction. The data format, here ``AOD'', is given at the end.
+Dissecting the full name of a dataset gives different information about its contents. The first part, here DoubleMuParked, hints at the selected particle content. In this case, the \textit{Parked} version superseded the usual DoubleMu datasets by adding an additional offline trigger with a lower transverse momentum threshold. The second part of the name denotes the data taking period and the third one the date at which it was processed. Unless the latter contains ``PromptReco'', the data has since been reprocessed with improved knowledge of the detector, leading to more precise measurements. The datasets which are subject of this analysis are part of the Winter13 ``ReReco'', short for rereconstruction. The data format, here ``AOD'', is given at the end.
+
+\footnotetext{The DoubleMuParked dataset from the 2012A period is not a superset of the DoubleMu dataset. As such, the DoubleMu dataset is being used, which yields an additional 3\% events in the chosen final state.}
 
 In the second column, the run ranges are listed. Each run is composed of several sections with roughly equal duration. In the third column, the integrated luminosity for the individual run ranges is given. It is estimated from the average number of pixel clusters occurring in the silicon pixel detector (Sec.~\ref{sec:innertracker}) during an inelastic collision $\left< n \right>$~\cite{cms-pixel-lumi-13}.
 
@@ -381,7 +383,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
   p^\prime_{\text{T}} = p_{\text{T}, \text{GEN}} + c \cdot (p_{\text{T}} - p_{\text{T}, \text{GEN}})
 \end{equation}
   
-\noindent The transverse momentum $p_{\text{T}}$ is replaced by a new value $p_{\text{T}}^\prime$, based on the generator information for the transverse momentum $p_{\text{T, GEN}$. Here $c$ denotes the core resolution scaling factors. To determine those, $0.8\,\text{fb}^{-1}$ of 2011 dijet data\footnote{No significant deviations have been observed with more statistics and 2012 data} has been used~\cite{jer}. The values are given in table~\ref{tab:jerfactors}.
+\noindent The transverse momentum $p_{\text{T}}$ is replaced by a new value $p_{\text{T}}^\prime$, based on the generator information for the transverse momentum $p_{\text{T, GEN}}$. Here $c$ denotes the core resolution scaling factors. To determine those, $0.8\,\text{fb}^{-1}$ of 2011 dijet data\footnote{No significant deviations have been observed with more statistics and 2012 data} has been used~\cite{jer}. The values are given in table~\ref{tab:jerfactors}.
 
   \begin{table}[htbp!]
     \centering
