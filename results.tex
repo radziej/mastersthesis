@@ -55,7 +55,23 @@ Having accounted for the systematic uncertainties, one can examine the final dis
 
 The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits  statistical uncertainties from the background samples which are subtracted from the data when determining the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation. All variations are well within the given uncertainties.
 
-Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. To improve the sensitivity a multi-bin approach is being employed. For that purpose the two dimensional gaugino-smuon mass distribution is divided into six regions, which is shown in figure~\ref{fig:m_smu_chi}.
+\begin{figure}[ht!]
+  \centering
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/signal_1000_1200_smu_chi.pdf}
+    \caption{\label{fig:sig-1000-1200-m-smu-chi}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/signal_1000_200_smu_chi.pdf}
+    \caption{\label{fig:sig-1000-200-m-smu-chi}}
+  \end{subfigure}
+  \caption{Two-dimensional smuon and gaugino mass distribution. Only the listed signal is shown. One can see that $m_0$ and $m_{1/2}$ determine which signal regions is the dominant one.}
+  \label{fig:sig-m-smu-chi}
+\end{figure}
+
+Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. A two dimensional visualization of the two exemplary signal contributions in the gaugino-smuon mass distribution is shown in figure~\ref{fig:sig-m-smu-chi}. In general, the dominant signal region for a RPV SUSY signal depends on the values of $m_0$ and $m_{1/2}$. To improve the sensitivity a multi-bin approach is being employed. For that purpose the two dimensional gaugino-smuon mass distribution is divided into six regions, which are shown in figure~\ref{fig:m_smu_chi}.
 
 \begin{figure}[!htb]
   \centering
@@ -64,26 +80,26 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
   \label{fig:m_smu_chi}
 \end{figure}
 
-\noindent Most entries are centered around one diagonal line. In comparison, the aforementioned signal point has the majority of its entries at smuon masses above $1200\,\text{GeV}$. The contents of each of the six regions are summarized in table~\ref{tab:m_smu_chi_summary}.
+\noindent Most entries are centered around one diagonal line, as a opposed to the previously shown signal samples. The contents of each of the six regions are summarized in table~\ref{tab:m_smu_chi_summary}.
 
 \begin{table}[!htbp]
   \centering
   \begin{tabular}{|l|r|r|r|}
     \hline
-    Process group & SR 1              & SR 2              & SR 3              \\ \hline
-    Fakes         & 16.0 $\pm$ 1.63   & 10.7 $\pm$ 1.3    & 5.00 $\pm$ 0.98   \\ 
-    $tt+V$        & 0.47 $\pm$ 0.10   & 0.49 $\pm$ 0.11   & 0.187 $\pm$ 0.068 \\ 
-    $VV$          & 8.46 $\pm$ 0.40   & 7.10 $\pm$ 0.40   & 4.01 $\pm$ 0.29   \\
-    $VVV$         & 0.374 $\pm$ 0.051 & 0.392 $\pm$ 0.052 & 0.209 $\pm$ 0.040 \\ 
-    Rare          & 1.04 $\pm$ 0.21   & 1.33 $\pm$ 0.24   & 1.65 $\pm$ 0.28   \\ \hline
-    $\sum$        & 26.4 $\pm$ 9.6    & 20.0 $\pm$ 7.1      & 11.1 $\pm$ 4.0    \\ \hline
-    Data          & 19                & 25                & 13                \\ \hline \hline
+    Process group & SR 1                & SR 2              & SR 3              \\ \hline
+    Fakes         & 16.0 $\pm$ 7.82     & 10.7 $\pm$ 5.3    & 5.00 $\pm$ 2.58   \\ 
+    $tt+V$        & 0.47 $\pm$ 0.16     & 0.49 $\pm$ 0.17   & 0.187 $\pm$ 0.089 \\ 
+    $VV$          & 8.46 $\pm$ 1.22     & 7.1 $\pm$ 1.1     & 4.01 $\pm$ 0.62   \\
+    $VVV$         & 0.374 $\pm$ 0.064   & 0.392 $\pm$ 0.066 & 0.209 $\pm$ 0.045 \\ 
+    Rare          & 1.04 $\pm$ 0.57     & 1.33 $\pm$ 0.72   & 1.65 $\pm$ 0.88   \\ \hline
+    $\sum$        & 26.4 $\pm$ 9.6      & 20.0 $\pm$ 7.1    & 11.1 $\pm$ 4.0    \\ \hline
+    Data          & 19                  & 25                & 13                \\ \hline \hline
     Process group & SR 4                & SR 5              & SR 6              \\ \hline
-    Fakes         & 0.23 $\pm$ 0.16     & 1.15 $\pm$ 0.69   & 0.33 $\pm$ 0.19   \\
-    $tt+V$        & $<0.001 \pm <0.001$ & 0.032$\pm$ 0.027  & 0.094 $\pm$ 0.054 \\
-    $VV$          & 0.106 $\pm$ 0.032   & 1.07 $\pm$ 0.11   & 0.277 $\pm$ 0.054 \\
-    $VVV$         & 0.0062 $\pm$ 0.0047 & 0.090 $\pm$ 0.026 & 0.028 $\pm$ 0.014 \\
-    Rare          & 0.102 $\pm$ 0.072   & 0.65 $\pm$ 0.17   & 0.80 $\pm$ 0.21   \\ \hline
+    Fakes         & 0.23 $\pm$ 0.20     & 1.15 $\pm$ 0.89   & 0.33 $\pm$ 0.25   \\
+    $tt+V$        & $<0.001$            & 0.032$\pm$ 0.029  & 0.094 $\pm$ 0.062 \\
+    $VV$          & 0.106 $\pm$ 0.034   & 1.07 $\pm$ 0.16   & 0.277 $\pm$ 0.062 \\
+    $VVV$         & 0.0062 $\pm$ 0.0048 & 0.090 $\pm$ 0.027 & 0.028 $\pm$ 0.014 \\
+    Rare          & 0.102 $\pm$ 0.089   & 0.65 $\pm$ 0.38   & 0.80 $\pm$ 0.46   \\ \hline
     $\sum$        & 0.45 $\pm$ 0.25     & 3.0 $\pm$ 1.3     & 1.5 $\pm$ 0.7     \\ \hline
     Data          & 2                   & 1                 & 3                 \\ \hline
   \end{tabular}

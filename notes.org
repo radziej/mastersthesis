@@ -125,7 +125,7 @@
 * Arnd's Comments
 ** TODO add 1d signal limits
 ** DONE fix plot titles to "CMS Private"
-** TODO fix values in SR1-6 table
-** TODO show signal distribution in m_smu_chi.pdf
+** DONE fix values in SR1-6 table
+** DONE show signal distribution in m_smu_chi.pdf
 ** TODO add smuon and gaugino mass in candidate events
 ** TODO mention smuon & gaugino mass calculation earlier
