@@ -4,7 +4,7 @@
 \section{Final Distribution}
 \label{sec:final-dist}
 
-Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the control region BVC, only the inverted missing transverse energy requirement is reversed again $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
+Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the CRBVC, only the inverted missing transverse energy requirement is reversed again $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
 
 \begin{figure}[htb!]
   \centering
@@ -59,12 +59,12 @@ The statistical uncertainties for the Monte Carlo predictions stem from the gene
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/signal_1000_1200_smu_chi.pdf}
+    \includegraphics[width=\textwidth]{plots/signal_1000_1200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-1200-m-smu-chi}}
   \end{subfigure}
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/signal_1000_200_smu_chi.pdf}
+    \includegraphics[width=\textwidth]{plots/signal_1000_200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-200-m-smu-chi}}
   \end{subfigure}
   \caption{Two-dimensional smuon and gaugino mass distribution. Only the listed signal is shown. One can see that $m_0$ and $m_{1/2}$ determine which signal regions is the dominant one.}
@@ -241,17 +241,50 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
 
 Comparing the shown limits to the analyses of 2011 RPV SUSY and the D0 predecessor, the phase space that is being covered has been expanded considerably. The excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0~\cite{auter,d0rpv}, and around a factor of 1.8 in regards to the 2011 analysis~\cite{2011rpv}. One can base a rough evaluation of this improvement on the increased luminosity. It grew by a factor of four compared to the 2011 analysis, and by simply assuming the cross sections remain roughly the same, one would expect an improvement by a factor of 2 due to the quadratic scaling of $\lambda^\prime_{211}$ with $\sigma$ (Eq.~\ref{eq:xs-lambda-scale}). This matches the actual improvement reasonably well. This marks these results as the world's best collider-based limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
 
-In general one can see that, especially towards higher values of $m_0$, the exclusion limits get progressively weaker. This is due the drop in selection efficiency for the high mass signal points, as there are changes in the particle properties and composition of the decay chain. These differences have been illustrated throughout the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
+In general, the exclusion limits get progressively weaker towards higher values of $m_0$. As shown in figure~\ref{fig:susy-2dxs}, the cross section for the interesting processes also decreases in this region. However, there is also a drop in selection efficiency for the high mass signal points. This is due to changes in the particles properties and composition of the decay chain. These differences have been mentioned and illustrated in the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
 
-
-\begin{figure}[!htb]
+\begin{figure}[!p]
   \centering
-  \includegraphics[width=0.7\textwidth]{plots/lambda_ratio.pdf}
-  \caption{Ratio of the observed (\ref{fig:lambda-prime-obs}) to expected limits (\ref{fig:lambda-prime-exp}) for the model parameter $\lambda^{\prime}_{211}$.}
-  \label{fig:lambda_ratio}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_200.pdf}
+    \caption{$m_{1/2} = 200\,\text{GeV}$\label{fig:limit-m12-200}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_500.pdf}
+    \caption{$m_{1/2} = 500\,\text{GeV}$\label{fig:limit-m12-500}}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_800.pdf}
+    \caption{$m_{1/2} = 800\,\text{GeV}$\label{fig:limit-m12-800}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_1200.pdf}
+    \caption{$m_{1/2} = 1200\,\text{GeV}$\label{fig:limit-m12-1200}}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_1600.pdf}
+    \caption{$m_{1/2} = 1600\,\text{GeV}$\label{fig:limit-m12-1600}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/limit_m12_2000.pdf}
+    \caption{$m_{1/2} = 2000\,\text{GeV}$\label{fig:limit-m12-2000}}
+  \end{subfigure}
+
+  \caption{One dimensional slices of the two dimensional limits given in figure~\ref{fig:lambda-prime-limits} for fixed values of $m_{1/2}$.}
+  \label{fig:1d-limits}
 \end{figure}
 
-Examining the ratio of expected and observed limits (Fig.~\ref{fig:lambda_ratio}), one can see that there are no rogue values deviating too much from the expectation. However, certain structures can be seen. They are the product of these mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the signal regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ (Fig.~\ref{fig:final-dist}) as an example, one can see that its distribution has its main contribution in the SR 5 and 6, where data and MC are in reasonable agreement. Hence, the ratio for that region in phase space is roughly equal to 1. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to ratio of 1.1 or higher.
+By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the signal regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ (Fig.~\ref{fig:sig-1000-1200-m-smu-chi}) as an example, one can see that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
+
+In general, the
 
 
 \section{Candidate Events}
@@ -273,7 +306,7 @@ Examining the ratio of expected and observed limits (Fig.~\ref{fig:lambda_ratio}
   \label{fig:evt-display}
 \end{figure}
 
-\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the respective jet's energy also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable.
+\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the respective jet's energy also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229.4\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186.8\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$.  
 
 \section{Conclusion and Outlook}
 \label{sec:conclusion}
@@ -284,6 +317,7 @@ For future efforts in this particular search, an improved selection efficiency f
 
 In addition, results allowing for a broader interpretation beyond the cMSSM using ``simplified models'', based on the knowledge gained about the most important decay channels, are also possible and being investigated.
 
+\clearpage
 \section*{Acknowledgements} 
 \label{sec:acknowledgements}
 

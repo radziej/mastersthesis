@@ -52,9 +52,9 @@
 * Sebastian's Comments
 ** DONE units and z-axis title in signal study plots
 ** DONE lumi sections
-** TODO lumi determination reference
-** TODO signal PDF?
-** TODO signal xs scaling table
+** DONE lumi determination reference
+# ** TODO signal PDF?
+# ** TODO signal xs scaling table
 ** DONE core resolution scaling factors ref
 ** DONE coordinate system
 ** DONE primary vertex
@@ -62,7 +62,7 @@
 ** DONE root smoothing ref
 ** DONE fake rate method ref + mb table of dd bgs
 ** DONE explain summarization of F_R systematic uncertainties
-** TODO round values in tables
+** DONE round values in tables
 * Daniel Notes
 ** page 1
 *** DONE Fermion: Matter; Boson: Interaction
@@ -127,5 +127,5 @@
 ** DONE fix plot titles to "CMS Private"
 ** DONE fix values in SR1-6 table
 ** DONE show signal distribution in m_smu_chi.pdf
-** TODO add smuon and gaugino mass in candidate events
-** TODO mention smuon & gaugino mass calculation earlier
+** DONE add smuon and gaugino mass in candidate events
+** DONE mention smuon & gaugino mass calculation earlier
