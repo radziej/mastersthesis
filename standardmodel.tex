@@ -9,8 +9,7 @@ Unless cited otherwise, this section is mostly based on the ``Introduction to el
 \subsection{General Overview}
 \label{sec:stdmdloverview}
 
-The ``Standard Model of particle physics'' that has mostly been developed throughout the last century serves as the basis for almost all analyses in high energy particle physics. It achieves to describe and predict all electromagnetic, strong and weak force processes that have been observed with very high precision. The particles, although by themselves very tiny in size, if any size at all ($< 10^{-18}\,\text{m}$), are what our entire (visible) universe consists of. The interactions between these particles are what fuels our sun, transports its energy towards us and keeps us from disintegrating at a nuclear level.
-
+The ``Standard Model of particle physics'' that has mostly been developed throughout the last century serves as the basis for almost all analyses in high energy particle physics. It achieves to describe and predict all electromagnetic, strong and weak force processes that have been observed with very high precision. The particles, although by themselves very tiny in size, if any size at all ($< 10^{-18}\,\text{m}$), are what our entire (visible) universe consists of.
 
 As one is looking for new physics beyond the Standard Model, it is essential to understand said model very well to differentiate between what one perceives as a known process and what goes beyond.
 
@@ -63,7 +62,7 @@ The first family is home to the most famous component of the Standard Model, the
   \end{pmatrix}
 \end{equation*}
 
-The first family has the up- and down-flavoured quarks $u$ and $d$, respectively. Similarly to the lepton families, every subsequent family differs only by their increasing mass. Their names are strange $s$ and charm $c$, as well as top $t$ and bottom $b$. Decays like $n(udd) \rightarrow p(uud) + e + \bar{\nu}_e$ from a higher family to a lower one are also possible. Quarks, as opposed to leptons, are found in bound states\footnote{The quark-gluon-plasma, a state of extremely high energy and/or density, is an exception to that. It is assumed to allow for asymptotically free quarks and gluons.}. They consist of two or three quarks, which are named mesons and baryons. While the two-quark states are unstable, certain baryons such as the proton $(uud)$ and neutron $(udd)$ are stable over longer periods of time.
+The first family has the up- and down-flavoured quarks $u$ and $d$, respectively. Similarly to the lepton families, every subsequent family differs only by their increasing mass. Their names are strange $s$ and charm $c$, as well as top $t$ and bottom $b$. Quarks, as opposed to leptons, are found in bound states\footnote{The quark-gluon-plasma, a state of extremely high energy and/or density, is an exception to that. It is assumed to allow for asymptotically free quarks and gluons.}. They consist of two or three quarks, which are named mesons and baryons. While the two-quark states are unstable, certain baryons such as the proton $(uud)$ and neutron $(udd)$ are stable over longer periods of time.
 
 
 While baryons and leptons can join to create atoms and therefore matter, \textbf{bosons} are necessary for the interactions between said particles. Each of the five bosons is responsible for mediating one type of force.
@@ -171,14 +170,14 @@ By expanding local gauge invariance from unitary $1 \times 1$ transformations $U
   \end{pmatrix}
 \end{equation}
 
-\noindent Requiring local gauge invariance results once again in new gauge fields $A^\mu$, giving a Lagrangian similar to the one of QED (Sec.~\ref{sec:qed}).
+% \noindent Requiring local gauge invariance results once again in new gauge fields $A^\mu$, giving a Lagrangian similar to the one of QED (Sec.~\ref{sec:qed}).
 
-\begin{equation}
-  \label{eq:qcdlagrangian}
-  \mathcal{L}_{\text{QCD}} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} - (q \bar{\psi} \gamma^\mu \mathbf{\lambda} \psi) A_\mu,
-\end{equation}
+% \begin{equation}
+%   \label{eq:qcdlagrangian}
+%   \mathcal{L}_{\text{QCD}} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} - (q \bar{\psi} \gamma^\mu \mathbf{\lambda} \psi) A_\mu,
+% \end{equation}
 
-Due to $\dim{SU(3)} = 8$, there are eight new fields which represent the massless mediators: Gluons. The Gell-Mann matrices $\mathbf{\lambda}$~\cite{gellmann} correspond to the generators of the $SU(3)$ $T_a$. the relation $T_a = \lambda_a / 2$ with $a = 1, 2, ..., 8$. Unlike the $U(1)$, the $SU(3)$ is not abelian, but adheres the commutation relations given by
+\noindent Due to $\dim{SU(3)} = 8$, eight new fields are introduced, which represent the massless mediators: Gluons. The Gell-Mann matrices $\mathbf{\lambda}$~\cite{gellmann} correspond to the generators of the $SU(3)$ $T_a$. the relation $T_a = \lambda_a / 2$ with $a = 1, 2, ..., 8$. Unlike the $U(1)$, the $SU(3)$ is not abelian, but adheres the commutation relations given by
 
 \begin{equation}
   \label{eq:qcdgencommute}
@@ -193,7 +192,7 @@ Another important aspect of QCD that stems from the self-coupling of gluons, is 
 
 \subsection{Electro Weak Theory}
 
-Unlike both the electromagnetic and strong interaction, the weak force has two different ``types'' of interactions. There are both neutral current (NC) and charged current (CC) interactions. Historically, the discovery of the charged currents precedes the one of neutral ones. To describe it as a gauge theory, the symmetry group $SU(2)_L$ is being used. The index ``L'' indicates that these types of currents only couple to left-handed particles and therefore violates parity conservation maximally. In reference to the spin and isospin attributes, the charge of this interaction is called ``weak isospin'' $I^3$. Using the weak isospin, left-handed particles can be sorted into doublets with $e^-_L$ and $u_L$ having $(I = \frac{1}{2}, I^3 = -\frac{1}{2})$, as well as $\nu_L$ and $d_L$ having $(I = \frac{1}{2}, I^3 = +\frac{1}{2})$. Since right-handed particles do not partake in the charged current interaction, they are sorted into singlets with $(I = 0, I^3 = 0)$.
+Unlike both the electromagnetic and strong interaction, the weak force has two different ``types'' of interactions. There are neutral current (NC) and charged current (CC) interactions. To describe the latter as a gauge theory, the symmetry group $SU(2)_L$ is being used. The index ``L'' indicates that these types of currents only couple to left-handed particles and therefore violates parity conservation maximally. In reference to the spin and isospin attributes, the charge of this interaction is called ``weak isospin'' $I^3$. Using the weak isospin, left-handed particles can be sorted into doublets with $e^-_L$ and $u_L$ having $(I = \frac{1}{2}, I^3 = -\frac{1}{2})$, as well as $\nu_L$ and $d_L$ having $(I = \frac{1}{2}, I^3 = +\frac{1}{2})$. Since right-handed particles do not partake in the charged current interaction, they are sorted into singlets with $(I = 0, I^3 = 0)$.
 
 Using the $SU(2)_L$ symmetry group yields a third weak interaction. As this still only couples to left-handed particles, it cannot be the weak neutral current which couples to both types. Instead a generator called ``hypercharge'' $Y$ is introduced and defined by:
 
@@ -216,7 +215,7 @@ Using the $SU(2)_L$ symmetry group yields a third weak interaction. As this stil
 
 The aforementioned NCs are mediated by the $Z$-boson and behave very similarly to the ones based on an exchange of photons $\gamma$. Charged current (CC) interactions have the $W^\pm$-boson as their gauge mediator, which, contrary to all other types of interactions, allows for changes of flavour. While the $W^\pm$ and $Z$ bosons are represented by their respective fields, $A_\mu$ can be recognized as the photon introduced in QED (Sec.~\ref{sec:qed}). The electroweak theory therefore describes the combination of both the electromagnetic and weak interaction by unifying them into a single gauge theory~\cite{standardmodel-salam,standardmodel-weinberg,standardmodel-glashow}.
 
-The Standard Model of particle physics describes Nature very well. One of the most precise measurements (and tests of QED), is the ``g-factor'' of the electron's magnetic momentum. While the agreement between theory and experiment can be as good as multiple orders of magnitude as in the aforementioned case, there are still certain discrepancies between theory and experiment in the Standard Model. One of them will be addressed in the following section.
+The Standard Model of particle physics describes Nature very well. While the agreement between theory and experiment can be as good as multiple orders of magnitude, there are still certain discrepancies between theory and experiment. One of them will be addressed in the following section.
 
 \subsection{The Higgs Mechanism}
 \label{sec:higgs}
@@ -228,23 +227,7 @@ While the initial two mediators of the respective gauge theories were massless, 
   \mathcal{L} =  \frac{1}{2} (\partial_\mu \phi)^* (\partial^\mu \phi)  + \frac{1}{2} \mu^2 (\phi^* \phi) - \frac{1}{4} \lambda (\phi^* \phi)^2
 \end{equation}
 
-\noindent Unlike the spinors used in the previous equations, the field $\phi$ is imaginary and scalar.
-
-\begin{equation}
-  \label{eq:higgs-field}
-  \phi = \frac{1}{\sqrt{2}} 
-  \begin{pmatrix}
-    \phi_1 + i \phi_2 \\
-    \phi_3 + i \phi_4
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    \phi^+ \\
-    \phi^0
-  \end{pmatrix}
-\end{equation}
-
-\noindent While spatial symmetry $\phi \rightarrow - \phi$ is maintained, the same cannot be said for the ground state anymore. As shown in figure~\ref{fig:higgspotential}, a unique, non-symmetrical ground state can be attained through spontaneous symmetry breaking.
+\noindent Unlike the spinors used in the previous equations, the field $\phi$ is imaginary and scalar. While spatial symmetry $\phi \rightarrow - \phi$ is maintained, the same cannot be said for the ground state anymore. As shown in figure~\ref{fig:higgspotential}, a unique, non-symmetrical ground state can be attained through spontaneous symmetry breaking.
 
 \begin{figure}[ht!]
   \centering
@@ -253,33 +236,7 @@ While the initial two mediators of the respective gauge theories were massless, 
   \label{fig:higgspotential}
 \end{figure}
 
-Using a taylor series to expand the field $\phi$ around a chosen ground state, yields
-
-\begin{equation}
-  \label{eq:higgs-field-taylor}
-  \phi = \frac{1}{\sqrt{2}}
-  \begin{pmatrix}
-    0 \\
-    v + h(x)
-  \end{pmatrix}
-\end{equation}
-
-\noindent where $v$ denotes the vacuum expectation value of the Higgs field $h(x)$. Particle masses are generated by coupling to this field. For the $W$ and $Z$ boson they are given by
-
-\begin{align}
-  \label{eq:higgs-couplings}
-  m_W = \frac{v \cdot e}{2 \cos{\theta_W}} \\
-  m_Z = \frac{m_W}{\cos{\theta_W}} \\
-\end{align}
-
-\noindent Fermion masses are determined through their Yukawa coupling $\lambda_f$
-
-\begin{equation}
-  \label{eq:higgs-fermion}
-  m_f = \frac{1}{\sqrt{2}} \lambda_f \cdot v
-\end{equation}
-
-\noindent As the Higgs-boson also couples to itself, it is massive as well with $m_h = 2 v^2 \cdot \lambda$. This extension to the theory described by the Lagrangian was suggested by F. Englert, R. Brout~\cite{higgs-englert} and P. Higgs~\cite{higgs-peter}, who also lends his name to the ``Higgs-boson''.
+Particle masses are generated by coupling to the Higgs field. While the mass generation terms are different for fermions and bosons, higher coupling strengths lead to higher masses in both cases. This extension to the theory described by the Lagrangian was suggested by F. Englert, R. Brout~\cite{higgs-englert} and P. Higgs~\cite{higgs-peter}, who also lends his name to the new ``Higgs-boson''. This boson is the mediator of the Higgs coupling.
 
 The search for the Higgs boson by the CMS collaboration at the Large Hadron Collider has found statistically significant evidence for the existence of a new boson (which resembles the proposed Higgs boson very closely). While previous publications have already shown a $5 \sigma$ excess around the invariant mass of $m_X = 125\,\text{GeV}$~\cite{higgscls}, further studies have been performed on the $H \rightarrow ZZ$ decay mode. One can see the invariant mass of four selected leptons $m_{4 l}$ in figure~\ref{fig:higgsmzz}.
 
