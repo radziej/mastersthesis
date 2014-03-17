@@ -129,3 +129,5 @@
 ** DONE show signal distribution in m_smu_chi.pdf
 ** DONE add smuon and gaugino mass in candidate events
 ** DONE mention smuon & gaugino mass calculation earlier
+* Hebbeker's Comments
+** TODO Shorten gauge symmetry etc. 
