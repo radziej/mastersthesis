@@ -130,4 +130,8 @@
 ** DONE add smuon and gaugino mass in candidate events
 ** DONE mention smuon & gaugino mass calculation earlier
 * Hebbeker's Comments
-** TODO Shorten gauge symmetry etc. 
+** TODO Shorten gauge symmetry etc.
+** TODO sigma and br dependence on lambda in signature chapter
+** TODO remove / 1 from histograms
+** TODO JER dependence on eta and pt
+** 
