@@ -377,10 +377,10 @@ From the ratio of each bin a weight can be calculated and applied to the MC samp
 
 With two jets and no missing transverse energy in the final state, the hadronic calorimeter contributes vital information. However, similarly to the pileup situation, the conditions of the simulation differ from the actual measurement. The energy resolution of the calorimeter is known to be estimated to be too good in the detector simulation~\cite{jer}. To gain access to the resolution, the objects after the simulation stage can be compared to the generator-level ones. Based on this information and the set of measurements the necessary scale factor can be determined.
 
-Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum is considered relevant for the analysis. The algorithm searches for generator-level (\textbf{gen-}) jets in a cone of $\Delta R = \sqrt{\Delta\phi^2 + \Delta\eta^2} = 0.5$ in spatial distance around each reconstructed (\textbf{reco-}) jet. Depending on whether or not any matching objects are found, a different recipe for adjusting the reconstructed jet energy resolution (\textbf{JER}) has to be used. \\
+Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum is considered relevant for the analysis. The algorithm searches for generator-level (\textbf{gen-}) jets in a cone of $\Delta R = \sqrt{\Delta\phi^2 + \Delta\eta^2} = 0.5$ in spatial distance around each reconstructed (\textbf{reco-}) jet. Depending on whether or not any matching objects are found, one of the following two recipes for adjusting the reconstructed jet energy resolution (\textbf{JER}) are used. \\
 
 
-\textbf{Matched gen-jets:} In case there are matching gen-jets, the following formula is used to smear the jet energy.
+\textbf{Matched gen-jets:} In case there are matching gen-jets, the formula used to smear the jet energy is given by:
 \begin{equation}
   \label{eq:jermatched}
   p^\prime_{\text{T}} = p_{\text{T}, \text{GEN}} + c \cdot (p_{\text{T}} - p_{\text{T}, \text{GEN}})

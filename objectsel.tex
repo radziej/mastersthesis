@@ -35,7 +35,7 @@ The recipe employed for muon identification has been developed by the Muon POG. 
 Since the analysis expects a low amount of statistics in the final distributions, the tight muon ID~\cite{muonid1, muonid2} has been chosen. This is the most strict criterion given by the physics object group, thus being the best choice to prevent misidentification, but it comes at the cost of having the lowest selection efficiency. The requirements are given below and apply to all muons within the intermediate energy range.
 
 \begin{itemize}
-\item \textbf{Global Muon} - The object is required to be identified as global muon. As discussed in the object reconstruction (Sec.~\ref{sec:objreco}), this means that a set of hits in the muon system has to be matched to a compatible set in the tracker. Since the majority of particles do not lead to a large amount of hits in the muon system or are stopped before even reaching it, this is an efficient tool to distinguish muons from them.
+\item \textbf{Global Muon} - The object is required to be identified as global muon. As discussed in the object reconstruction (Sec.~\ref{sec:objreco}), this means that a set of hits in the muon system has to be matched to a compatible set in the tracker. Since the majority of particles do not leave many hits in the muon system or are stopped before even reaching it, this is an efficient tool to distinguish muons from them.
 \item \textbf{Particle Flow Muon} - As outlined in the object reconstruction, the particle flow algorithm considers the measurements from all sub-detectors. By combining the information of an entire event, the accuracy of particle identification is improved.
 \item \textbf{Muon Track} $\mathbf{\chi^2 / N_{\textbf{dof}} < 10}$ - The fit of the trajectory has to describe the hits reasonably well. This is meant to protect against muons stemming from a decay in flight, as well as hadrons passing the HCAL~\cite{muonidcosmic}. In both cases the trajectory is likely not to have a good match in the tracker region.
 % \item $\mathbf{N_{\textbf{Muon Chambers}} > 0}$ - For the same purpose at least one muon chamber has to be part of the global fit. 
@@ -46,7 +46,7 @@ Since the analysis expects a low amount of statistics in the final distributions
 \item $\mathbf{N_{\textbf{Tracker Layers}} > 5}$ - A certain amount of tracker CSC layers needs to be hit for a precise transverse momentum measurement. Additionally, the same logic as for the hits in the pixel detector applies.
 \end{itemize}
 
-The detector coverage only ensures a consistent momentum resolution for muons in the $\eta$-region up to 2.1 (Cf. cha.~\ref{cha:experiment}). Hence the analysis limits itself to this region, which also avoids the additional noise for increasing values of $\eta$. Together with a minimum transverse momentum set by the trigger, these are the basic criteria for object selection with regards to muons. They will be used and expanded upon in the event selection (Sec.~\ref{cha:eventsel}).
+The detector coverage only ensures a consistent momentum resolution for muons in the $\eta$-region up to 2.1 (Cf. cha.~\ref{cha:experiment}), with respect to the nominal cross. Hence the analysis limits itself to this region, which also avoids the additional noise for increasing values of $\eta$. Together with a minimum transverse momentum set by the trigger, these are the basic criteria for object selection with regards to muons. They will be used and expanded upon in the event selection (Sec.~\ref{cha:eventsel}).
 
 Additional distributions displaying the effects of the individual ID criteria can be seen in figure~\ref{fig:n-1}. To be able to visualize the individual impact of a requirement from a given recipe, the histogram is only filled with events passing all of the recipe's requirements excluding the one to be examined. These so-called ``N$ - 1$ plots'' show the parameter regions which are \textit{only} excluded because of the requirement in question.
 
@@ -133,20 +133,15 @@ For the transverse momentum threshold and spatial coverage $15\,\text{GeV}$ and 
 \section{Electron Identification}
 \label{sec:eleid}
 
-For selecting electrons, the Egamma POG recommendations are employed. These are taken from and can be found on yet another TWiki Website~\cite{egammaid}. Since electron identification is only used for vetoing against potentially misreconstructed events, they are of lower importance compared to the previously discussed physics objects. The chosen medium working point is similar to VBTF 80 working points and has the following requirements for the barrel (encaps) region. 
+For selecting electrons, the Egamma POG recommendations are employed. These are taken from and can be found on yet another TWiki Website~\cite{egammaid}. Since electron identification is only used for vetoing against potentially misreconstructed events, they are of lower importance compared to the previously discussed physics objects. As a single electron can lead to multiple entries in the calorimeter, superclusters (\textbf{SC}) are used to describe an $\eta$-region of ECAL entries triggered by an electron. These can be due to Due to the trajectory being bent, the electron emits photons resulting in these additional hits in the adjacent ECAL cells. The chosen medium working point has the following requirements for the barrel (encaps) region.
 
 
 \begin{itemize}
 \item $\mathbf{\Delta \eta_{\textbf{SC}} < 0.004 (0.007)}$ - $\eta$-distance of extrapolated track to supercluster.
 \item $\mathbf{\Delta \phi_{\textbf{SC}} < 0.06 (0.03)}$ - $\phi$-distance of extrapolated track to supercluster.
-\item $\mathbf{\sigma_{I\eta I\eta} < 0.01 (0.03)}$ - Size of the spread of the supercluster; measured in units of crystals.
-\end{itemize}
-
-A supercluster (\textbf{SC}) describes an $\eta$-region of ECAL entries triggered by an electron. Due to the trajectory being bent, the electron emits photons resulting in these additional hits in the adjacent ECAL cells.
-
-\begin{itemize}
-\item $\mathbf{H / E < 0.12 (0.10)}$ - Ratio of energy measurement in HCAL to ECAL.
-\item $\mathbf{|d_{0, \textbf{vtx}}| < 0.02}$ - Transverse distance to primary vertex. 
+\item $\mathbf{\sigma_{\eta \text{Energy spread}} < 0.01 (0.03)}$ - Size of the energy spread of the supercluster. It is calculated from the distance $\Delta \eta$ of the adjacent $5 times 5$ ECAL cells around the seeding crystal. Each distance is weighted with the energy deposited in the respective cell. This quantity is also known as $\sigma_{I \eta I \eta}$.
+\item $\mathbf{H / E < 0.12 (0.10)}$ - Ratio of energy measurement in HCAL to ECAL. Electrons are expected to deposit most of their energy in the ECAL, hence this ratio is expected to be low. 
+\item $\mathbf{|d_{0, \textbf{vtx}}| < 0.02}$ - Transverse distance to primary vertex.
 \item $\mathbf{|d_{z, \textbf{vtx}}| < 0.1}$ - Longitudinal distance to primary vertex.
 \item $\mathbf{1/E - 1/p < 0.05}$ - Difference of the inverse energy and momentum.
 \item $\mathbf{\textbf{Combined I}_{\textbf{rel, PF}} < 0.15}$ - Combined relative isolation.
@@ -154,7 +149,7 @@ A supercluster (\textbf{SC}) describes an $\eta$-region of ECAL entries triggere
 \item \textbf{Vertex Fit Probability} $\mathbf{< 10^{-6}}$ - Likelihood of the electron being matched to a conversion vertex.
 \end{itemize}
 
-Isolation describes the amount of energy in close vicinity $\Delta R = 0.3$ to the particle's trajectory. To match the electron trigger's settings, the individual tracker, ECAL and HCAL entries are also required to have an isolation less than 0.2, respectively.
+Isolation describes the amount of energy in close vicinity $\Delta R = 0.3$ to the particle's trajectory. To match the electron trigger's settings, the individual tracker and calorimeter entries are also required to have an isolation less than 0.2, respectively.
 
 %%% Local Variables: 
 %%% mode: latex
