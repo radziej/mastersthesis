@@ -4,79 +4,82 @@
 \section{Final Distribution}
 \label{sec:final-dist}
 
-Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the CRBVC, only the inverted missing transverse energy requirement is reversed again $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
+Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the $b$-jet veto plus charge control region, only the inverted missing transverse energy requirement is reversed again $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
 
 \begin{figure}[htb!]
   \centering
-  \begin{subfigure}[b]{0.495\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_gaugino.pdf}
     \caption{\label{fig:m_gaugino}}
   \end{subfigure}
-  \begin{subfigure}[b]{0.495\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_smuon.pdf}
     \caption{\label{fig:m_smuon}}
   \end{subfigure}
-  \caption{Mass of the gaugino (\ref{fig:m_gaugino}) and smuon (\ref{fig:m_smuon}). Both are calculated from the invariant masses of the selected two jets and two muons in the smuon case, as well as two jets and the sub leading muon for the gaugino. The distributions include the data-driven background estimate.}
+  \caption{Mass of the gaugino (\ref{fig:m_gaugino}) and smuon (\ref{fig:m_smuon}) after all selection requirements. Both are calculated from the invariant masses of the selected two jets and two muons in the smuon case, as well as two jets and the sub leading muon for the gaugino. The distributions include the data-driven background estimate.}
   \label{fig:final-dist}
 \end{figure}
 
-\noindent Table~\ref{tab:nev-msmuon} resolves each group of processes into its individual background components. The importance of the data-driven background estimate is shown by its large contribution. Combined with the $WZ \rightarrow 3l \nu$ process, it adds up to more than $80\,\pct$ of the entire background prediction.
+\noindent Table~\ref{tab:nev-msmuon} resolves each group of processes into its individual background components. The importance of the data-driven background estimate is shown by its large contribution. It is roughly twice as high as the biggest Monte Carlo sample contribution given by the $WZ \rightarrow 3l \nu$ process. Together, they amount to more than $80\,\pct$ of the entire background prediction.
 
 \begin{table}[!htb]
   \centering
-  \begin{tabular}{|l|c|c|c|}
+  \begin{tabular}{|l|d{4}|d{4}|d{4}|}
     \hline
-    \multirow{2}{*}{Backgrounds}    & \multirow{2}{*}{$N_{\text{Events}}$} & \multicolumn{2}{|c|}{Uncertainties} \\ \cline{3-4}
-                                    &                                      & stat.  & sys.                       \\ \hline \hline
-    Fake estimate                   & 33.5                                 & 2.4    & 16                         \\ \hline
-    $W\gamma \rightarrow l\nu 2\mu$ & 1.35                                 & 0.45   & 0.69                       \\
-    $WZ \rightarrow 3l \nu$         & 17.1                                 & 0.5    & 1.9                        \\
-    $WZ \rightarrow 2q l \nu$       & 0.026                                & 0.026  & 0.003                      \\
-    $ZZ \rightarrow 2l 2q$          & 0.044                                & 0.030  & 0.0044                     \\
-    $ZZ \rightarrow 4l$             & 2.55                                 & 0.05   & 0.27                       \\ \hline
-    $t\bar{t} + W$                  & 1.0                                  & 0.16   & 0.30                       \\
-    $t\bar{t} + WW$                 & 0.0163                               & 0.0019 & 00083                      \\
-    $t\bar{t} + Z$                  & 0.258                                & 0.070  & 0.038                      \\ \hline
-    $WWW$                           & 0.842                                & 0.081  & 0.085                      \\
-    $WWZ$                           & 0.186                                & 0.034  & 0.02                       \\
-    $WZZ$                           & 0.186                                & 0.013  & 0.001                      \\
-    $ZZZ$                           & 0.0554                               & 0.0018 & 0.0005                     \\ \hline
-    $W^- W^-$                       & 1.38                                 & 0.17   & 0.7                        \\
-    $W^+ W^+$                       & 3.97                                 & 0.48   & 2.02                       \\
-    $WW$ Double-parton              & 0.24                                 & 0.07   & 0.12                       \\ \hline
-    $\sum$                          & 62.5                                 & 2.6    & 22.1                       \\ \hline
-    Data                            & 63                                   & -      & -                          \\ \hline
+    \multirow{2}{*}{Sample}    & \multirow{2}{0.6cm}{$N_{\text{Events}}$} & \multicolumn{2}{c|}{Uncertainties} \\ \cline{3-4}
+
+                               &                                   & \text{stat.}  & \text{sys.}                       \\ \hline \hline
+    Data-driven background estimate                   & 33.5                                 & 2.4    & 16.0                         \\ \hline \hline
+    
+    \multicolumn{4}{|c|}{Monte Carlo} \\ \hline    
+    $W\gamma \rightarrow l\nu 2\mu$ & 1.35   & 0.45   & 0.69   \\
+    $WZ \rightarrow 3l \nu$         & 17.1   & 0.5    & 1.9    \\
+    $WZ \rightarrow 2q l \nu$       & 0.026  & 0.026  & 0.003  \\
+    $ZZ \rightarrow 2l 2q$          & 0.044  & 0.030  & 0.0044 \\
+    $ZZ \rightarrow 4l$             & 2.55   & 0.05   & 0.27   \\ \hline
+    $t\bar{t} + W$                  & 1.00   & 0.16   & 0.30   \\
+    $t\bar{t} + WW$                 & 0.0163 & 0.0019 & 0.0083  \\
+    $t\bar{t} + Z$                  & 0.258  & 0.070  & 0.038  \\ \hline
+    $WWW$                           & 0.842  & 0.081  & 0.085  \\
+    $WWZ$                           & 0.186  & 0.034  & 0.02   \\
+    $WZZ$                           & 0.186  & 0.013  & 0.001  \\
+    $ZZZ$                           & 0.0554 & 0.0018 & 0.0005 \\ \hline
+    $W^- W^-$                       & 1.38   & 0.17   & 0.7    \\
+    $W^+ W^+$                       & 3.97   & 0.48   & 2.02   \\
+    $WW$ Double-parton              & 0.24   & 0.07   & 0.12   \\ \hline
+    $\sum$                          & 62.5   & 2.6    & 22.1   \\ \hline \hline
+    Data                            & \multicolumn{1}{c|}{63}     & \multicolumn{1}{c|}{-}      & \multicolumn{1}{c|}{-}      \\ \hline
   \end{tabular}
   \caption{Detailed number of events for each background in the distributions at the final stage of the analysis.}
   \label{tab:nev-msmuon}
 \end{table}
 
-The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits  statistical uncertainties from the background samples which are subtracted from the data when determining the tight-to-loose ratio. Respectively adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation. All variations are well within the given uncertainties.
+The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits  statistical uncertainties from the background samples which are subtracted from the data when determining the tight-to-loose ratio. Adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation.
 
 \begin{figure}[ht!]
   \centering
-  \begin{subfigure}[b]{0.495\textwidth}
+  \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/signal_1000_1200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-1200-m-smu-chi}}
   \end{subfigure}
-  \begin{subfigure}[b]{0.495\textwidth}
+  \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/signal_1000_200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-200-m-smu-chi}}
   \end{subfigure}
-  \caption{Two-dimensional smuon and gaugino mass distribution. Only the listed signal is shown. One can see that $m_0$ and $m_{1/2}$ determine which signal regions is the dominant one.}
+  \caption{Two-dimensional smuon and gaugino mass distribution. Only the listed signal is shown. One can see that $m_0$ and $m_{1/2}$ determine which out of the six search regions SR 1-6 is the dominant one. The black lines represent the borders of the individual search regions.}
   \label{fig:sig-m-smu-chi}
 \end{figure}
 
-Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. A two dimensional visualization of the two exemplary signal contributions in the gaugino-smuon mass distribution is shown in figure~\ref{fig:sig-m-smu-chi}. In general, the dominant signal region for a RPV SUSY signal depends on the values of $m_0$ and $m_{1/2}$. To improve the sensitivity a multi-bin approach is being employed. For that purpose the two dimensional gaugino-smuon mass distribution is divided into six regions, which are shown in figure~\ref{fig:m_smu_chi}.
+Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{GeV}$ in figure~\ref{fig:final-dist} as an example, one can see that while the distributions coincide in the gaugino mass distribution, they do not in the smuon one. A two-dimensional visualization of the two exemplary signal contributions in the gaugino-smuon mass distribution is shown in figure~\ref{fig:sig-m-smu-chi}. In general, the dominant search region for a RPV SUSY signal depends on the values of $m_0$ and $m_{1/2}$. To improve the sensitivity of the limit setting procedure, a multi-bin approach is being employed. For that purpose the two-dimensional gaugino-smuon mass distribution is divided into six regions SR 1-6. Figure~\ref{fig:m_smu_chi} shows the two-dimensional, final distribution of the smuon and gaugino mass.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.7\textwidth]{plots/m_smu_chi.pdf}
-  \caption{Two-dimensional smuon and gaugino mass distribution. All backgrounds are summed up and are shown as coloured signal regions, while the data points are shown individually. The six bins are regarded as separate signal regions to improve the results of this analysis.}
+  \caption{Background estimate and CMS data of the two-dimensional smuon and gaugino mass distribution. All backgrounds are summed up and are shown as coloured search regions, while the data points are shown individually. The six bins are regarded as separate search regions SR 1-6 to improve the results of this analysis. The black lines represent the borders of the individual search regions.}
   \label{fig:m_smu_chi}
 \end{figure}
 
@@ -84,24 +87,24 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
 
 \begin{table}[!htbp]
   \centering
-  \begin{tabular}{|l|r|r|r|}
+  \begin{tabular}{|l|d{5}@{}d{4}|d{4}@{}d{4}|d{4}@{}d{4}|}
     \hline
-    Process group & SR 1                & SR 2              & SR 3              \\ \hline
-    Fakes         & 16.0 $\pm$ 7.82     & 10.7 $\pm$ 5.3    & 5.00 $\pm$ 2.58   \\ 
-    $tt+V$        & 0.47 $\pm$ 0.16     & 0.49 $\pm$ 0.17   & 0.187 $\pm$ 0.089 \\ 
-    $VV$          & 8.46 $\pm$ 1.22     & 7.1 $\pm$ 1.1     & 4.01 $\pm$ 0.62   \\
-    $VVV$         & 0.374 $\pm$ 0.064   & 0.392 $\pm$ 0.066 & 0.209 $\pm$ 0.045 \\ 
-    Rare          & 1.04 $\pm$ 0.57     & 1.33 $\pm$ 0.72   & 1.65 $\pm$ 0.88   \\ \hline
-    $\sum$        & 26.4 $\pm$ 9.6      & 20.0 $\pm$ 7.1    & 11.1 $\pm$ 4.0    \\ \hline
-    Data          & 19                  & 25                & 13                \\ \hline \hline
-    Process group & SR 4                & SR 5              & SR 6              \\ \hline
-    Fakes         & 0.23 $\pm$ 0.20     & 1.15 $\pm$ 0.89   & 0.33 $\pm$ 0.25   \\
-    $tt+V$        & $<0.001$            & 0.032$\pm$ 0.029  & 0.094 $\pm$ 0.062 \\
-    $VV$          & 0.106 $\pm$ 0.034   & 1.07 $\pm$ 0.16   & 0.277 $\pm$ 0.062 \\
-    $VVV$         & 0.0062 $\pm$ 0.0048 & 0.090 $\pm$ 0.027 & 0.028 $\pm$ 0.014 \\
-    Rare          & 0.102 $\pm$ 0.089   & 0.65 $\pm$ 0.38   & 0.80 $\pm$ 0.46   \\ \hline
-    $\sum$        & 0.45 $\pm$ 0.25     & 3.0 $\pm$ 1.3     & 1.5 $\pm$ 0.7     \\ \hline
-    Data          & 2                   & 1                 & 3                 \\ \hline
+    Process group & \multicolumn{1}{c}{\text{SR 1}} &              & \multicolumn{1}{c}{\text{SR 2}} &              & \multicolumn{1}{c}{\text{SR 3}} &              \\ \hline
+    Fakes         & 16.0                            & \pm\: 7.8    & 10.7                            & \pm\:  5.3   & 5.00                            & \pm\:  2.58  \\ 
+    $tt+V$        & 0.47                            & \pm\: 0.16   & 0.49                            & \pm\:  0.17  & 0.187                           & \pm\:  0.089 \\ 
+    $VV$          & 8.46                            & \pm\: 1.22   & 7.1                             & \pm\:  1.1   & 4.01                            & \pm\:  0.62  \\
+    $VVV$         & 0.374                           & \pm\: 0.064  & 0.392                           & \pm\:  0.066 & 0.209                           & \pm\:  0.045 \\ 
+    Rare          & 1.04                            & \pm\: 0.57   & 1.33                            & \pm\:  0.72  & 1.65                            & \pm\:  0.88  \\ \hline
+    $\sum$        & 26.4                            & \pm\: 9.6    & 20.0                            & \pm\:  7.1   & 11.1                            & \pm\:  4.0   \\ \hline
+    Data          & 19                              &              & 25                              &              & 13                              &              \\ \hline \hline
+    Process group & \multicolumn{1}{c}{\text{SR 4}} &              & \multicolumn{1}{c}{\text{SR 5}} &              & \multicolumn{1}{c}{\text{SR 6}} &              \\ \hline
+    Fakes         & 0.23                            & \pm\: 0.20   & 1.15                            & \pm\:  0.89  & 0.33                            & \pm\:  0.25  \\
+    $tt+V$        & <0.001                          &              & 0.032                           & \pm\:  0.029 & 0.094                           & \pm\:  0.062 \\
+    $VV$          & 0.106                           & \pm\: 0.034  & 1.07                            & \pm\:  0.16  & 0.277                           & \pm\:  0.062 \\
+    $VVV$         & 0.0062                          & \pm\: 0.0048 & 0.090                           & \pm\:  0.027 & 0.028                           & \pm\:  0.014 \\
+    Rare          & 0.102                           & \pm\: 0.089  & 0.65                            & \pm\:  0.38  & 0.80                            & \pm\:  0.46  \\ \hline
+    $\sum$        & 0.45                            & \pm\: 0.25   & 3.0                             & \pm\:  1.3   & 1.5                             & \pm\:  0.7   \\ \hline
+    Data          & 2                               &              & 1                               &              & 3                               &              \\ \hline
   \end{tabular}
   \caption{Summary of the six regions displayed in figure~\ref{fig:m_smu_chi}. They are numbered starting on the left and progressing upwards from the lowest bin.}
   \label{tab:m_smu_chi_summary}
@@ -110,13 +113,13 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
 \section{Calculation of Limits}
 \label{sec:calc-of-limits}
 
-As any excess of data is too slight to be considered statistically significant, one can translate the result into limits onto two quantities. The cross section of a RPV SUSY model and its model parameters. To calculate these, one method commonly used in the CMS experiment will be utilized. Details are given in the upcoming section.
+As any excess of data is too small to be considered statistically significant, the result is translated into limits onto two quantities. The cross section of a $R$-parity violating supersymmetry model and its model parameter $\lambda^\prime_{211}$. To calculate these, one method commonly used in the CMS experiment will be utilized. Details are given in the upcoming section.
 
 
 \subsection{CLs Method}
 \label{sec:cls-method}
 
-The $CL_s$ method~\cite{cls,cls2} is considered a modified frequentist analysis. It has been developed to prevent setting limits with frequentist methods on regions where the analysis is not sensitive. Its provides useful results in cases with low statistics and less dependent on background fluctuations. The general idea is to compare two hypotheses to a measurement.
+The $CL_s$ method~\cite{cls,cls2} is a modified frequentist analysis. It has been developed to prevent setting limits with frequentist methods on regions where the analysis is not sensitive. Its provides useful results in cases with low statistics and less dependent on background fluctuations. The general idea is to compare two hypotheses to a measurement.
 
 For most analyses in high energy particle physics, there are two cases to be covered. The null hypotheses $H_0$ being the Standard Model prediction by itself and a combination of the proposed signal and the Standard Model prediction as the second hypothesis $H_1$. In the most simple case, given enough statistics, one expects the number of events $n$ to follow a Poisson distribution.
 
@@ -180,7 +183,7 @@ Following the recommendations by the CMS and ATLAS collaborations~\cite{clsmod},
 
 % Using the logarithm with a factor of $-2$ allows the test statistic to converge against $\Delta \chi^2$ for a large number of selected events.
 
-To improve the limits, the signal region is subdivided into multiple signal regions. When combining the results for the individual regions, the respective likelihoods have to be multiplied and the overall value is given by
+To improve the limits, the search region is subdivided into multiple search regions. When combining the results for the individual regions, the respective likelihoods have to be multiplied and the overall value is given by
 
 \begin{equation}
   \label{eq:likelihood-product}
@@ -278,11 +281,11 @@ In general, the exclusion limits get progressively weaker towards higher values 
     \caption{$m_{1/2} = 2000\,\text{GeV}$\label{fig:limit-m12-2000}}
   \end{subfigure}
 
-  \caption{One dimensional slices of the two dimensional limits given in figure~\ref{fig:lambda-prime-limits} for fixed values of $m_{1/2}$.}
+  \caption{One dimensional slices of the two-dimensional limits given in figure~\ref{fig:lambda-prime-limits} for fixed values of $m_{1/2}$.}
   \label{fig:1d-limits}
 \end{figure}
 
-By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the signal regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ (Fig.~\ref{fig:sig-1000-1200-m-smu-chi}) as an example, one can see that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
+By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the search regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ (Fig.~\ref{fig:sig-1000-1200-m-smu-chi}) as an example, one can see that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
 
 In general, the
 

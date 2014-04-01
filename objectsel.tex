@@ -133,23 +133,25 @@ For the transverse momentum threshold and spatial coverage $15\,\text{GeV}$ and 
 \section{Electron Identification}
 \label{sec:eleid}
 
-For selecting electrons, the Egamma POG recommendations are employed. These are taken from and can be found on yet another TWiki Website~\cite{egammaid}. Since electron identification is only used for vetoing against potentially misreconstructed events, they are of lower importance compared to the previously discussed physics objects. As a single electron can lead to multiple entries in the calorimeter, superclusters (\textbf{SC}) are used to describe an $\eta$-region of ECAL entries triggered by an electron. These can be due to Due to the trajectory being bent, the electron emits photons resulting in these additional hits in the adjacent ECAL cells. The chosen medium working point has the following requirements for the barrel (encaps) region.
-
+For selecting electrons, the Egamma POG recommendations are employed. These are taken from and can be found on yet another TWiki Website~\cite{egammaid}. Since electron identification is only used for vetoing against potentially misreconstructed events, they are of lower importance compared to the previously discussed physics objects. As a single electron can lead to multiple entries in the calorimeter, superclusters (\textbf{SC}) are used to describe an $\eta$-region of ECAL entries triggered by an electron. Due to the electron's trajectory being bent, the electron emits photons resulting in these additional hits in the adjacent ECAL cells. If an electron hits the border of adjacent cells, it also yields multiple entries. The chosen medium working point has the following requirements for the barrel (encaps) region.
 
 \begin{itemize}
 \item $\mathbf{\Delta \eta_{\textbf{SC}} < 0.004 (0.007)}$ - $\eta$-distance of extrapolated track to supercluster.
 \item $\mathbf{\Delta \phi_{\textbf{SC}} < 0.06 (0.03)}$ - $\phi$-distance of extrapolated track to supercluster.
 \item $\mathbf{\sigma_{\eta \text{Energy spread}} < 0.01 (0.03)}$ - Size of the energy spread of the supercluster. It is calculated from the distance $\Delta \eta$ of the adjacent $5 times 5$ ECAL cells around the seeding crystal. Each distance is weighted with the energy deposited in the respective cell. This quantity is also known as $\sigma_{I \eta I \eta}$.
-\item $\mathbf{H / E < 0.12 (0.10)}$ - Ratio of energy measurement in HCAL to ECAL. Electrons are expected to deposit most of their energy in the ECAL, hence this ratio is expected to be low. 
+\item $\mathbf{H / E < 0.12 (0.10)}$ - Ratio of ECAL and HCAL energy measurements. Electrons are expected to deposit most of their energy in the ECAL, hence this ratio is expected to be low. 
 \item $\mathbf{|d_{0, \textbf{vtx}}| < 0.02}$ - Transverse distance to primary vertex.
 \item $\mathbf{|d_{z, \textbf{vtx}}| < 0.1}$ - Longitudinal distance to primary vertex.
-\item $\mathbf{1/E - 1/p < 0.05}$ - Difference of the inverse energy and momentum.
-\item $\mathbf{\textbf{Combined I}_{\textbf{rel, PF}} < 0.15}$ - Combined relative isolation.
-\item \textbf{Missing Hits} $\mathbf{<= 1}$ - Number of expected tracker hits that are missing.
+\item $\mathbf{|1/E - 1/p| < 0.05}$ - Absolute difference of the inverse energy and momentum. Due to the electron being light, both the energy and momentum are expected to be very close, which is exploited here.  
+\item $\mathbf{\textbf{Combined I}_{\textbf{rel, PF}} < 0.15}$ - Isolation criterion determined by the particle flow algorithm. It is given by the amount of energy around the particle in a cone with $R = 0.3$, divided by the particle's energy. It uses a combination of tracker and calorimeter entries.
+\end{itemize}
+\noindent The following requirements ensure that one does not misidentify a conversion of a prompt photon as an electron. 
+\begin{itemize}
+\item $\mathbf{N_{\text{Missing Tracker Hits}} \leq 1}$ - Number of tracker hits that are missing. A prompt photon most likely converts after passing through the first layers of the ECAL, thus the extrapolated track will not have any hits in these layers. 
 \item \textbf{Vertex Fit Probability} $\mathbf{< 10^{-6}}$ - Likelihood of the electron being matched to a conversion vertex.
 \end{itemize}
 
-Isolation describes the amount of energy in close vicinity $\Delta R = 0.3$ to the particle's trajectory. To match the electron trigger's settings, the individual tracker and calorimeter entries are also required to have an isolation less than 0.2, respectively.
+Isolation describes the amount of energy in close vicinity $\Delta R = 0.3$ to the particle's trajectory. To match the electron trigger's settings, the individual tracker and calorimeter entries\footnote{This also takes into account possible HCAL entries, for cases where an electron was able to pass through the ECAL.} are also required to have an isolation less than 0.2, respectively.
 
 %%% Local Variables: 
 %%% mode: latex

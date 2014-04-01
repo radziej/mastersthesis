@@ -1,9 +1,9 @@
 \chapter{Event Selection}
 \label{cha:eventsel}
 
-After establishing the signature, datasets, Monte Carlo samples and object selection recipes, one can select the relevant events. Improving the signal to background ratio is the major goal to achieve through this procedure. The motivation behind that, is the large difference in cross sections between the signal and all two muon, two jets processes. The same sign charge requirement is expected to have the biggest impact in that regard. Prior to that, the steps mainly concentrate on reducing \textit{one} dominant background process at a time.
+After establishing the signature, datasets, Monte Carlo samples and object selection recipes, one can select the relevant events. To be able to evaluate possible signal contributions, this procedure is also meant to improve the signal to background ratio. The motivation behind that is the large difference in cross sections between the signal and all two muon, two jets processes. The same sign charge requirement is expected to have the biggest impact in that regard. Prior to that, the steps mainly concentrate on reducing \textit{one} dominant background process at a time.
 
-It should also be noted that this analysis was performed ``blindly''. Therefore control regions are used to estimate the agreement before one inspects the final distribution.
+It should also be noted that this analysis was performed ``blindly''. Therefore control regions are used to estimate the agreement before one inspects the final CMS data distribution.
 
 \section{Event Cleaning}
 \label{sec:evclean}
@@ -11,31 +11,31 @@ It should also be noted that this analysis was performed ``blindly''. Therefore 
 As a first step, a list of noise filters needs to be applied to the triggered events. Their purpose is to prevent a variety of detector specific effects to be misinterpreted as particles. It is maintained by the JetMET physics object group~\cite{jmepog}. The recommended list~\cite{jmefilters} of noise cleaning filters encompasses the following entries.
 
 \begin{itemize}
-\item \textbf{CSC tight beam halo filter} - Uses information of the cathode strip chambers to identify anomalous MET created by the beam halo.
-\item \textbf{HBHE noise filter with isolated noise rejection} - Detects isolated noise of instrumental origin. In particular the one from hybrid photodiodes and readout boxes.
+\item \textbf{CSC tight beam halo filter} - Uses information of the cathode strip muon chambers to identify anomalous MET created by the beam halo.
+\item \textbf{HBHE noise filter with isolated noise rejection} - Detects isolated noise of instrumental origin. In particular the one from hybrid photodiodes and readout boxes of the HB and HE hadron calorimeters.
 \item \textbf{HCAL laser filter} - Picks events where the HCAL laser fired at incorrect times. This leads to numerous entries throughout the entire HCAL.
 \item \textbf{ECAL dead cell trigger primitive filter} - Suppresses events where the trigger primitive energy lies above a certain threshold. These mismeasurements are due to the $\sim 1\pct$ of dead ECAL cells.
-\item \textbf{Tracking failure filter} - Wards against two issues. Large clusters of entries can lead to less iterations of the tracking algorithm. Displaced primary vertices can also pose problems.
-\item \textbf{Bad EE Supercrystal filter} - Two of the $5 \times 5$ crystal regions appear to provide anomalous information. Removing these events is this filter's task.
-\item \textbf{ECAL laser correction filter} - Due to a poor calibration of some ECAL crystals using lasers, they are highly energetic. To prevent a MET mismeasurement, the respective events are removed. 
-\item \textbf{Tracking POG filters} - Filters two types of issues. Events with (partially) aborted track reconstruction and events influenced by strip tracker noise.
+\item \textbf{Tracking failure filter} - Wards against two issues. Large clusters of hits can lead to less iterations of the tracking algorithm. Displaced primary vertices can also pose problems.
+\item \textbf{Bad EE Supercrystal filter} - Two of the $5 \times 5$ crystal regions appear to provide anomalous information in the electromagnetic endcaps EE. Removing these events is this filter's task.
+\item \textbf{ECAL laser correction filter} - The ECAL crystals are calibrated using a laser. This calibration lead to some crystals appearing to be highly energetic. To prevent a MET mismeasurement, the respective events are removed. 
+\item \textbf{Tracking odd event filters} - Filters two types of issues. Events with (partially) aborted track reconstruction and events influenced by strip tracker noise.
 \end{itemize}
 
-This first stage of the analysis combines event cleaning with the \textbf{electron veto}. The latter is essentially seen as additional noise with regards to selecting muons.
+This first stage of the analysis combines event cleaning with the \textbf{electron veto}. To prevent muon candidates being misidentified electrons, the number of electrons selected by the previously defined recipe (Sec.~\ref{sec:eleid}) is required to be zero.
 
 \section{Basic Muon Selection}
 \label{sec:basicmuon}
 
 At this stage of the analysis, a first subset of muons is selected. Using the object selection recipe (Sec.~\ref{sec:muonid}) as a basis, the requirements are slightly tightened. Events with less than two muons passing the object identification are rejected immediately.
 
-The \verb+HLT_Mu17_TkMu8+ trigger requires more than $17\,\text{GeV}$ and $8\,\text{GeV}$ transverse momentum for the respective muon. To avoid the trigger ``turn on''~\cite{trigeff} in the region close to that cut-off, the following thresholds have been chosen in the analysis. The value for the leading muon is required to be at least $p_{\text{T}} > 20\,\text{GeV}$, while the sub-leading muon needs a minimum of $p_{\text{T}} > 15\,\text{GeV}$.
+The \verb+HLT_Mu17_TkMu8+ trigger requires more than $17\,\text{GeV}$ and $8\,\text{GeV}$ transverse momentum for the respective muon. To avoid the trigger ``turn on''~\cite{trigeff} in the region close to that cut-off, the leading muon is required to have a transverse momentum of at least $p_{\text{T}} > 20\,\text{GeV}$. The value for the sub-leading muon has to exceed $p_{\text{T}} > 15\,\text{GeV}$, which is also well above the trigger requirement. Lower thresholds of around $10\,\text{GeV}$ were tested, but mostly yield additional background, not signal events. 
 
 \section{Jet Quality Criteria}
 \label{sec:jetqualy}
 
 The jet selection recipe for identification (Sec.~\ref{sec:jetid}) is not altered significantly. Thus their selection ensures the two muon, two jet signature, but does not exclude potentially good events by placing unusually high demands on jets.
 
-To satisfy the final state of the signal, the number of jets cannot be lower than two. In addition to that, both the leading and sub-leading jets in terms of transverse momentum, need to pass the $30\,\text{GeV}$ threshold. This is meant to help against clustered tracks or pileup contamination that may be identified as jets. Both the distributions of the number of jets (Fig.~\ref{fig:jetn}) and the leading jet transverse momentum (Fig.~\ref{fig:jetpt1}) show that these requirements mainly suppresses the Drell-Yan and QCD background.
+To satisfy the final state of the signal, the number of jets cannot be lower than two. In addition to that, both the leading and sub-leading jets in terms of transverse momentum, need to pass the $30\,\text{GeV}$ threshold. This is meant to help against clustered tracks or pileup contamination that may be identified as jets. Both the distributions of the number of jets (Fig.~\ref{fig:jetn}) and the leading jet transverse momentum (Fig.~\ref{fig:jetpt1}) show that these requirements mainly suppresses the Drell-Yan background.
 
 \begin{figure}[htb!]
   \centering
@@ -49,7 +49,7 @@ To satisfy the final state of the signal, the number of jets cannot be lower tha
     \includegraphics[width=\textwidth]{plots/jet_pt1.pdf}
     \caption{\label{fig:jetpt1}}
   \end{subfigure}
-  \caption{Number of jets (\ref{fig:jetn}) and leading jet transverse momentum (\ref{fig:jetpt1}) at this stage of the analysis. The thresholds are at least two jets and $p_{\text{T}, j_i} > 30\,\text{GeV}$.}
+  \caption{Number of jets (\ref{fig:jetn}) and leading jet transverse momentum (\ref{fig:jetpt1}) after the basic muon selection, before applying the jet quality criteria. The jet quality criteria require at least two jets and $p_{\text{T}, j_i} > 30\,\text{GeV}$.}
   \label{fig:jetqualy}
 \end{figure}
 
@@ -59,7 +59,7 @@ To satisfy the final state of the signal, the number of jets cannot be lower tha
 \section{Muon Quality Criteria}
 \label{sec:muonqualy}
 
-To satisfy the signal signature and provide the candidates for further selection requirements, events containing exactly two ``good'' muons are selected. For this purpose the basic muon subset is refined through trigger-matching as well as isolation and impact parameter thresholds. It should be noted that the actual process of evaluating the events has been performed before the event cleaning. For the impact parameter, this was meant to prevent any bias. And with regards to the remaining parameters it was unavoidable, due to the structure of this analysis (see upcoming cha.~\ref{cha:datadrivenbg}).
+To satisfy the signal signature of two \textit{prompt} muons and provide the candidates for further selection requirements, events containing exactly two ``good'' muons are selected. For this purpose, the basic muon subset is refined through trigger-matching as well as isolation and impact parameter thresholds. It should be noted that the actual process of evaluating the events has been performed before the event cleaning. For the impact parameter, this was meant to prevent any bias. And with regards to the remaining parameters it was unavoidable, due to the structure of this analysis (see chapter~\ref{cha:datadrivenbg}).
 
 Every \textit{event} examined at this stage is already required to pass the selected trigger (Sec.~\ref{sec:trigger}). Building upon that, the trigger-path for the \textit{muon} content of each event is also compared to the one of \verb+HLT_Mu17_TkMu8+ for every single particle. Only particles that fulfil this match are considered as candidates to ensure a minimum reconstruction quality and equal conditions throughout the entire subset. 
 
@@ -70,14 +70,14 @@ In addition to that, there are two different types of isolation criteria impleme
   I_{\text{rel}} = \frac{ \sum p_{\text{T, charged had.}} + \max \left( 0,  \sum E_{\text{T, neutral had.}} + \sum E_{\text{T}, \gamma} - \Delta\beta \sum p_{\text{T, PU}} \right) }{ p_{\text{T}, \mu} }
 \end{equation}
 
-Each sum is determined by the particle flow algorithm. When adding them up, the $\Delta \beta$ corrections are applied to the neutral energy deposit. The corrections are based on the energies of charged particles not stemming from the primary vertex. These are determined by splitting particle flow candidates by whether or not they are considered to be pileup contributions. The factor of 0.5 has been determined from jets as an average of neutral to charged particles~\cite{muondbeta}.
+Each sum is determined by the particle flow algorithm. When adding them up, the $\Delta \beta$ corrections are applied to the neutral energy deposit. The corrections are based on the energies of charged particles not stemming from the primary vertex. These are determined by splitting particle flow candidates by whether or not they are considered to be pileup contributions. The factor of $\Delta \beta = 0.5$ has been determined from jets as an average of neutral to charged particles~\cite{muondbeta}.
 
-The sum of the four components represents the energy/transverse momentum around the muon candidates in a cone with a radius of $R = 0.4$. Division by the particle's transverse momentum reduces the dependence on the energy of the interaction. With higher energies in the initial state, the absolute amount of energy carried by all the products is expected to rise as well. However, the relative distribution of said energy is expected to remain similar. With highly energetic muons and a relative isolation criterion, pileup contamination also becomes less of a problem for the same reason. Figure~\ref{fig:reliso} shows the combined relative isolation.
+The sum of the four components represents the energy/transverse momentum around the muon candidates in a cone with a radius of $R = 0.4$. Division by the particle's transverse momentum reduces the dependence on the centre-of-mass energy of $8\,\text{TeV}$. With higher energies in the initial state, the absolute amount of energy carried by all the products is expected to rise as well. However, the relative distribution of said energy is expected to remain similar. With highly energetic muons and a relative isolation criterion, pileup contamination also becomes less of a problem for the same reason. Figure~\ref{fig:reliso} shows the distribution of the combined relative isolation.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.7\textwidth]{plots/reliso.pdf}
-  \caption{Combined relative isolation~\ref{eq:reliso} of muons. In the large overflow bin, the almost constant continuation of the distribution is contained. For this analysis, it is not of relevance. This histogram was generated before any event selection.}
+  \caption{Combined relative isolation $I_{\text{rel}}$ (Eq.~\ref{eq:reliso}) of muons. In the large overflow bin, the almost constant continuation of the distribution is contained. For this analysis, it is not of relevance. This histogram is generated after the choosing the trigger, but before performing any other event selection.}
   \label{fig:reliso}
 \end{figure}
 
@@ -85,16 +85,16 @@ The sum of the four components represents the energy/transverse momentum around 
 
 The second isolation criterion deals with the spatial distance $\Delta R$ between jets which pass the object selection and muons. It is required to be at least $0.4$ for each of the two muon candidates. Similarly to the combined relative isolation, this ensures that the muon has a reasonably clean trajectory to work with. Although in this case the emphasis is put on hadronic interferences instead of taking a combination of all of them.
 
-Further restrictions are placed upon both the impact parameters. The muon POG suggests tightening the \textit{transverse} one to $|d_{xy}| < 0.2\,\text{mm}$. By reducing it by one order of magnitude, vertices  cosmic muons are suppressed more effectively. When comparing the \textit{longitudinal} impact parameters $d_z$ of both muons, the signal particles are expected to be very close to each other as the supersymmetric decays are effectively prompt. In figure~\ref{fig:deltadz}, the difference between the impact parameters of the two candidates is visualized.
+Further restrictions are placed upon both the impact parameters. The CMS muon physics object group suggests tightening the \textit{transverse} one to $|d_{xy}| < 0.2\,\text{mm}$. By reducing it by one order of magnitude, vertices cosmic muons are suppressed more effectively. When comparing the \textit{longitudinal} impact parameters $d_z$ of both muons, the signal particles are expected to be very close to each other as the supersymmetric decays are effectively prompt. In figure~\ref{fig:deltadz}, the difference between the impact parameters of the two candidates is visualized.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.6\textwidth]{plots/dz_mumu.pdf}
-  \caption{Difference between the longitudinal impact parameter of the two muon candidates.}
+  \caption{Difference between the longitudinal impact parameters of the two muon candidates. This histogram is generated after the jet quality criteria, but before applying the muon quality criteria.}
   \label{fig:deltadz}
 \end{figure}
 
-\noindent Almost no signal events can be observed past $\Delta d_{z, \mu\mu} \leq 0.8\,\text{mm}$. Hence, the threshold is set to this value.
+\noindent Almost no signal events can be observed past $\Delta d_{z, \mu\mu} \leq 0.8\,\text{mm}$. While one might consider tightening the requirement, it has been kept at $0.08\text{mm}$ to stay consistent with the $7\,\text{TeV}$ analysis and provide a better comparison.
 
 Only events with two muon candidates who suffice all listed requirements pass this stage of the selection.
 
@@ -103,7 +103,7 @@ Only events with two muon candidates who suffice all listed requirements pass th
 \section{Drell-Yan Normalization}
 \label{sec:scaling}
 
-After applying both the muon and jet quality criteria, the Drell-Yan background is the dominant one. However, upon closer inspection a discrepancy between data and simulation can be observed. To allow for better comparison between them, scaling factors $f$ (Eq.~\eqref{eq:weight}) can be employed. This is a reasonable choice, since this background does \textbf{not} contribute to the final distributions. Determining the ratio between the integrals of data and simulation yields the scale factors. The ranges that are being taken into account for the determination are $15 - 45\,\text{GeV}$ for the low mass sample and $80 - 120\,\text{GeV}$ for the high mass sample. Both values $f_{10-50} = 1.23$ and $f_{50} = 0.96$ are within the expected range. While the statistical errors are negligible, the systematic dependency on other requirements is estimated to be $5\,\pct$. The factors are applied throughout the entire analysis, including distributions preceding this section.
+After applying both the muon and jet quality criteria, the Drell-Yan background is the dominant one. However, upon closer inspection a discrepancy between data and simulation can be observed. To allow for better comparison between them, scaling factors $f$ (Eq.~\eqref{eq:weight}) can be employed. This is a reasonable choice, since this background does \textbf{not} contribute to the final distributions. Determining the ratio between the integrals of data and simulation yields the scale factors. The ranges that are being taken into account for the determination are $15 - 45\,\text{GeV}$ for the low mass sample covering $10$ to $50\,\text{GeV}$ and $80 - 120\,\text{GeV}$ for the high mass sample, which covers everything upwards of $50\,\text{GeV}$. Both values $f_{10-50} = 1.23$ and $f_{50-\infty} = 0.96$ are within the expected range. While the statistical errors on $f$ are negligible, the systematic dependency on other requirements is estimated to be $5\,\pct$. The factors are applied throughout the entire analysis, including distributions preceding this section.
 
 Strictly speaking, this is not part of the event selection. Nevertheless the Drell-Yan background is most relevant at this stage, therefore the adjustment is performed here as well. In figure~\ref{fig:m_mumu_zpeak_nodysf} and~\ref{fig:m_mumu_zpeak} the invariant mass of both selected muons is shown before and after the scaling, respectively.
 
@@ -119,7 +119,7 @@ Strictly speaking, this is not part of the event selection. Nevertheless the Dre
     \includegraphics[width=\textwidth]{plots/m_mumu_zpeak.pdf}
     \caption{\label{fig:m_mumu_zpeak}}
   \end{subfigure}
-  \caption{Invariant mass of the two selected muons. In histogram \ref{fig:m_mumu_zpeak_nodysf} the scaling factors for the Drell-Yan background are not applied, while in histogram \ref{fig:m_mumu_zpeak} they are.}
+  \caption{Invariant mass of the two selected muons. In histogram \ref{fig:m_mumu_zpeak_nodysf} the scaling factors for the Drell-Yan background are not applied, while in histogram \ref{fig:m_mumu_zpeak} they are. The distributions are generated after the muon quality criteria and before the invariant dimuon mass requirement.}
   \label{fig:dyscaling}
 \end{figure}
 
@@ -148,16 +148,16 @@ Events with an invariant dimuon mass smaller than $m_{\mu\mu} < 15\,\text{GeV}$ 
 \section{Missing Transverse Energy}
 \label{sec:met}
 
-As discussed in chapter~\ref{cha:sig}, \textit{resonant} production of sleptons can lead to low amounts of missing transverse energy in the final state. In this analysis, MET has been computed using the particle flow algorithm. The corresponding histogram is given in figure~\ref{fig:pfmet}.
+As discussed in chapter~\ref{cha:sig}, \textit{resonant} production of sleptons usually leads to low amounts of missing transverse energy in the final state. In this analysis, MET has been computed using the particle flow algorithm. The corresponding histogram is given in figure~\ref{fig:pfmet}.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.7\textwidth]{plots/pfmet.pdf}
-  \caption{Particle Flow missing transverse energy for events with two muon and least two jets passing their respective quality criteria.}
+  \caption{Particle Flow missing transverse energy for events with two muons and least two jets passing their respective quality criteria. The histogram is generated after the invariant dimuon mass requirement, but before applying the missing transverse energy requirement.}
   \label{fig:pfmet}
 \end{figure}
 
-The distribution shows very good agreement up until roughly $230\,\text{GeV}$. Here one can see a slight systematic overprediction. The $t\bar{t}$ sample which dominates this region, has been generated with \textsc{Powheg}. Since this generator does not include more than one hard jet on matrix element level, increasing jet multiplicity towards higher energies poses more of a challenge. Therefore the discrepancy is comprehensible. One can also see that the majority of the expected signal contribution is concentrated in the region with very little MET. Once again, the shape of the signal varies between the different regions of the phase space. Compared to the other simulations, the selection efficiency for the high $m_0$, low $m_{1/2}$ point suffers a lot due to the softer decline. To optimize the signal to background ratio for the majority of SUSY parameter configurations, the threshold is set at $E^{\text{miss}}_{\text{T}} < 50\,\text{GeV}$.
+The distribution shows very good agreement up until roughly $230\,\text{GeV}$. Here one can see a slight systematic overprediction. The $t\bar{t}$ sample which dominates this region, has been generated with \textsc{Powheg}. Since this generator does not include more than one hard jet on matrix element level, the increasing jet multiplicity towards higher energies poses more of a challenge. Therefore the discrepancy is comprehensible. One can also see that the majority of the expected signal contribution is concentrated in the region with very little MET. Once again, the shape of the signal varies between the different regions of the phase space. Compared to the other simulations, the selection efficiency for the high $m_0$, low $m_{1/2}$ point suffers a lot due to the softer decline. To optimize the signal to background ratio for the majority of SUSY parameter configurations, the threshold is set at $E^{\text{miss}}_{\text{T}} < 50\,\text{GeV}$.
 
 To be able to judge the quality of the last steps of the event selection without consulting the final distributions, control regions are introduced. An orthogonal sample is generated by inverting the missing transverse energy requirement. Demanding values larger than $50\,\text{GeV}$, is the first step for every control region. They are subsequently divided by their corresponding requirement passing or rejecting events.
 
@@ -165,7 +165,7 @@ To be able to judge the quality of the last steps of the event selection without
 \section{Jets from b-Quarks}
 \label{sec:bjets}
 
-The signal signature (Cha.~\ref{cha:sig}) only includes jets from the first generation of quarks. With the top quark backgrounds being amongst the most dominant ones, a sizeable amount of jets will stem from bottom quarks (Fig.~\ref{fig:ttbar}). To reduce their contribution in the final distributions, the combined secondary vertex algorithm (\textbf{CSV})~\cite{csvbtag} is used. 
+The signal signature (Cf. chapter~\ref{cha:sig}) only includes jets from the first generation of quarks. With the top quark backgrounds being amongst the dominant ones, a sizeable amount of jets will stem from bottom quarks (Fig.~\ref{fig:ttbar}). To reduce their contribution in the final distributions, the combined secondary vertex algorithm (\textbf{CSV})~\cite{csvbtag} is used. 
 
 This very sophisticated algorithm combines a multitude of parameters to distinguish $b$-jets from non-$b$-jets. Its basis is the reconstruction of secondary vertices produced in the weak decay of bottom quarks. For that purpose the Trimmed Kalman Vertex Finder~\cite{kalmanvtx} is employed. Starting off with all tracks assigned to a jet, it isolates rogue ones. These are then used to reconstruct new vertices, which are sorted into three categories. For the first one, the vertex candidates have to suffice four criteria.
 
@@ -173,7 +173,7 @@ This very sophisticated algorithm combines a multitude of parameters to distingu
 \item The $x$-$y$-distance $l_{\text{T}}$ between primary and secondary vertex has to be larger than $100\,\mu\text{m}$ but within $2.5\,\text{cm}$.
 \item The significance $\frac{l_{\text{T}}}{\sigma_{l_{\text{T}}}}$ has to be larger than $3$.
 \item The invariant mass of all charged particles must not be larger than $6.5\,\text{GeV}$.
-\item If there are two tracks with opposite charges, their mass must not be within $50\,\text{MeV}$ of the $K^0_S$ mass.
+\item If there are two tracks with opposite charges, their mass must not be within $50\,\text{MeV}$ of the $K^0_S$ mass $m_{K^0_S} = 497\,\text{MeV}$.
 \end{itemize}
 
 \noindent If all requirements are met, the candidate is considered a reconstructed secondary vertex. Should they not be met, but there are still at least two tracks with the specified significance higher than 2, a ``pseudo-vertex'' is created. This is the second category. If neither situation applies to the jet, it is placed in the third one.
@@ -185,8 +185,8 @@ Based on which category a jet belongs to, the criteria are tightened and/or expa
 \item A high multiplicity of tracks is characteristic to $b$-jets, even compared to charm hadrons.
 \item Since bottom quarks have a comparatively long flight time, the significance $\frac{l_{\text{T}}}{\sigma_{l_{\text{T}}}}$ can be examined further.
 \item The energy fraction of all charged particles of the secondary vertex as well as the one of the entire jet can be compared to the hard fragmentation function of quarks.
-\item Due to the large mass of a bottom quark, the produced particles are on average more collimated than for e.g. $c$-quarks. Therefore the differences in pseudorapidity between the particles can be used.
-\item Sorting the tracks by their impact parameter significance and determining their invariant mass can help against $c$-quarks as well. The first track exceeding the charm's specific threshold $1.5\,\text{GeV}$ can be used to split them into two categories.
+\item Due to the large mass of a bottom quark, the produced particles are on average less collimated than the ones of e.g. $c$-quarks. Therefore the differences in pseudorapidity between the particles with respect to the jet's axis can be used.
+\item Sorting the tracks by their impact parameter significance and determining their invariant mass can help against $c$-quarks as well. The first track exceeding the charm's mass threshold of $1.5\,\text{GeV}$\footnote{This is only a rough estimate, since not all the right decay products will enter the calculation. In addition to that, neutral particles will also be missed.} can be used to split them into two categories.
 \end{itemize}
 
 \noindent While all of them can be incorporated for the first category of vertices, the significances have to be excluded for the second one. The reason behind this is the lack of a geometrical fit for this type of vertex. For the third category no additional variables are used.
@@ -198,7 +198,7 @@ To derive a single value $v$ for discrimination, all variables are combined into
   v = f_{\text{BG}}(c) \cdot \frac{\mathcal{L}^b}{\mathcal{L}^b + \mathcal{L}^c} + f_{\text{BG}}(q) \cdot \frac{\mathcal{L}^b}{\mathcal{L}^b + \mathcal{L}^q} \quad \text{with} \quad \mathcal{L}^{b, c, q} = \mathcal{L}^{b, c, q} (\alpha, x_i)
 \end{equation}
 
-\noindent The likelihoods $\mathcal{L}$ are a function of the vertex category denoted by $\alpha$ and the $x_i$, which denote the variables. Both $f_{\text{BG}}(c)$ and $f_{\text{BG}}(q)$ are the expected probabilities for light and charm jets to contain $b$ and $c$ quarks, respectively.
+\noindent The likelihoods $\mathcal{L}$ are a function of the vertex category denoted by $\alpha$ and the $x_i$, which denote the variables. Both $b$- and $c$-quark jets contain a certain amount of $b$-quarks. The ratios of likelihoods are weighted with the expected a-priori probabilities of the $b$-quarks in light quark $f_{\text{BG}}(q)$ and charm quark $f_{\text{BG}}(c)$ jets $(f_{\text{BG}}(q) + f_{\text{BG}}(c) = 1)$.
 
 \begin{figure}[htb!]
   \centering
@@ -212,11 +212,11 @@ To derive a single value $v$ for discrimination, all variables are combined into
     \includegraphics[width=\textwidth]{plots/b_proj.pdf}
     \caption{\label{fig:b_proj}}
   \end{subfigure}
-  \caption{Highest $b$-tag discriminator of an event \ref{fig:1st_btag} and $p_{\text{T}}$-projection of the Monte Carlo $b$-tagging efficiency \ref{fig:b_proj}.}
+  \caption{Highest $b$-tag discriminator of an event \ref{fig:1st_btag} and $p_{\text{T}}$-projection of the Monte Carlo $b$-tagging efficiency \ref{fig:b_proj}. The discriminator distribution is generated after the missing transverse energy requirement, while the efficiency maps are generated after the trigger requirement, before any other event selection.}
   \label{fig:btag}
 \end{figure}
 
-The medium working point for the CSV (\textbf{CSVM}) has been chosen for this analysis. Its suggested dicriminator value is $v > 0.679$~\cite{btagworkp}. To judge its performance, one can consult the distribution of the highest $b$-tag discriminator in every event shown in figure~\ref{fig:1st_btag}. One can see the majority of the top pair background being cut off by the chosen threshold. As expected, the signal simulation has its lowest contribution in this region as well. It is quite apparent that there are discrepancies between data and MC, especially towards the lower discriminator values. They are being accounted for by adjusting the $b$-tag status of a fraction $f$ of all jets\footnote{Once again $b$, $c$ and light jets are treated separately.}~\cite{btageff}. Depending on whether one needs to upgrade a non-tagged or downgrade a tagged object, a different formula for determining $f$ has to be used.
+The medium working point for the CSV (\textbf{CSVM}) has been chosen for this analysis to reduce the $t\bar{t}$-background. Its suggested discriminator value is $v > 0.679$~\cite{btagworkp}. To make this choice, one can judge the algorithm's performance by consulting the distribution of the highest $b$-tag discriminator in every event shown in figure~\ref{fig:1st_btag}. One can see the majority of the top pair background being cut off by the chosen threshold, while the signal has its lowest contribution in this region. It is quite apparent that there are discrepancies between data and MC, especially towards the lower discriminator values. They are being accounted for by adjusting the $b$-tag status of a fraction $f$ of all jets\footnote{Once again $b$, $c$ and light jets are treated separately.}~\cite{btageff}. Depending on whether one needs to upgrade a non-tagged or downgrade a tagged object, a different formula for determining $f$ has to be used.
 
 \begin{align}
   \label{eq:btagsf}
@@ -224,11 +224,11 @@ The medium working point for the CSV (\textbf{CSVM}) has been chosen for this an
   f = \frac{1 - \text{SF}}{1- 1/\varepsilon_{\text{MC}}} \quad & \text{for} \quad \text{SF} > 1\:(\text{upgrade})
 \end{align}
 
-\noindent Here, $\varepsilon_{\text{MC}}$ denotes the efficiency of the algorithm accurately selecting bottom quark jets in the Monte Carlo simulation. The scale factors $SF$ are defined by dividing the same efficiency measured in data by Monte Carlo one: $\text{SF} = \varepsilon_{\text{DATA}} / \varepsilon_{\text{MC}}$.
+\noindent Here, $\varepsilon_{\text{MC}}$ denotes the efficiency of the algorithm selecting bottom quark jets in the Monte Carlo simulation. The scale factors $SF$ are defined by dividing the same efficiency measured in data by Monte Carlo one: $\text{SF} = \varepsilon_{\text{DATA}} / \varepsilon_{\text{MC}}$.
 
-While the scale factors are provided as $p_{\text{T}}$ and $\eta$ dependent functions on the $b$-tagging TWiki~\cite{btagtwiki}, the Monte Carlo efficiency has to be determined individually for each analysis. This is due to its dependence on the relevant background samples and analysis requirements. To determine $\varepsilon_{\text{MC}}$, the number of jets tagged as a certain flavour by the CSVM algorithm is divided by the number of jets which truly carry that flavour. A jet's true flavour can be retrieved by the jet flavour tool~\cite{jetflavtool}. It uses Monte Carlo generator information to determine the origin of the jet.
+While the scale factors are provided as $p_{\text{T}}$ and $\eta$ dependent functions on the CMS $b$-tagging TWiki~\cite{btagtwiki}, the Monte Carlo efficiency has to be determined individually for each analysis. This is due to its dependence on the relevant background samples and analysis requirements. To determine $\varepsilon_{\text{MC}}$, the number of jets tagged as a certain flavour by the CSVM algorithm is divided by the number of jets which truly carry that flavour. A jet's true flavour can be retrieved by the jet flavour tool~\cite{jetflavtool}. It uses Monte Carlo generator information to determine the origin of the jet.
 
-Counting the numbers of tags for the denominator and true $b$-jets for the enumerator with respect to their $p_{\text{T}}$ and $\eta$ is done after adjusting the jet energy resolution of the Monte Carlo samples. The efficiency is only estimated using the $t\bar{t}$ background as it is the most relevant one for this requirement. Figure~\ref{fig:b_proj} shows the $p_{\text{T}}$-projection of the Monte Carlo efficiency map. For increasing $\eta$ values the shape remains the same, with slightly decreasing efficiencies ($\mathcal{O}(5\pct)$) for all bins. Towards higher energies, the number of entries and therefore the statistical uncertainty does not allow for reasonable estimate of the efficiency anymore. The value of the last bin is used for any jet exceeding the energy maximum. To get a model prediction, rather than being influenced by a few single bins with abnormal values, the \textsc{ROOT} smoothing algorithm~\cite{rootsmooth} has been employed. It estimates the contents of a bin by taking its neighbouring ones into account.
+Counting the numbers of tags for the denominator and true $b$-jets for the enumerator with respect to their $p_{\text{T}}$ and $\eta$ is done after adjusting the jet energy resolution of the Monte Carlo samples. The efficiency is only estimated using the $t\bar{t}$ background as it is the most relevant one for this requirement. Figure~\ref{fig:b_proj} shows the $p_{\text{T}}$-projection of the Monte Carlo efficiency map. For increasing $\eta$ values the shape remains the same, with slightly decreasing efficiencies ($\mathcal{O}(5\pct)$) for all bins. Towards higher energies, the number of entries and therefore the statistical uncertainty does not allow for a reasonable estimate of the efficiency anymore. The value of the last bin is used for any jet exceeding the energy maximum. To get a model prediction, rather than being influenced by a few single bins with abnormal values, the \textsc{ROOT} smoothing algorithm~\cite{rootsmooth} has been employed. It estimates the contents of a bin by taking its neighbouring ones into account.
 
 \begin{figure}[htb!]
   \centering
@@ -242,20 +242,26 @@ Counting the numbers of tags for the denominator and true $b$-jets for the enume
     \includegraphics[width=\textwidth]{plots/crbv.pdf}
     \caption{\label{fig:crbv}}
   \end{subfigure}
-  \caption{Control regions (MET $> 50\,\text{GeV}$) that display the effect of the $b$-tagging algorithm. On the left the $b$-tagged events \ref{fig:crbt} and on the right $b$-jet vetoed events \ref{fig:crbv} are shown.}
+  \caption{Control regions (MET $> 50\,\text{GeV}$), which include all requirements up to the $b$-quark stage, that display the effect of the $b$-tagging algorithm. On the left the $b$-tagged events \ref{fig:crbt} and on the right $b$-jet vetoed events \ref{fig:crbv} are shown.}
   \label{fig:crbtagging}
 \end{figure}
 
-With a set algorithm to tag $b$-jets, the control regions can be inspected to judge its performance. Figure~\ref{fig:crbt} shows the $m_{\mu \mu}$ distribution in the control region with events that are tagged as $b$-jets (\textbf{CRBT}) and will therefore be rejected. Complementary to that, \ref{fig:crbv} displays the remainder of events after vetoing against $b$-jets (\textbf{CRBV}). Both distributions show good agreement between data and simulation. Combined with the majority (roughly $80\,\pct$) of the rejected entries being from the top pair background, this entire method successfully reduces the bottom quark jet contribution in the final state.
+With a set algorithm to tag $b$-jets, the control regions can be inspected to judge its performance. Figure~\ref{fig:crbt} shows the $m_{\mu \mu}$ distribution in the control region with events that are tagged as $b$-jets and will therefore be rejected. Complementary to that, \ref{fig:crbv} displays the remainder of events after vetoing against $b$-jets. Both distributions show good agreement between data and simulation. Combined with the majority (roughly $80\,\pct$) of the rejected entries being from the top pair background, this entire method successfully reduces the bottom quark jet contribution in the final state.
 
 
 \section{Same Sign Charge Muons}
 \label{sec:sscmuons}
 
-At this stage of the analysis, there is still \textit{at least} one order of magnitude between the number of events of the background prediction and a potential signal. As discussed in the chapter regarding the signature (Cha.~\ref{cha:sig}), the charge of both prompt muons can be the same. Most of the background Monte Carlo cannot lead to the same condition in the final state. As a result, this requirement is able to improve the signal to background ratio significantly.
+At this stage of the analysis, there is still \textit{at least} one order of magnitude between the number of events of the background prediction and a potential signal. As explained in the discussion of the signature in chapter~\ref{cha:sig}, the charge of both prompt muons can be the same. Most of the background Monte Carlo events cannot lead to the same condition in the final state. As a result, this requirement is able to improve the signal to background ratio significantly.
 
 \begin{figure}[htb!]
   \centering
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/CR6_m_mumu_nofakes.pdf}
+    \caption{\label{fig:CRBVC_m_mumu_nofakes}}
+  \end{subfigure}
+
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/CR6_m_smuon_nofakes.pdf}
@@ -267,11 +273,11 @@ At this stage of the analysis, there is still \textit{at least} one order of mag
     \caption{\label{fig:CRBVC_m_gaugino_nofakes}}
   \end{subfigure}
 
-  \caption{Mass of the gaugino \ref{fig:CRBVC_m_gaugino_nofakes} and mass of the smuon \ref{fig:CRBVC_m_smuon_nofakes} from the CRBVC. The gaugino mass is the invariant mass of both jets and the sub-leading muon candidate, while the smuon mass includes the leading muon as well. Both distributions will be expanded upon in the following chapter.}
+  \caption{Invariant mass of the two muon candidates \ref{fig:CRBVC_m_mumu_nofakes}, mass of the gaugino \ref{fig:CRBVC_m_gaugino_nofakes} and mass of the smuon \ref{fig:CRBVC_m_smuon_nofakes} from the $b$-jet veto plus charge control region. The gaugino mass is the invariant mass of both jets and the sub-leading muon candidate, while the smuon mass includes the leading muon as well. The latter two distributions will be expanded upon in the following chapter.}
   \label{fig:ssccr_nofakes}
 \end{figure}
 
-The corresponding control region adds the charge restriction (\textbf{CRBVC}) to the previously defined CRBV. Figure~\ref{fig:ssccr_nofakes} shows the smuon and gaugino mass distribution. The former is given by the invariant mass of the two muon and jet candidates, where the latter only takes the sub-leading muon and two jet candidates into the calculation. When examining the distributions of the CRBVC, one does see the drastic reduction of the background. However, the dominant backgrounds are not amongst those, that are able to provide two prompt same sign charge muons from the same vertex. Additionally, the agreement between data and simulation appears to be poor throughout the entire mass spectrum. In combination, this suggests that the background is not described accurately. One effect that contributes significantly to this phenomena will be discussed in the upcoming chapter.
+The corresponding control region \textit{adds} the charge restriction to the previously defined $b$-jet veto control region. Figure~\ref{fig:ssccr_nofakes} shows the dimuon, smuon and gaugino mass distribution. The slepton mass is given by the invariant mass of the two muon and jet candidates, where the gaugino mass only takes the sub-leading muon and two jet candidates into the calculation. When comparing the invariant mass of the two muons in the same sign charge control region (Fig.~\ref{fig:CRBVC_m_mumu_nofakes}) to the $b$-jet veto control region (Fig.~\ref{fig:crbv}), whose only difference is no charge-based requirement at all, one does see the drastic reduction of the background. However, the agreement between data and simulation appears to be a lot worse throughout the entire mass spectrum in all charge control region distributions. When taking the unexpectedly large contributions of multi-jet dominated samples like $t\bar{t}$ into account, this suggests that the background is not described accurately. One effect that contributes significantly to this phenomenon will be discussed in the upcoming chapter.
 
 \section{Control Region Overview}
 \label{sec:cr-overview}
@@ -281,7 +287,7 @@ A short overview of all used control regions up to this point is given in figure
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.8\textwidth]{plots/cr-overview.pdf}
-  \caption{Overview over the used control regions. Blue elipses mark requirements, green boxes mark control regions and arrows indicate whether an event passes or fails a requirement.}
+  \caption{Overview over the used control regions. Blue ellipses mark requirements, green boxes mark control regions and arrows indicate whether an event passes or fails a requirement.}
   \label{fig:cr-overview}
 \end{figure}
 

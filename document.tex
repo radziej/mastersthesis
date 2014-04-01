@@ -28,6 +28,8 @@
 % Settings for tables and captions
 
 \usepackage{multirow} % enables multiple rows per column in tables
+\usepackage{dcolumn} % column alignment for decimal numbers
+\newcolumntype{d}[1]{D{.}{.}{#1}}
 \usepackage[hang,small,bf]{caption} % bold captions + vertical alignment
 
 
@@ -65,9 +67,6 @@
 \fancyhead[LE,RO]{\slshape\thepage} % L - Left, E - Even page number, R - Right, O - Odd page number
 \fancyhead[RE]{\slshape \leftmark}
 \fancyhead[LO]{\slshape \rightmark}
-% \fancyfoot[LO,LE]{\slshape Short Course on Asymptotics}
-% \fancyfoot[C]{}
-% \fancyfoot[RO,RE]{\slshape 7/15/2002}
 
 \renewcommand{\headrulewidth}{0.5pt} % size of line in header
 \renewcommand{\footrulewidth}{0pt} % size of line in footer

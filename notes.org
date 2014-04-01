@@ -131,8 +131,10 @@
 ** DONE mention smuon & gaugino mass calculation earlier
 * Hebbeker's Comments
 ** TODO Shorten gauge symmetry etc.
-** feynman graphs for neutrinoless double beta-decays and RPV pion
+** TODO feynman graphs for neutrinoless double beta-decays and RPV pion
 ** TODO sigma and br dependence on lambda in signature chapter
+** TODO fix cut arrow in histograms
 ** TODO remove / 1 from histograms
 ** TODO JER dependence on eta and pt
-*** 
+** TODO "cutflow" <-> table
+** TODO rephrase tl ratio stuff
