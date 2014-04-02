@@ -1,6 +1,27 @@
 \chapter{Results}
 \label{cha:results}
 
+\section{Candidate Event}
+\label{sec:candidate-event}
+
+\begin{figure}[!htbp]
+  \centering
+  \begin{subfigure}[b]{0.75\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/event_display_eta_z.png}
+    \caption{\label{fig:evt-eta-z}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.75\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/event_display_phi_r.png}
+    \caption{\label{fig:evt-phi-r}}
+  \end{subfigure}
+  \caption{Signal-like event candidate detected by the CMS. Shown are both the $\eta$-$z$- (\ref{fig:evt-eta-z}) and the $\phi$-$r$-plane (\ref{fig:evt-phi-r}).}
+  \label{fig:evt-display}
+\end{figure}
+
+\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the respective jet energies also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229.4\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186.8\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$.
+
 \section{Final Distribution}
 \label{sec:final-dist}
 
@@ -8,12 +29,12 @@ Having accounted for the systematic uncertainties, one can examine the final dis
 
 \begin{figure}[htb!]
   \centering
-  \begin{subfigure}[b]{0.7\textwidth}
+  \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_gaugino.pdf}
     \caption{\label{fig:m_gaugino}}
   \end{subfigure}
-  \begin{subfigure}[b]{0.7\textwidth}
+  \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_smuon.pdf}
     \caption{\label{fig:m_smuon}}
@@ -89,24 +110,24 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
   \centering
   \begin{tabular}{|l|d{5}@{}d{4}|d{4}@{}d{4}|d{4}@{}d{4}|}
     \hline
-    Process group & \multicolumn{1}{c}{\text{SR 1}} &              & \multicolumn{1}{c}{\text{SR 2}} &              & \multicolumn{1}{c}{\text{SR 3}} &              \\ \hline
-    Fakes         & 16.0                            & \pm\: 7.8    & 10.7                            & \pm\:  5.3   & 5.00                            & \pm\:  2.58  \\ 
-    $tt+V$        & 0.47                            & \pm\: 0.16   & 0.49                            & \pm\:  0.17  & 0.187                           & \pm\:  0.089 \\ 
-    $VV$          & 8.46                            & \pm\: 1.22   & 7.1                             & \pm\:  1.1   & 4.01                            & \pm\:  0.62  \\
-    $VVV$         & 0.374                           & \pm\: 0.064  & 0.392                           & \pm\:  0.066 & 0.209                           & \pm\:  0.045 \\ 
-    Rare          & 1.04                            & \pm\: 0.57   & 1.33                            & \pm\:  0.72  & 1.65                            & \pm\:  0.88  \\ \hline
-    $\sum$        & 26.4                            & \pm\: 9.6    & 20.0                            & \pm\:  7.1   & 11.1                            & \pm\:  4.0   \\ \hline
-    Data          & 19                              &              & 25                              &              & 13                              &              \\ \hline \hline
-    Process group & \multicolumn{1}{c}{\text{SR 4}} &              & \multicolumn{1}{c}{\text{SR 5}} &              & \multicolumn{1}{c}{\text{SR 6}} &              \\ \hline
-    Fakes         & 0.23                            & \pm\: 0.20   & 1.15                            & \pm\:  0.89  & 0.33                            & \pm\:  0.25  \\
-    $tt+V$        & <0.001                          &              & 0.032                           & \pm\:  0.029 & 0.094                           & \pm\:  0.062 \\
-    $VV$          & 0.106                           & \pm\: 0.034  & 1.07                            & \pm\:  0.16  & 0.277                           & \pm\:  0.062 \\
-    $VVV$         & 0.0062                          & \pm\: 0.0048 & 0.090                           & \pm\:  0.027 & 0.028                           & \pm\:  0.014 \\
-    Rare          & 0.102                           & \pm\: 0.089  & 0.65                            & \pm\:  0.38  & 0.80                            & \pm\:  0.46  \\ \hline
-    $\sum$        & 0.45                            & \pm\: 0.25   & 3.0                             & \pm\:  1.3   & 1.5                             & \pm\:  0.7   \\ \hline
-    Data          & 2                               &              & 1                               &              & 3                               &              \\ \hline
+    Process group  & \multicolumn{1}{c}{\text{SR 1}} &              & \multicolumn{1}{c}{\text{SR 2}} &              & \multicolumn{1}{c}{\text{SR 3}} &              \\ \hline
+    Fake Estimate  & 16.0                            & \pm\: 7.8    & 10.7                            & \pm\:  5.3   & 5.00                            & \pm\:  2.58  \\ 
+    $tt+V$         & 0.47                            & \pm\: 0.16   & 0.49                            & \pm\:  0.17  & 0.187                           & \pm\:  0.089 \\ 
+    $VV$           & 8.46                            & \pm\: 1.22   & 7.1                             & \pm\:  1.1   & 4.01                            & \pm\:  0.62  \\
+    $VVV$          & 0.374                           & \pm\: 0.064  & 0.392                           & \pm\:  0.066 & 0.209                           & \pm\:  0.045 \\ 
+    Rare           & 1.04                            & \pm\: 0.57   & 1.33                            & \pm\:  0.72  & 1.65                            & \pm\:  0.88  \\ \hline
+    $\sum$         & 26.4                            & \pm\: 9.6    & 20.0                            & \pm\:  7.1   & 11.1                            & \pm\:  4.0   \\ \hline
+    Data           & 19                              &              & 25                              &              & 13                              &              \\ \hline \hline
+    Process group  & \multicolumn{1}{c}{\text{SR 4}} &              & \multicolumn{1}{c}{\text{SR 5}} &              & \multicolumn{1}{c}{\text{SR 6}} &              \\ \hline
+    Fakes Estimate & 0.23                            & \pm\: 0.20   & 1.15                            & \pm\:  0.89  & 0.33                            & \pm\:  0.25  \\
+    $tt+V$         & <0.001                          &              & 0.032                           & \pm\:  0.029 & 0.094                           & \pm\:  0.062 \\
+    $VV$           & 0.106                           & \pm\: 0.034  & 1.07                            & \pm\:  0.16  & 0.277                           & \pm\:  0.062 \\
+    $VVV$          & 0.0062                          & \pm\: 0.0048 & 0.090                           & \pm\:  0.027 & 0.028                           & \pm\:  0.014 \\
+    Rare           & 0.102                           & \pm\: 0.089  & 0.65                            & \pm\:  0.38  & 0.80                            & \pm\:  0.46  \\ \hline
+    $\sum$         & 0.45                            & \pm\: 0.25   & 3.0                             & \pm\:  1.3   & 1.5                             & \pm\:  0.7   \\ \hline
+    Data           & 2                               &              & 1                               &              & 3                               &              \\ \hline
   \end{tabular}
-  \caption{Summary of the six regions displayed in figure~\ref{fig:m_smu_chi}. They are numbered starting on the left and progressing upwards from the lowest bin.}
+  \caption{Summary of the six regions displayed in figure~\ref{fig:m_smu_chi}. They are numbered starting on the left and progressing upwards from the lowest bin. Statistical and systematic uncertainties are added in quadrature.}
   \label{tab:m_smu_chi_summary}
 \end{table}
 
@@ -119,22 +140,22 @@ As any excess of data is too small to be considered statistically significant, t
 \subsection{CLs Method}
 \label{sec:cls-method}
 
-The $CL_s$ method~\cite{cls,cls2} is a modified frequentist analysis. It has been developed to prevent setting limits with frequentist methods on regions where the analysis is not sensitive. Its provides useful results in cases with low statistics and less dependent on background fluctuations. The general idea is to compare two hypotheses to a measurement.
+The $CL_s$ method~\cite{cls,cls2} is a modified frequentist analysis. With frequentist methods, one may exclude signal contributions based on downward fluctuations of the measurement in cases with low statistics. The $CL_S$ method, however, yields meaningful results in these circumstances. Its general idea is to compare two hypotheses to a measurement.
 
-For most analyses in high energy particle physics, there are two cases to be covered. The null hypotheses $H_0$ being the Standard Model prediction by itself and a combination of the proposed signal and the Standard Model prediction as the second hypothesis $H_1$. In the most simple case, given enough statistics, one expects the number of events $n$ to follow a Poisson distribution.
+For most analyses in high energy particle physics, there are two cases to be covered. The null hypotheses $H_0$ being the Standard Model prediction by itself and a combination of the proposed signal and the Standard Model prediction as the second hypothesis $H_1$. In the most simple case, one expects the number of events $n$ to follow a Poisson distribution.
 
 \begin{equation}
   \label{eq:poisson-likelihood}
     \mathcal{L} (x; n) = \frac{x^n}{n!} e^{-x}
 \end{equation}
 
-\noindent These likelihoods $\mathcal{L}_x$ are the basis for this method. Here, $x$ denotes the background-only scenario for $x = b$ and the background plus signal one for $x = s + b$. The distributions are ultimately a function of the cross section of the relevant processes, as it proportional to the number of selected events $n$.
+\noindent These likelihoods $\mathcal{L}_x$ are the basis for this method. Here, $x$ denotes the background-only scenario for $x = b$ and the background plus signal one for $x = s + b$. The distributions are ultimately a function of the cross section of the relevant processes, as it is proportional to the number of selected events $n$.
 
-Using the two likelihoods, a test statistic $Q$ can be defined. It is called the \textit{likelihood-ratio} and is used to judge how well a hypothesis describes the measurement. In the simplest case, it is given by
+Using the two likelihood functions, a test statistic $Q$ can be defined. It is called the \textit{likelihood-ratio} and is used to judge how well a hypothesis describes the measurement. In the simplest case, it is given by
 
 \begin{equation}
   \label{eq:testq}
-  Q = \frac{\mathcal{L} (s + b; n)}{\mathcal{L} (b; n)}.
+  Q = -2 \ln{ \frac{\mathcal{L} (s + b; n)}{\mathcal{L} (b; n)} }.
 \end{equation}
 
 \noindent Large values of $Q$ correspond to a better agreement with $H_1$, while small ones to a better agreement with $H_0$. For a result of an actual experiment, the observed number of events $n_{\text{obs}}$ yields a set likelihood-ratio $Q_{\text{obs}}$. The confidence level for an hypothesis is defined as the probability $P$ to find a test statistic $Q$, which is less or equal to $Q_{\text{obs}}$. 
@@ -151,7 +172,7 @@ To determine this probability $P$, one has to integrate over all possible $Q$s u
   CL_x = \int^{Q_{\text{obs}}}_{-\infty} \frac{d f_x(Q)}{d Q} \text{d} Q
 \end{equation}
 
-\noindent The probability distribution functions are denoted by $f_x(Q)$ and are usually determined through pseudo-experiments. For a very well understood background hypothesis, a confidence level in the null hypothesis close to one $CL_b (Q_{\text{obs}}) \approx 1$ is necessary to claim a discovery. The specific thresholds for the claim are given on $1 - CL_b (Q_{\text{obs}})$ and have been derived from standard deviations of the Gaussian distribution. This means $2.7 \cdot 10^{-3}$ corresponds to $3\,\sigma$, which is considered ``evidence'', and $5.7 \cdot 10^{-5}$ corresponding to $5\,\sigma$, a discovery.
+\noindent The probability distribution functions are denoted by $f_x(Q)$ and are determined through pseudo-experiments. For a very well understood background hypothesis, a confidence level in the null hypothesis close to one $CL_b (Q_{\text{obs}}) \approx 1$ is necessary to claim a discovery. The specific thresholds for the claim are given on $1 - CL_b (Q_{\text{obs}})$ and have been derived from standard deviations of the Gaussian distribution. This means $2.7 \cdot 10^{-3}$ corresponds to $3\,\sigma$, which is considered ``evidence'', and $5.7 \cdot 10^{-5}$ corresponding to $5\,\sigma$, a discovery.
 
 Excluding the signal (plus background) hypothesis uses the eponymous $CL_s$ quantity instead of $CL_{s+b}$. It is defined as a ratio:
 
@@ -162,7 +183,7 @@ Excluding the signal (plus background) hypothesis uses the eponymous $CL_s$ quan
 
 \noindent While $CL_{s+b}$ may lead to unphysical results in certain cases, $CL_s$ does not. A prime example is a signal hypothesis that is dominated by its background. Slight fluctuations towards lower values of the latter would lead to a very low $CL_{s+b}$, yielding a strong exclusion limit. As $CL_s$ is not a confidence limit, but a ratio of those, fluctuations like these cancel themselves out.
 
-A signal can be excluded to a confidence level $CL$, when the following relation is fulfilled.
+A signal can be excluded at a confidence level $CL$, when the following relation is fulfilled.
 
 \begin{equation}
   \label{eq:cl-excl}
@@ -172,14 +193,14 @@ A signal can be excluded to a confidence level $CL$, when the following relation
 \section{Modifications}
 \label{sec:mods}
 
-Following the recommendations by the CMS and ATLAS collaborations~\cite{clsmod}, a modified test statistic is employed for the $CL_s$ method. To scale the signal strength, a parameter $\mu$ is introduced to the formula. It is used to in- or decrease the cross section of the signal prediction while the branching ratios remain constant. Additionally, both the signal and background simulation are subject to a number of uncertainties. To account for those in the limit calculation, a set of nuisance parameters $\theta$ is introduced.
+Following the recommendations by the CMS and ATLAS collaborations~\cite{clsmod}, a modified test statistic is employed for the $CL_s$ method. To scale the signal strength, a parameter $\mu$ is introduced to the formula. It is used to in- or decrease the cross section of the signal prediction while the branching ratios remain constant. Additionally, both the signal and background simulation are subject to a number of uncertainties. In this analysis, the systematic uncertainties discussed in chapter~\ref{cha:systematics} are considered. These include detector based uncertainties, such as the energy resolution of jets, theoretical uncertainties, for example the accuracy of cross section calculations, and physics object identification uncertainties, like the ability to accurately determine the flavour of a jet. Additionally, the accuracy of the Monte Carlo simulation, which is limited by its simulated number of events, is also taken into consideration. To account for those in the limit calculation, a set of nuisance parameters $\theta$ is introduced.
 
 \begin{equation}
   \label{eq:q-mod}
-  Q = - 2 \ln{ \frac{\mathcal{L} (\mu s + b; n, \hat{\theta)_\mu}) }{\mathcal{L} (\hat{\mu} \cdot s + b; n, \hat{\theta} )} } \quad \text{ with } \quad 0 \leq \hat{\mu} \leq \mu
+  Q = - 2 \ln{ \frac{\mathcal{L} (\mu s + b; n, \hat{\theta})_\mu) }{ \mathcal{L} (\hat{\mu} \cdot s + b; n, \hat{\theta} )} } \quad \text{ with } \quad 0 \leq \hat{\mu} \leq \mu
 \end{equation}
 
-\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are evaluated at the global maximum of the likelihood. $\hat{\theta}_\mu$ on the other hand denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$.
+\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are evaluated at the global maximum of the likelihood. On the other hand, $\hat{\theta}_\mu$ denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$. The lower constraint $0 < \hat{\mu}$ ensures that the signal has a positive contribution\footnote{While certain signals can lead to a negative interference, these are not covered by the $CL_s$ method.}.  while the upper constraint $\hat{\mu} < \mu$  
 
 % Using the logarithm with a factor of $-2$ allows the test statistic to converge against $\Delta \chi^2$ for a large number of selected events.
 
@@ -218,7 +239,7 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
     \includegraphics[width=\textwidth]{plots/l211limits_MultiBin_logz-colz.pdf}
     \caption{\label{fig:lambda-prime-obs}}
   \end{subfigure}
-  \caption{Expected (\ref{fig:lambda-prime-exp}) and observed (\ref{fig:lambda-prime-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_0$ and $m_{1/2}$, while $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$.}
+  \caption{Expected (\ref{fig:lambda-prime-exp}) and observed (\ref{fig:lambda-prime-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_0$ and $m_{1/2}$, while the parameters $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$ are fixed. The white regions to the left are part of the $\tilde{\tau}$-LSP phase space, to which this analysis is not sensitive. The ones on the bottom lead to unphysical models, non-converging RGEs, no electroweak symmetry breaking or tachyonic solutions.}
   \label{fig:lambda-prime-limits}
 \end{figure}
 
@@ -234,7 +255,7 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
     \includegraphics[width=\textwidth]{plots/plot_smuon_neutralino_mass_LimitsCombine.pdf}
     \caption{\label{fig:m-smu-nt0-obs}}
   \end{subfigure}
-  \caption{Expected (\ref{fig:m-smu-nt0-exp}) and observed (\ref{fig:m-smu-nt0-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_{\tilde{\mu}}$ and $m_{\tilde{\chi}^0}$, while $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$.}
+  \caption{Expected (\ref{fig:m-smu-nt0-exp}) and observed (\ref{fig:m-smu-nt0-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_{\tilde{\mu}}$ and $m_{\tilde{\chi}^0}$, while the parameters $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$ are fixed.}
   \label{fig:smu-nt0-limits}
 \end{figure}
 
@@ -242,79 +263,67 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
 \section{Discussion and Interpretation}
 \label{sec:discussion}
 
-Comparing the shown limits to the analyses of 2011 RPV SUSY and the D0 predecessor, the phase space that is being covered has been expanded considerably. The excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0~\cite{auter,d0rpv}, and around a factor of 1.8 in regards to the 2011 analysis~\cite{2011rpv}. One can base a rough evaluation of this improvement on the increased luminosity. It grew by a factor of four compared to the 2011 analysis, and by simply assuming the cross sections remain roughly the same, one would expect an improvement by a factor of 2 due to the quadratic scaling of $\lambda^\prime_{211}$ with $\sigma$ (Eq.~\ref{eq:xs-lambda-scale}). This matches the actual improvement reasonably well. This marks these results as the world's best collider-based limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
+Comparing the shown limits to the analyses of 2011 RPV SUSY by CMS and the D0 predecessor, the phase space that is being covered has been expanded considerably. The excluded values of $\lambda^{\prime}_{211}$ are roughly a factor of 10 better than the ones presented by D0~\cite{auter,d0rpv}, and around a factor of 1.8 in regards to the 2011 analysis~\cite{2011rpv}. One can base a rough evaluation of this improvement on the increased luminosity. It grew by a factor of four compared to the 2011 analysis, and by simply assuming the cross sections remain roughly the same, one would expect an improvement by a factor of 2 due to the quadratic scaling of $\lambda^\prime_{211}$ with $\sigma$ (Eq.~\ref{eq:xs-lambda-scale}). This matches the actual improvement reasonably well. This marks these results as the world's best collider-based limits on the $R$-parity violating supersymmetry scenario with a single coupling dominance of the $\lambda^{\prime}_{211}$ parameter.
 
-In general, the exclusion limits get progressively weaker towards higher values of $m_0$. As shown in figure~\ref{fig:susy-2dxs}, the cross section for the interesting processes also decreases in this region. However, there is also a drop in selection efficiency for the high mass signal points. This is due to changes in the particles properties and composition of the decay chain. These differences have been mentioned and illustrated in the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
+In general, the exclusion limits get progressively weaker towards higher values of $m_0$. As shown in figure~\ref{fig:susy-2dxs}, the cross section for the interesting processes decreases in this region. However, there is also a drop in selection efficiency for the high mass signal points. This is due to changes in the particle properties and composition of the decay chain. These differences have been mentioned and illustrated in the event selection (Cha.~\ref{cha:eventsel}), by providing three exemplary signal points as a comparison in the various distributions.
 
 \begin{figure}[!p]
   \centering
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_200.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 200\,\text{GeV}$\label{fig:limit-m12-200}}
   \end{subfigure}
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_500.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 500\,\text{GeV}$\label{fig:limit-m12-500}}
   \end{subfigure}
 
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_800.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 800\,\text{GeV}$\label{fig:limit-m12-800}}
   \end{subfigure}
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_1200.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 1200\,\text{GeV}$\label{fig:limit-m12-1200}}
   \end{subfigure}
 
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_1600.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 1600\,\text{GeV}$\label{fig:limit-m12-1600}}
   \end{subfigure}
   \begin{subfigure}[b]{0.495\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/limit_m12_2000.pdf}
+    \setlength{\abovecaptionskip}{-20pt}
+    \setlength{\belowcaptionskip}{10pt}
     \caption{$m_{1/2} = 2000\,\text{GeV}$\label{fig:limit-m12-2000}}
   \end{subfigure}
 
-  \caption{One dimensional slices of the two-dimensional limits given in figure~\ref{fig:lambda-prime-limits} for fixed values of $m_{1/2}$.}
+  \caption{One dimensional slices of the two-dimensional limits given in figure~\ref{fig:lambda-prime-limits} for fixed values of $m_{1/2}$. The one and two sigma bands include both statistical and systematic uncertainties.}
   \label{fig:1d-limits}
 \end{figure}
 
-By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the search regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ (Fig.~\ref{fig:sig-1000-1200-m-smu-chi}) as an example, one can see that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the upward fluctuation of the measurement in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
-
-In general, the
-
-
-\section{Candidate Events}
-\label{sec:candidate-events}
-
-\begin{figure}[!htbp]
-  \centering
-  \begin{subfigure}[b]{0.75\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{plots/event_display_eta_z.png}
-    \caption{\label{fig:evt-eta-z}}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.75\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{plots/event_display_phi_r.png}
-    \caption{\label{fig:evt-phi-r}}
-  \end{subfigure}
-  \caption{Signal-like event candidate detected by the CMS. Shown are both the $\eta$-$z$- (\ref{fig:evt-eta-z}) and the $\phi$-$r$-plane (\ref{fig:evt-phi-r}).}
-  \label{fig:evt-display}
-\end{figure}
-
-\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the respective jet's energy also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229.4\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186.8\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$.  
+By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the search regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ as an example, one can see in figure~\ref{fig:sig-1000-1200-m-smu-chi} that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit (Fig.~\ref{fig:limit-m12-1200}) are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the slight excess of data in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
 
 \section{Conclusion and Outlook}
 \label{sec:conclusion}
 
-A search for resonant production of second generation sleptons via single coupling dominance of the $\lambda^{\prime}_{211}$ parameter has been presented. For this purpose, the full $\mathcal{L} = 19.7\,\text{fb}^{-1}$ of double muon events recorded by the CMS experiment at proton-proton collisions with a center-of-mass energy of $\sqrt{s} = 8\,\text{TeV}$, is being used. The final state in question is composed of two reasonably well isolated, same-sign muons and at least two jets. An additional characteristic of the signature is a low amount of missing transverse energy, which is atypical for common SUSY events. As no significant excess of data has been observed in comparison to the Standard Model's prediction, the best limits to date have been set on the model parameter $\lambda^{\prime}_{211}$. They cover a range of up to $2.5\,\text{TeV}$ for the universal mass parameter of scalar particles $m_0$ and up to $1.5\,\text{TeV}$ for the universal mass parameter of fermionic particles $m_{1/2}$. A complementary expression through the mass of the smuon $m_{\tilde{\mu}}$ and gaugino $m_{\tilde{\chi}^0}$ in this model has also been provided.
+A search for resonant production of second generation sleptons via single coupling dominance of the $\lambda^{\prime}_{211}$ parameter has been presented. For this purpose, the full $\mathcal{L} = 19.7\,\text{fb}^{-1}$ of double muon events recorded by the CMS experiment at proton-proton collisions with a centre-of-mass energy of $\sqrt{s} = 8\,\text{TeV}$, is being used. The final state in question is composed of two well isolated, same-sign muons and at least two jets. An additional characteristic of the signature is a low amount of missing transverse energy, which is atypical for common SUSY events. As no significant excess of data has been observed in comparison to the Standard Model's prediction, the best limits to date have been set on the model parameter $\lambda^{\prime}_{211}$ down to values of $10^{-3}$. They cover a range of up to $2.5\,\text{TeV}$ for the universal mass parameter of scalar particles $m_0$ and up to $1.5\,\text{TeV}$ for the universal mass parameter of fermionic particles $m_{1/2}$. A complementary expression through the mass of the smuon $m_{\tilde{\mu}}$ and gaugino $m_{\tilde{\chi}^0}$ in this model has also been provided.
 
 For future efforts in this particular search, an improved selection efficiency for the signal could be achieved through taking the varying signature distributions of different RPV SUSY phase space points into account. This would require either fully flexible or individually adjusted thresholds for specific regions of the $m_0$-$m_{1/2}$-phase space.
 
@@ -324,7 +333,7 @@ In addition, results allowing for a broader interpretation beyond the cMSSM usin
 \section*{Acknowledgements} 
 \label{sec:acknowledgements}
 
-I offer my sincerest gratitude to both my family and my institute. Amongst the many people who helped me along the way, there are some which I would like to highlight. First of all, Professor Thomas Hebbeker, who enabled me to develop my thesis at his institute. Martin Weber, who supervised me throughout most of my work and introduced me to my new best friend ``Emacs''. Sebastian Th\"uer, who vigorously endured my constant nagging and questioning. Arnd Meyer, the voice of wisdom in times of need. Lars Sonnenschein, who was always eager to push for results. Andreas G\"ueth, miracle worker at the monstrosity called Monte Carlo generators. Daniel Teyssier, at efficiently working on efficiencies. My parents for allowing me to get this far and their omnipresent all around support. And everyone working at the institute, who all contribute to the work-oriented and yet relaxing atmosphere, allowing for an enjoyable experience throughout my time there.
+I offer my sincerest gratitude to both my family and my institute. Amongst the many people who helped me along the way, there are some which I would like to highlight. First of all, Professor Thomas Hebbeker, who enabled me to develop my thesis at his institute. Martin Weber, who supervised me throughout most of my work and introduced me to my new best friend ``Emacs''. Sebastian Th\"uer, who vigorously endured my constant nagging and questioning. Arnd Meyer, the voice of wisdom in times of need. Lars Sonnenschein, who was always eager to push for results. Andreas G\"uth, miracle worker at the monstrosity called Monte Carlo generators. Daniel Teyssier, at efficiently working on efficiencies. My parents for allowing me to get this far and their omnipresent all around support. And everyone working at the institute, who all contribute to the work-oriented and yet relaxing atmosphere, allowing for an enjoyable experience throughout my time there.
 
 %%% Local Variables: 
 %%% mode: latex

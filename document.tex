@@ -78,7 +78,19 @@
 \usepackage[figuresright]{rotating} % enables rotation of figures/tables
 \usepackage{comment} % enables a comment environment
 \usepackage{setspace} % enables individual line spacing
-\usepackage[backend=biber,style=ieee,sorting=none]{biblatex} % use biblatex with biber
+% \usepackage[backend=biber,style=ieee,sorting=none]{biblatex} 
+
+\usepackage[autostyle]{csquotes}
+\usepackage[backend=biber,
+        sorting=none,
+	style=numeric-comp,
+	natbib=true,
+	sortlocale=en_UK,
+        %dashed=false,
+	url=true, 
+	doi=true,
+	eprint=true]{biblatex} % use biblatex with biber
+\renewbibmacro{in:}{,}
 \addbibresource{bibliography.bib} % add the bibliography ressource
 
 % self defined commands

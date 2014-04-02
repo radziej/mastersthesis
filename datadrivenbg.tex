@@ -1,7 +1,7 @@
 \chapter{Data-driven Background Estimation}
 \label{cha:datadrivenbg}
 
-One does observe a sizeable contribution from backgrounds like $t\bar{t}$ in the CRBVC after the final step of the event selection (Cf. fig~\ref{fig:ssccr_nofakes}). This is the case despite them being unable to produce two prompt same sign charge muons. That necessitates at least one of the two leptons to be misreconstructed. Muons from jets or other secondary interactions could be falsely associated with the vertex in question. Another possibility are punch-through particles traversing the HCAL and leaving tracks in the muon system. For example fragments from a hadronic interaction, like a charged pion or kaon, could yield enough hits in the chambers, given enough energy. As a result, this particle may be misidentified as a muon, if a coincidentally matching trajectory can be found in the tracker. Both cases lead to a ``fake muon''. Obviously only the latter is a \textit{true} fake muon, but both occurrences are usually handled the same way. The corresponding selection requirements are isolation for the secondary interaction case and the trajectory quality criteria for the punch-through one. However, preventing either scenario from happening by tightening their thresholds is unlikely to impossible. The poor agreement between data and prediction can be improved by utilizing a portion of the measurement, which is orthogonal to the signal region. To estimate the contribution of fakes from data, the ``fake rate method'' is employed.
+One does observe a sizeable contribution from backgrounds like $t\bar{t}$ in the $b$-jet veto plus charge control region after the final step of the event selection (Cf. fig~\ref{fig:ssccr_nofakes}). This is the case despite them being unable to produce two prompt same sign charge muons. That necessitates at least one of the two leptons to be misreconstructed. Muons from jets or other secondary interactions could be falsely associated with the vertex in question. Another possibility are punch-through particles traversing the HCAL and leaving tracks in the muon system. For example fragments from a hadronic interaction, like a charged pion or kaon, could yield enough hits in the chambers, given enough energy. As a result, this particle may be misidentified as a muon, if a coincidentally matching trajectory can be found in the tracker. Both cases lead to a ``fake muon''. Obviously only the latter is a \textit{true} fake muon, but both occurrences are usually handled the same way. The corresponding selection requirements are isolation for the secondary interaction case and the trajectory quality criteria for the punch-through one. However, preventing either scenario from happening by tightening their thresholds is unlikely to impossible. The poor agreement between data and prediction can be improved by utilizing a portion of the measurement, which is orthogonal to the signal region. To estimate the contribution of fakes from data, the ``fake rate method'' is employed.
 
 
 \section{Fake Rate Method}
@@ -158,7 +158,7 @@ In general, one can observe reasonable agreement between data and simulation in 
     \caption{$\Delta \phi$ between loose muon and leading jet \label{fig:ntljetdphi}}
   \end{subfigure}
 
-  \caption{$n - 1$ distributions of the fake rate determiniation. Requirements are indicated by arrows.}
+  \caption{$n - 1$ distributions of the fake rate determiniation, after the basic muon selection. Requirements are indicated by arrows.}
   \label{fig:ntl}
 \end{figure}
 
@@ -177,7 +177,7 @@ Counting the number of tight and loose muons in the resulting enriched sample, c
     \caption{\label{fig:tlratio2d}}
   \end{subfigure}
 
-  \caption{Ratio of tight to loose muons for the calculation of $F_R$, as a function of $p_{\text{T}}$ (\ref{fig:tlratio}) and as a function of both $p_{\text{T}}$ and $\eta$ (\ref{fig:tlratio2d}).}
+  \caption{Ratio of tight to loose muons for the calculation of $F_R$, as a function of $p_{\text{T}}$ (\ref{fig:tlratio}) and as a function of both $p_{\text{T}}$ and $\eta$ (\ref{fig:tlratio2d}). Both histograms are generated after applying the multi-jet enrichment requirements of the data-driven background method.}
   \label{fig:tlratios}
 \end{figure}
 
@@ -203,11 +203,11 @@ With the tight-to-loose ratio $F_R$ determined, the analysis can be rerun to det
     \caption{\label{fig:CRBVC_m_smuon_doublefake}}
   \end{subfigure}
 
-  \caption{Single- (\ref{fig:CRBVC_m_smuon_singlefake}) and double-fake estimate (\ref{fig:CRBVC_m_smuon_doublefake}) for CRBVC. The distribution before the fake estimate can be seen in figure~\ref{fig:ssccr_nofakes}.}
+  \caption{Single- (\ref{fig:CRBVC_m_smuon_singlefake}) and double-fake estimate (\ref{fig:CRBVC_m_smuon_doublefake}) for the $b$-jet veto plus charge control region. The distribution before the fake estimate can be seen in figure~\ref{fig:ssccr_nofakes}.}
   \label{fig:fakeestimates}
 \end{figure}
 
-One can see that the data exceeds the simulated backgrounds, including QCD multi-jet production. This supports the hypothesis, that the contribution of fake muons is not well modelled and has an influence on the final state in question. Re-examining the CRBVC previously discussed in section~\ref{sec:sscmuons}, yields the distributions shown in figure~\ref{fig:CRBVC}.
+One can see that the data exceeds the simulated backgrounds, including QCD multi-jet production. This supports the hypothesis, that the contribution of fake muons is not well modelled and has an influence on the final state in question. Re-examining the $b$-jet veto plus charge control region previously discussed in section~\ref{sec:sscmuons}, yields the distributions shown in figure~\ref{fig:CRBVC}.
 
 \begin{figure}[hb!]
   \centering
@@ -222,7 +222,7 @@ One can see that the data exceeds the simulated backgrounds, including QCD multi
     \caption{\label{fig:CRBVC_m_gaugino}}
   \end{subfigure}
 
-  \caption{Smuon mass and gaugino mass of the CRBVC, including the data-driven background estimate (Cf.~fig~\ref{fig:ssccr_nofakes}).}
+  \caption{Smuon mass and gaugino mass of the $b$-jet veto plus charge control region, including the data-driven background estimate (Cf.~fig~\ref{fig:ssccr_nofakes}).}
   \label{fig:CRBVC}
 \end{figure}
 
