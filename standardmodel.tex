@@ -89,72 +89,33 @@ For almost all particles in the SM, there is also a corresponding antiparticle. 
 
 \subsection{Gauge Symmetry}
 
-The Standard Model of particle physics is a relativistic gauge theory, which is invariant under local gauge transformations. Similarly to the Euler-Lagrange approach for a kinetic energy $T$ and a potential $U$
-
-\begin{equation}
-  \label{eq:eulerlagrange}
-  \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) =  \frac{\partial L}{\partial q_i} \quad \text{with } L = T - U,
-\end{equation}
-
-\noindent relativistic field theories are formulated using a Lagrangian (density) $\mathcal{L} ( \phi_i, \partial_\mu \phi_i )$, which is a function of time and spatial coordinates as well as its derivatives. It is a necessary transition from a classical particle to a quantized object. The equation using this Langrangian has the following shape.
-
-\begin{equation}
-  \label{eq:lagrangian}
-  \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_i)} \right) = \frac{\partial \mathcal{L}}{\partial \phi_i} \quad (i = 1, 2, 3, 4)
-\end{equation}
-
-Further studies using this equation have lead to the formulation of the weak, strong and electromagnetic force as gauge theories. 
-
-\subsection{Local Gauge Invariance}
-
-The most basic Lagrangian for a spin $\frac{1}{2}$ particle is called a ``Dirac Lagrangian''. It describes a free particle with no external fields:
+The Standard Model of particle physics is a relativistic gauge theory, which is invariant under local gauge transformations. Relativistic field theories are formulated using a Lagrangian (density) $\mathcal{L} ( \phi_i, \partial_\mu \phi_i )$, which is a function of time and spatial coordinates as well as its derivatives. The most basic Lagrangian for a spin $\frac{1}{2}$ particle is called a ``Dirac Lagrangian''.
 
 \begin{equation}
   \label{eq:diraclagrangian}
   \mathcal{L} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi
 \end{equation}
 
-\noindent Here the $\psi$ are called ``Spinors'' and are the most basic description of a particle. One can see that under a global gauge transformation, similarly to adding a phase,
-
-\begin{equation}
-  \label{eq:globalgaugeinv}
-  \psi \rightarrow e^{i \theta} \psi
-\end{equation}
-
-\noindent the equation remains invariant. The sign of the exponent will change with complex conjugation and both exponential functions will cancel each other out. Considering that physics should not depend on the location (disregarding external factors), requiring local gauge invariance is necessary:
-
-\begin{equation}
-  \label{eq:localgaugeinv}
-  \psi \rightarrow e^{i \theta(x)} \psi
-\end{equation}
-
-\noindent Doing so will however yield additional terms stemming from the derivation of $e^{i \theta(x)}$ which need to be dealt with. 
+\noindent It describes a free particle with no external fields. Here, $\psi$ represent ``Spinors'', which are the most basic description of a particle.
 
 \subsection{Quantum Electro Dynamics}
 \label{sec:qed}
 
-To compensate for the terms added by requiring local gauge invariance, the covariant derivative is introduced:
+Requiring local gauge invariance for the Lagrangian~\eqref{eq:diraclagrangian} yields additional terms, which are being compensated for by introducing the covariant derivative:
 
 \begin{align}
   \label{eq:covariantderivative}
   \mathcal{D}_\mu = \partial_\mu + i \frac{q}{\hbar c} A_\mu
 \end{align}
 
-\noindent Using equation~(\ref{eq:covariantderivative}), the invariance of the Lagrangian is restored, but it also adds a spin-1 vector field $A_\mu$, which requires its own additional terms. The basic Lagrangian for such a field is given by:
-
-\begin{equation}
-  \label{eq:procalagrangian}
-  \mathcal{L} = - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} + \frac{1}{8 \pi} \left( \frac{m_A c}{\hbar} \right)^2 A^\nu A_\nu - \frac{1}{c} \underbrace{J^\mu}_{Source} A_\mu \quad \text{with } F^{\mu \nu} = \partial^\mu A^\nu - \partial^\nu A^\mu
-\end{equation}
-
-\noindent While the first and the last term are locally gauge invariant, the middle one is not. This necessitates a massless mediator $m_A = 0$ to conserve the invariance. Adding both components of the Lagrangians results in
+\noindent By using the covariant derivate~\eqref{eq:covariantderivative}, the invariance of the Lagrangian is restored. However, a spin-1 vector field $A_\mu$ is also added. To conserve the invariance, the mediator of the field to be massless $m_A = 0$. \noindent This yields the Lagrangian for quantum electro dynamics
 
 \begin{equation}
   \label{eq:qedlagrangian}
-  \mathcal{L}_{\text{QED}} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} - \frac{1}{c} \underbrace{(q \bar{\psi} \gamma^\mu  \psi)}_{\text{Source} J^\mu} A_\mu,
+  \mathcal{L}_{\text{QED}} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} - \frac{1}{c} \underbrace{(q \bar{\psi} \gamma^\mu  \psi)}_{\text{Source} J^\mu} A_\mu.
 \end{equation}
 
-\noindent which is the Lagrangian for quantum electro dynamics. So by requiring local gauge invariance under a transformation $\psi \rightarrow U \psi$ with a unitary $1 \times 1$ matrix $U$, here $U = e^{i \theta}$, the photon as the mediator of the electromagnetic force is introduced to the free Lagrangian. It is massless, has a spin of 1 and since its transformation does commutate, it does not interact with other photons. The latter aspect is also coherent with the photon not carrying any charge. The group of all such transformations is called $U(1)$. Using the same principle but different groups of transformations, the remaining interactions will be introduced as well.
+So by requiring local gauge invariance under a transformation $\psi \rightarrow U \psi$ with a unitary $1 \times 1$ matrix $U$, here $U = e^{i \theta}$, the photon as the mediator of the electromagnetic force is introduced to the free Lagrangian. It is massless, has a spin of 1 and since its transformation does commutate, it does not interact with other photons. The latter aspect is also coherent with the photon not carrying any electric charge. The group of all such transformations is called $U(1)$. Using the same principle but different groups of transformations, the remaining interactions will be introduced as well.
 
 \subsection{Quantum Chromo Dynamics}
 \label{sec:qcd}
@@ -170,23 +131,7 @@ By expanding local gauge invariance from unitary $1 \times 1$ transformations $U
   \end{pmatrix}
 \end{equation}
 
-% \noindent Requiring local gauge invariance results once again in new gauge fields $A^\mu$, giving a Lagrangian similar to the one of QED (Sec.~\ref{sec:qed}).
-
-% \begin{equation}
-%   \label{eq:qcdlagrangian}
-%   \mathcal{L}_{\text{QCD}} = i (\hbar c) \bar{\psi} \gamma^\mu \partial_\mu \psi - (m c^2) \bar{\psi} \psi - \frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu} - (q \bar{\psi} \gamma^\mu \mathbf{\lambda} \psi) A_\mu,
-% \end{equation}
-
-\noindent Due to $\dim{SU(3)} = 8$, eight new fields are introduced, which represent the massless mediators: Gluons. The Gell-Mann matrices $\mathbf{\lambda}$~\cite{gellmann} correspond to the generators of the $SU(3)$ $T_a$. the relation $T_a = \lambda_a / 2$ with $a = 1, 2, ..., 8$. Unlike the $U(1)$, the $SU(3)$ is not abelian, but adheres the commutation relations given by
-
-\begin{equation}
-  \label{eq:qcdgencommute}
-  \left[ T_a, T_b \right] = i \sum_{c=1}^8 f_{abc} T_c,
-\end{equation}
-
-\noindent where $f_{abc}$ are the structure constants of the $SU(3)$. 
-
-Since the transformation is not abelian, these mediators self-couple. Therefore the gluons have to carry the colour charge. They are bi-colour objects containing one colour and one anti-colour. The reason for the naming scheme being borrowed from chromatics, is due to the way particles couple. One can only observe neutrally coloured states. This means that a quark, which are the only fermions to carry a colour charge in the Standard Model, has two options. Either couple to a quark of its anticolour or two other quarks, who carry the remaining two colour charges of the $r,g,b$ triplet. As mentioned in section~\ref{sec:stdmdloverview}, those are called mesons and baryons respectively.
+\noindent Due to $\dim{SU(3)} = 8$, eight new fields are introduced, which represent the massless mediators: Gluons. Since the transformation is not abelian, these mediators self-couple. Therefore the gluons have to carry the colour charge. They are bi-colour objects containing one colour and one anti-colour. The reason for the naming scheme being borrowed from chromatics, is due to the way particles couple. One can only observe neutrally coloured states. This means that a quark, which are the only fermions to carry a colour charge in the Standard Model, has two options. Either couple to a quark of its anticolour or two other quarks, who carry the remaining two colour charges of the $r,g,b$ triplet. As mentioned in section~\ref{sec:stdmdloverview}, those are called mesons and baryons respectively.
 
 Another important aspect of QCD that stems from the self-coupling of gluons, is the behaviour of the strong coupling constant $\alpha_s(Q^2)$. Since it decreases as function of rising momentum transfer $Q^2$, the particles become less constrained the higher the energy scale of the interaction. This is called ``asymptotic freedom'' and can be described pertubatively. On the other end of the scale, around $\sqrt{Q^2} \sim 200\,\text{MeV}$, $\alpha_s(Q^2)$ becomes very large and this freedom turns into ``confinement''. Here the pertubation theory diverges and quarks as well as gluons do not appear as free particles anymore.
 
@@ -213,7 +158,7 @@ Using the $SU(2)_L$ symmetry group yields a third weak interaction. As this only
  
 \noindent The mixing-angle $\theta_W$ is a free parameter of the Standard Model, meaning that it cannot be predicted from its theoretical construct and has to be measured instead.
 
-The aforementioned NCs are mediated by the $Z$-boson and behave very similarly to the ones based on an exchange of photons $\gamma$. Charged current (CC) interactions have the $W^\pm$-boson as their gauge mediator, which, contrary to all other types of interactions, allows for changes of flavour. While the $W^\pm$ and $Z$ bosons are represented by their respective fields, $A_\mu$ can be recognized as the photon introduced in QED (Sec.~\ref{sec:qed}). The electroweak theory therefore describes the combination of both the electromagnetic and weak interaction by unifying them into a single gauge theory~\cite{standardmodel-salam,standardmodel-weinberg,standardmodel-glashow}.
+The aforementioned NCs are mediated by the $Z$-boson and behave very similarly to the ones based on an exchange of photons $\gamma$. Charged current (CC) interactions have the $W^\pm$-boson as their gauge mediator, which, contrary to all other types of interactions, allows for changes of flavour. While the $W^\pm$ and $Z$ bosons are represented by their respective fields, $A_\mu$ can be recognized as the photon introduced by QED (Sec.~\ref{sec:qed}). The electroweak theory therefore describes the combination of both the electromagnetic and weak interaction by unifying them into a single gauge theory~\cite{standardmodel-salam,standardmodel-weinberg,standardmodel-glashow}.
 
 The Standard Model of particle physics describes Nature very well. While the agreement between theory and experiment can be as good as multiple orders of magnitude, there are still certain discrepancies between theory and experiment. One of them will be addressed in the following section.
 
