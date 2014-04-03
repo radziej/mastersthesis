@@ -131,11 +131,18 @@
 ** DONE mention smuon & gaugino mass calculation earlier
 * Hebbeker's Comments
 ** DONE Shorten gauge symmetry etc.
-** DONE feynman graphs for neutrinoless double beta-decays and RPV pion
-** TODO sigma and br dependence on lambda in signature chapter
+** TODO feynman graphs for neutrinoless double beta-decays and RPV pion
+** DONE sigma and br dependence on lambda in signature chapter
 ** DONE fix cut arrow in histograms
 ** DONE remove / 1 from histograms
 ** TODO JER dependence on eta and pt
 ** TODO "cutflow" <-> table
 ** TODO rephrase tl ratio stuff
 ** DONE atlas analysis?
+** TODO rephrase bullet cluster "overlay .."
+** TODO ATLAS search in "current limits"
+** TODO pion limit units!
+** TODO stable LSP in signature
+** TODO fix phrase of motivation for parameters
+** TODO fix QCD p_T
+** 
