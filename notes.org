@@ -145,5 +145,6 @@
 ** DONE stable LSP in signature
 ** DONE fix phrase of motivation for parameters
 ** DONE fix QCD p_T
-** TODO candidate event errors
+** DONE candidate event errors
 ** TODO matched histogram
+** DONE cls method

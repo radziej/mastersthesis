@@ -20,12 +20,12 @@
   \label{fig:evt-display}
 \end{figure}
 
-\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the respective jet energies also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229.4\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186.8\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$.
+\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the highest two jet energies also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229 \pm 19\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186 \pm 18\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$. To determine the uncertainties on the masses, the muon and jet Lorentz-vectors have been shifted by the respective uncertainties of the momentum scale and resolution.
 
 \section{Final Distribution}
 \label{sec:final-dist}
 
-Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the $b$-jet veto plus charge control region, only the inverted missing transverse energy requirement is reversed again $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
+Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the $b$-jet veto plus charge control region, only the missing transverse energy requirement is reversed to be $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$ again. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
 
 \begin{figure}[htb!]
   \centering
@@ -140,7 +140,7 @@ As any excess of data is too small to be considered statistically significant, t
 \subsection{CLs Method}
 \label{sec:cls-method}
 
-The $CL_s$ method~\cite{cls,cls2} is a modified frequentist analysis. With frequentist methods, one may exclude signal contributions based on downward fluctuations of the measurement in cases with low statistics. The $CL_S$ method, however, yields meaningful results in these circumstances. Its general idea is to compare two hypotheses to a measurement.
+The $CL_s$ method~\cite{cls,cls2} is a modified frequentist analysis. Simple hypothesis tests may exclude possible (small) signal contributions based on downward fluctuations of the measurement in cases with low statistics. The $CL_s$ method, however, yields meaningful results in these circumstances. Its general idea is to compare two hypotheses to a measurement.
 
 For most analyses in high energy particle physics, there are two cases to be covered. The null hypotheses $H_0$ being the Standard Model prediction by itself and a combination of the proposed signal and the Standard Model prediction as the second hypothesis $H_1$. In the most simple case, one expects the number of events $n$ to follow a Poisson distribution.
 
@@ -197,10 +197,10 @@ Following the recommendations by the CMS and ATLAS collaborations~\cite{clsmod},
 
 \begin{equation}
   \label{eq:q-mod}
-  Q = - 2 \ln{ \frac{\mathcal{L} (\mu s + b; n, \hat{\theta})_\mu) }{ \mathcal{L} (\hat{\mu} \cdot s + b; n, \hat{\theta} )} } \quad \text{ with } \quad 0 \leq \hat{\mu} \leq \mu
+  Q = - 2 \ln{ \frac{\mathcal{L} (\mu s + b; n, \hat{\theta})_\mu }{ \mathcal{L} (\hat{\mu} \cdot s + b; n, \hat{\theta} )} } \quad \text{ with } \quad 0 \leq \hat{\mu} \leq \mu
 \end{equation}
 
-\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are evaluated at the global maximum of the likelihood. On the other hand, $\hat{\theta}_\mu$ denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$. The lower constraint $0 < \hat{\mu}$ ensures that the signal has a positive contribution\footnote{While certain signals can lead to a negative interference, these are not covered by the $CL_s$ method.}. To prevent upward fluctuations of the measurement $\hat{\mu} > \mu$ to be considered evidence \textit{against} the signal hypothesis, the upper constraint $\hat{\mu} < \mu$ is set.
+\noindent Here, the pair of parameters $\hat{\mu}$ and $\hat{\theta}$ are evaluated at the global maximum of the likelihood. On the other hand, $\hat{\theta}_\mu$ denotes the conditional maximum likelihood estimator of $\theta$, which also depends on the choice of $\mu$. The lower constraint $0 < \hat{\mu}$ ensures that the signal has a positive contribution\footnote{While certain signals can lead to a negative interference, these are not covered by the $CL_s$ method.}. To prevent upward fluctuations of the measurement ($\hat{\mu} > \mu$) to be considered evidence \textit{against} the signal hypothesis, the upper constraint $\hat{\mu} < \mu$ is set.
 
 % Using the logarithm with a factor of $-2$ allows the test statistic to converge against $\Delta \chi^2$ for a large number of selected events.
 
@@ -239,7 +239,7 @@ The respective $95\,\pct\: CL$ multi-bin upper cross section limits, which have 
     \includegraphics[width=\textwidth]{plots/l211limits_MultiBin_logz-colz.pdf}
     \caption{\label{fig:lambda-prime-obs}}
   \end{subfigure}
-  \caption{Expected (\ref{fig:lambda-prime-exp}) and observed (\ref{fig:lambda-prime-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_0$ and $m_{1/2}$, while the parameters $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$ are fixed. The white regions to the left are part of the $\tilde{\tau}$-LSP phase space, to which this analysis is not sensitive. The ones on the bottom lead to unphysical models, non-converging RGEs, no electroweak symmetry breaking or tachyonic solutions.}
+  \caption{Expected (\ref{fig:lambda-prime-exp}) and observed (\ref{fig:lambda-prime-obs}) $95\,\%\: CL$ upper limits on the $\lambda^{\prime}_{211}$ coupling. They are given as a function of $m_0$ and $m_{1/2}$, while the parameters $A_0 = 0\,\text{GeV}$, $\text{sgn}(\mu) = +1$ and $\tan{\beta} = 20$ are fixed. The white regions to the left are part of the $\tilde{\tau}$-LSP phase space, to which this analysis is not sensitive. In the white regions on the bottom, the model has non-converging RGEs, no electroweak symmetry breaking or tachyonic solutions.}
   \label{fig:lambda-prime-limits}
 \end{figure}
 
@@ -320,7 +320,7 @@ In general, the exclusion limits get progressively weaker towards higher values 
   \label{fig:1d-limits}
 \end{figure}
 
-By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the search regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ as an example, one can see in figure~\ref{fig:sig-1000-1200-m-smu-chi} that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit (Fig.~\ref{fig:limit-m12-1200}) are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the slight excess of data in the corresponding SR 4 leads to an observed limit that is a lot worse than the expectation.
+By taking one dimensional slices out of the $m_0$-$m_{1/2}$ plane of the limits, one can see the evolution of the limits with regards to their uncertainties (Fig.~\ref{fig:1d-limits}). There are no rogue values deviating too much from the expectation, but certain structures can be observed. These are the product of the universal mass parameters leading to certain smuon and gaugino masses, corresponding to one or two of the search regions. Using the phase space point with $m_0 = 1000\,\text{GeV}, m_{1/2} = 1200\,\text{GeV}$ as an example, one can see in figure~\ref{fig:sig-1000-1200-m-smu-chi} that its distribution has its main contribution in the SR 5, where data and MC are in reasonable agreement. Hence, the observed and expected limit (Fig.~\ref{fig:limit-m12-1200}) are very close to each other. For $m_0 = 1000\,\text{GeV}, m_{1/2} = 200\,\text{GeV}$ on the other hand, the slight excess of data in the corresponding SR 4 leads to an observed limit that is a worse than the expectation, but still within $2\sigma$ (Fig.~\ref{fig:limit-m12-200}).
 
 \section{Conclusion and Outlook}
 \label{sec:conclusion}
