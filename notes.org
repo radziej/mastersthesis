@@ -123,7 +123,7 @@
 ** page 16
 *** DONE add lambda prime 211 on z axis in 2011 plot
 * Arnd's Comments
-** TODO add 1d signal limits
+** DONE add 1d signal limits
 ** DONE fix plot titles to "CMS Private"
 ** DONE fix values in SR1-6 table
 ** DONE show signal distribution in m_smu_chi.pdf
@@ -131,18 +131,17 @@
 ** DONE mention smuon & gaugino mass calculation earlier
 * Hebbeker's Comments
 ** DONE Shorten gauge symmetry etc.
-** TODO feynman graphs for neutrinoless double beta-decays and RPV pion
+** DONE feynman graphs for neutrinoless double beta-decays and RPV pion
 ** DONE sigma and br dependence on lambda in signature chapter
 ** DONE fix cut arrow in histograms
 ** DONE remove / 1 from histograms
-** TODO JER dependence on eta and pt
+** DONE JER dependence on eta and pt
 ** TODO "cutflow" <-> table
 ** TODO rephrase tl ratio stuff
 ** DONE atlas analysis?
-** TODO rephrase bullet cluster "overlay .."
-** TODO ATLAS search in "current limits"
-** TODO pion limit units!
-** TODO stable LSP in signature
-** TODO fix phrase of motivation for parameters
-** TODO fix QCD p_T
-** 
+** DONE rephrase bullet cluster "overlay .."
+** DONE ATLAS search in "current limits"
+** DONE pion limit units!
+** DONE stable LSP in signature
+** DONE fix phrase of motivation for parameters
+** DONE fix QCD p_T

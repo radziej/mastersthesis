@@ -14,7 +14,7 @@ Observation of the universe has lead to the conclusion, that matter as we know i
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.6\textwidth]{plots/bulletcluster.jpg}
-  \caption{Image of the Bullet Cluster~\cite{gravlens}. Two galaxy clusters collided, with the baryonic gas, here marked in red, being slowed down. The dark matter, here marked in blue, passed through and is visible through gravitational lensing.}
+  \caption{Overlay of various images of the Bullet Cluster~\cite{gravlens}. The background is an optical picture, while the baryonic gas, marked in red, is measured in the x-ray spectrum. Calculations based on gravitational lensing yield the dark matter marked in blue. Two galaxy clusters collided, with the baryonic gas being slowed down, while the dark matter passed through.}
   \label{fig:gravlens}
 \end{figure}
 
@@ -252,26 +252,45 @@ In the present analysis, the resonant production of sleptons through a single R-
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.6\textwidth]{plots/neutrinoless-double-beta.pdf}  
-  \caption{Feynman diagram of a neutrinoless double beta decay. Such a decay could lead to same sign charge electrons, but has not yet been observed and therefore limits the coupling $\lambda^\prime_{211}$.}
-  \label{fig:neutrinoless-double-beta}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/neutrinoless-double-beta.pdf}
+    \caption{\label{fig:neutrinoless-double-beta}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/neutrinoless-double-beta-lambda-prime-111.pdf}
+    \caption{\label{fig:neutrinoless-double-beta-lambda-prime-111}}
+  \end{subfigure}
+  \caption{Feynman diagrams of neutrinoless double beta decays. Via $W$ bosons (\ref{fig:neutrinoless-double-beta}) and the $R$-parity violating coupling $\lambda^\prime_{111}$.}
+  \label{fig:neutrinoless-double-beta-decays}
 \end{figure}
 
 
-Neutrinoless double beta decay experiments investigate final states with two same sign charge electrons (Fig.~\ref{fig:neutrinoless-double-beta}), hence they puts bounds on the coupling for the first generation $\lambda^\prime_{111}$. The order of magnitude of the limit is  $\lambda^\prime_{111} < 10^{-4}$~\cite{rpvimpl}. This strict limit favours a search for the production of second generation sleptons through $\lambda^\prime_{211}$. With the assumption of an unstable LSP, there exists a lower limit of $\mathcal{O}(10^{-12})$ on all coupling parameters $\lambda$, $\lambda^\prime$ and $\lambda^{\prime\prime}$. Cosmological studies of the Big-Bang nucleosynthesis predict a certain abundance of light elements. For values below the lower limit, the decay of LSPs would modify these~\cite{rpvimpl}. In line with the single coupling dominance assumption, any contributions from couplings other than $\lambda^\prime_{211}$ are being neglected.
+Neutrinoless double beta decay experiments investigate final states with two same sign charge electrons (Fig.~\ref{fig:neutrinoless-double-beta-decays}), hence they puts bounds on the coupling for the first generation $\lambda^\prime_{111}$. The order of magnitude of the limit is  $\lambda^\prime_{111} < 10^{-4}$~\cite{rpvimpl}. This strict limit favours a search for the production of second generation sleptons through $\lambda^\prime_{211}$. With the assumption of an unstable LSP, there exists a lower limit of $\mathcal{O}(10^{-12})$ on all coupling parameters $\lambda$, $\lambda^\prime$ and $\lambda^{\prime\prime}$. Cosmological studies of the Big-Bang nucleosynthesis predict a certain abundance of light elements. For values below the lower limit, the decay of LSPs would modify these~\cite{rpvimpl}. In line with the single coupling dominance assumption, any contributions from couplings other than $\lambda^\prime_{211}$ are being neglected.
 
 \subsubsection{Current Limits}
 
-While $R$-parity conserving scenarios are more popular and therefore more thoroughly investigated, there have also been searches for $R$-parity violating supersymmetry, with which this analysis concerns itself with. As none of these searches lead to any discoveries, their main results are limits on the value of $\lambda^\prime_{211}$. Pion decays can be mediated by the $\lambda^\prime_{211}$ coupling as depicted in figure~\ref{fig:pion-lambda-prime-211}.
+While $R$-parity conserving scenarios are more popular and therefore more thoroughly investigated, there have also been searches for $R$-parity violating supersymmetry, with which this analysis concerns itself with. As none of these searches lead to any discoveries, their main results are limits on the value of $\lambda^\prime_{211}$. Pion decays can be mediated by the $\lambda^\prime_{211}$ coupling as depicted in figure~\ref{fig:pion-decays}.
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.4\textwidth]{plots/pion-lambda-prime-211.pdf}
-  \caption{Feynman diagram of a pion decay, mediated by the $R$-parity violating coupling $\lambda^\prime_{211}$.}
-  \label{fig:pion-lambda-prime-211}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/pion-decay.pdf}
+    \caption{\label{fig:pion-decay}}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.495\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{plots/pion-lambda-prime-211.pdf}
+    \caption{\label{fig:pion-lambda-prime-211}}
+  \end{subfigure}
+
+  \caption{Feynman diagrams of a pion decays. Via the $W$ boson (\ref{fig:pion-decay}) and the $R$-parity violating coupling $\lambda^\prime_{211}$ (\ref{fig:pion-lambda-prime-211}).}
+  \label{fig:pion-decays}
 \end{figure}
 
-\noindent Measuring the branching fractions of pion decay modes yielded limits on the coupling parameter group $\lambda^\prime_{21i}, i = 1, 2, 3$. They are given by $\lambda^\prime_{21i} < 0.059 \cdot \tilde{d}_{k, R}$~\cite{rpvimpl} and show a dependence on the mass parameters.
+\noindent Measuring the branching fractions of pion decay modes yielded limits on the coupling parameter group $\lambda^\prime_{21i}, i = 1, 2, 3$. They are given by $\lambda^\prime_{21i} < 0.059 \cdot m_{\tilde{d}_{k, R}} / 100\,\text{GeV}$~\cite{rpvimpl} and show a dependence on the mass parameters.
 
 \begin{figure}[!htbp]
   \centering
@@ -291,6 +310,8 @@ While $R$-parity conserving scenarios are more popular and therefore more thorou
 Even stricter limits have been determined with a direct search, using the $D0$ experiment at the Tevatron~\cite{auter,d0rpv}, and are given in figure~\ref{fig:auterrpv}. These $95\,\pct$ confidence level exclusion limits are the most stringent limits from a collider experiment prior to the LHC.
 
 Due to the technically more advanced combination of the LHC and CMS experiments, the results could be expanded upon. Figure~\ref{fig:2011rpv} shows the extended, more strict limits, which were obtained using the data recorded during 2011~\cite{2011rpv}. These exclusion ranges are the basis for this analysis.
+
+The ATLAS experiment has not published any comparable results. However, their search for long-lived, heavy particles in final states with a muon and a displaced vertex~\cite{atlasrpv} is sensitive to lower values of $\lambda^\prime_{2ij}$. They focus on the possibility of a non-prompt decay of the neutralino LSP, where the values of $\lambda^\prime_{2ij}$ are below $10^{-6}$, as opposed to this analysis. Due to this circumstance, the decay of the LSP is delayed and leads to a displaced vertex. Since their results are limits on the lifetime of the neutralino and are given as a simplified model interpretation, they are difficult to interpret for the model of this analysis.
 
 
 %%% Local Variables: 

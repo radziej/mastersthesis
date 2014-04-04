@@ -120,65 +120,66 @@ $WW$-DoubleParton & 0.588 & 0.0139 \\
   \label{tab:mcsamples}
 \end{table}
 
+\footnotetext[3]{$\hat{p}_{\text{T}}$ refers transverse momentum of the hard interaction.} 
+\footnotetext[4]{\textsc{Pythia6} does not include $W$ and $Z$ bosons in the showering process, which is why additional $t\bar{t} + V$ samples are required.} 
+
+
 \begin{comment}
   #+ORGTBL: SEND datasetsmc orgtbl-to-latex :splice t :no-escape t
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | Monte Carlo Sample                                                                                                | $\sigma [\text{pb}^{-1}]$                                   |            Weight |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $Z/\gamma^* \rightarrow ll$ $(10\,\text{GeV} < m_{ll} < 50\,\text{GeV})$                                          | 762                                                         | $1.25 \cdot 2.10$ |
-  | $Z/\gamma^* \rightarrow ll$ $(50\,\text{GeV} < m_{ll})$                                                           | $3.50 \cdot 10^3$ $\star$$\star$                            | $0.96 \cdot 2.26$ |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($15\,\text{GeV} < \hat{p}_{\text{T}} < 20\,\text{GeV}$)              | $2.74 \cdot 10^6$                                           | $31.3 \cdot 10^3$ |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($20\,\text{GeV} < \hat{p}_{\text{T}}\footnotemark < 30\,\text{GeV}$) | $1.87 \cdot 10^6$                                           | $4.32 \cdot 10^3$ |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($30\,\text{GeV} < \hat{p}_{\text{T}} < 50\,\text{GeV}$)              | $8.06 \cdot 10^5$                                           | $1.66 \cdot 10^3$ |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($50\,\text{GeV} < \hat{p}_{\text{T}} < 80\,\text{GeV}$)              | $1.76 \cdot 10^5$                                           |               334 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($80\,\text{GeV} < \hat{p}_{\text{T}} < 120\,\text{GeV}$)             | $4.04 \cdot 10^4$                                           |              86.1 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($120\,\text{GeV} < \hat{p}_{\text{T}} < 170\,\text{GeV}$)            | $7.46 \cdot 10^3$                                           |              17.3 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($170\,\text{GeV} < \hat{p}_{\text{T}} < 300\,\text{GeV}$)            | $2.23 \cdot 10^3$                                           |              5.90 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($300\,\text{GeV} < \hat{p}_{\text{T}} < 470\,\text{GeV}$)            | 151                                                         |             0.381 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($470\,\text{GeV} < \hat{p}_{\text{T}} < 600\,\text{GeV}$)            | 11.8                                                        |            0.0613 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($600\,\text{GeV} < \hat{p}_{\text{T}} < 800\,\text{GeV}$)            | 2.69                                                        |            0.0128 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($800\,\text{GeV} < \hat{p}_{\text{T}} < 1000\,\text{GeV}$)           | 0.369                                                       |            0.0018 |
-  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($1000\,\text{GeV} < \hat{p}_{\text{T}}$)                             | 0.0849                                                      |            0.0004 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $t^+$ ($s$-channel)                                                                                               | $3.79 \pm 0.7$ $\star$$\star$$\star$ \cite{topxsec}         |             0.532 |
-  | $t^-$ ($s$-channel)                                                                                               | $1.76 \pm 0.01$ $\star$$\star$$\star$ \cite{topxsec}        |             0.133 |
-  | $t^+$ ($t$-channel)                                                                                               | $56.4^{+ 2.1}_{- 0.3}$ $\star$$\star$$\star$ \cite{topxsec} |             0.573 |
-  | $t^-$ ($t$-channel)                                                                                               | $30.7 \pm 0.7$ $\star$$\star$$\star$ \cite{topxsec}         |              6.05 |
-  | $t^+$ ($tW$-channel)                                                                                              | $11.1 \pm 0.3$ $\star$$\star$$\star$ \cite{topxsec}         |             0.555 |
-  | $t^-$ ($tW$-channel)                                                                                              | $11.1 \pm 0.3$ $\star$$\star$$\star$ \cite{topxsec}         |             0.439 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $t\bar{t}$ \footnotemark                                                                                          | $234^{+10}_{-9}$ $\star$$\star$$\star$                      |             0.212 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $t\bar{t} + W$                                                                                                    | $0.232 \pm 0.067$ $\star$                                   |            0.0210 |
-  | $t\bar{t} + WW$                                                                                                   | 0.002037                                                    |            0.0002 |
-  | $t\bar{t} + Z$                                                                                                    | $0.2057^{+0.019}_{-0.024}$                                  |            0.0193 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $W + \text{jets} \rightarrow l + \nu$                                                                             | $3.75 \cdot 10^4$$\star$$\star$                             |              12.8 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $W + \gamma \rightarrow l + \nu + 2 \mu$                                                                          | 1.91                                                        |             0.126 |
-  | $WW + \text{jets} \rightarrow 2 l + 2 \nu$                                                                        | $5.885 \pm 0.396$ $\star$                                   |            0.0599 |
-  | $WZ + \text{jets} \rightarrow 2 l + 2 q$                                                                          | $2.293 \pm 0.126$ $\star$                                   |            0.0140 |
-  | $WZ + \text{jets} \rightarrow 2 q + l \nu$                                                                        | $7.495 \pm 0.455$ $\star$                                   |            0.0507 |
-  | $WZ + \text{jets} \rightarrow 3 l + \nu$                                                                          | $1.105 \pm 0.066$ $\star$                                   |            0.0108 |
-  | $ZZ + \text{jets} \rightarrow 2 l + 2 \nu$                                                                        | $0.358 \pm 0.019$ $\star$                                   |            0.0074 |
-  | $ZZ + \text{jets} \rightarrow 2 l + 2 q$                                                                          | $1.251 \pm 0.065$ $\star$                                   |            0.0127 |
-  | $ZZ + \text{jets} \rightarrow 4 l$                                                                                | $0.181 \pm 0.009$ $\star$                                   |            0.0007 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $WWW$                                                                                                             | $0.08068^{+4.7\,\pct}_{-3.9\,\pct}$ $\star$                 |            0.0072 |
-  | $WWZ$                                                                                                             | $0.0580^{+5.6\,\pct}_{-4.6\,\pct}$ $\star$                  |            0.0051 |
-  | $WZZ$                                                                                                             | $0.0197^{+6.0\,\pct}_{-4.9\,\pct}$ $\star$                  |            0.0018 |
-  | $ZZZ$                                                                                                             | $0.00553^{+2.7\,\pct}_{-2.4\,\pct}$ $\star$                 |            0.0005 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
-  | $W^-W^-$                                                                                                          | 0.0889                                                      |            0.0181 |
-  | $W^+W^+$                                                                                                          | 0.248                                                       |            0.0488 |
-  | $WW$-DoubleParton                                                                                                 | 0.588                                                       |            0.0139 |
-  |-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | Monte Carlo Sample                                                                                                 | $\sigma [\text{pb}^{-1}]$                                   |            Weight |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $Z/\gamma^* \rightarrow ll$ $(10\,\text{GeV} < m_{ll} < 50\,\text{GeV})$                                           | 762                                                         | $1.25 \cdot 2.10$ |
+  | $Z/\gamma^* \rightarrow ll$ $(50\,\text{GeV} < m_{ll})$                                                            | $3.50 \cdot 10^3$ $\star$$\star$                            | $0.96 \cdot 2.26$ |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($15\,\text{GeV} < \hat{p}_{\text{T}} < 20\,\text{GeV}$)               | $2.74 \cdot 10^6$                                           | $31.3 \cdot 10^3$ |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($20\,\text{GeV} < \hat{p}_{\text{T}} \footnotemark < 30\,\text{GeV}$) | $1.87 \cdot 10^6$                                           | $4.32 \cdot 10^3$ |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($30\,\text{GeV} < \hat{p}_{\text{T}} < 50\,\text{GeV}$)               | $8.06 \cdot 10^5$                                           | $1.66 \cdot 10^3$ |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($50\,\text{GeV} < \hat{p}_{\text{T}} < 80\,\text{GeV}$)               | $1.76 \cdot 10^5$                                           |               334 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($80\,\text{GeV} < \hat{p}_{\text{T}} < 120\,\text{GeV}$)              | $4.04 \cdot 10^4$                                           |              86.1 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($120\,\text{GeV} < \hat{p}_{\text{T}} < 170\,\text{GeV}$)             | $7.46 \cdot 10^3$                                           |              17.3 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($170\,\text{GeV} < \hat{p}_{\text{T}} < 300\,\text{GeV}$)             | $2.23 \cdot 10^3$                                           |              5.90 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($300\,\text{GeV} < \hat{p}_{\text{T}} < 470\,\text{GeV}$)             | 151                                                         |             0.381 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($470\,\text{GeV} < \hat{p}_{\text{T}} < 600\,\text{GeV}$)             | 11.8                                                        |            0.0613 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($600\,\text{GeV} < \hat{p}_{\text{T}} < 800\,\text{GeV}$)             | 2.69                                                        |            0.0128 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($800\,\text{GeV} < \hat{p}_{\text{T}} < 1000\,\text{GeV}$)            | 0.369                                                       |            0.0018 |
+  | QCD $\mu_{p_\text{T} > 5\,\text{GeV}}$-enr. ($1000\,\text{GeV} < \hat{p}_{\text{T}}$)                              | 0.0849                                                      |            0.0004 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $t^+$ ($s$-channel)                                                                                                | $3.79 \pm 0.7$ $\star$$\star$$\star$ \cite{topxsec}         |             0.532 |
+  | $t^-$ ($s$-channel)                                                                                                | $1.76 \pm 0.01$ $\star$$\star$$\star$ \cite{topxsec}        |             0.133 |
+  | $t^+$ ($t$-channel)                                                                                                | $56.4^{+ 2.1}_{- 0.3}$ $\star$$\star$$\star$ \cite{topxsec} |             0.573 |
+  | $t^-$ ($t$-channel)                                                                                                | $30.7 \pm 0.7$ $\star$$\star$$\star$ \cite{topxsec}         |              6.05 |
+  | $t^+$ ($tW$-channel)                                                                                               | $11.1 \pm 0.3$ $\star$$\star$$\star$ \cite{topxsec}         |             0.555 |
+  | $t^-$ ($tW$-channel)                                                                                               | $11.1 \pm 0.3$ $\star$$\star$$\star$ \cite{topxsec}         |             0.439 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $t\bar{t}$ \footnotemark                                                                                           | $234^{+10}_{-9}$ $\star$$\star$$\star$                      |             0.212 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $t\bar{t} + W$                                                                                                     | $0.232 \pm 0.067$ $\star$                                   |            0.0210 |
+  | $t\bar{t} + WW$                                                                                                    | 0.002037                                                    |            0.0002 |
+  | $t\bar{t} + Z$                                                                                                     | $0.2057^{+0.019}_{-0.024}$                                  |            0.0193 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $W + \text{jets} \rightarrow l + \nu$                                                                              | $3.75 \cdot 10^4$$\star$$\star$                             |              12.8 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $W + \gamma \rightarrow l + \nu + 2 \mu$                                                                           | 1.91                                                        |             0.126 |
+  | $WW + \text{jets} \rightarrow 2 l + 2 \nu$                                                                         | $5.885 \pm 0.396$ $\star$                                   |            0.0599 |
+  | $WZ + \text{jets} \rightarrow 2 l + 2 q$                                                                           | $2.293 \pm 0.126$ $\star$                                   |            0.0140 |
+  | $WZ + \text{jets} \rightarrow 2 q + l \nu$                                                                         | $7.495 \pm 0.455$ $\star$                                   |            0.0507 |
+  | $WZ + \text{jets} \rightarrow 3 l + \nu$                                                                           | $1.105 \pm 0.066$ $\star$                                   |            0.0108 |
+  | $ZZ + \text{jets} \rightarrow 2 l + 2 \nu$                                                                         | $0.358 \pm 0.019$ $\star$                                   |            0.0074 |
+  | $ZZ + \text{jets} \rightarrow 2 l + 2 q$                                                                           | $1.251 \pm 0.065$ $\star$                                   |            0.0127 |
+  | $ZZ + \text{jets} \rightarrow 4 l$                                                                                 | $0.181 \pm 0.009$ $\star$                                   |            0.0007 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $WWW$                                                                                                              | $0.08068^{+4.7\,\pct}_{-3.9\,\pct}$ $\star$                 |            0.0072 |
+  | $WWZ$                                                                                                              | $0.0580^{+5.6\,\pct}_{-4.6\,\pct}$ $\star$                  |            0.0051 |
+  | $WZZ$                                                                                                              | $0.0197^{+6.0\,\pct}_{-4.9\,\pct}$ $\star$                  |            0.0018 |
+  | $ZZZ$                                                                                                              | $0.00553^{+2.7\,\pct}_{-2.4\,\pct}$ $\star$                 |            0.0005 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
+  | $W^-W^-$                                                                                                           | 0.0889                                                      |            0.0181 |
+  | $W^+W^+$                                                                                                           | 0.248                                                       |            0.0488 |
+  | $WW$-DoubleParton                                                                                                  | 0.588                                                       |            0.0139 |
+  |--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------------------|
 \end{comment}
-
-\footnotetext{$\hat{p}_{\text{T}}$ refers to the sum of all transverse momenta of an interaction.} 
-\footnotetext{\textsc{Pythia6} does not include $W$ and $Z$ bosons in the showering process, which is why additional $t\bar{t} + V$ samples are required.} 
 
 All Standard Model samples that can produce two muons and two jets are considered as backgrounds for this analysis are given in table~\ref{tab:mcsamples}. The samples were generated during the ``Summer12'' period using \textsc{Pythia6}~\cite{pythia6} for QCD, \textsc{Powheg}~\cite{powheg,powhegst,powhegtt} for single and pair production of top-quarks and \textsc{Madgraph}~\cite{madgraph5} for most others. Details can be extracted from the sample paths, which are given in appendix~\ref{cha:mcsamppath}. In columns two and three, the cross section and weight of the specific processes are given. The latter is necessary to adjust the generated number of events for each sample to the expected amount for a given luminosity. Producing Monte Carlos samples individually for each analysis would not only be inefficient, but also very resource intensive. Instead most samples are produced centrally, which is also the reason why the generated and expected number of events cannot be matched. The formula for calculating the weight is
 
@@ -413,7 +414,7 @@ Every reconstructed particle flow jet above $15\,\text{GeV}$ transverse momentum
   \label{fig:jerdeltapt}
 \end{figure}
 
-\noindent Determining the width of this distribution yields the energy resolution. The entire distribution cannot be accurately modeled with a Gaussian function, however the width of the peak is reasonably well described. It yields $\sigma_{\text{MC}} = 6.2\,\text{GeV}$ with a negligible statistical error. Keeping the shape in mind, the systematic uncertainty of the fit is expected to be higher. Its impact will be studied in the dedicated systematics section (Sec.~\ref{sec:jersys}).
+\noindent Determining the width of this distribution yields the energy resolution. The entire distribution cannot be accurately modeled with a Gaussian function, however the width of the peak is reasonably well described. It yields $\sigma_{\text{MC}} = 6.2\,\text{GeV}$ a negligible statistical error. While this distribution does depend on the transverse momentum and $\eta$ of the jet, the resolution of the majority of jets (more than $95\,\pct$) is well described by this value. Variations of $\sigma_{\text{MC}}$ have shown an impact of less than $1\,\pct$ on the final distribution. The $p_{\text{T}}$ and $\eta$ dependence, as well the systematic uncertainty of the fit due to the shape are taken into account in the dedicated systematics section (Sec.~\ref{sec:jersys}).
 
 The correction to the transverse momenta is propagated to the $x$ and $y$ momenta, energy and the missing transverse energy measurements. In figure~\ref{fig:jermet} the particle flow missing transverse energy is shown with and without the correction. Due to the adjustment being expected to be comparatively small, the histogram has been filled before the missing transverse energy requirement (Sec.~\ref{sec:met}) of the analysis. This ensures a reasonable agreement between data and simulation prior to examining the effect of the jet energy resolution.
 
