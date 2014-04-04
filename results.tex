@@ -4,6 +4,8 @@
 \section{Candidate Event}
 \label{sec:candidate-event}
 
+To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the highest two jet energies also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229 \pm 19\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186 \pm 18\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$. To determine the uncertainties on the masses, the muon and jet Lorentz-vectors have been shifted by the respective uncertainties of the momentum scale and resolution.
+
 \begin{figure}[!htbp]
   \centering
   \begin{subfigure}[b]{0.75\textwidth}
@@ -20,20 +22,23 @@
   \label{fig:evt-display}
 \end{figure}
 
-\noindent To summarize the event selection, an event that has been recorded by the CMS detector is being shown in figure~\ref{fig:evt-display}. Muons below the minimum transverse momentum of $20\,\text{GeV}$ and jets below the minimum energy of $30\,\text{GeV}$ have been removed. The event passed all selection requirements and visualizes the most important aspects of it. Both muons are highly energetic and well isolated, as they are reasonably separated from the various jets. The number of jets exceeds the minimum of two, while the highest two jet energies also surpasses the threshold by quite a margin. With the low amount of missing transverse energy that is needed to pass the upper limit of $50\,\text{GeV}$, the red arrow representing this quantity is barely noticeable. The two muon and two jet candidates result in an invariant mass of $229 \pm 19\,\text{GeV}$ corresponding to the smuon $m_{\tilde{\mu}}$. Removing the leading muon from this invariant mass calculation yields $186 \pm 18\,\text{GeV}$, which is the gaugino mass $m_{\tilde{\chi}^0_1}$. To determine the uncertainties on the masses, the muon and jet Lorentz-vectors have been shifted by the respective uncertainties of the momentum scale and resolution.
 
 \section{Final Distribution}
 \label{sec:final-dist}
 
 Having accounted for the systematic uncertainties, one can examine the final distribution(s). This encompasses the mass of the gaugino and smuon. In case of the smuon, the selected two jets and the two muons enter the invariant mass calculation. Removing the leading muon from this composition yields the gaugino case. All event selection requirements are applied and in relation to the $b$-jet veto plus charge control region, only the missing transverse energy requirement is reversed to be $E_{\text{T}}^{\text{miss}} < 50\,\text{GeV}$ again. Figure~\ref{fig:final-dist} shows both distributions including the data-driven background estimate.
 
-\begin{figure}[htb!]
+\begin{figure}[!htb]
   \centering
   \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_gaugino.pdf}
     \caption{\label{fig:m_gaugino}}
   \end{subfigure}
+\end{figure}
+\begin{figure}[!htb]
+  \ContinuedFloat
+  \centering
   \begin{subfigure}[b]{0.6\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/m_smuon.pdf}
@@ -79,14 +84,14 @@ Having accounted for the systematic uncertainties, one can examine the final dis
 
 The statistical uncertainties for the Monte Carlo predictions stem from the generated number of events, which limit the accuracy of the prediction. While the fake estimate has been determined from data, the method itself inherits  statistical uncertainties from the background samples which are subtracted from the data when determining the tight-to-loose ratio. Adding the uncertainties for every bin of the single- and double-fake estimates in quadrature and propagating them according to equation~\eqref{eq:fakes}, yields the statistical uncertainty for this case. All systematic uncertainties are taken from the summary table (Tab.~\ref{tab:sys-uncertainties}). Individual cross section uncertainties are included in accordance to the table's description as well. Overall one can observe an excellent agreement of measurement and SM simulation.
 
-\begin{figure}[ht!]
+\begin{figure}[!htb]
   \centering
-  \begin{subfigure}[b]{0.6\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/signal_1000_1200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-1200-m-smu-chi}}
   \end{subfigure}
-  \begin{subfigure}[b]{0.6\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/signal_1000_200_m_smu_chi.pdf}
     \caption{\label{fig:sig-1000-200-m-smu-chi}}
@@ -99,14 +104,14 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.7\textwidth]{plots/m_smu_chi.pdf}
+  \includegraphics[width=0.8\textwidth]{plots/m_smu_chi.pdf}
   \caption{Background estimate and CMS data of the two-dimensional smuon and gaugino mass distribution. All backgrounds are summed up and are shown as coloured search regions, while the data points are shown individually. The six bins are regarded as separate search regions SR 1-6 to improve the results of this analysis. The black lines represent the borders of the individual search regions.}
   \label{fig:m_smu_chi}
 \end{figure}
 
-\noindent Most entries are centered around one diagonal line, as a opposed to the previously shown signal samples. The contents of each of the six regions are summarized in table~\ref{tab:m_smu_chi_summary}.
+\noindent While the the smuon mass axis extends further than $1.4\,\text{TeV}$, only a portion is shown to avoid cluttering in the low mass region. Most entries are centered around one diagonal line, as a opposed to the previously shown signal samples. While some of the data points seem to stray quite far from the diagonal, they are not significant. This can be seen by examining the contents of each of the six regions, which are summarized in table~\ref{tab:m_smu_chi_summary}.
 
-\begin{table}[!htbp]
+\begin{table}[!htb]
   \centering
   \begin{tabular}{|l|d{5}@{}d{4}|d{4}@{}d{4}|d{4}@{}d{4}|}
     \hline
@@ -130,6 +135,8 @@ Taking the signal point with $m_0 = 1000\,\text{GeV}$ and $m_{1/2} = 200\,\text{
   \caption{Summary of the six regions displayed in figure~\ref{fig:m_smu_chi}. They are numbered starting on the left and progressing upwards from the lowest bin. Statistical and systematic uncertainties are added in quadrature.}
   \label{tab:m_smu_chi_summary}
 \end{table}
+
+\clearpage
 
 \section{Calculation of Limits}
 \label{sec:calc-of-limits}
@@ -331,7 +338,6 @@ For future efforts in this particular search, an improved selection efficiency f
 
 In addition, results allowing for a broader interpretation beyond the cMSSM using ``simplified models'', based on the knowledge gained about the most important decay channels, are also possible and being investigated.
 
-\clearpage
 \section*{Acknowledgements} 
 \label{sec:acknowledgements}
 

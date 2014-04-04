@@ -137,7 +137,7 @@
 ** DONE remove / 1 from histograms
 ** DONE JER dependence on eta and pt
 ** TODO "cutflow" <-> table
-** TODO rephrase tl ratio stuff
+** DONE rephrase tl ratio stuff
 ** DONE atlas analysis?
 ** DONE rephrase bullet cluster "overlay .."
 ** DONE ATLAS search in "current limits"
