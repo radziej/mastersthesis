@@ -21,7 +21,7 @@ As a first step, a list of noise filters needs to be applied to the triggered ev
 \item \textbf{Tracking odd event filters} - Filters two types of issues. Events with (partially) aborted track reconstruction and events influenced by strip tracker noise.
 \end{itemize}
 
-This first stage of the analysis combines event cleaning with the \textbf{electron veto}. To prevent muon candidates being misidentified electrons, the number of electrons selected by the previously defined recipe (Sec.~\ref{sec:eleid}) is required to be zero.
+This first stage of the analysis combines event cleaning with the \textbf{electron veto}. Since the chosen signature does not contain any electrons, the number of electrons selected by the previously defined recipe (Sec.~\ref{sec:eleid}) is required to be zero.
 
 \section{Basic Muon Selection}
 \label{sec:basicmuon}
@@ -90,7 +90,7 @@ Further restrictions are placed upon both the impact parameters. The CMS muon ph
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.6\textwidth]{plots/dz_mumu.pdf}
-  \caption{Difference between the longitudinal impact parameters of the two muon candidates. This histogram is generated after the jet quality criteria, but before applying the muon quality criteria.}
+  \caption{Difference between the longitudinal impact parameters of the two muon candidates. This histogram is generated after the jet quality criteria, but before applying the muon quality criteria. Towards higher differences in $z$ the agreement suffers from low statistics and the simulation of non-prompt muons.}
   \label{fig:deltadz}
 \end{figure}
 
@@ -152,8 +152,8 @@ As discussed in chapter~\ref{cha:sig}, \textit{resonant} production of sleptons 
 
 \begin{figure}[ht!]
   \centering
-    \includegraphics[width=0.7\textwidth]{plots/pfmet.pdf}
-  \caption{Particle Flow missing transverse energy for events with two muons and least two jets passing their respective quality criteria. The histogram is generated after the invariant dimuon mass requirement, but before applying the missing transverse energy requirement.}
+    \includegraphics[width=0.7\textwidth]{plots/apfmet.pdf}
+  \caption{Particle Flow missing transverse energy for events with two muons and at least two jets passing their respective quality criteria. The histogram is generated after the invariant dimuon mass requirement, but before applying the missing transverse energy requirement.}
   \label{fig:pfmet}
 \end{figure}
 
