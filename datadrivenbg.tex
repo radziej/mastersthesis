@@ -49,29 +49,29 @@ Rare Samples & No \\
 \end{comment}
 
 
-The general idea of the fake rate method is to estimate the contributions of ``fake'' particles by comparing one tightly and one loosely selected muon sample. It should be noted that \textit{loose} muons are only selected for this data-driven background estimation, while the ones used in the analysis are denoted as \textit{tight}\footnote{The dimuon criteria are not applied for the data-driven background estimate.} ones. Two criteria are used to separate the samples from one another. First and foremost, the combined relative isolation criterion is being raised from $I_{\text{rel}} < 0.12$ to $I_{\text{rel}} < 0.5$. This adds a sizeable contribution from backgrounds such as QCD and $t \bar{t}$ with muons stemming from secondary interactions. Additionally, the transverse impact parameter requirement has been loosened from $|d_{xy}| < 0.2\,\text{mm}$ to $|d_{xy}| < 2\,\text{mm}$. This allows for more displaced vertices to enter the selection.
+The general idea of the fake rate method is to estimate the contributions of ``fake'' particles by comparing one tightly and one loosely selected muon sample. It should be noted that the \textit{loose} muon selection is only used in the data-driven background estimation, while the ones used in the analysis are denoted as \textit{tight}\footnote{The dimuon criteria are not applied for the data-driven background estimate.} ones. Two criteria are used to separate the samples from one another. First and foremost, the combined relative isolation criterion is being raised from $I_{\text{rel}} < 0.12$ to $I_{\text{rel}} < 0.5$. This adds a sizeable contribution from backgrounds such as QCD and $t \bar{t}$ with muons stemming from secondary interactions. Additionally, the transverse impact parameter requirement has been loosened from $|d_{xy}| < 0.2\,\text{mm}$ to $|d_{xy}| < 2\,\text{mm}$. This allows for more displaced vertices to enter the selection.
 
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.6\textwidth]{plots/nloosetight.pdf}
-  \caption{Number of loose versus number of tight muons measured in data. T - Tight, L - Loose, SF - Single-fake, DF - Double-fake, ANA - Analysis sample (Signal region), X - Not used.}
+  \caption{Number of loose versus number of tight muons measured in data. This histogram is generated before applying the muon quality criteria. The samples names indicate their application: T - Tight, L - Loose, Single-fake, Double-fake, Search region.}
   \label{fig:nloosetight}
 \end{figure}
 
-To measure the fake rate independently from the final distributions, an orthogonal sample needs to be constructed. Much like the control regions are defined by an inverted MET requirement, the number of loose muons $N_{\text{Loose}}$ in an event can be used. Disjointed from the analysis sample ($N_{\text{Loose}} = 1$) in figure~\ref{fig:nloosetight}), the fraction of tight to loose muons $F_R = \frac{T}{T+L}$~\footnote{This is often confusingly called the ``fake rate'', thus naming the method.} can be determined. To account for possible dependencies introduced by the detector, it is measured as a function of $\eta$ and $p_{\text{T}}$. 
+To measure the tight-to-loose ratio independently from the final distributions, an orthogonal sample needs to be constructed. Much like the control regions are defined by an inverted MET requirement, the number of loose muons $N_{\text{Loose}}$ in an event can be used. Disjointed from the analysis sample ($N_{\text{Loose}} = 1$) in figure~\ref{fig:nloosetight}), the fraction of tight to loose muons $F_R = \frac{T}{T+L}$~\footnote{This is often confusingly called the ``fake rate'', thus naming the method.} can be determined. To account for possible dependencies introduced by the detector, it is measured as a function of $\eta$ and $p_{\text{T}}$. 
 
-Using $F_R$, the number of tight muons $N_{\text{Tight}}$ can be predicted from the number of loose (but not tight) ones $N_{Loose(!N)}$. The definition of loose muons also includes all tight ones. Therefore, to stay in line with the independence of samples, one has to ensure that amongst the number of loose muons $N_{Loose(!N)}$, there are \textit{no} tight ones. The resulting formula is given below.
+Using $F_R$, the number of tight muons $N_{\text{Tight}}$ can be predicted from the number of loose (but not tight) ones $N_{\text{Loose(!T)}}$. The definition of loose muons also includes all tight ones. Therefore, to stay in line with the independence of samples, one has to ensure that amongst the number of loose muons $N_{\text{Loose(!T)}}$, there are \textit{no} tight ones. The resulting formula is given below.
 
 \begin{equation}
   \label{eq:fakerate}
-  N_{\text{Tight}} = f \cdot N_{Loose(!N)} = \frac{F_R }{1 - F_R} \cdot N_{Loose(!N)}
+  N_{\text{Tight}} = f \cdot N_{\text{Loose(!N)}} = \frac{F_R }{1 - F_R} \cdot N_{\text{Loose(!T)}}
 \end{equation}
 
-When looking for two prompt muons, either one or both of them can be misidentified. Depending on whether or not the specific background can produce a prompt muon, one of the two cases will be prevalent. For ``single-fakes'', $W +$ jets or top pair production are prime examples. To predict the number of single-fakes from an orthogonal sample, one of the analysis' tight muons is replaced with a loose (but \textit{not} tight) muon (Cf. fig.~\ref{fig:nloosetight}). The sum over the resulting number of events having one tight $t$ and one loose muon $l$ and applying the weight $f$, yields the number of single-fakes $N_{SF}$.
+When looking for two prompt muons, either one or both of them can be misidentified. Depending on whether or not the specific background can produce a prompt muon, one of the two cases will be prevalent. For ``single-fakes'', $W +$ jets or top pair production are prime examples. To predict the number of single-fakes from an orthogonal sample, one of the analysis' tight muons is replaced with a loose (but \textit{not} tight) muon (Cf. fig.~\ref{fig:nloosetight}). The sum over the resulting number of events having one tight $t$ and one loose muon $l$ and applying the weight $f$, yields the number of single-fakes $N_{\text{Single-Fakes}}$.
 
 \begin{equation}
   \label{eq:singlefakes}
-  N_{SF} = \sum_{tl} f = \sum_{tl} \frac{F_R^1}{1 - F_R^1}
+  N_{\text{Single-Fakes}} = \sum_{tl} f = \sum_{tl} \frac{F_R^1}{1 - F_R^1}
 \end{equation}
 
 \noindent The additional index $i$ of the tight-to-loose ratio $F_R^i$ represents the dependency on the transverse momentum and pseudorapidity of the specific muon. 
@@ -80,21 +80,21 @@ If both muons are misidentified, ``double-fakes'', the scenario has to be adjust
 
 \begin{equation}
   \label{eq:doublefakes}
-  N_{DF} = \sum_{ll} f = \sum_{ll} f^1 f^2 = \sum_{ll} \frac{F_R^1}{1 - F_R^1} \cdot \frac{F_R^2}{1 - F_R^2}
+  N_{\text{Double-Fakes}} = \sum_{ll} f = \sum_{ll} f^1 f^2 = \sum_{ll} \frac{F_R^1}{1 - F_R^1} \cdot \frac{F_R^2}{1 - F_R^2}
 \end{equation}
 
 One would naively expect the sum of both cases to be the overall amount of fakes. However, the double-fake scenario is also embedded in the single-fake one. If the tight muon of the latter case has been faked, it becomes the double-fake scenario (Eq.~\ref{eq:doublefakes}). Since either of the two loose leptons of the double-fake case is able to fake the tight one, it is contributing \textit{twice} to the single-fake case (Eq.~\ref{eq:singlefakes}).
 
 \begin{equation}
   \label{eq:fakes}
-  N_{fakes} = N_{SF} - N_{DF} =  \sum_{tl} \frac{F_R^1}{1 - F_R^1} - \sum_{ll} \frac{F_R^1}{1 - F_R^1} \cdot \frac{F_R^2}{1 - F_R^2}
+  N_{\text{Background estimate}} = N_{\text{Single-Fakes}} - N_{\text{Double-Fakes}} =  \sum_{tl} \frac{F_R^1}{1 - F_R^1} - \sum_{ll} \frac{F_R^1}{1 - F_R^1} \cdot \frac{F_R^2}{1 - F_R^2}
 \end{equation}
 
 
 \section{Measurement}
 \label{sec:tlmeasurement}
 
-Estimating the background starts off by measuring the tight-to-loose ratio $F_R$. For that, the definition and selection of tight $T$ and loose muons $L$ is the first step. This is done after the event cleaning (Sec.~\ref{sec:evclean}), but before the basic muon selection (Sec.~\ref{sec:basicmuon}). Therefore events with any number of muons, specifically ones with less than two muons that pass the ID, can be included. For the \textit{tight} subset, almost all of the muon quality criteria (Sec.~\ref{sec:muonqualy}) are applied. The only exceptions are the distance to the next jet and the distance between two muons. These requirements are only meant for selecting the two muon candidates of the analysis. They may otherwise introduce a bias towards the specific final state, thus limiting the prediction. As already stated before, \textit{loose} muons are defined by the same rules, but only have to abide $I_{\text{rel}} < 0.5$ and $|d_{xy}| < 2\,\text{mm}$.
+Estimating the background starts off by measuring the tight-to-loose ratio $F_R$. For that, the definition and selection of tight $T$ and loose muons $L$ is the first step. This is done after the event cleaning (Sec.~\ref{sec:evclean}), but before the basic muon selection (Sec.~\ref{sec:basicmuon}). Therefore events with any number of muons, specifically ones with less than two muons passing the object selection, can be included. For the \textit{tight} subset, almost all of the muon quality criteria (Sec.~\ref{sec:muonqualy}) are applied. The only exceptions are the distance to the next jet and the distance between two muons. These requirements are only meant for selecting the two muon candidates of the analysis. They may otherwise introduce a bias towards the specific final state, thus limiting the prediction. As already stated before, \textit{loose} muons are defined by the same rules, but only have to abide $I_{\text{rel}} < 0.5$ and $|d_{xy}| < 2\,\text{mm}$.
 
 Demanding exactly one loose muon (Fig.~\ref{fig:ntlnloose}) yields an independent sample. Since the prediction of fakes is strongly correlated to the amount of QCD multi-jet events, various kinematic and topologic requirements can be applied to isolate these. Requiring two jets (Fig.~\ref{fig:ntlnjets}) ensures a minimum amount of hadronic activity per event. With each jet's transverse momentum exceeding $50\,\text{GeV}$ (Fig.~\ref{fig:ntljetpt}), the Drell-Yan background is being suppressed. After setting the minimum transverse momentum of the first muon to $20\,\text{GeV}$ and all remaining ones to at least $10\,\text{GeV}$(Fig.~\ref{fig:ntlmupt}), the $Z$-peak can be eliminated for the same purpose. Thus the invariant mass of two muons\footnote{The two muons encompass the one loose muon as well as one muon which passes the ID, but does not qualify as a loose muon.} closest to the $Z$-mass, is restricted to a window from $10\,\text{GeV}$ to $80\,\text{GeV}$ (Fig.~\ref{fig:ntlzmass}). By setting an upper bound of $40\,\text{GeV}$ for the missing transverse energy (Fig.~\ref{fig:ntlmet}), the top-quark and $W$-Boson backgrounds are being discriminated, as QCD processes generally do not contain a lot of $E_{T}^{miss}$. By using the transverse mass hypothesis for a leptonically decaying $W$ boson, it is also possible to reduce the same backgrounds.
 Requiring the value of the transverse mass of the loose muon\footnote{One expects the \textit{loose} muon to stem from a secondary decay, which is why it is the subject of this requirement.} and the missing transverse energy to be less than $40\,\text{GeV}$ (Fig.~\ref{fig:ntlmt}) decreases the contribution of top and $W$ backgrounds as well, while passing QCD multi-jet events. 
@@ -158,7 +158,7 @@ In general, one can observe reasonable agreement between data and simulation in 
     \caption{$\Delta \phi$ between loose muon and leading jet \label{fig:ntljetdphi}}
   \end{subfigure}
 
-  \caption{$n - 1$ distributions of the fake rate determiniation, after the basic muon selection. Requirements are indicated by arrows.}
+  \caption{$n - 1$ distributions of the fake rate determiniation, generated before the basic muon selection. Requirements are indicated by arrows.}
   \label{fig:ntl}
 \end{figure}
 
