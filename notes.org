@@ -136,7 +136,7 @@
 ** DONE fix cut arrow in histograms
 ** DONE remove / 1 from histograms
 ** DONE JER dependence on eta and pt
-** TODO "cutflow" <-> table
+** DONE "cutflow" <-> table
 ** DONE rephrase tl ratio stuff
 ** DONE atlas analysis?
 ** DONE rephrase bullet cluster "overlay .."
@@ -146,5 +146,5 @@
 ** DONE fix phrase of motivation for parameters
 ** DONE fix QCD p_T
 ** DONE candidate event errors
-** TODO matched histogram
+** DONE matched histogram
 ** DONE cls method

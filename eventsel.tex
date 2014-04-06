@@ -279,6 +279,7 @@ At this stage of the analysis, there is still \textit{at least} one order of mag
 
 The corresponding control region \textit{adds} the charge restriction to the previously defined $b$-jet veto control region. Figure~\ref{fig:ssccr_nofakes} shows the dimuon, smuon and gaugino mass distribution. The slepton mass is given by the invariant mass of the two muon and jet candidates, while the gaugino mass only takes the sub-leading muon and two jet candidates into the calculation. When comparing the invariant mass of the two muons in the same sign charge control region (Fig.~\ref{fig:CRBVC_m_mumu_nofakes}) to the $b$-jet veto control region (Fig.~\ref{fig:crbv}), whose only difference is no charge-based requirement at all, one does see the drastic reduction of the background. However, the agreement between data and simulation appears to be worse throughout the entire mass spectrum in all charge control region distributions. When taking the unexpectedly large contributions of samples containing many jets like $t\bar{t}$ into account, this suggests that the background is not described accurately. One effect that contributes significantly to this phenomenon will be discussed in the upcoming chapter.
 
+
 \section{Control Region Overview}
 \label{sec:cr-overview}
 
@@ -286,10 +287,93 @@ A short overview of all used control regions up to this point is given in figure
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/cr-overview.pdf}
+  \includegraphics[width=0.65\textwidth]{plots/cr-overview.pdf}
   \caption{Overview over the used control regions. Blue ellipses mark requirements, green boxes mark control regions and arrows indicate whether an event passes or fails a requirement.}
   \label{fig:cr-overview}
 \end{figure}
+
+
+\section{Selection Efficiencies of Requirements}
+\label{sec:requirement-eff}
+
+To summarize the event selection, figure~\ref{fig:cutflow} shows the consecutive impacts of the requirements on the number of events. Table~\ref{tab:selection-efficiencies} translates these values into selection efficiencies relative to the number of events after requiring the chosen trigger. Focussing on the simulations of the signal models, one can once again see the varying impact of the requirements depending on the mass parameters $m_0$, $m_{1/2}$ mentioned throughout this chapter. Most striking are the impacts of the jet and muon quality criteria, as well as the missing transverse energy requirement.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{plots/cutflow.pdf}
+  \caption{Number of events after consecutively applying the different event selection requirements.}
+  \label{fig:cutflow}
+\end{figure}
+
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|d{5}|d{1}|d{1}|d{1}|d{1}|d{1}|d{1}|d{4}|d{3}|}
+    \hline
+    Sample Group                                                     & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ $N_{\text{Events}}$ }}} & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ Muon selection }}}      & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ Jet quality }}}         & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ Muon quality }}}        & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ $m_{\mu \mu}$ }}}       & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ $E_{T}^{miss}$ }}}      & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ $b$-jet veto }}}        & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ Same charge $\mu$ }}}   & 
+    \multicolumn{1}{c|}{\parbox[c]{1mm}{\rotatebox[origin=c]{90}{ $N_{\text{Events}}$ }}} \\ \hline
+    % BEGIN RECEIVE ORGTBL SELEFF
+    \hline
+    Drell-Yan         & 2.2 \cdot 10^6 & 67.9 & 18.3 & 10.7    & 10.5    & 9.9     & 9.0     & 0     & 0    \\
+    QCD               & 2.1 \cdot 10^7 & 10.4 & 5.1  & \multicolumn{1}{r|}{$10^{-4}$} & \multicolumn{1}{r|}{$10^{-6}$} & \multicolumn{1}{r|}{$10^{-6}$} & \multicolumn{1}{r|}{$10^{-6}$} & 0     & 0    \\
+    $t\bar{t}$        & 2.0 \cdot 10^5 & 45.0 & 38.6 & 9.1     & 9.0     & 2.8     & 0.5     & 0.004 & 7.32 \\
+    $t\bar{t} + V$    & 7.9 \cdot 10^2 & 54.0 & 51.6 & 17.5    & 17.3    & 6.2     & 1.3     & 0.02  & 1.27 \\
+    Single top        & 3.0 \cdot 10^4 & 39.0 & 24.2 & 3.3     & 3.3     & 1.0     & 0.3     & 0.001 & 0.8  \\
+    Diboson           & 1.5 \cdot 10^5 & 21.1 & 9.4  & 2.9     & 2.9     & 2.3     & 2.0     & 0.01  & 21.0 \\
+    $VVV$             & 1.2 \cdot 10^2 & 62.8 & 49.7 & 29.2    & 29.1    & 13.2    & 10.7    & 0.9   & 1.1  \\
+    Rare samples      & 1.1 \cdot 10^2 & 45.2 & 31.4 & 17.5    & 17.4    & 5.6     & 5.3     & 5.1   & 5.6  \\
+    \hline
+    % END RECEIVE ORGTBL SELEFF
+    $m_0$, $m_{1/2}$ [GeV] & \multicolumn{9}{c|}{Signal Models} \\
+    % BEGIN RECEIVE ORGTBL SELEFFpt2
+    \hline
+    300, 300 & 4.7 \cdot 10^2 & 76.6 & 48.5 & 32.3 & 32.1 & 26.5 & 23.9 & 11.2 & 52.4 \\
+    1000, 200 & 1.9 \cdot 10^3 & 80.6 & 50.1 & 12.4 & 12.3 & 6.1 & 5.3 & 2.5 & 47.8 \\
+    1000, 1200 & 4.3 \cdot 10^1 & 86.9 & 82.4 & 64.1 & 64.1 & 36.3 & 27.4 & 13.7 & 5.9 \\
+    \hline
+    \hline
+    Data & 2.4 \cdot 10^7 & 16.8 & 6.8 & 1.2 & 1.1 & 1.0 & 0.8 & 0.001 & 63 \\
+    \hline
+    % END RECEIVE ORGTBL SELEFFpt2
+  \end{tabular}
+  \caption{Consecutive selection efficiencies given as percentages for different requirements discussed throughout the event selection. All efficiencies are given relative to the number of events remaining after requiring the HLT\_Mu18\_TkMu8 trigger. The second column shows the number of events after requiring the trigger and last column show the number of events after all requirements.}
+  \label{tab:selection-efficiencies}
+\end{table}
+
+\begin{comment}
+#+ORGTBL: SEND SELEFF orgtbl-to-latex :splice t :skip 0 :no-escape t
+|----------------+----------------+------+------+---------+---------+---------+---------+-------+------|
+| Drell-Yan      | 2.2 \cdot 10^6 | 67.9 | 18.3 |    10.7 |    10.5 |     9.9 |     9.0 |     0 |    0 |
+| QCD            | 2.1 \cdot 10^7 | 10.4 |  5.1 | \multicolumn{1}{r|}{$10^{-4}$} | \multicolumn{1}{r|}{$10^{-6}$} | \multicolumn{1}{r|}{$10^{-6}$} | \multicolumn{1}{r|}{$10^{-6}$} | 0     | 0 |
+| $t\bar{t}$     | 2.0 \cdot 10^5 | 45.0 | 38.6 |     9.1 |     9.0 |     2.8 |     0.5 | 0.004 | 7.32 |
+| $t\bar{t} + V$ | 7.9 \cdot 10^2 | 54.0 | 51.6 |    17.5 |    17.3 |     6.2 |     1.3 |  0.02 | 1.27 |
+| Single top     | 3.0 \cdot 10^4 | 39.0 | 24.2 |     3.3 |     3.3 |     1.0 |     0.3 | 0.001 |  0.8 |
+| Diboson        | 1.5 \cdot 10^5 | 21.1 |  9.4 |     2.9 |     2.9 |     2.3 |     2.0 |  0.01 | 21.0 |
+| $VVV$          | 1.2 \cdot 10^2 | 62.8 | 49.7 |    29.2 |    29.1 |    13.2 |    10.7 |   0.9 |  1.1 |
+| Rare samples   | 1.1 \cdot 10^2 | 45.2 | 31.4 |    17.5 |    17.4 |     5.6 |     5.3 |   5.1 |  5.6 |
+|----------------+----------------+------+------+---------+---------+---------+---------+-------+------|
+\end{comment}
+
+\begin{comment}
+#+ORGTBL: SEND SELEFFpt2 orgtbl-to-latex :splice t :skip 0 :no-escape t
+|------------+----------------+------+------+------+------+------+------+-------+------|
+| 300, 300   | 4.7 \cdot 10^2 | 76.6 | 48.5 | 32.3 | 32.1 | 26.5 | 23.9 |  11.2 | 52.4 |
+| 1000, 200  | 1.9 \cdot 10^3 | 80.6 | 50.1 | 12.4 | 12.3 |  6.1 |  5.3 |   2.5 | 47.8 |
+| 1000, 1200 | 4.3 \cdot 10^1 | 86.9 | 82.4 | 64.1 | 64.1 | 36.3 | 27.4 |  13.7 |  5.9 |
+|------------+----------------+------+------+------+------+------+------+-------+------|
+|------------+----------------+------+------+------+------+------+------+-------+------|
+| Data       | 2.4 \cdot 10^7 | 16.8 |  6.8 |  1.2 |  1.1 |  1.0 |  0.8 | 0.001 |   63 |
+|------------+----------------+------+------+------+------+------+------+-------+------|
+\end{comment}
+
 
 
 %%% Local Variables: 

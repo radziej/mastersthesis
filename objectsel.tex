@@ -19,12 +19,12 @@ To quantify the difference between both triggers, the number of selected events 
 
 \begin{figure}[ht!]
   \centering
-    \includegraphics[width=0.8\textwidth]{plots/dycut_matched.pdf}
-  \caption{Each bin represents the number of data events passing the various trigger combinations given on the $x$-axis. All four runs of 2012 (Tab.~\ref{tab:data}) are included in this distribution.}
+    \includegraphics[width=0.8\textwidth]{plots/matched.pdf}
+  \caption{Each bin represents the number of data events passing the various trigger combinations given on the $x$-axis. All four runs of 2012 (Tab.~\ref{tab:data}) are included in this distribution. The histogram is generated after the invariant dimuon mass requirement (Sec.~\ref{sec:m_mumu}).}
   \label{fig:matched}
 \end{figure}
 
-\noindent The first two bins of the distribution show the results for each individual trigger. By raw numbers, \verb+HLT_Mu17_TkMu8+ is in the lead in terms of overall efficiency. To get en estimate of the overlap, the third bin shows the case when both triggers are required at once. With the number of events being quite similar to the one for \verb+HLT_Mu17_Mu8+, one can conclude that almost all events in the first bin are contained in the second one as well. To further quantify this conclusion, the fourth and fifth bin display the event count of \textit{only} one out of the two being triggered. Comparing the contents of these bins with the previous ones, the additional efficiency yielded by using \verb+HLT_Mu17_Mu8+ in addition to \verb+HLT_Mu17_TkMu8+ can be estimated. With it being only of the order of $\mathcal{O}(10^{-5})$, this analysis uses the latter trigger exclusively.
+\noindent The first two bins of the distribution show the results for each individual trigger. By raw numbers, \verb+HLT_Mu17_TkMu8+ is in the lead in terms of overall efficiency. To get en estimate of the overlap, the third bin shows the case when both triggers are required at once. With the number of events being quite similar to the one for \verb+HLT_Mu17_Mu8+, one can conclude that almost all events in the first bin are contained in the second one as well. Complementary, the fourth bin displays the case where either of the two triggers was active. The number of events appears to be roughly equal to the one of the second bin, which supports the previous conclusion. To further quantify this statement, the fifth and sixth bin display the event count of \textit{only} one out of the two being triggered. Comparing the contents of these bins with the previous ones, the additional efficiency yielded by using \verb+HLT_Mu17_Mu8+ in addition to \verb+HLT_Mu17_TkMu8+ can be estimated. With it being only of the order of $\mathcal{O}(10^{-5})$, this analysis uses the latter trigger exclusively.
 
 
 \section{Muon Identification}
@@ -108,7 +108,7 @@ Additional distributions displaying the effects of the individual ID criteria ca
     \caption{$\chi^2$ value of the track fitting procedure for muons.\label{fig:muo_chi2}}
   \end{subfigure}
 
-  \caption{$n - 1$ distributions of the muon object selection. Requirements are indicated by arrows.}
+  \caption{$n - 1$ distributions of the muon object selection, where only the right trigger is required. Requirements are indicated by arrows.}
   \label{fig:n-1}
 \end{figure}
 
